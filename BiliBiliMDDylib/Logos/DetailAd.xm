@@ -31,3 +31,36 @@
 
 %end
 
+// UP主分享好物广告
+@interface IGListAdapter : NSObject
+
+/// 广告商品cell的索引
+@property (nonatomic, strong) NSIndexPath *njAdMerchandiseViewIndexPath;
+
+
+@end
+
+%hook IGListAdapter
+
+//  广告商品cell的索引
+%property (nonatomic, strong) NSIndexPath *njAdMerchandiseViewIndexPath;
+
+- (id)collectionView:(id)view cellForItemAtIndexPath:(NSIndexPath *)path {
+    UICollectionViewCell *cell = %orig;
+    if ([cell.reuseIdentifier isEqualToString:@"AdMerchandiseViewBBVideoModule.VDViewSectionControllerCell"]) {
+        // 保存广告商品cell的索引
+        self.njAdMerchandiseViewIndexPath = path;
+    }
+    return cell;
+}
+
+- (CGSize)collectionView:(id)view layout:(id)layout sizeForItemAtIndexPath:(NSIndexPath *)path {
+    if (path == self.njAdMerchandiseViewIndexPath) {
+        %log((NSString *)@"cxzcxz");
+        return CGSizeMake(0.0, 0.1);
+    }
+    return %orig;
+}
+
+%end
+

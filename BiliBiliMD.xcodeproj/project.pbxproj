@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF0D031C2DEDA95900115365 /* libBiliBiliMDDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF0D031B2DEDA95900115365 /* libBiliBiliMDDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		BF0D031C2DEDA95900115365 /* libBiliBiliMDDylib.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = BF0D031B2DEDA95900115365 /* libBiliBiliMDDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BF0D03212DEDA95900115365 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0D03202DEDA95900115365 /* JavaScriptCore.framework */; };
 		BF0D03232DEDA95900115365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0D03222DEDA95900115365 /* Foundation.framework */; };
 		BF0D03252DEDA95900115365 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0D03242DEDA95900115365 /* UIKit.framework */; };
@@ -51,14 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BF0D03072DEDA95900115365 /* CopyFiles */ = {
+		BF0D03072DEDA95900115365 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF0D031C2DEDA95900115365 /* libBiliBiliMDDylib.dylib in CopyFiles */,
+				BF0D031C2DEDA95900115365 /* libBiliBiliMDDylib.dylib in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -301,7 +302,7 @@
 				BF0D03042DEDA95900115365 /* Frameworks */,
 				BF0D03052DEDA95900115365 /* ShellScript */,
 				BF0D03062DEDA95900115365 /* Resources */,
-				BF0D03072DEDA95900115365 /* CopyFiles */,
+				BF0D03072DEDA95900115365 /* Copy Files */,
 				BF0D03082DEDA95900115365 /* ShellScript */,
 			);
 			buildRules = (

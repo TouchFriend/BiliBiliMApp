@@ -70,7 +70,6 @@
  
 %ctor {
     %init(
-//          AdBaseModel = objc_getClass("BBAdModel.AdBaseModel")
           AdPGInfoModel = objc_getClass("BBAdPegasus.AdPGInfoModel"),
           AdPegasusModel = objc_getClass("BBAdPegasus.AdPegasusModel"),
           AdPGCmInfoModel = objc_getClass("BBAdPegasus.AdPGCmInfoModel"),
