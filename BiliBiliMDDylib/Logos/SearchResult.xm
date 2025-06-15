@@ -1,39 +1,27 @@
-// 视频详情页广告
+// 搜索结果广告
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
-@interface BBAdUGCContext : NSObject
+// 搜索结果广告
+%hook BBAdSearchModel
 
-@end
+- (id)init {
+    %log(nj_logPrefix);
+    return nil;
+}
 
-// 视频下方广告
-%hook BBAdUGCContext
 
-- (id)initWithResovler:(id)resovler {
++ (id)modelWithMossMessage:(id)message {
     %log(nj_logPrefix);
     return nil;
 }
 
 %end
 
-// 列表广告
-%hook BBAdUGCRcmdModel
 
-- (id)initWithModel:(id)model {
-    %log(nj_logPrefix);
-    return nil;
-}
 
-- (id)initWithSourceContentAny:(id)any {
-    %log(nj_logPrefix);
-    return nil;
-}
-
-%end
-
-// UP主分享好物广告
-@interface IGListAdapter : NSObject
+@interface ResultViewController : NSObject
 
 // 过滤cell的索引
 - (NSMutableSet *)nj_filterIndexPaths;
@@ -42,11 +30,9 @@
 // 要过滤的cell id
 - (NSSet<NSString *> *)nj_filterCellIds;
 
-- (void)reloadDataWithCompletion:(id)completion;
-
 @end
  
-%hook IGListAdapter
+%hook ResultViewController
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = %orig;
@@ -55,13 +41,25 @@
         if (![[self nj_filterIndexPaths] containsObject:indexPath]) {
 //            %log(nj_logPrefix, @"-add", indexPath, [self nj_filterIndexPaths]);
             [[self nj_filterIndexPaths] addObject:indexPath];
-            [self reloadDataWithCompletion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [collectionView performBatchUpdates:^{
+                    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                } completion:^(BOOL finished) {
+                    
+                }];
+            });
         }
     } else {
         if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
 //            %log(nj_logPrefix, @"-rm", indexPath, [self nj_filterIndexPaths]);
             [[self nj_filterIndexPaths] removeObject:indexPath];
-            [self reloadDataWithCompletion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [collectionView performBatchUpdates:^{
+                    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                } completion:^(BOOL finished) {
+                    
+                }];
+            });
         }
     }
     return cell;
@@ -92,7 +90,7 @@
 - (NSSet<NSString *> *)nj_filterCellTypes {
     NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCellType));
     if (!filterSet) {
-        NSArray *types = @[];
+        NSArray *types = @[@"_TtCO21BBSearchCardsProvider6Result17LittleSpecialCell"];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterCellType), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
@@ -104,7 +102,7 @@
 - (NSSet<NSString *> *)nj_filterCellIds {
     NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCellId));
     if (!filterSet) {
-        NSArray *ids = @[@"AdMerchandiseViewBBVideoModule.VDViewSectionControllerCell"];
+        NSArray *ids = @[];
         filterSet = [NSSet setWithArray:ids];
         objc_setAssociatedObject(self, @selector(nj_filterCellId), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
@@ -113,22 +111,13 @@
 
 %end
 
-// 评论顶部黄色广告条
-%hook BBAdSourceContent
 
-- (id)init {
-    %log(nj_logPrefix);
-    return nil;
+
+
+
+%ctor {
+    %init(
+          ResultViewController = objc_getClass("BBSearchSwift.ResultViewController"),
+        );
+    
 }
-
-%end
-
-%hook BBAdCommonBaseModel
-
-+ (id)modelWithMossMessage:(id)message {
-    %log(nj_logPrefix);
-    return nil;
-}
-
-
-%end

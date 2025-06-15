@@ -35,6 +35,9 @@
 		BF0D035E2DEDA95900115365 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035D2DEDA95900115365 /* fishhook.h */; };
 		BF0D03602DEDA95900115365 /* BiliBiliMDDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */; };
 		BF0D03622DEDA95900115365 /* BiliBiliMDDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */; };
+		BF45F0032DFECE1600CCE5FB /* NJCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = BF45EFFF2DFECE1600CCE5FB /* NJCommonDefine.h */; };
+		BF45F0042DFECE1600CCE5FB /* SearchResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF45F0012DFECE1600CCE5FB /* SearchResult.mm */; };
+		BF45F0052DFECE1600CCE5FB /* NJCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = BF45F0002DFECE1600CCE5FB /* NJCommonDefine.m */; };
 		BF6326802DF19C5F00E7EE23 /* DetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF63267A2DF19C5F00E7EE23 /* DetailAd.mm */; };
 		BF6326812DF19C5F00E7EE23 /* HomeAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF63267C2DF19C5F00E7EE23 /* HomeAd.mm */; };
 		BF6326822DF19C5F00E7EE23 /* LaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = BF63267E2DF19C5F00E7EE23 /* LaunchAd.m */; };
@@ -96,6 +99,10 @@
 		BF0D035D2DEDA95900115365 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiliBiliMDDylib.h; sourceTree = "<group>"; };
 		BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiliBiliMDDylib.m; sourceTree = "<group>"; };
+		BF45EFFF2DFECE1600CCE5FB /* NJCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJCommonDefine.h; sourceTree = "<group>"; };
+		BF45F0002DFECE1600CCE5FB /* NJCommonDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJCommonDefine.m; sourceTree = "<group>"; };
+		BF45F0012DFECE1600CCE5FB /* SearchResult.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchResult.mm; sourceTree = "<group>"; };
+		BF45F0022DFECE1600CCE5FB /* SearchResult.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = SearchResult.xm; sourceTree = "<group>"; };
 		BF63267A2DF19C5F00E7EE23 /* DetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DetailAd.mm; sourceTree = "<group>"; };
 		BF63267B2DF19C5F00E7EE23 /* DetailAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = DetailAd.xm; sourceTree = "<group>"; };
 		BF63267C2DF19C5F00E7EE23 /* HomeAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HomeAd.mm; sourceTree = "<group>"; };
@@ -197,6 +204,10 @@
 		BF0D03272DEDA95900115365 /* Logos */ = {
 			isa = PBXGroup;
 			children = (
+				BF45EFFF2DFECE1600CCE5FB /* NJCommonDefine.h */,
+				BF45F0002DFECE1600CCE5FB /* NJCommonDefine.m */,
+				BF45F0012DFECE1600CCE5FB /* SearchResult.mm */,
+				BF45F0022DFECE1600CCE5FB /* SearchResult.xm */,
 				BF63267A2DF19C5F00E7EE23 /* DetailAd.mm */,
 				BF63267B2DF19C5F00E7EE23 /* DetailAd.xm */,
 				BF63267C2DF19C5F00E7EE23 /* HomeAd.mm */,
@@ -286,6 +297,7 @@
 				BF0D03522DEDA95900115365 /* LLDBTools.h in Headers */,
 				BF0D03602DEDA95900115365 /* BiliBiliMDDylib.h in Headers */,
 				BF0D032D2DEDA95900115365 /* MDConfigManager.h in Headers */,
+				BF45F0032DFECE1600CCE5FB /* NJCommonDefine.h in Headers */,
 				BF0D034C2DEDA95900115365 /* OCSelectorTrampolines.h in Headers */,
 				BF0D03482DEDA95900115365 /* OCMethodTrace.h in Headers */,
 			);
@@ -460,6 +472,8 @@
 				BF0D03332DEDA95900115365 /* MDCycriptManager.m in Sources */,
 				BF0D033C2DEDA95900115365 /* a1a2-selectortramps-arm64.s in Sources */,
 				BF0D033A2DEDA95900115365 /* a1a2-selectortramps-arm.s in Sources */,
+				BF45F0042DFECE1600CCE5FB /* SearchResult.mm in Sources */,
+				BF45F0052DFECE1600CCE5FB /* NJCommonDefine.m in Sources */,
 				BF0D03402DEDA95900115365 /* a1a2-selectortramps-x86_64.s in Sources */,
 				BF0D034A2DEDA95900115365 /* OCMethodTrace.m in Sources */,
 				BF0D032F2DEDA95900115365 /* MDConfigManager.m in Sources */,

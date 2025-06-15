@@ -1,4 +1,7 @@
+// 启动广告
+
 #import <UIKit/UIKit.h>
+#import "NJCommonDefine.h"
 
 @interface BFCSplashWindow : UIWindow
 
@@ -8,7 +11,7 @@
 %hook BFCSplashWindow
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    NSLog(@"cxzcxz:%@-%s", NSStringFromClass([self class]), __FUNCTION__);
+    NSLog(@"%@:%@-%s", nj_logPrefix, NSStringFromClass([self class]), __FUNCTION__);
     return nil;
 }
 
