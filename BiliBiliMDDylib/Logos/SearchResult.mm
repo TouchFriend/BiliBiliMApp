@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/SearchResult.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/SearchResult.xm"
 
 
 #import <UIKit/UIKit.h>
@@ -31,7 +31,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BBAdSearchModel; @class ResultViewController; 
 static BBAdSearchModel* (*_logos_orig$_ungrouped$BBAdSearchModel$init)(_LOGOS_SELF_TYPE_INIT BBAdSearchModel*, SEL) _LOGOS_RETURN_RETAINED; static BBAdSearchModel* _logos_method$_ungrouped$BBAdSearchModel$init(_LOGOS_SELF_TYPE_INIT BBAdSearchModel*, SEL) _LOGOS_RETURN_RETAINED; static id (*_logos_meta_orig$_ungrouped$BBAdSearchModel$modelWithMossMessage$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id _logos_meta_method$_ungrouped$BBAdSearchModel$modelWithMossMessage$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static __kindof UICollectionViewCell * (*_logos_orig$_ungrouped$ResultViewController$collectionView$cellForItemAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL, UICollectionView *, NSIndexPath *); static __kindof UICollectionViewCell * _logos_method$_ungrouped$ResultViewController$collectionView$cellForItemAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL, UICollectionView *, NSIndexPath *); static CGSize (*_logos_orig$_ungrouped$ResultViewController$collectionView$layout$sizeForItemAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL, UICollectionView *, UICollectionViewLayout*, NSIndexPath *); static CGSize _logos_method$_ungrouped$ResultViewController$collectionView$layout$sizeForItemAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL, UICollectionView *, UICollectionViewLayout*, NSIndexPath *); static NSMutableSet * _logos_method$_ungrouped$ResultViewController$nj_filterIndexPaths(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL); static NSSet<NSString *> * _logos_method$_ungrouped$ResultViewController$nj_filterCellTypes(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL); static NSSet<NSString *> * _logos_method$_ungrouped$ResultViewController$nj_filterCellIds(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST, SEL); 
 
-#line 7 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/SearchResult.xm"
+#line 7 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/SearchResult.xm"
 
 
 static BBAdSearchModel* _logos_method$_ungrouped$BBAdSearchModel$init(_LOGOS_SELF_TYPE_INIT BBAdSearchModel* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
@@ -67,8 +67,8 @@ static __kindof UICollectionViewCell * _logos_method$_ungrouped$ResultViewContro
     if ([[self nj_filterCellIds] containsObject:cell.reuseIdentifier] ||
         [[self nj_filterCellTypes] containsObject:NSStringFromClass([cell class])]) {
         if (![[self nj_filterIndexPaths] containsObject:indexPath]) {
-
             [[self nj_filterIndexPaths] addObject:indexPath];
+
             dispatch_async(dispatch_get_main_queue(), ^{
                 [collectionView performBatchUpdates:^{
                     [collectionView reloadItemsAtIndexPaths:@[indexPath]];
@@ -79,8 +79,8 @@ static __kindof UICollectionViewCell * _logos_method$_ungrouped$ResultViewContro
         }
     } else {
         if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
-
             [[self nj_filterIndexPaths] removeObject:indexPath];
+
             dispatch_async(dispatch_get_main_queue(), ^{
                 [collectionView performBatchUpdates:^{
                     [collectionView reloadItemsAtIndexPaths:@[indexPath]];

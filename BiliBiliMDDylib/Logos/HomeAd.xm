@@ -64,6 +64,27 @@
 
 %end
 
+@interface BBHotTopicSmallCoverV5Model : NSObject
+
+- (id)smallCoverV5;
+- (id)base;
+- (NSString *)fromType;
+
+@end
+
+// 热门-后台添加，固定位置的广告
+%hook BBHotTopicSmallCoverV5Model
+
+- (id)initWithGPBMessage:(id)gpbmessage {
+    BBHotTopicSmallCoverV5Model *model = %orig;
+    if ([[[[model smallCoverV5] base] fromType] isEqualToString:@"operation"]) {
+        return nil;
+    }
+    return model;
+}
+
+%end
+
  
 %ctor {
     %init(
