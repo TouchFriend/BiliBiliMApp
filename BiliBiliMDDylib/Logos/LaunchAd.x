@@ -11,7 +11,7 @@
 %hook BFCSplashWindow
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    NSLog(@"%@:%@-%s", nj_logPrefix, NSStringFromClass([self class]), __FUNCTION__);
+    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
     return nil;
 }
 

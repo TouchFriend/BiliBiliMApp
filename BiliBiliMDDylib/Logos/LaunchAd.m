@@ -39,7 +39,7 @@ static BFCSplashWindow* (*_logos_orig$_ungrouped$BFCSplashWindow$initWithFrame$)
 
 
 static BFCSplashWindow* _logos_method$_ungrouped$BFCSplashWindow$initWithFrame$(_LOGOS_SELF_TYPE_INIT BFCSplashWindow* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
-    NSLog(@"%@:%@-%s", nj_logPrefix, NSStringFromClass([self class]), __FUNCTION__);
+    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
     return nil;
 }
 

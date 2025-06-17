@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*
  %log(nj_logPrefix);
- NSLog(@"%@:%@-%s", nj_logPrefix, NSStringFromClass([self class]), __FUNCTION__);
+ NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
  */
 /// 日志前缀
 UIKIT_EXTERN const NSString *nj_logPrefix;
