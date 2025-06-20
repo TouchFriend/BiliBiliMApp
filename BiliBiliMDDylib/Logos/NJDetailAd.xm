@@ -11,7 +11,6 @@
 %hook BBAdUGCContext
 
 - (id)initWithResovler:(id)resovler {
-    %log(nj_logPrefix);
     return nil;
 }
 
@@ -21,12 +20,10 @@
 %hook BBAdUGCRcmdModel
 
 - (id)initWithModel:(id)model {
-    %log(nj_logPrefix);
     return nil;
 }
 
 - (id)initWithSourceContentAny:(id)any {
-    %log(nj_logPrefix);
     return nil;
 }
 
@@ -69,7 +66,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
-        %log(nj_logPrefix);
+//        %log(nj_logPrefix);
         return CGSizeMake(0.0, 0.1);
     }
     return %orig;
@@ -117,7 +114,6 @@
 %hook BBAdSourceContent
 
 - (id)init {
-    %log(nj_logPrefix);
     return nil;
 }
 
@@ -126,7 +122,6 @@
 %hook BBAdCommonBaseModel
 
 + (id)modelWithMossMessage:(id)message {
-    %log(nj_logPrefix);
     return nil;
 }
 

@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/LaunchAd.x"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJLaunchAd.x"
 
 
 #import <UIKit/UIKit.h>
@@ -35,15 +35,14 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BFCSplashWindow; 
 static BFCSplashWindow* (*_logos_orig$_ungrouped$BFCSplashWindow$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BFCSplashWindow*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BFCSplashWindow* _logos_method$_ungrouped$BFCSplashWindow$initWithFrame$(_LOGOS_SELF_TYPE_INIT BFCSplashWindow*, SEL, CGRect) _LOGOS_RETURN_RETAINED; 
 
-#line 11 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/LaunchAd.x"
+#line 11 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJLaunchAd.x"
 
 
 static BFCSplashWindow* _logos_method$_ungrouped$BFCSplashWindow$initWithFrame$(_LOGOS_SELF_TYPE_INIT BFCSplashWindow* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
-    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
     return nil;
 }
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$BFCSplashWindow = objc_getClass("BFCSplashWindow"); { MSHookMessageEx(_logos_class$_ungrouped$BFCSplashWindow, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BFCSplashWindow$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BFCSplashWindow$initWithFrame$);}} }
-#line 19 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/LaunchAd.x"
+#line 18 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJLaunchAd.x"
