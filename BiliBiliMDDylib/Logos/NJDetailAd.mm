@@ -1,4 +1,31 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/NJDetailAd.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJDetailAd.xm"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #import <UIKit/UIKit.h>
@@ -32,10 +59,10 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBAdCommonBaseModel; @class IGListAdapter; @class BBAdUGCContext; @class BBAdSourceContent; @class BBAdUGCRcmdModel; 
-static BBAdUGCContext* (*_logos_orig$_ungrouped$BBAdUGCContext$initWithResovler$)(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCContext* _logos_method$_ungrouped$BBAdUGCContext$initWithResovler$(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCRcmdModel* (*_logos_orig$_ungrouped$BBAdUGCRcmdModel$initWithModel$)(_LOGOS_SELF_TYPE_INIT BBAdUGCRcmdModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCRcmdModel* _logos_method$_ungrouped$BBAdUGCRcmdModel$initWithModel$(_LOGOS_SELF_TYPE_INIT BBAdUGCRcmdModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCRcmdModel* (*_logos_orig$_ungrouped$BBAdUGCRcmdModel$initWithSourceContentAny$)(_LOGOS_SELF_TYPE_INIT BBAdUGCRcmdModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCRcmdModel* _logos_method$_ungrouped$BBAdUGCRcmdModel$initWithSourceContentAny$(_LOGOS_SELF_TYPE_INIT BBAdUGCRcmdModel*, SEL, id) _LOGOS_RETURN_RETAINED; static __kindof UICollectionViewCell * (*_logos_orig$_ungrouped$IGListAdapter$collectionView$cellForItemAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL, UICollectionView *, NSIndexPath *); static __kindof UICollectionViewCell * _logos_method$_ungrouped$IGListAdapter$collectionView$cellForItemAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL, UICollectionView *, NSIndexPath *); static CGSize (*_logos_orig$_ungrouped$IGListAdapter$collectionView$layout$sizeForItemAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL, UICollectionView *, UICollectionViewLayout*, NSIndexPath *); static CGSize _logos_method$_ungrouped$IGListAdapter$collectionView$layout$sizeForItemAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL, UICollectionView *, UICollectionViewLayout*, NSIndexPath *); static NSMutableSet * _logos_method$_ungrouped$IGListAdapter$nj_filterIndexPaths(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL); static NSSet<NSString *> * _logos_method$_ungrouped$IGListAdapter$nj_filterCellTypes(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL); static NSSet<NSString *> * _logos_method$_ungrouped$IGListAdapter$nj_filterCellIds(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST, SEL); static BBAdSourceContent* (*_logos_orig$_ungrouped$BBAdSourceContent$init)(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* _logos_method$_ungrouped$BBAdSourceContent$init(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static id (*_logos_meta_orig$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id _logos_meta_method$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); 
+@class BBAdCommonBaseModel; @class BAPIAppViewuniteV1IntroductionTab; @class BAPIAppViewuniteCommonRelates; @class BBAdUGCContext; @class BAPIAppViewuniteV1RelatesFeedReply; @class BBAdSourceContent; 
+static BBAdUGCContext* (*_logos_orig$_ungrouped$BBAdUGCContext$initWithResovler$)(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCContext* _logos_method$_ungrouped$BBAdUGCContext$initWithResovler$(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static NSMutableArray * (*_logos_orig$_ungrouped$BAPIAppViewuniteV1IntroductionTab$modulesArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$_ungrouped$BAPIAppViewuniteV1IntroductionTab$modulesArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$_ungrouped$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$_ungrouped$BAPIAppViewuniteCommonRelates$cardsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$_ungrouped$BAPIAppViewuniteCommonRelates$cardsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static BAPIAppViewuniteV1RelatesFeedReply* (*_logos_orig$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppViewuniteV1RelatesFeedReply* _logos_method$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* (*_logos_orig$_ungrouped$BBAdSourceContent$init)(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* _logos_method$_ungrouped$BBAdSourceContent$init(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static id (*_logos_meta_orig$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id _logos_meta_method$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); 
 
-#line 11 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/NJDetailAd.xm"
+#line 38 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJDetailAd.xm"
 
 
 static BBAdUGCContext* _logos_method$_ungrouped$BBAdUGCContext$initWithResovler$(_LOGOS_SELF_TYPE_INIT BBAdUGCContext* __unused self, SEL __unused _cmd, id resovler) _LOGOS_RETURN_RETAINED {
@@ -47,94 +74,141 @@ static BBAdUGCContext* _logos_method$_ungrouped$BBAdUGCContext$initWithResovler$
 
 
 
-static BBAdUGCRcmdModel* _logos_method$_ungrouped$BBAdUGCRcmdModel$initWithModel$(_LOGOS_SELF_TYPE_INIT BBAdUGCRcmdModel* __unused self, SEL __unused _cmd, id model) _LOGOS_RETURN_RETAINED {
-    return nil;
-}
+@interface BAPIAppViewuniteCommonModule : NSObject
 
-static BBAdUGCRcmdModel* _logos_method$_ungrouped$BBAdUGCRcmdModel$initWithSourceContentAny$(_LOGOS_SELF_TYPE_INIT BBAdUGCRcmdModel* __unused self, SEL __unused _cmd, id any) _LOGOS_RETURN_RETAINED {
-    return nil;
-}
-
-
-
-
-@interface IGListAdapter : NSObject
-
-
-- (NSMutableSet *)nj_filterIndexPaths;
-
-- (NSSet<NSString *> *)nj_filterCellTypes;
-
-- (NSSet<NSString *> *)nj_filterCellIds;
-
-- (void)reloadDataWithCompletion:(id)completion;
+@property (nonatomic, assign) int type;
 
 @end
- 
+
+@interface BAPIAppViewuniteV1IntroductionTab : NSObject
+
+@property (retain, nonatomic) NSMutableArray *modulesArray;
+
+- (NSSet<NSNumber *> *)nj_filterTypes;
+
+@end
 
 
-static __kindof UICollectionViewCell * _logos_method$_ungrouped$IGListAdapter$collectionView$cellForItemAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UICollectionView * collectionView, NSIndexPath * indexPath) {
-    UICollectionViewCell *cell = _logos_orig$_ungrouped$IGListAdapter$collectionView$cellForItemAtIndexPath$(self, _cmd, collectionView, indexPath);
-    if ([[self nj_filterCellIds] containsObject:cell.reuseIdentifier] ||
-        [[self nj_filterCellTypes] containsObject:NSStringFromClass([cell class])]) {
-        if (![[self nj_filterIndexPaths] containsObject:indexPath]) {
 
-            [[self nj_filterIndexPaths] addObject:indexPath];
-            [self reloadDataWithCompletion:nil];
+static NSMutableArray * _logos_method$_ungrouped$BAPIAppViewuniteV1IntroductionTab$modulesArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    NSMutableArray *origModules = _logos_orig$_ungrouped$BAPIAppViewuniteV1IntroductionTab$modulesArray(self, _cmd);
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppViewuniteCommonModule *item in origModules) {
+        if ([[self nj_filterTypes] containsObject:@(item.type)]) {
+            continue;
         }
-    } else {
-        if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
-
-            [[self nj_filterIndexPaths] removeObject:indexPath];
-            [self reloadDataWithCompletion:nil];
-        }
+        [items addObject:item];
     }
-    return cell;
-}
-
-static CGSize _logos_method$_ungrouped$IGListAdapter$collectionView$layout$sizeForItemAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UICollectionView * collectionView, UICollectionViewLayout* collectionViewLayout, NSIndexPath * indexPath) {
-    if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
-
-        return CGSizeMake(0.0, 0.1);
-    }
-    return _logos_orig$_ungrouped$IGListAdapter$collectionView$layout$sizeForItemAtIndexPath$(self, _cmd, collectionView, collectionViewLayout, indexPath);
+    
+    [self setModulesArray:items];
+    return items;
 }
 
 
-
-
-static NSMutableSet * _logos_method$_ungrouped$IGListAdapter$nj_filterIndexPaths(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    NSMutableSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterIndexPaths));
+static NSSet<NSNumber *> * _logos_method$_ungrouped$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
     if (!filterSet) {
-        filterSet = [NSMutableSet set];
-        objc_setAssociatedObject(self, @selector(nj_filterIndexPaths), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return filterSet;
-}
-
-
-
-static NSSet<NSString *> * _logos_method$_ungrouped$IGListAdapter$nj_filterCellTypes(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCellType));
-    if (!filterSet) {
-        NSArray *types = @[];
+        NSArray *types = @[
+            @(0x0000000000000037),   
+        ];
         filterSet = [NSSet setWithArray:types];
-        objc_setAssociatedObject(self, @selector(nj_filterCellType), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return filterSet;
 }
 
 
 
-static NSSet<NSString *> * _logos_method$_ungrouped$IGListAdapter$nj_filterCellIds(_LOGOS_SELF_TYPE_NORMAL IGListAdapter* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCellId));
+
+@interface BAPIAppViewuniteCommonRelateCard : NSObject
+
+
+@property (nonatomic, assign) int relateCardType;
+
+@property (nonatomic) _Bool hasCmStock;
+
+@end
+
+@interface NJDetailIntroductionCardFilterTool : NSObject
+
+
++ (NSSet<NSNumber *> *)filterTypes;
+
+@end
+
+@implementation NJDetailIntroductionCardFilterTool
+
+
+
+
+
+
+
++ (NSSet<NSNumber *> *)filterTypes {
+    static NSSet *filterSet;
     if (!filterSet) {
-        NSArray *ids = @[@"AdMerchandiseViewBBVideoModule.VDViewSectionControllerCell"];
-        filterSet = [NSSet setWithArray:ids];
-        objc_setAssociatedObject(self, @selector(nj_filterCellId), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        NSArray *types = @[
+            @(4),   
+            @(5),   
+            @(6),   
+        ];
+        filterSet = [NSSet setWithArray:types];
     }
     return filterSet;
 }
+
+@end
+
+@interface BAPIAppViewuniteCommonRelates : NSObject
+
+@property (retain, nonatomic) NSMutableArray *cardsArray;
+
+@end
+
+
+
+static NSMutableArray * _logos_method$_ungrouped$BAPIAppViewuniteCommonRelates$cardsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    NSMutableArray *origCards = _logos_orig$_ungrouped$BAPIAppViewuniteCommonRelates$cardsArray(self, _cmd);
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppViewuniteCommonRelateCard *item in origCards) {
+        if ([[NJDetailIntroductionCardFilterTool filterTypes] containsObject:@(item.relateCardType)] ||
+            item.hasCmStock) {
+            continue;
+        }
+        [items addObject:item];
+    }
+    
+    [self setCardsArray:items];
+    return items;
+}
+
+
+
+
+@interface BAPIAppViewuniteV1RelatesFeedReply : NSObject
+
+@property (retain, nonatomic) NSMutableArray *relatesArray;
+
+@end
+
+
+
+static BAPIAppViewuniteV1RelatesFeedReply* _logos_method$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply* __unused self, SEL __unused _cmd, id data, id registry, id * error) _LOGOS_RETURN_RETAINED {
+    BAPIAppViewuniteV1RelatesFeedReply *result = _logos_orig$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$(self, _cmd, data, registry, error);
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppViewuniteCommonRelateCard *item in result.relatesArray) {
+        if ([[NJDetailIntroductionCardFilterTool filterTypes] containsObject:@(item.relateCardType)] ||
+            item.hasCmStock) {
+            continue;
+        }
+        [items addObject:item];
+    }
+    result.relatesArray = items;
+    return result;
+}
+
+
+
 
 
 
@@ -156,5 +230,5 @@ static id _logos_meta_method$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$BBAdUGCContext = objc_getClass("BBAdUGCContext"); { MSHookMessageEx(_logos_class$_ungrouped$BBAdUGCContext, @selector(initWithResovler:), (IMP)&_logos_method$_ungrouped$BBAdUGCContext$initWithResovler$, (IMP*)&_logos_orig$_ungrouped$BBAdUGCContext$initWithResovler$);}Class _logos_class$_ungrouped$BBAdUGCRcmdModel = objc_getClass("BBAdUGCRcmdModel"); { MSHookMessageEx(_logos_class$_ungrouped$BBAdUGCRcmdModel, @selector(initWithModel:), (IMP)&_logos_method$_ungrouped$BBAdUGCRcmdModel$initWithModel$, (IMP*)&_logos_orig$_ungrouped$BBAdUGCRcmdModel$initWithModel$);}{ MSHookMessageEx(_logos_class$_ungrouped$BBAdUGCRcmdModel, @selector(initWithSourceContentAny:), (IMP)&_logos_method$_ungrouped$BBAdUGCRcmdModel$initWithSourceContentAny$, (IMP*)&_logos_orig$_ungrouped$BBAdUGCRcmdModel$initWithSourceContentAny$);}Class _logos_class$_ungrouped$IGListAdapter = objc_getClass("IGListAdapter"); { MSHookMessageEx(_logos_class$_ungrouped$IGListAdapter, @selector(collectionView:cellForItemAtIndexPath:), (IMP)&_logos_method$_ungrouped$IGListAdapter$collectionView$cellForItemAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$IGListAdapter$collectionView$cellForItemAtIndexPath$);}{ MSHookMessageEx(_logos_class$_ungrouped$IGListAdapter, @selector(collectionView:layout:sizeForItemAtIndexPath:), (IMP)&_logos_method$_ungrouped$IGListAdapter$collectionView$layout$sizeForItemAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$IGListAdapter$collectionView$layout$sizeForItemAtIndexPath$);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSMutableSet *), strlen(@encode(NSMutableSet *))); i += strlen(@encode(NSMutableSet *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$IGListAdapter, @selector(nj_filterIndexPaths), (IMP)&_logos_method$_ungrouped$IGListAdapter$nj_filterIndexPaths, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSString *> *), strlen(@encode(NSSet<NSString *> *))); i += strlen(@encode(NSSet<NSString *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$IGListAdapter, @selector(nj_filterCellTypes), (IMP)&_logos_method$_ungrouped$IGListAdapter$nj_filterCellTypes, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSString *> *), strlen(@encode(NSSet<NSString *> *))); i += strlen(@encode(NSSet<NSString *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$IGListAdapter, @selector(nj_filterCellIds), (IMP)&_logos_method$_ungrouped$IGListAdapter$nj_filterCellIds, _typeEncoding); }Class _logos_class$_ungrouped$BBAdSourceContent = objc_getClass("BBAdSourceContent"); { MSHookMessageEx(_logos_class$_ungrouped$BBAdSourceContent, @selector(init), (IMP)&_logos_method$_ungrouped$BBAdSourceContent$init, (IMP*)&_logos_orig$_ungrouped$BBAdSourceContent$init);}Class _logos_class$_ungrouped$BBAdCommonBaseModel = objc_getClass("BBAdCommonBaseModel"); Class _logos_metaclass$_ungrouped$BBAdCommonBaseModel = object_getClass(_logos_class$_ungrouped$BBAdCommonBaseModel); { MSHookMessageEx(_logos_metaclass$_ungrouped$BBAdCommonBaseModel, @selector(modelWithMossMessage:), (IMP)&_logos_meta_method$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$, (IMP*)&_logos_meta_orig$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$);}} }
-#line 130 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/NJDetailAd.xm"
+{Class _logos_class$_ungrouped$BBAdUGCContext = objc_getClass("BBAdUGCContext"); { MSHookMessageEx(_logos_class$_ungrouped$BBAdUGCContext, @selector(initWithResovler:), (IMP)&_logos_method$_ungrouped$BBAdUGCContext$initWithResovler$, (IMP*)&_logos_orig$_ungrouped$BBAdUGCContext$initWithResovler$);}Class _logos_class$_ungrouped$BAPIAppViewuniteV1IntroductionTab = objc_getClass("BAPIAppViewuniteV1IntroductionTab"); { MSHookMessageEx(_logos_class$_ungrouped$BAPIAppViewuniteV1IntroductionTab, @selector(modulesArray), (IMP)&_logos_method$_ungrouped$BAPIAppViewuniteV1IntroductionTab$modulesArray, (IMP*)&_logos_orig$_ungrouped$BAPIAppViewuniteV1IntroductionTab$modulesArray);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIAppViewuniteV1IntroductionTab, @selector(nj_filterTypes), (IMP)&_logos_method$_ungrouped$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes, _typeEncoding); }Class _logos_class$_ungrouped$BAPIAppViewuniteCommonRelates = objc_getClass("BAPIAppViewuniteCommonRelates"); { MSHookMessageEx(_logos_class$_ungrouped$BAPIAppViewuniteCommonRelates, @selector(cardsArray), (IMP)&_logos_method$_ungrouped$BAPIAppViewuniteCommonRelates$cardsArray, (IMP*)&_logos_orig$_ungrouped$BAPIAppViewuniteCommonRelates$cardsArray);}Class _logos_class$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply = objc_getClass("BAPIAppViewuniteV1RelatesFeedReply"); { MSHookMessageEx(_logos_class$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$_ungrouped$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$);}Class _logos_class$_ungrouped$BBAdSourceContent = objc_getClass("BBAdSourceContent"); { MSHookMessageEx(_logos_class$_ungrouped$BBAdSourceContent, @selector(init), (IMP)&_logos_method$_ungrouped$BBAdSourceContent$init, (IMP*)&_logos_orig$_ungrouped$BBAdSourceContent$init);}Class _logos_class$_ungrouped$BBAdCommonBaseModel = objc_getClass("BBAdCommonBaseModel"); Class _logos_metaclass$_ungrouped$BBAdCommonBaseModel = object_getClass(_logos_class$_ungrouped$BBAdCommonBaseModel); { MSHookMessageEx(_logos_metaclass$_ungrouped$BBAdCommonBaseModel, @selector(modelWithMossMessage:), (IMP)&_logos_meta_method$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$, (IMP*)&_logos_meta_orig$_ungrouped$BBAdCommonBaseModel$modelWithMossMessage$);}} }
+#line 204 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJDetailAd.xm"

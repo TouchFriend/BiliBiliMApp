@@ -1,5 +1,32 @@
 // 视频详情页广告
 
+/*
+ BAPIAppPlayeruniteV1PlayViewUniteReply：请求视频信息响应model
+ 
+ BAPIAppViewuniteV1ViewReply： 请求卡片列表响应model
+    BAPIAppViewuniteV1Tab：所有标签信息，通过数组保存
+        BAPIAppViewuniteV1TabModule：统一通用标签model，根据类型选择具体的标签model
+            BAPIAppViewuniteV1IntroductionTab：简介标签信息
+                BAPIAppViewuniteCommonModule：简介视图统一通用模块
+            BAPIAppViewuniteV1ReplyTab：评论标签信息
+            BAPIAppViewuniteCommonActivityTab：活动标签信息
+ 
+ BAPIAppViewuniteCommonModule：简介视图统一通用模块
+    BAPIAppViewuniteCommonHeadline:视频标题；type: UGC_HEADLINE
+    BAPIAppViewuniteCommonUgcIntroduction：UGC简介，比如标签、评分、通用排名等等；type: UGC_INTRODUCTION
+    BAPIAppViewuniteCommonKingPosition：操作栏，比如点赞，不喜欢，投币等等； type: KING_POSITION
+    BAPIAppViewuniteCommonSpecialTag：特殊标签；type: SPECIALTAG
+    BAPIAppViewuniteCommonMerchandise：UP主分享好物；type: MERCHANDISE
+    BAPIAppViewuniteCommonRelates: 推荐内容；type: RELATED_RECOMMEND
+        BAPIAppViewuniteCommonRelateCard:统一通用相关卡片
+
+ BAPIAppViewuniteCommonRelateCard:统一通用相关卡片
+    BAPIAppViewuniteCommonRelateGameCard：游戏卡片；relate_card_type: GAME
+    BAPIAppViewuniteCommonRelateLiveCard: 直播卡片；relate_card_type: LIVE
+    BAPIAppViewuniteCommonRelateCMCard: 广告卡片; relate_card_type: CM
+ 
+ */
+
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
@@ -16,99 +43,146 @@
 
 %end
 
-// 列表广告
-%hook BBAdUGCRcmdModel
+/****************************** 简介标签 ************************************/
 
-- (id)initWithModel:(id)model {
-    return nil;
-}
+// 简介-UP主分享好物
+@interface BAPIAppViewuniteCommonModule : NSObject
 
-- (id)initWithSourceContentAny:(id)any {
-    return nil;
-}
-
-%end
-
-// UP主分享好物广告
-@interface IGListAdapter : NSObject
-
-// 过滤cell的索引
-- (NSMutableSet *)nj_filterIndexPaths;
-// 要过滤的cell类型
-- (NSSet<NSString *> *)nj_filterCellTypes;
-// 要过滤的cell id
-- (NSSet<NSString *> *)nj_filterCellIds;
-
-- (void)reloadDataWithCompletion:(id)completion;
+@property (nonatomic, assign) int type;
 
 @end
- 
-%hook IGListAdapter
 
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = %orig;
-    if ([[self nj_filterCellIds] containsObject:cell.reuseIdentifier] ||
-        [[self nj_filterCellTypes] containsObject:NSStringFromClass([cell class])]) {
-        if (![[self nj_filterIndexPaths] containsObject:indexPath]) {
-//            %log(nj_logPrefix, @"-add", indexPath, [self nj_filterIndexPaths]);
-            [[self nj_filterIndexPaths] addObject:indexPath];
-            [self reloadDataWithCompletion:nil];
+@interface BAPIAppViewuniteV1IntroductionTab : NSObject
+
+@property (retain, nonatomic) NSMutableArray *modulesArray;
+
+- (NSSet<NSNumber *> *)nj_filterTypes;
+
+@end
+
+%hook BAPIAppViewuniteV1IntroductionTab
+
+- (NSMutableArray *)modulesArray {
+    NSMutableArray *origModules = %orig;
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppViewuniteCommonModule *item in origModules) {
+        if ([[self nj_filterTypes] containsObject:@(item.type)]) {
+            continue;
         }
-    } else {
-        if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
-//            %log(nj_logPrefix, @"-rm", indexPath, [self nj_filterIndexPaths]);
-            [[self nj_filterIndexPaths] removeObject:indexPath];
-            [self reloadDataWithCompletion:nil];
-        }
+        [items addObject:item];
     }
-    return cell;
+    // 保存过滤后的数据
+    [self setModulesArray:items];
+    return items;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[self nj_filterIndexPaths] containsObject:indexPath]) {
-//        %log(nj_logPrefix);
-        return CGSizeMake(0.0, 0.1);
-    }
-    return %orig;
-}
-
-
-// 要过滤的cell索引
 %new
-- (NSMutableSet *)nj_filterIndexPaths {
-    NSMutableSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterIndexPaths));
+- (NSSet<NSNumber *> *)nj_filterTypes {
+    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
     if (!filterSet) {
-        filterSet = [NSMutableSet set];
-        objc_setAssociatedObject(self, @selector(nj_filterIndexPaths), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return filterSet;
-}
-
-// 要过滤的cell类型
-%new
-- (NSSet<NSString *> *)nj_filterCellTypes {
-    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCellType));
-    if (!filterSet) {
-        NSArray *types = @[];
+        NSArray *types = @[
+            @(0x0000000000000037),   // MERCHANDISE, UP主分享好物
+        ];
         filterSet = [NSSet setWithArray:types];
-        objc_setAssociatedObject(self, @selector(nj_filterCellType), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return filterSet;
-}
-
-// 要过滤的cell id
-%new
-- (NSSet<NSString *> *)nj_filterCellIds {
-    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCellId));
-    if (!filterSet) {
-        NSArray *ids = @[@"AdMerchandiseViewBBVideoModule.VDViewSectionControllerCell"];
-        filterSet = [NSSet setWithArray:ids];
-        objc_setAssociatedObject(self, @selector(nj_filterCellId), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return filterSet;
 }
 
 %end
+
+// 简介的首屏卡片
+@interface BAPIAppViewuniteCommonRelateCard : NSObject
+
+/// 卡片类型
+@property (nonatomic, assign) int relateCardType;
+/// 是否是广告（买了推广的）
+@property (nonatomic) _Bool hasCmStock;
+
+@end
+
+@interface NJDetailIntroductionCardFilterTool : NSObject
+
+/// 过滤卡片类型
++ (NSSet<NSNumber *> *)filterTypes;
+
+@end
+
+@implementation NJDetailIntroductionCardFilterTool
+
+/*
+    relate_card_type: AV relateCardType:1   // 普通视频卡片
+    relate_card_type: GAME relateCardType:4 // 游戏卡片
+    relate_card_type: CM relateCardType:5   // 广告卡片
+    relate_card_type: LIVE relateCardType:6 // 直播卡片
+ */
++ (NSSet<NSNumber *> *)filterTypes {
+    static NSSet *filterSet;
+    if (!filterSet) {
+        NSArray *types = @[
+            @(4),   // GAME, 游戏卡片
+            @(5),   // CM, 广告卡片
+            @(6),   // LIVE, 直播卡片
+        ];
+        filterSet = [NSSet setWithArray:types];
+    }
+    return filterSet;
+}
+
+@end
+
+@interface BAPIAppViewuniteCommonRelates : NSObject
+
+@property (retain, nonatomic) NSMutableArray *cardsArray;
+
+@end
+
+%hook BAPIAppViewuniteCommonRelates
+
+- (NSMutableArray *)cardsArray {
+    NSMutableArray *origCards = %orig;
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppViewuniteCommonRelateCard *item in origCards) {
+        if ([[NJDetailIntroductionCardFilterTool filterTypes] containsObject:@(item.relateCardType)] ||
+            item.hasCmStock) {
+            continue;
+        }
+        [items addObject:item];
+    }
+    // 保存过滤后的数据
+    [self setCardsArray:items];
+    return items;
+}
+
+%end
+
+// 简介后续加载的卡片
+@interface BAPIAppViewuniteV1RelatesFeedReply : NSObject
+
+@property (retain, nonatomic) NSMutableArray *relatesArray;
+
+@end
+
+%hook BAPIAppViewuniteV1RelatesFeedReply
+
+- (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
+    BAPIAppViewuniteV1RelatesFeedReply *result = %orig;
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppViewuniteCommonRelateCard *item in result.relatesArray) {
+        if ([[NJDetailIntroductionCardFilterTool filterTypes] containsObject:@(item.relateCardType)] ||
+            item.hasCmStock) {
+            continue;
+        }
+        [items addObject:item];
+    }
+    result.relatesArray = items;
+    return result;
+}
+
+%end
+
+
+/****************************** 评论标签 ************************************/
 
 // 评论顶部黄色广告条
 %hook BBAdSourceContent

@@ -34,9 +34,7 @@
         }
         [items addObject:item];
     }
-    NSInteger oldCount = result.itemArray_Count;
     result.itemArray = items;
-//    NSLog(@"%@:%@-%p-%s-oldCount:%ld-newCount:%llu", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__, oldCount, result.itemArray_Count);
     return result;
 }
 
