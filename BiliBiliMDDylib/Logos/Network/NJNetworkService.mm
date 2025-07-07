@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Network/NJNetworkService.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Network/NJNetworkService.xm"
 
 
 #import <UIKit/UIKit.h>
@@ -38,7 +38,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BFCRequest; 
 static BFCRequest* (*_logos_orig$_ungrouped$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$)(_LOGOS_SELF_TYPE_INIT BFCRequest*, SEL, NSURLRequest *, unsigned long long, long long, void (^)(long long param1, long long param2, long long param3), void (^)(id<BFCApiMetrics> metrics), void (^)(NSData *data, NSURLResponse *response, NSError *error)) _LOGOS_RETURN_RETAINED; static BFCRequest* _logos_method$_ungrouped$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$(_LOGOS_SELF_TYPE_INIT BFCRequest*, SEL, NSURLRequest *, unsigned long long, long long, void (^)(long long param1, long long param2, long long param3), void (^)(id<BFCApiMetrics> metrics), void (^)(NSData *data, NSURLResponse *response, NSError *error)) _LOGOS_RETURN_RETAINED; 
 
-#line 14 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Network/NJNetworkService.xm"
+#line 14 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Network/NJNetworkService.xm"
 
 
 
@@ -69,4 +69,4 @@ static BFCRequest* _logos_method$_ungrouped$BFCRequest$initWithRequest$taskType$
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$BFCRequest = objc_getClass("BFCRequest"); { MSHookMessageEx(_logos_class$_ungrouped$BFCRequest, @selector(initWithRequest:taskType:priority:progressHandler:metricsHandler:completionHandler:), (IMP)&_logos_method$_ungrouped$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$, (IMP*)&_logos_orig$_ungrouped$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$);}} }
-#line 42 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Network/NJNetworkService.xm"
+#line 42 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Network/NJNetworkService.xm"

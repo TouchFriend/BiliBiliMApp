@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJSearchResult.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/NJSearchResult.xm"
 
 
 #import <UIKit/UIKit.h>
@@ -50,7 +50,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BAPIPolymerAppSearchV1SearchAllResponse; 
 static BAPIPolymerAppSearchV1SearchAllResponse* (*_logos_orig$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIPolymerAppSearchV1SearchAllResponse*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIPolymerAppSearchV1SearchAllResponse* _logos_method$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIPolymerAppSearchV1SearchAllResponse*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static NSSet<NSString *> * _logos_method$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$nj_filterCardTypes(_LOGOS_SELF_TYPE_NORMAL BAPIPolymerAppSearchV1SearchAllResponse* _LOGOS_SELF_CONST, SEL); 
 
-#line 26 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJSearchResult.xm"
+#line 26 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/NJSearchResult.xm"
 
 
 static BAPIPolymerAppSearchV1SearchAllResponse* _logos_method$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIPolymerAppSearchV1SearchAllResponse* __unused self, SEL __unused _cmd, id data, id registry, id * error) _LOGOS_RETURN_RETAINED {
@@ -80,4 +80,4 @@ static NSSet<NSString *> * _logos_method$_ungrouped$BAPIPolymerAppSearchV1Search
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse = objc_getClass("BAPIPolymerAppSearchV1SearchAllResponse"); { MSHookMessageEx(_logos_class$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSString *> *), strlen(@encode(NSSet<NSString *> *))); i += strlen(@encode(NSSet<NSString *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse, @selector(nj_filterCardTypes), (IMP)&_logos_method$_ungrouped$BAPIPolymerAppSearchV1SearchAllResponse$nj_filterCardTypes, _typeEncoding); }} }
-#line 53 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/NJSearchResult.xm"
+#line 53 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/NJSearchResult.xm"

@@ -61,6 +61,7 @@
 		BF45F0032DFECE1600CCE5FB /* NJCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = BF45EFFF2DFECE1600CCE5FB /* NJCommonDefine.h */; };
 		BF45F0042DFECE1600CCE5FB /* NJSearchResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF45F0012DFECE1600CCE5FB /* NJSearchResult.mm */; };
 		BF45F0052DFECE1600CCE5FB /* NJCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = BF45F0002DFECE1600CCE5FB /* NJCommonDefine.m */; };
+		BF514B1A2E1BE73A0008E458 /* NJDynamicAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF514AE52E1BE73A0008E458 /* NJDynamicAd.mm */; };
 		BF6326802DF19C5F00E7EE23 /* NJDetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF63267A2DF19C5F00E7EE23 /* NJDetailAd.mm */; };
 		BF6326822DF19C5F00E7EE23 /* NJLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = BF63267E2DF19C5F00E7EE23 /* NJLaunchAd.m */; };
 		BFEBF4BF2E0D743900ED612C /* NJDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEBF4BD2E0D743900ED612C /* NJDebug.mm */; };
@@ -152,6 +153,8 @@
 		BF45F0002DFECE1600CCE5FB /* NJCommonDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJCommonDefine.m; sourceTree = "<group>"; };
 		BF45F0012DFECE1600CCE5FB /* NJSearchResult.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSearchResult.mm; sourceTree = "<group>"; };
 		BF45F0022DFECE1600CCE5FB /* NJSearchResult.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJSearchResult.xm; sourceTree = "<group>"; };
+		BF514AE52E1BE73A0008E458 /* NJDynamicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDynamicAd.mm; sourceTree = "<group>"; };
+		BF514AE62E1BE73A0008E458 /* NJDynamicAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDynamicAd.xm; sourceTree = "<group>"; };
 		BF63267A2DF19C5F00E7EE23 /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
 		BF63267B2DF19C5F00E7EE23 /* NJDetailAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDetailAd.xm; sourceTree = "<group>"; };
 		BF63267E2DF19C5F00E7EE23 /* NJLaunchAd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLaunchAd.m; sourceTree = "<group>"; };
@@ -254,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				BF273A622E19402700EFD7F0 /* Category */,
+				BF514AE72E1BE73A0008E458 /* Dynamic */,
 				BF273A772E19402700EFD7F0 /* Home */,
 				BF273A7E2E19402700EFD7F0 /* Network */,
 				BFEBF4BD2E0D743900ED612C /* NJDebug.mm */,
@@ -397,6 +401,15 @@
 				BF273A7D2E19402700EFD7F0 /* NJNetworkService.xm */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BF514AE72E1BE73A0008E458 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				BF514AE52E1BE73A0008E458 /* NJDynamicAd.mm */,
+				BF514AE62E1BE73A0008E458 /* NJDynamicAd.xm */,
+			);
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,6 +609,7 @@
 				BF273A8A2E19402700EFD7F0 /* NSURL+NJPath.m in Sources */,
 				BF273A8B2E19402700EFD7F0 /* NJRcmdBannerV8Entry.m in Sources */,
 				BF273A8C2E19402700EFD7F0 /* NJRcmdCardDataItem.m in Sources */,
+				BF514B1A2E1BE73A0008E458 /* NJDynamicAd.mm in Sources */,
 				BF273A8D2E19402700EFD7F0 /* NJRcmdSmallCoverV2Entry.m in Sources */,
 				BF273A8E2E19402700EFD7F0 /* NJRcmdAd.mm in Sources */,
 				BF273A8F2E19402700EFD7F0 /* NJNetworkService.mm in Sources */,
