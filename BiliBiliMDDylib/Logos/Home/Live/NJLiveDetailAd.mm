@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/Live/NJLiveDetailAd.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Live/NJLiveDetailAd.xm"
 
 
 #import <UIKit/UIKit.h>
@@ -29,10 +29,10 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBLiveVerticalPanelViewController; @class BBLiveRevenueCardsContentView; @class BBLiveBaseAppointmentCardView; 
+@class BBLiveRevenueCardsContentView; @class BBLiveVerticalPanelViewController; @class BBLiveBaseAppointmentCardView; 
 static BBLiveRevenueCardsContentView* (*_logos_orig$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$)(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveRevenueCardsContentView* _logos_method$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView*, SEL, id, id) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$_ungrouped$BBLiveVerticalPanelViewController$viewWillAppear$)(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalPanelViewController* _LOGOS_SELF_CONST, SEL, BOOL); static void _logos_method$_ungrouped$BBLiveVerticalPanelViewController$viewWillAppear$(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalPanelViewController* _LOGOS_SELF_CONST, SEL, BOOL); static BBLiveBaseAppointmentCardView* (*_logos_orig$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentCardView* _logos_method$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; 
 
-#line 8 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/Live/NJLiveDetailAd.xm"
+#line 8 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Live/NJLiveDetailAd.xm"
 
 
 static BBLiveRevenueCardsContentView* _logos_method$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView* __unused self, SEL __unused _cmd, id source, id model) _LOGOS_RETURN_RETAINED {
@@ -90,4 +90,4 @@ static BBLiveBaseAppointmentCardView* _logos_method$_ungrouped$BBLiveBaseAppoint
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$BBLiveRevenueCardsContentView = objc_getClass("BBLiveRevenueCardsContentView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveRevenueCardsContentView, @selector(initWithDataSource:viewModel:), (IMP)&_logos_method$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$, (IMP*)&_logos_orig$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$);}Class _logos_class$_ungrouped$BBLiveVerticalPanelViewController = objc_getClass("BBLiveVerticalPanelViewController"); { objc_property_attribute_t _attributes[16]; unsigned int attrc = 0; _attributes[attrc++] = (objc_property_attribute_t) { "T", "@\"NSDate\"" }; _attributes[attrc++] = (objc_property_attribute_t) { "&", "" }; _attributes[attrc++] = (objc_property_attribute_t) { "N", "" }; class_addProperty(_logos_class$_ungrouped$BBLiveVerticalPanelViewController, "nj_liveAppearDate", _attributes, attrc); size_t _nBytes = 1024; char _typeEncoding[_nBytes]; snprintf(_typeEncoding, _nBytes, "%s@:", @encode(NSDate *)); class_addMethod(_logos_class$_ungrouped$BBLiveVerticalPanelViewController, @selector(nj_liveAppearDate), (IMP)&_logos_property$_ungrouped$BBLiveVerticalPanelViewController$nj_liveAppearDate, _typeEncoding); snprintf(_typeEncoding, _nBytes, "v@:%s", @encode(NSDate *)); class_addMethod(_logos_class$_ungrouped$BBLiveVerticalPanelViewController, @selector(setNj_liveAppearDate:), (IMP)&_logos_property$_ungrouped$BBLiveVerticalPanelViewController$setNj_liveAppearDate, _typeEncoding); } { MSHookMessageEx(_logos_class$_ungrouped$BBLiveVerticalPanelViewController, @selector(viewWillAppear:), (IMP)&_logos_method$_ungrouped$BBLiveVerticalPanelViewController$viewWillAppear$, (IMP*)&_logos_orig$_ungrouped$BBLiveVerticalPanelViewController$viewWillAppear$);}Class _logos_class$_ungrouped$BBLiveBaseAppointmentCardView = objc_getClass("BBLiveBaseAppointmentCardView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseAppointmentCardView, @selector(initWithEntryFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$);}} }
-#line 63 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/Live/NJLiveDetailAd.xm"
+#line 63 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Live/NJLiveDetailAd.xm"

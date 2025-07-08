@@ -36,8 +36,8 @@
 - (NSDictionary *_Nullable)handleBannerData:(NSMutableDictionary *)bannerDic {
     if ([bannerDic[@"type"] isEqualToString:@"static"]) {
         NSMutableDictionary *staticBannerDic = bannerDic[@"static_banner"];
-        if ([staticBannerDic[@"is_ad_loc"] isKindOfClass:[NSNumber class]] &&
-            [staticBannerDic[@"is_ad_loc"] boolValue] == YES) {
+        if ([staticBannerDic[@"cm_mark"] isKindOfClass:[NSNumber class]] &&
+            [staticBannerDic[@"cm_mark"] intValue] == 0) {
             return nil;
         }
     }
