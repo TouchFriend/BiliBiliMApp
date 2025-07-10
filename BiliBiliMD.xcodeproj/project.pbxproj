@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0355082E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0355072E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.m */; };
+		BF0355092E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0355062E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.h */; };
 		BF0D031C2DEDA95900115365 /* libBiliBiliMDDylib.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = BF0D031B2DEDA95900115365 /* libBiliBiliMDDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BF0D03212DEDA95900115365 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0D03202DEDA95900115365 /* JavaScriptCore.framework */; };
 		BF0D03232DEDA95900115365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0D03222DEDA95900115365 /* Foundation.framework */; };
@@ -57,7 +59,7 @@
 		BF48A9222E1FD52D0003372D /* NJAnimeChannelCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF48A8DD2E1FD52D0003372D /* NJAnimeChannelCardEntity.h */; };
 		BF48A9232E1FD52D0003372D /* NJAnimeChannelDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF48A8E22E1FD52D0003372D /* NJAnimeChannelDataItem.h */; };
 		BF48A9242E1FD52D0003372D /* NJLiveSecondGetListDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF48A8F22E1FD52D0003372D /* NJLiveSecondGetListDataItem.h */; };
-		BF48A9252E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF48A8E82E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.h */; };
+		BF48A9252E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF48A8E82E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.h */; };
 		BF48A9262E1FD52D0003372D /* NJRcmdBannerV8Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF48A8F82E1FD52D0003372D /* NJRcmdBannerV8Entry.h */; };
 		BF48A9272E1FD52D0003372D /* NJLiveIndexFeedCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A8EB2E1FD52D0003372D /* NJLiveIndexFeedCardEntity.m */; };
 		BF48A9282E1FD52D0003372D /* NJLiveSecondGetListDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A8F32E1FD52D0003372D /* NJLiveSecondGetListDataItem.m */; };
@@ -84,7 +86,7 @@
 		BF48A93D2E1FD52D0003372D /* NJAnimeChannelCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A8DE2E1FD52D0003372D /* NJAnimeChannelCardEntity.m */; };
 		BF48A93E2E1FD52D0003372D /* NJRcmdCmV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A9012E1FD52D0003372D /* NJRcmdCmV2Entry.m */; };
 		BF48A93F2E1FD52D0003372D /* NJRcmdSmallCoverV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A9032E1FD52D0003372D /* NJRcmdSmallCoverV2Entry.m */; };
-		BF48A9402E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A8E92E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.m */; };
+		BF48A9402E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48A8E92E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.m */; };
 		BF6326802DF19C5F00E7EE23 /* NJDetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF63267A2DF19C5F00E7EE23 /* NJDetailAd.mm */; };
 		BF6326822DF19C5F00E7EE23 /* NJLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = BF63267E2DF19C5F00E7EE23 /* NJLaunchAd.m */; };
 		BFEBF4BF2E0D743900ED612C /* NJDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEBF4BD2E0D743900ED612C /* NJDebug.mm */; };
@@ -115,6 +117,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF0355062E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerV2Entity.h; sourceTree = "<group>"; };
+		BF0355072E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerV2Entity.m; sourceTree = "<group>"; };
 		BF0D030A2DEDA95900115365 /* BiliBiliMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiliBiliMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D031B2DEDA95900115365 /* libBiliBiliMDDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libBiliBiliMDDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D03202DEDA95900115365 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -168,8 +172,8 @@
 		BF48A8E32E1FD52D0003372D /* NJAnimeChannelDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelDataItem.m; sourceTree = "<group>"; };
 		BF48A8E52E1FD52D0003372D /* NJHotTopicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJHotTopicAd.mm; sourceTree = "<group>"; };
 		BF48A8E62E1FD52D0003372D /* NJHotTopicAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJHotTopicAd.xm; sourceTree = "<group>"; };
-		BF48A8E82E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerEntity.h; sourceTree = "<group>"; };
-		BF48A8E92E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerEntity.m; sourceTree = "<group>"; };
+		BF48A8E82E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerV1Entity.h; sourceTree = "<group>"; };
+		BF48A8E92E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerV1Entity.m; sourceTree = "<group>"; };
 		BF48A8EA2E1FD52D0003372D /* NJLiveIndexFeedCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedCardEntity.h; sourceTree = "<group>"; };
 		BF48A8EB2E1FD52D0003372D /* NJLiveIndexFeedCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedCardEntity.m; sourceTree = "<group>"; };
 		BF48A8EC2E1FD52D0003372D /* NJLiveIndexFeedCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedCardHandler.h; sourceTree = "<group>"; };
@@ -179,7 +183,7 @@
 		BF48A8F22E1FD52D0003372D /* NJLiveSecondGetListDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveSecondGetListDataItem.h; sourceTree = "<group>"; };
 		BF48A8F32E1FD52D0003372D /* NJLiveSecondGetListDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveSecondGetListDataItem.m; sourceTree = "<group>"; };
 		BF48A8F52E1FD52D0003372D /* NJLiveDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJLiveDetailAd.mm; sourceTree = "<group>"; };
-		BF48A8F62E1FD52D0003372D /* NJLiveDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJLiveDetailAd.xm; sourceTree = "<group>"; };
+		BF48A8F62E1FD52D0003372D /* NJLiveDetailAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJLiveDetailAd.xm; sourceTree = "<group>"; };
 		BF48A8F82E1FD52D0003372D /* NJRcmdBannerV8Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdBannerV8Entry.h; sourceTree = "<group>"; };
 		BF48A8F92E1FD52D0003372D /* NJRcmdBannerV8Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdBannerV8Entry.m; sourceTree = "<group>"; };
 		BF48A8FA2E1FD52D0003372D /* NJRcmdCardEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardEntry.h; sourceTree = "<group>"; };
@@ -444,12 +448,14 @@
 		BF48A8EE2E1FD52D0003372D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BF48A8E82E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.h */,
-				BF48A8E92E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.m */,
+				BF48A8E82E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.h */,
+				BF48A8E92E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.m */,
 				BF48A8EA2E1FD52D0003372D /* NJLiveIndexFeedCardEntity.h */,
 				BF48A8EB2E1FD52D0003372D /* NJLiveIndexFeedCardEntity.m */,
 				BF48A8EC2E1FD52D0003372D /* NJLiveIndexFeedCardHandler.h */,
 				BF48A8ED2E1FD52D0003372D /* NJLiveIndexFeedCardHandler.m */,
+				BF0355062E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.h */,
+				BF0355072E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -565,8 +571,9 @@
 				BF48A9212E1FD52D0003372D /* NJRcmdCardHandler.h in Headers */,
 				BF48A9222E1FD52D0003372D /* NJAnimeChannelCardEntity.h in Headers */,
 				BF48A9232E1FD52D0003372D /* NJAnimeChannelDataItem.h in Headers */,
+				BF0355092E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.h in Headers */,
 				BF48A9242E1FD52D0003372D /* NJLiveSecondGetListDataItem.h in Headers */,
-				BF48A9252E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.h in Headers */,
+				BF48A9252E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.h in Headers */,
 				BF48A9262E1FD52D0003372D /* NJRcmdBannerV8Entry.h in Headers */,
 				BF0D03352DEDA95900115365 /* MDMethodTrace.h in Headers */,
 				BF0D035E2DEDA95900115365 /* fishhook.h in Headers */,
@@ -750,6 +757,7 @@
 				BF0D033A2DEDA95900115365 /* a1a2-selectortramps-arm.s in Sources */,
 				BF45F0042DFECE1600CCE5FB /* NJSearchResult.mm in Sources */,
 				BF45F0052DFECE1600CCE5FB /* NJCommonDefine.m in Sources */,
+				BF0355082E207EF300BD287B /* NJLiveIndexFeedBannerV2Entity.m in Sources */,
 				BF0D03402DEDA95900115365 /* a1a2-selectortramps-x86_64.s in Sources */,
 				BF0D034A2DEDA95900115365 /* OCMethodTrace.m in Sources */,
 				BF0D032F2DEDA95900115365 /* MDConfigManager.m in Sources */,
@@ -779,7 +787,7 @@
 				BF48A93D2E1FD52D0003372D /* NJAnimeChannelCardEntity.m in Sources */,
 				BF48A93E2E1FD52D0003372D /* NJRcmdCmV2Entry.m in Sources */,
 				BF48A93F2E1FD52D0003372D /* NJRcmdSmallCoverV2Entry.m in Sources */,
-				BF48A9402E1FD52D0003372D /* NJLiveIndexFeedBannerEntity.m in Sources */,
+				BF48A9402E1FD52D0003372D /* NJLiveIndexFeedBannerV1Entity.m in Sources */,
 				BF0D03592DEDA95900115365 /* AntiAntiDebug.m in Sources */,
 				BF0D034E2DEDA95900115365 /* OCSelectorTrampolines.mm in Sources */,
 				BF0D033E2DEDA95900115365 /* a1a2-selectortramps-i386.s in Sources */,

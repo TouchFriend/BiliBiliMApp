@@ -1,13 +1,13 @@
 //
-//  NJLiveIndexFeedBannerEntity.m
+//  NJLiveIndexFeedBannerV1Entity.m
 //  BiliBiliTweak
 //
 //  Created by touchWorld on 2025/7/9.
 //
 
-#import "NJLiveIndexFeedBannerEntity.h"
+#import "NJLiveIndexFeedBannerV1Entity.h"
 
-@implementation NJLiveIndexFeedBannerEntity
+@implementation NJLiveIndexFeedBannerV1Entity
 
 - (NSString *)cardType {
     return @"banner_v1";

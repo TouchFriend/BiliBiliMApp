@@ -1,5 +1,5 @@
 //
-//  NJLiveIndexFeedBannerEntity.h
+//  NJLiveIndexFeedBannerV1Entity.h
 //  BiliBiliTweak
 //
 //  Created by touchWorld on 2025/7/9.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NJLiveIndexFeedBannerEntity : NJLiveIndexFeedCardEntity
+@interface NJLiveIndexFeedBannerV1Entity : NJLiveIndexFeedCardEntity
 
 @end
 

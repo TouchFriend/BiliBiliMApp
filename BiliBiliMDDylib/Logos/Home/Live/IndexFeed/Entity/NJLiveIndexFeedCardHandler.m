@@ -7,7 +7,8 @@
 
 #import "NJLiveIndexFeedCardHandler.h"
 #import "NJLiveIndexFeedCardEntity.h"
-#import "NJLiveIndexFeedBannerEntity.h"
+#import "NJLiveIndexFeedBannerV1Entity.h"
+#import "NJLiveIndexFeedBannerV2Entity.h"
 
 @interface NJLiveIndexFeedCardHandler ()
 
@@ -79,7 +80,8 @@
 
 - (NSArray<Class> *)cardEntityClasses {
     if (!_cardEntityClasses) {
-        _cardEntityClasses = @[[NJLiveIndexFeedBannerEntity class], // banner
+        _cardEntityClasses = @[[NJLiveIndexFeedBannerV1Entity class],   // banner_v1
+                               [NJLiveIndexFeedBannerV2Entity class],   // banner_v2
         ];
     }
     return _cardEntityClasses;
