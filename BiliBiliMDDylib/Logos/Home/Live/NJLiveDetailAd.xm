@@ -45,8 +45,7 @@
 
 %end
 
-// 更多直播入口
-%hook BBLiveRoomMoreEntranceView
+%hook BBLiveBaseUserRankListEntryView
 
 - (id)initWithFrame:(CGRect)frame {
     return nil;
@@ -54,10 +53,35 @@
 
 %end
 
-//  顶部吊坠，比如LOL观赛福利入口
-%hook BBLiveRoomOperationBanner
+%hook BBLiveBasePopularRankEntryView
 
-- (id)init {
+- (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+%end
+
+// 分区排行，比如娱乐新人
+%hook BBLiveBaseAreaRankEntryView
+
+- (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+%end
+
+%hook BBLiveBaseMixedRankEntryView
+
+- (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+%end
+
+// 更多直播入口
+%hook BBLiveRoomMoreEntranceView
+
+- (id)initWithFrame:(CGRect)frame {
     return nil;
 }
 
@@ -82,10 +106,7 @@
 
 %end
 
-
-
-
-/*
+//  顶部吊坠，比如LOL观赛福利入口、红包、心愿单
 @interface BBLiveVerticalCenterBar : NSObject
 
 @property (retain, nonatomic) UIView *topPendantContainerView;
@@ -101,4 +122,4 @@
 }
 
 %end
-*/
+
