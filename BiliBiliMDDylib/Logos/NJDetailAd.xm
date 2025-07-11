@@ -81,7 +81,8 @@
     NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
     if (!filterSet) {
         NSArray *types = @[
-            @(0x0000000000000037),   // MERCHANDISE, UP主分享好物
+            @(55),      // MERCHANDISE, UP主分享好物
+            @(29),      // PAY_BAR, 大会员
         ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

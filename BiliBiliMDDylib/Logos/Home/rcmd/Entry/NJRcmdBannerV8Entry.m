@@ -35,13 +35,12 @@
 
 - (NSDictionary *_Nullable)handleBannerData:(NSMutableDictionary *)bannerDic {
     if ([bannerDic[@"type"] isEqualToString:@"static"]) {
-        NSMutableDictionary *staticBannerDic = bannerDic[@"static_banner"];
-        if ([staticBannerDic[@"cm_mark"] isKindOfClass:[NSNumber class]] &&
-            [staticBannerDic[@"cm_mark"] intValue] == 0) {
-            return nil;
-        }
+        return nil;
     }
     if ([bannerDic[@"type"] isEqualToString:@"ad"]) {
+        return nil;
+    }
+    if ([bannerDic[@"type"] isEqualToString:@"ad_inline_live"]) {
         return nil;
     }
     return bannerDic;

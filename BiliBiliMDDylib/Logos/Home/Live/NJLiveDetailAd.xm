@@ -78,10 +78,10 @@
 
 %end
 
-// 更多直播入口
-%hook BBLiveRoomMoreEntranceView
+// 右上角入口，比如观赛活动、更多直播入口
+%hook BBLiveTopRightEntranceManager
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)init {
     return nil;
 }
 
@@ -116,7 +116,6 @@
 %hook BBLiveVerticalCenterBar
 
 - (void)layoutTopPendantContainerView {
-    %log(nj_logPrefix);
     [self.topPendantContainerView removeFromSuperview];
     self.topPendantContainerView = nil;
 }
