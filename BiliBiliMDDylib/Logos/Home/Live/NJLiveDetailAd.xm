@@ -2,7 +2,6 @@
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
-#import "UIViewController+NJFind.h"
 
 // 收入面板，包含礼物面板
 %hook BBLiveRevenueCardsContentView
@@ -106,6 +105,15 @@
 
 %end
 
+// 弹幕下面的购物卡，比如热门抢购卡
+%hook BBLiveShoppingExplainCardViewModel
+
+- (id)initWithDataSource:(id)source tracker:(id)tracker {
+    return nil;
+}
+
+%end
+
 //  顶部吊坠，比如LOL观赛福利入口、红包、心愿单
 @interface BBLiveVerticalCenterBar : NSObject
 
@@ -121,4 +129,28 @@
 }
 
 %end
+
+
+// 礼物动画
+// BBLiveBaseMP4AnimationView
+// BBLiveBaseSpineAnimationView
+// BBLiveBaseSVGAAnimationView
+%hook BBLiveBaseAnimationView
+
+- (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+%end
+
+// 关注弹窗
+%hook BBLiveFollowCardAlertComponent
+
+- (id)initWithDataSource:(id)source {
+    return nil;
+}
+
+%end
+
+
 

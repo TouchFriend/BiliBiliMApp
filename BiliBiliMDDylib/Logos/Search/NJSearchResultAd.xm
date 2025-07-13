@@ -42,7 +42,11 @@
 - (NSSet<NSString *> *)nj_filterCardTypes {
     NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterCardTypes));
     if (!filterSet) {
-        NSArray *types = @[@"special_s", @"video_ad", @"picture_ad"];
+        NSArray *types = @[@"special_s",        // 广告
+                           @"video_ad",         // 视频广告
+                           @"picture_ad",       // 图片广告
+                           @"related_search",   // 相关搜索
+        ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterCardTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
