@@ -1,6 +1,6 @@
 // 调试
 /*
- b站的model继承自GPBMessage。
+ b站的PB model继承自GPBMessage。
  请求数据的model以Req结尾，比如BAPIAppViewuniteV1ViewReq。
  响应数据的model以Reply结尾，比如BAPIAppViewuniteV1ViewReply。
  

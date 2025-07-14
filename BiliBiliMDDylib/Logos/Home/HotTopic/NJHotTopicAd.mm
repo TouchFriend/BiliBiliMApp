@@ -1,9 +1,30 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/NJHotTopicAd.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/HotTopic/NJHotTopicAd.xm"
+
+
+
+
+
+
+
+
+
+
+
 
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
+#import "NJHotTopicCardHandler.h"
+#import "BAPIAppCardV1Card.h"
 
+
+@interface BAPIAppShowPopularV1PopularReply : NSObject
+
+@property (retain, nonatomic) NSMutableArray *itemsArray;
+
+@property (nonatomic, strong) NJHotTopicCardHandler *nj_cardHandler;
+
+@end
 
 
 #include <substrate.h>
@@ -28,56 +49,73 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBHotTopicSmallCoverAdModel; @class BBHotTopicRcmdOneItemModel; @class BBHotTopicTopicListModel; @class BBHotTopicSmallCoverV5Model; 
-static BBHotTopicTopicListModel* (*_logos_orig$_ungrouped$BBHotTopicTopicListModel$initWithGPBMessage$)(_LOGOS_SELF_TYPE_INIT BBHotTopicTopicListModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicTopicListModel* _logos_method$_ungrouped$BBHotTopicTopicListModel$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicTopicListModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicRcmdOneItemModel* (*_logos_orig$_ungrouped$BBHotTopicRcmdOneItemModel$initWithGPBMessage$)(_LOGOS_SELF_TYPE_INIT BBHotTopicRcmdOneItemModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicRcmdOneItemModel* _logos_method$_ungrouped$BBHotTopicRcmdOneItemModel$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicRcmdOneItemModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicSmallCoverV5Model* (*_logos_orig$_ungrouped$BBHotTopicSmallCoverV5Model$initWithGPBMessage$)(_LOGOS_SELF_TYPE_INIT BBHotTopicSmallCoverV5Model*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicSmallCoverV5Model* _logos_method$_ungrouped$BBHotTopicSmallCoverV5Model$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicSmallCoverV5Model*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicSmallCoverAdModel* (*_logos_orig$_ungrouped$BBHotTopicSmallCoverAdModel$initWithGPBMessage$)(_LOGOS_SELF_TYPE_INIT BBHotTopicSmallCoverAdModel*, SEL, id) _LOGOS_RETURN_RETAINED; static BBHotTopicSmallCoverAdModel* _logos_method$_ungrouped$BBHotTopicSmallCoverAdModel$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicSmallCoverAdModel*, SEL, id) _LOGOS_RETURN_RETAINED; 
+@class BAPIAppCardV1PopularTopEntrance; @class BAPIAppShowPopularV1PopularReply; 
+static BAPIAppShowPopularV1PopularReply* (*_logos_orig$_ungrouped$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppShowPopularV1PopularReply* _logos_method$_ungrouped$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static NSMutableArray * (*_logos_orig$_ungrouped$BAPIAppCardV1PopularTopEntrance$itemsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$_ungrouped$BAPIAppCardV1PopularTopEntrance$itemsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST, SEL); 
 
-#line 7 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/NJHotTopicAd.xm"
+#line 28 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/HotTopic/NJHotTopicAd.xm"
 
 
-static BBHotTopicTopicListModel* _logos_method$_ungrouped$BBHotTopicTopicListModel$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicTopicListModel* __unused self, SEL __unused _cmd, id gpbmessage) _LOGOS_RETURN_RETAINED {
-    return nil;
+
+__attribute__((used)) static NJHotTopicCardHandler * _logos_property$_ungrouped$BAPIAppShowPopularV1PopularReply$nj_cardHandler(BAPIAppShowPopularV1PopularReply * __unused self, SEL __unused _cmd) { return (NJHotTopicCardHandler *)objc_getAssociatedObject(self, (void *)_logos_property$_ungrouped$BAPIAppShowPopularV1PopularReply$nj_cardHandler); }; __attribute__((used)) static void _logos_property$_ungrouped$BAPIAppShowPopularV1PopularReply$setNj_cardHandler(BAPIAppShowPopularV1PopularReply * __unused self, SEL __unused _cmd, NJHotTopicCardHandler * rawValue) { objc_setAssociatedObject(self, (void *)_logos_property$_ungrouped$BAPIAppShowPopularV1PopularReply$nj_cardHandler, rawValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC); }
+
+static BAPIAppShowPopularV1PopularReply* _logos_method$_ungrouped$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply* __unused self, SEL __unused _cmd, id data, id registry, id * error) _LOGOS_RETURN_RETAINED {
+    BAPIAppShowPopularV1PopularReply *result = _logos_orig$_ungrouped$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$(self, _cmd, data, registry, error);
+    result.nj_cardHandler = [[NJHotTopicCardHandler alloc] init];
+    
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPIAppCardV1Card *item in result.itemsArray) {
+        BAPIAppCardV1Card *cardData = [result.nj_cardHandler handleCardData:item];
+        if (cardData) {
+            [items addObject:cardData];
+        }
+    }
+    result.itemsArray = items;
+    return result;
 }
 
 
 
 
+@interface BAPIAppCardV1EntranceItem : NSObject
 
+@property (copy, nonatomic) NSString *moduleId;
 
-static BBHotTopicRcmdOneItemModel* _logos_method$_ungrouped$BBHotTopicRcmdOneItemModel$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicRcmdOneItemModel* __unused self, SEL __unused _cmd, id gpbmessage) _LOGOS_RETURN_RETAINED {
-    return nil;
-}
+@end
 
+@interface BAPIAppCardV1PopularTopEntrance : NSObject
 
-
-@interface BBHotTopicSmallCoverV5Model : NSObject
-
-- (id)smallCoverV5;
-- (id)base;
-- (NSString *)fromType;
+@property (retain, nonatomic) NSMutableArray *itemsArray;
 
 @end
 
 
 
-
-static BBHotTopicSmallCoverV5Model* _logos_method$_ungrouped$BBHotTopicSmallCoverV5Model$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicSmallCoverV5Model* __unused self, SEL __unused _cmd, id gpbmessage) _LOGOS_RETURN_RETAINED {
-    BBHotTopicSmallCoverV5Model *model = _logos_orig$_ungrouped$BBHotTopicSmallCoverV5Model$initWithGPBMessage$(self, _cmd, gpbmessage);
-    if ([[[[model smallCoverV5] base] fromType] isEqualToString:@"operation"]) {
-        return nil;
+static NSMutableArray * _logos_method$_ungrouped$BAPIAppCardV1PopularTopEntrance$itemsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    NSMutableArray *origItems = _logos_orig$_ungrouped$BAPIAppCardV1PopularTopEntrance$itemsArray(self, _cmd);
+    NSMutableArray *items = [NSMutableArray array];
+    
+    BOOL goodHistoryFlag = NO;
+    for (BAPIAppCardV1EntranceItem *item in origItems) {
+        if ([item.moduleId isEqualToString:@"hot-h5"] &&
+            !goodHistoryFlag) {
+            continue;
+        }
+        
+        if ([item.moduleId isEqualToString:@"good-history"]) {
+            goodHistoryFlag = YES;
+        }
+        [items addObject:item];
     }
-    return model;
+    
+    [self setItemsArray:items];
+    return items;
 }
 
 
 
 
-
-
-static BBHotTopicSmallCoverAdModel* _logos_method$_ungrouped$BBHotTopicSmallCoverAdModel$initWithGPBMessage$(_LOGOS_SELF_TYPE_INIT BBHotTopicSmallCoverAdModel* __unused self, SEL __unused _cmd, id gpbmessage) _LOGOS_RETURN_RETAINED {
-    return nil;
-}
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$BBHotTopicTopicListModel = objc_getClass("BBHotTopicTopicListModel"); { MSHookMessageEx(_logos_class$_ungrouped$BBHotTopicTopicListModel, @selector(initWithGPBMessage:), (IMP)&_logos_method$_ungrouped$BBHotTopicTopicListModel$initWithGPBMessage$, (IMP*)&_logos_orig$_ungrouped$BBHotTopicTopicListModel$initWithGPBMessage$);}Class _logos_class$_ungrouped$BBHotTopicRcmdOneItemModel = objc_getClass("BBHotTopicRcmdOneItemModel"); { MSHookMessageEx(_logos_class$_ungrouped$BBHotTopicRcmdOneItemModel, @selector(initWithGPBMessage:), (IMP)&_logos_method$_ungrouped$BBHotTopicRcmdOneItemModel$initWithGPBMessage$, (IMP*)&_logos_orig$_ungrouped$BBHotTopicRcmdOneItemModel$initWithGPBMessage$);}Class _logos_class$_ungrouped$BBHotTopicSmallCoverV5Model = objc_getClass("BBHotTopicSmallCoverV5Model"); { MSHookMessageEx(_logos_class$_ungrouped$BBHotTopicSmallCoverV5Model, @selector(initWithGPBMessage:), (IMP)&_logos_method$_ungrouped$BBHotTopicSmallCoverV5Model$initWithGPBMessage$, (IMP*)&_logos_orig$_ungrouped$BBHotTopicSmallCoverV5Model$initWithGPBMessage$);}Class _logos_class$_ungrouped$BBHotTopicSmallCoverAdModel = objc_getClass("BBHotTopicSmallCoverAdModel"); { MSHookMessageEx(_logos_class$_ungrouped$BBHotTopicSmallCoverAdModel, @selector(initWithGPBMessage:), (IMP)&_logos_method$_ungrouped$BBHotTopicSmallCoverAdModel$initWithGPBMessage$, (IMP*)&_logos_orig$_ungrouped$BBHotTopicSmallCoverAdModel$initWithGPBMessage$);}} }
-#line 53 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/NJHotTopicAd.xm"
+{Class _logos_class$_ungrouped$BAPIAppShowPopularV1PopularReply = objc_getClass("BAPIAppShowPopularV1PopularReply"); { objc_property_attribute_t _attributes[16]; unsigned int attrc = 0; _attributes[attrc++] = (objc_property_attribute_t) { "T", "@\"NJHotTopicCardHandler\"" }; _attributes[attrc++] = (objc_property_attribute_t) { "&", "" }; _attributes[attrc++] = (objc_property_attribute_t) { "N", "" }; class_addProperty(_logos_class$_ungrouped$BAPIAppShowPopularV1PopularReply, "nj_cardHandler", _attributes, attrc); size_t _nBytes = 1024; char _typeEncoding[_nBytes]; snprintf(_typeEncoding, _nBytes, "%s@:", @encode(NJHotTopicCardHandler *)); class_addMethod(_logos_class$_ungrouped$BAPIAppShowPopularV1PopularReply, @selector(nj_cardHandler), (IMP)&_logos_property$_ungrouped$BAPIAppShowPopularV1PopularReply$nj_cardHandler, _typeEncoding); snprintf(_typeEncoding, _nBytes, "v@:%s", @encode(NJHotTopicCardHandler *)); class_addMethod(_logos_class$_ungrouped$BAPIAppShowPopularV1PopularReply, @selector(setNj_cardHandler:), (IMP)&_logos_property$_ungrouped$BAPIAppShowPopularV1PopularReply$setNj_cardHandler, _typeEncoding); } { MSHookMessageEx(_logos_class$_ungrouped$BAPIAppShowPopularV1PopularReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$_ungrouped$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$_ungrouped$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$);}Class _logos_class$_ungrouped$BAPIAppCardV1PopularTopEntrance = objc_getClass("BAPIAppCardV1PopularTopEntrance"); { MSHookMessageEx(_logos_class$_ungrouped$BAPIAppCardV1PopularTopEntrance, @selector(itemsArray), (IMP)&_logos_method$_ungrouped$BAPIAppCardV1PopularTopEntrance$itemsArray, (IMP*)&_logos_orig$_ungrouped$BAPIAppCardV1PopularTopEntrance$itemsArray);}} }
+#line 91 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/HotTopic/NJHotTopicAd.xm"
