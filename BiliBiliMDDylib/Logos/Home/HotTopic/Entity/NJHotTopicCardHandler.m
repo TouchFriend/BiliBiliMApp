@@ -8,6 +8,7 @@
 #import "NJHotTopicCardHandler.h"
 #import "NJHotTopicCardEntity.h"
 #import "NJHotTopicRcmdOneItemEntity.h"
+#import "NJHotTopicSmallCoverV5Entity.h"
 
 @interface NJHotTopicCardHandler ()
 
@@ -80,7 +81,8 @@
 - (NSArray<Class> *)cardEntityClasses {
     if (!_cardEntityClasses) {
         _cardEntityClasses = @[
-            [NJHotTopicRcmdOneItemEntity class], // 推荐一个卡片，rcmd_one_item
+            [NJHotTopicRcmdOneItemEntity class],    // 推荐一个卡片，rcmd_one_item
+            [NJHotTopicSmallCoverV5Entity class],   // 小封面卡片，small_cover_v5
         ];
     }
     return _cardEntityClasses;
