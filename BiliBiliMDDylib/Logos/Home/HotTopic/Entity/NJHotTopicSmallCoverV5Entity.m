@@ -19,10 +19,6 @@
     if ([base.fromType isEqualToString:@"operation"]) {
         return nil;
     }
-    // 有广告信息
-    if (base.hasAdInfo) {
-        return nil;
-    }
     return data;
 }
 
