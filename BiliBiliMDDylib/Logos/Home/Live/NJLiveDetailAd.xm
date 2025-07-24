@@ -105,7 +105,7 @@
 
 %end
 
-// 弹幕下面的购物卡，比如热门抢购卡
+// 弹幕下面的购物说明卡，比如热门抢购卡
 %hook BBLiveShoppingExplainCardViewModel
 
 - (id)initWithDataSource:(id)source tracker:(id)tracker {
@@ -123,9 +123,14 @@
 
 %hook BBLiveVerticalCenterBar
 
+// 顶部吊坠
 - (void)layoutTopPendantContainerView {
     [self.topPendantContainerView removeFromSuperview];
     self.topPendantContainerView = nil;
+}
+
+// 弹幕下面的购物推荐卡
+- (void)_showShoppingRecommendViewWithInfo:(id)info completion:(id)completion {
 }
 
 %end
