@@ -5,7 +5,6 @@
 #import "NJCommonDefine.h"
 
 
-
 #include <substrate.h>
 #if defined(__clang__)
 #if __has_feature(objc_arc)
@@ -28,13 +27,16 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBLiveBasePopularRankEntryView; @class BBLiveShoppingExplainCardViewModel; @class BBLiveBaseAreaRankEntryView; @class BBLiveBaseAnimationView; @class BBLiveChainView; @class BBLiveBaseAppointmentCardView; @class BBLiveVerticalCenterBar; @class BBLiveRevenueCardsContentView; @class BBLiveBaseUserRankListEntryView; @class BBLiveBaseAppointmentEntryView; @class BBLiveBaseMixedRankEntryView; @class BBLiveFollowCardAlertComponent; @class BBLiveFunctionCardTaskManager; @class BBLiveTopRightEntranceManager; @class BBLiveBasePopularHotRankEntryView; 
-static BBLiveRevenueCardsContentView* (*_logos_orig$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$)(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveRevenueCardsContentView* _logos_method$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentEntryView* (*_logos_orig$_ungrouped$BBLiveBaseAppointmentEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentEntryView* _logos_method$_ungrouped$BBLiveBaseAppointmentEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentCardView* (*_logos_orig$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentCardView* _logos_method$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularHotRankEntryView* (*_logos_orig$_ungrouped$BBLiveBasePopularHotRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularHotRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularHotRankEntryView* _logos_method$_ungrouped$BBLiveBasePopularHotRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularHotRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseUserRankListEntryView* (*_logos_orig$_ungrouped$BBLiveBaseUserRankListEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseUserRankListEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseUserRankListEntryView* _logos_method$_ungrouped$BBLiveBaseUserRankListEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseUserRankListEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularRankEntryView* (*_logos_orig$_ungrouped$BBLiveBasePopularRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularRankEntryView* _logos_method$_ungrouped$BBLiveBasePopularRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAreaRankEntryView* (*_logos_orig$_ungrouped$BBLiveBaseAreaRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAreaRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAreaRankEntryView* _logos_method$_ungrouped$BBLiveBaseAreaRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAreaRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseMixedRankEntryView* (*_logos_orig$_ungrouped$BBLiveBaseMixedRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseMixedRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseMixedRankEntryView* _logos_method$_ungrouped$BBLiveBaseMixedRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseMixedRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveTopRightEntranceManager* (*_logos_orig$_ungrouped$BBLiveTopRightEntranceManager$init)(_LOGOS_SELF_TYPE_INIT BBLiveTopRightEntranceManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveTopRightEntranceManager* _logos_method$_ungrouped$BBLiveTopRightEntranceManager$init(_LOGOS_SELF_TYPE_INIT BBLiveTopRightEntranceManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveChainView* (*_logos_orig$_ungrouped$BBLiveChainView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveChainView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveChainView* _logos_method$_ungrouped$BBLiveChainView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveChainView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveFunctionCardTaskManager* (*_logos_orig$_ungrouped$BBLiveFunctionCardTaskManager$init)(_LOGOS_SELF_TYPE_INIT BBLiveFunctionCardTaskManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveFunctionCardTaskManager* _logos_method$_ungrouped$BBLiveFunctionCardTaskManager$init(_LOGOS_SELF_TYPE_INIT BBLiveFunctionCardTaskManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveShoppingExplainCardViewModel* (*_logos_orig$_ungrouped$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$)(_LOGOS_SELF_TYPE_INIT BBLiveShoppingExplainCardViewModel*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveShoppingExplainCardViewModel* _logos_method$_ungrouped$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$(_LOGOS_SELF_TYPE_INIT BBLiveShoppingExplainCardViewModel*, SEL, id, id) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$_ungrouped$BBLiveVerticalCenterBar$layoutTopPendantContainerView)(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$BBLiveVerticalCenterBar$layoutTopPendantContainerView(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$_ungrouped$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$)(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL, id, id); static void _logos_method$_ungrouped$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL, id, id); static BBLiveBaseAnimationView* (*_logos_orig$_ungrouped$BBLiveBaseAnimationView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAnimationView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAnimationView* _logos_method$_ungrouped$BBLiveBaseAnimationView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAnimationView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveFollowCardAlertComponent* (*_logos_orig$_ungrouped$BBLiveFollowCardAlertComponent$initWithDataSource$)(_LOGOS_SELF_TYPE_INIT BBLiveFollowCardAlertComponent*, SEL, id) _LOGOS_RETURN_RETAINED; static BBLiveFollowCardAlertComponent* _logos_method$_ungrouped$BBLiveFollowCardAlertComponent$initWithDataSource$(_LOGOS_SELF_TYPE_INIT BBLiveFollowCardAlertComponent*, SEL, id) _LOGOS_RETURN_RETAINED; 
-
-#line 7 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Live/NJLiveDetailAd.xm"
+@class BBLiveShoppingExplainCardViewModel; @class BBLiveBaseAreaRankEntryView; @class BBLiveBaseAppointmentEntryView; @class BBLiveChainView; @class BBLiveBasePopularRankEntryView; @class BBLiveBaseMixedRankEntryView; @class BBLiveBaseAppointmentCardView; @class BBLiveTopRightEntranceManager; @class BBLiveBasePopularHotRankEntryView; @class BBLiveBaseAnimationView; @class BBLiveVerticalCenterBar; @class BBLiveBaseUserRankListEntryView; @class BBLiveFunctionCardTaskManager; @class BBLiveRevenueCardsContentView; @class BBLiveFollowCardAlertComponent; 
 
 
-static BBLiveRevenueCardsContentView* _logos_method$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView* __unused self, SEL __unused _cmd, id source, id model) _LOGOS_RETURN_RETAINED {
+#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Live/NJLiveDetailAd.xm"
+static BBLiveRevenueCardsContentView* (*_logos_orig$App$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$)(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveRevenueCardsContentView* _logos_method$App$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentEntryView* (*_logos_orig$App$BBLiveBaseAppointmentEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentEntryView* _logos_method$App$BBLiveBaseAppointmentEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentCardView* (*_logos_orig$App$BBLiveBaseAppointmentCardView$initWithEntryFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAppointmentCardView* _logos_method$App$BBLiveBaseAppointmentCardView$initWithEntryFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularHotRankEntryView* (*_logos_orig$App$BBLiveBasePopularHotRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularHotRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularHotRankEntryView* _logos_method$App$BBLiveBasePopularHotRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularHotRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseUserRankListEntryView* (*_logos_orig$App$BBLiveBaseUserRankListEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseUserRankListEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseUserRankListEntryView* _logos_method$App$BBLiveBaseUserRankListEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseUserRankListEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularRankEntryView* (*_logos_orig$App$BBLiveBasePopularRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBasePopularRankEntryView* _logos_method$App$BBLiveBasePopularRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAreaRankEntryView* (*_logos_orig$App$BBLiveBaseAreaRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAreaRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAreaRankEntryView* _logos_method$App$BBLiveBaseAreaRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAreaRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseMixedRankEntryView* (*_logos_orig$App$BBLiveBaseMixedRankEntryView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseMixedRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseMixedRankEntryView* _logos_method$App$BBLiveBaseMixedRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseMixedRankEntryView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveTopRightEntranceManager* (*_logos_orig$App$BBLiveTopRightEntranceManager$init)(_LOGOS_SELF_TYPE_INIT BBLiveTopRightEntranceManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveTopRightEntranceManager* _logos_method$App$BBLiveTopRightEntranceManager$init(_LOGOS_SELF_TYPE_INIT BBLiveTopRightEntranceManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveChainView* (*_logos_orig$App$BBLiveChainView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveChainView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveChainView* _logos_method$App$BBLiveChainView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveChainView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveFunctionCardTaskManager* (*_logos_orig$App$BBLiveFunctionCardTaskManager$init)(_LOGOS_SELF_TYPE_INIT BBLiveFunctionCardTaskManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveFunctionCardTaskManager* _logos_method$App$BBLiveFunctionCardTaskManager$init(_LOGOS_SELF_TYPE_INIT BBLiveFunctionCardTaskManager*, SEL) _LOGOS_RETURN_RETAINED; static BBLiveShoppingExplainCardViewModel* (*_logos_orig$App$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$)(_LOGOS_SELF_TYPE_INIT BBLiveShoppingExplainCardViewModel*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBLiveShoppingExplainCardViewModel* _logos_method$App$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$(_LOGOS_SELF_TYPE_INIT BBLiveShoppingExplainCardViewModel*, SEL, id, id) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$App$BBLiveVerticalCenterBar$layoutTopPendantContainerView)(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBLiveVerticalCenterBar$layoutTopPendantContainerView(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$App$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$)(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL, id, id); static void _logos_method$App$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST, SEL, id, id); static BBLiveBaseAnimationView* (*_logos_orig$App$BBLiveBaseAnimationView$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BBLiveBaseAnimationView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveBaseAnimationView* _logos_method$App$BBLiveBaseAnimationView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAnimationView*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BBLiveFollowCardAlertComponent* (*_logos_orig$App$BBLiveFollowCardAlertComponent$initWithDataSource$)(_LOGOS_SELF_TYPE_INIT BBLiveFollowCardAlertComponent*, SEL, id) _LOGOS_RETURN_RETAINED; static BBLiveFollowCardAlertComponent* _logos_method$App$BBLiveFollowCardAlertComponent$initWithDataSource$(_LOGOS_SELF_TYPE_INIT BBLiveFollowCardAlertComponent*, SEL, id) _LOGOS_RETURN_RETAINED; 
+
+
+
+
+static BBLiveRevenueCardsContentView* _logos_method$App$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$(_LOGOS_SELF_TYPE_INIT BBLiveRevenueCardsContentView* __unused self, SEL __unused _cmd, id source, id model) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -44,7 +46,7 @@ static BBLiveRevenueCardsContentView* _logos_method$_ungrouped$BBLiveRevenueCard
 
 
 
-static BBLiveBaseAppointmentEntryView* _logos_method$_ungrouped$BBLiveBaseAppointmentEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveBaseAppointmentEntryView* _logos_method$App$BBLiveBaseAppointmentEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -57,7 +59,7 @@ static BBLiveBaseAppointmentEntryView* _logos_method$_ungrouped$BBLiveBaseAppoin
 
 
 
-static BBLiveBaseAppointmentCardView* _logos_method$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveBaseAppointmentCardView* _logos_method$App$BBLiveBaseAppointmentCardView$initWithEntryFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAppointmentCardView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -66,7 +68,7 @@ static BBLiveBaseAppointmentCardView* _logos_method$_ungrouped$BBLiveBaseAppoint
 
 
 
-static BBLiveBasePopularHotRankEntryView* _logos_method$_ungrouped$BBLiveBasePopularHotRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularHotRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveBasePopularHotRankEntryView* _logos_method$App$BBLiveBasePopularHotRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularHotRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -74,7 +76,7 @@ static BBLiveBasePopularHotRankEntryView* _logos_method$_ungrouped$BBLiveBasePop
 
 
 
-static BBLiveBaseUserRankListEntryView* _logos_method$_ungrouped$BBLiveBaseUserRankListEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseUserRankListEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveBaseUserRankListEntryView* _logos_method$App$BBLiveBaseUserRankListEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseUserRankListEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -82,24 +84,7 @@ static BBLiveBaseUserRankListEntryView* _logos_method$_ungrouped$BBLiveBaseUserR
 
 
 
-static BBLiveBasePopularRankEntryView* _logos_method$_ungrouped$BBLiveBasePopularRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
-    return nil;
-}
-
-
-
-
-
-
-static BBLiveBaseAreaRankEntryView* _logos_method$_ungrouped$BBLiveBaseAreaRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAreaRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
-    return nil;
-}
-
-
-
-
-
-static BBLiveBaseMixedRankEntryView* _logos_method$_ungrouped$BBLiveBaseMixedRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseMixedRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveBasePopularRankEntryView* _logos_method$App$BBLiveBasePopularRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBasePopularRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -108,7 +93,15 @@ static BBLiveBaseMixedRankEntryView* _logos_method$_ungrouped$BBLiveBaseMixedRan
 
 
 
-static BBLiveTopRightEntranceManager* _logos_method$_ungrouped$BBLiveTopRightEntranceManager$init(_LOGOS_SELF_TYPE_INIT BBLiveTopRightEntranceManager* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
+static BBLiveBaseAreaRankEntryView* _logos_method$App$BBLiveBaseAreaRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAreaRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+    return nil;
+}
+
+
+
+
+
+static BBLiveBaseMixedRankEntryView* _logos_method$App$BBLiveBaseMixedRankEntryView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseMixedRankEntryView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -117,7 +110,16 @@ static BBLiveTopRightEntranceManager* _logos_method$_ungrouped$BBLiveTopRightEnt
 
 
 
-static BBLiveChainView* _logos_method$_ungrouped$BBLiveChainView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveChainView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveTopRightEntranceManager* _logos_method$App$BBLiveTopRightEntranceManager$init(_LOGOS_SELF_TYPE_INIT BBLiveTopRightEntranceManager* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
+    return nil;
+}
+
+
+
+
+
+
+static BBLiveChainView* _logos_method$App$BBLiveChainView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveChainView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -127,7 +129,7 @@ static BBLiveChainView* _logos_method$_ungrouped$BBLiveChainView$initWithFrame$(
 
 
 
-static BBLiveFunctionCardTaskManager* _logos_method$_ungrouped$BBLiveFunctionCardTaskManager$init(_LOGOS_SELF_TYPE_INIT BBLiveFunctionCardTaskManager* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
+static BBLiveFunctionCardTaskManager* _logos_method$App$BBLiveFunctionCardTaskManager$init(_LOGOS_SELF_TYPE_INIT BBLiveFunctionCardTaskManager* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -136,7 +138,7 @@ static BBLiveFunctionCardTaskManager* _logos_method$_ungrouped$BBLiveFunctionCar
 
 
 
-static BBLiveShoppingExplainCardViewModel* _logos_method$_ungrouped$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$(_LOGOS_SELF_TYPE_INIT BBLiveShoppingExplainCardViewModel* __unused self, SEL __unused _cmd, id source, id tracker) _LOGOS_RETURN_RETAINED {
+static BBLiveShoppingExplainCardViewModel* _logos_method$App$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$(_LOGOS_SELF_TYPE_INIT BBLiveShoppingExplainCardViewModel* __unused self, SEL __unused _cmd, id source, id tracker) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -152,14 +154,13 @@ static BBLiveShoppingExplainCardViewModel* _logos_method$_ungrouped$BBLiveShoppi
 
 
 
-static void _logos_method$_ungrouped$BBLiveVerticalCenterBar$layoutTopPendantContainerView(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+static void _logos_method$App$BBLiveVerticalCenterBar$layoutTopPendantContainerView(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     [self.topPendantContainerView removeFromSuperview];
     self.topPendantContainerView = nil;
 }
 
 
-static void _logos_method$_ungrouped$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id info, id completion) {
-    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__);
+static void _logos_method$App$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$(_LOGOS_SELF_TYPE_NORMAL BBLiveVerticalCenterBar* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id info, id completion) {
 }
 
 
@@ -171,7 +172,7 @@ static void _logos_method$_ungrouped$BBLiveVerticalCenterBar$_showShoppingRecomm
 
 
 
-static BBLiveBaseAnimationView* _logos_method$_ungrouped$BBLiveBaseAnimationView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAnimationView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
+static BBLiveBaseAnimationView* _logos_method$App$BBLiveBaseAnimationView$initWithFrame$(_LOGOS_SELF_TYPE_INIT BBLiveBaseAnimationView* __unused self, SEL __unused _cmd, CGRect frame) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -180,7 +181,7 @@ static BBLiveBaseAnimationView* _logos_method$_ungrouped$BBLiveBaseAnimationView
 
 
 
-static BBLiveFollowCardAlertComponent* _logos_method$_ungrouped$BBLiveFollowCardAlertComponent$initWithDataSource$(_LOGOS_SELF_TYPE_INIT BBLiveFollowCardAlertComponent* __unused self, SEL __unused _cmd, id source) _LOGOS_RETURN_RETAINED {
+static BBLiveFollowCardAlertComponent* _logos_method$App$BBLiveFollowCardAlertComponent$initWithDataSource$(_LOGOS_SELF_TYPE_INIT BBLiveFollowCardAlertComponent* __unused self, SEL __unused _cmd, id source) _LOGOS_RETURN_RETAINED {
     return nil;
 }
 
@@ -188,6 +189,10 @@ static BBLiveFollowCardAlertComponent* _logos_method$_ungrouped$BBLiveFollowCard
 
 
 
-static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$BBLiveRevenueCardsContentView = objc_getClass("BBLiveRevenueCardsContentView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveRevenueCardsContentView, @selector(initWithDataSource:viewModel:), (IMP)&_logos_method$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$, (IMP*)&_logos_orig$_ungrouped$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$);}Class _logos_class$_ungrouped$BBLiveBaseAppointmentEntryView = objc_getClass("BBLiveBaseAppointmentEntryView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseAppointmentEntryView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseAppointmentEntryView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseAppointmentEntryView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveBaseAppointmentCardView = objc_getClass("BBLiveBaseAppointmentCardView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseAppointmentCardView, @selector(initWithEntryFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseAppointmentCardView$initWithEntryFrame$);}Class _logos_class$_ungrouped$BBLiveBasePopularHotRankEntryView = objc_getClass("BBLiveBasePopularHotRankEntryView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBasePopularHotRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBasePopularHotRankEntryView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBasePopularHotRankEntryView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveBaseUserRankListEntryView = objc_getClass("BBLiveBaseUserRankListEntryView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseUserRankListEntryView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseUserRankListEntryView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseUserRankListEntryView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveBasePopularRankEntryView = objc_getClass("BBLiveBasePopularRankEntryView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBasePopularRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBasePopularRankEntryView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBasePopularRankEntryView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveBaseAreaRankEntryView = objc_getClass("BBLiveBaseAreaRankEntryView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseAreaRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseAreaRankEntryView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseAreaRankEntryView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveBaseMixedRankEntryView = objc_getClass("BBLiveBaseMixedRankEntryView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseMixedRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseMixedRankEntryView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseMixedRankEntryView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveTopRightEntranceManager = objc_getClass("BBLiveTopRightEntranceManager"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveTopRightEntranceManager, @selector(init), (IMP)&_logos_method$_ungrouped$BBLiveTopRightEntranceManager$init, (IMP*)&_logos_orig$_ungrouped$BBLiveTopRightEntranceManager$init);}Class _logos_class$_ungrouped$BBLiveChainView = objc_getClass("BBLiveChainView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveChainView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveChainView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveChainView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveFunctionCardTaskManager = objc_getClass("BBLiveFunctionCardTaskManager"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveFunctionCardTaskManager, @selector(init), (IMP)&_logos_method$_ungrouped$BBLiveFunctionCardTaskManager$init, (IMP*)&_logos_orig$_ungrouped$BBLiveFunctionCardTaskManager$init);}Class _logos_class$_ungrouped$BBLiveShoppingExplainCardViewModel = objc_getClass("BBLiveShoppingExplainCardViewModel"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveShoppingExplainCardViewModel, @selector(initWithDataSource:tracker:), (IMP)&_logos_method$_ungrouped$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$, (IMP*)&_logos_orig$_ungrouped$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$);}Class _logos_class$_ungrouped$BBLiveVerticalCenterBar = objc_getClass("BBLiveVerticalCenterBar"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveVerticalCenterBar, @selector(layoutTopPendantContainerView), (IMP)&_logos_method$_ungrouped$BBLiveVerticalCenterBar$layoutTopPendantContainerView, (IMP*)&_logos_orig$_ungrouped$BBLiveVerticalCenterBar$layoutTopPendantContainerView);}{ MSHookMessageEx(_logos_class$_ungrouped$BBLiveVerticalCenterBar, @selector(_showShoppingRecommendViewWithInfo:completion:), (IMP)&_logos_method$_ungrouped$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$, (IMP*)&_logos_orig$_ungrouped$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$);}Class _logos_class$_ungrouped$BBLiveBaseAnimationView = objc_getClass("BBLiveBaseAnimationView"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveBaseAnimationView, @selector(initWithFrame:), (IMP)&_logos_method$_ungrouped$BBLiveBaseAnimationView$initWithFrame$, (IMP*)&_logos_orig$_ungrouped$BBLiveBaseAnimationView$initWithFrame$);}Class _logos_class$_ungrouped$BBLiveFollowCardAlertComponent = objc_getClass("BBLiveFollowCardAlertComponent"); { MSHookMessageEx(_logos_class$_ungrouped$BBLiveFollowCardAlertComponent, @selector(initWithDataSource:), (IMP)&_logos_method$_ungrouped$BBLiveFollowCardAlertComponent$initWithDataSource$, (IMP*)&_logos_orig$_ungrouped$BBLiveFollowCardAlertComponent$initWithDataSource$);}} }
-#line 163 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Live/NJLiveDetailAd.xm"
+static __attribute__((constructor)) void _logosLocalCtor_a72702ea(int __unused argc, char __unused **argv, char __unused **envp) {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        {Class _logos_class$App$BBLiveRevenueCardsContentView = objc_getClass("BBLiveRevenueCardsContentView"); { MSHookMessageEx(_logos_class$App$BBLiveRevenueCardsContentView, @selector(initWithDataSource:viewModel:), (IMP)&_logos_method$App$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$, (IMP*)&_logos_orig$App$BBLiveRevenueCardsContentView$initWithDataSource$viewModel$);}Class _logos_class$App$BBLiveBaseAppointmentEntryView = objc_getClass("BBLiveBaseAppointmentEntryView"); { MSHookMessageEx(_logos_class$App$BBLiveBaseAppointmentEntryView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBaseAppointmentEntryView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBaseAppointmentEntryView$initWithFrame$);}Class _logos_class$App$BBLiveBaseAppointmentCardView = objc_getClass("BBLiveBaseAppointmentCardView"); { MSHookMessageEx(_logos_class$App$BBLiveBaseAppointmentCardView, @selector(initWithEntryFrame:), (IMP)&_logos_method$App$BBLiveBaseAppointmentCardView$initWithEntryFrame$, (IMP*)&_logos_orig$App$BBLiveBaseAppointmentCardView$initWithEntryFrame$);}Class _logos_class$App$BBLiveBasePopularHotRankEntryView = objc_getClass("BBLiveBasePopularHotRankEntryView"); { MSHookMessageEx(_logos_class$App$BBLiveBasePopularHotRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBasePopularHotRankEntryView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBasePopularHotRankEntryView$initWithFrame$);}Class _logos_class$App$BBLiveBaseUserRankListEntryView = objc_getClass("BBLiveBaseUserRankListEntryView"); { MSHookMessageEx(_logos_class$App$BBLiveBaseUserRankListEntryView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBaseUserRankListEntryView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBaseUserRankListEntryView$initWithFrame$);}Class _logos_class$App$BBLiveBasePopularRankEntryView = objc_getClass("BBLiveBasePopularRankEntryView"); { MSHookMessageEx(_logos_class$App$BBLiveBasePopularRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBasePopularRankEntryView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBasePopularRankEntryView$initWithFrame$);}Class _logos_class$App$BBLiveBaseAreaRankEntryView = objc_getClass("BBLiveBaseAreaRankEntryView"); { MSHookMessageEx(_logos_class$App$BBLiveBaseAreaRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBaseAreaRankEntryView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBaseAreaRankEntryView$initWithFrame$);}Class _logos_class$App$BBLiveBaseMixedRankEntryView = objc_getClass("BBLiveBaseMixedRankEntryView"); { MSHookMessageEx(_logos_class$App$BBLiveBaseMixedRankEntryView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBaseMixedRankEntryView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBaseMixedRankEntryView$initWithFrame$);}Class _logos_class$App$BBLiveTopRightEntranceManager = objc_getClass("BBLiveTopRightEntranceManager"); { MSHookMessageEx(_logos_class$App$BBLiveTopRightEntranceManager, @selector(init), (IMP)&_logos_method$App$BBLiveTopRightEntranceManager$init, (IMP*)&_logos_orig$App$BBLiveTopRightEntranceManager$init);}Class _logos_class$App$BBLiveChainView = objc_getClass("BBLiveChainView"); { MSHookMessageEx(_logos_class$App$BBLiveChainView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveChainView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveChainView$initWithFrame$);}Class _logos_class$App$BBLiveFunctionCardTaskManager = objc_getClass("BBLiveFunctionCardTaskManager"); { MSHookMessageEx(_logos_class$App$BBLiveFunctionCardTaskManager, @selector(init), (IMP)&_logos_method$App$BBLiveFunctionCardTaskManager$init, (IMP*)&_logos_orig$App$BBLiveFunctionCardTaskManager$init);}Class _logos_class$App$BBLiveShoppingExplainCardViewModel = objc_getClass("BBLiveShoppingExplainCardViewModel"); { MSHookMessageEx(_logos_class$App$BBLiveShoppingExplainCardViewModel, @selector(initWithDataSource:tracker:), (IMP)&_logos_method$App$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$, (IMP*)&_logos_orig$App$BBLiveShoppingExplainCardViewModel$initWithDataSource$tracker$);}Class _logos_class$App$BBLiveVerticalCenterBar = objc_getClass("BBLiveVerticalCenterBar"); { MSHookMessageEx(_logos_class$App$BBLiveVerticalCenterBar, @selector(layoutTopPendantContainerView), (IMP)&_logos_method$App$BBLiveVerticalCenterBar$layoutTopPendantContainerView, (IMP*)&_logos_orig$App$BBLiveVerticalCenterBar$layoutTopPendantContainerView);}{ MSHookMessageEx(_logos_class$App$BBLiveVerticalCenterBar, @selector(_showShoppingRecommendViewWithInfo:completion:), (IMP)&_logos_method$App$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$, (IMP*)&_logos_orig$App$BBLiveVerticalCenterBar$_showShoppingRecommendViewWithInfo$completion$);}Class _logos_class$App$BBLiveBaseAnimationView = objc_getClass("BBLiveBaseAnimationView"); { MSHookMessageEx(_logos_class$App$BBLiveBaseAnimationView, @selector(initWithFrame:), (IMP)&_logos_method$App$BBLiveBaseAnimationView$initWithFrame$, (IMP*)&_logos_orig$App$BBLiveBaseAnimationView$initWithFrame$);}Class _logos_class$App$BBLiveFollowCardAlertComponent = objc_getClass("BBLiveFollowCardAlertComponent"); { MSHookMessageEx(_logos_class$App$BBLiveFollowCardAlertComponent, @selector(initWithDataSource:), (IMP)&_logos_method$App$BBLiveFollowCardAlertComponent$initWithDataSource$, (IMP*)&_logos_orig$App$BBLiveFollowCardAlertComponent$initWithDataSource$);}}
+    }
+}
+
+

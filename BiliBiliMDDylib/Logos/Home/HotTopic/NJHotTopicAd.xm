@@ -16,6 +16,8 @@
 #import "NJHotTopicCardHandler.h"
 #import "BAPIAppCardV1Card.h"
 
+%group App
+
 @interface BAPIAppShowPopularV1PopularReply : NSObject
 
 @property (retain, nonatomic) NSMutableArray *itemsArray;
@@ -84,6 +86,13 @@
 
 %end
 
+%end
+
+%ctor {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        %init(App);
+    }
+}
 
 
 

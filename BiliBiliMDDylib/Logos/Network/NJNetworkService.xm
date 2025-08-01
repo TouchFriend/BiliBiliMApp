@@ -2,12 +2,17 @@
 
 #import <UIKit/UIKit.h>
 #import "NJApiDataManger.h"
+#import "NJCommonDefine.h"
 
-@interface BFCRequest : NSObject
+
+@protocol BFCApiMetrics <NSObject>
 
 @end
 
-@protocol BFCApiMetrics <NSObject>
+
+%group App
+
+@interface BFCRequest : NSObject
 
 @end
 
@@ -39,3 +44,11 @@
 }
 
 %end
+
+%end
+
+%ctor {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        %init(App);
+    }
+}

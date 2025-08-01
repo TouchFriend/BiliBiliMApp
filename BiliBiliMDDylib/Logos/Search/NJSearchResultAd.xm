@@ -3,6 +3,8 @@
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
+%group App
+
 // 过滤搜索结果
 @interface BAPIPolymerAppSearchV1Item : NSObject
 
@@ -54,3 +56,11 @@
 }
 
 %end
+
+%end
+
+%ctor {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        %init(App);
+    }
+}

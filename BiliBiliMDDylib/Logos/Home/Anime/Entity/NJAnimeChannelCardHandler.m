@@ -8,6 +8,7 @@
 #import "NJAnimeChannelCardHandler.h"
 #import "NJAnimeChannelCardEntity.h"
 #import "NJAnimeChannelBannerEntity.h"
+#import "NJAnimeChannelTipEntity.h"
 
 @interface NJAnimeChannelCardHandler ()
 
@@ -80,6 +81,7 @@
 - (NSArray<Class> *)cardEntityClasses {
     if (!_cardEntityClasses) {
         _cardEntityClasses = @[[NJAnimeChannelBannerEntity class],  // banner
+                               [NJAnimeChannelTipEntity class],     // 付费提示条(比如大会员)
         ];
     }
     return _cardEntityClasses;

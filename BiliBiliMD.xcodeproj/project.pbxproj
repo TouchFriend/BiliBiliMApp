@@ -35,83 +35,87 @@
 		BF0D035E2DEDA95900115365 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035D2DEDA95900115365 /* fishhook.h */; };
 		BF0D03602DEDA95900115365 /* BiliBiliMDDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */; };
 		BF0D03622DEDA95900115365 /* BiliBiliMDDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */; };
-		BFB53D2D2E23D77D0052AAA7 /* NJCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB53D012E23D77D0052AAA7 /* NJCommonDefine.h */; };
-		BFB53D352E23D77D0052AAA7 /* NJDetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFB53D052E23D77D0052AAA7 /* NJDetailAd.mm */; };
-		BFB53D3A2E23D77D0052AAA7 /* NJCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53D022E23D77D0052AAA7 /* NJCommonDefine.m */; };
-		BFB53D4C2E23D77D0052AAA7 /* NJLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53D072E23D77D0052AAA7 /* NJLaunchAd.m */; };
-		BFB53D4D2E23D77D0052AAA7 /* NJDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFB53D032E23D77D0052AAA7 /* NJDebug.mm */; };
-		BFEF9F642E32703100A8633D /* NJHotTopicCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F1A2E32703100A8633D /* NJHotTopicCardHandler.m */; };
-		BFEF9F652E32703100A8633D /* NJSearchSquareDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F5A2E32703100A8633D /* NJSearchSquareDataItem.m */; };
-		BFEF9F662E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F2C2E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.m */; };
-		BFEF9F672E32703100A8633D /* NJLiveSecondGetListDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F362E32703100A8633D /* NJLiveSecondGetListDataItem.m */; };
-		BFEF9F682E32703100A8633D /* NJLiveIndexFeedCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F2E2E32703100A8633D /* NJLiveIndexFeedCardEntity.m */; };
-		BFEF9F692E32703100A8633D /* NJLiveIndexFeedCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F302E32703100A8633D /* NJLiveIndexFeedCardHandler.m */; };
-		BFEF9F6A2E32703100A8633D /* NJSearchSquareCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F562E32703100A8633D /* NJSearchSquareCardEntity.m */; };
-		BFEF9F6B2E32703100A8633D /* NJRcmdBannerV8Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F3C2E32703100A8633D /* NJRcmdBannerV8Entry.m */; };
-		BFEF9F6C2E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F282E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.m */; };
-		BFEF9F6D2E32703100A8633D /* NJApiDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F512E32703100A8633D /* NJApiDataManger.m */; };
-		BFEF9F6E2E32703100A8633D /* NJSearchSquareCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F582E32703100A8633D /* NJSearchSquareCardHandler.m */; };
-		BFEF9F6F2E32703100A8633D /* NJAnimeChannelDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F152E32703100A8633D /* NJAnimeChannelDataItem.m */; };
-		BFEF9F702E32703100A8633D /* NJHotTopicCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F182E32703100A8633D /* NJHotTopicCardEntity.m */; };
-		BFEF9F712E32703100A8633D /* NJHotTopicAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F242E32703100A8633D /* NJHotTopicAd.mm */; };
-		BFEF9F722E32703100A8633D /* NJAnimeChannelBannerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F0E2E32703100A8633D /* NJAnimeChannelBannerEntity.m */; };
-		BFEF9F732E32703100A8633D /* NJRcmdCmDoubleV9Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F422E32703100A8633D /* NJRcmdCmDoubleV9Entry.m */; };
-		BFEF9F742E32703100A8633D /* NJLiveIndexFeedDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F332E32703100A8633D /* NJLiveIndexFeedDataItem.m */; };
-		BFEF9F752E32703100A8633D /* NJRcmdSmallCoverV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F462E32703100A8633D /* NJRcmdSmallCoverV2Entry.m */; };
-		BFEF9F762E32703100A8633D /* NJRcmdCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F402E32703100A8633D /* NJRcmdCardHandler.m */; };
-		BFEF9F772E32703100A8633D /* NJRcmdCmV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F442E32703100A8633D /* NJRcmdCmV2Entry.m */; };
-		BFEF9F782E32703100A8633D /* NJRcmdCardEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F3E2E32703100A8633D /* NJRcmdCardEntry.m */; };
-		BFEF9F792E32703100A8633D /* NJHotTopicRcmdOneItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F1C2E32703100A8633D /* NJHotTopicRcmdOneItemEntity.m */; };
-		BFEF9F7A2E32703100A8633D /* NJDynamicAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F0A2E32703100A8633D /* NJDynamicAd.mm */; };
-		BFEF9F7B2E32703100A8633D /* NJRcmdCardDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F4B2E32703100A8633D /* NJRcmdCardDataItem.m */; };
-		BFEF9F7C2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F1E2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.m */; };
-		BFEF9F7D2E32703100A8633D /* NJSearchResultAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F5E2E32703100A8633D /* NJSearchResultAd.mm */; };
-		BFEF9F7E2E32703100A8633D /* NJAnimeChannelCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F102E32703100A8633D /* NJAnimeChannelCardEntity.m */; };
-		BFEF9F7F2E32703100A8633D /* NJAnimeChannelCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F122E32703100A8633D /* NJAnimeChannelCardHandler.m */; };
-		BFEF9F802E32703100A8633D /* NJRcmdAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F482E32703100A8633D /* NJRcmdAd.mm */; };
-		BFEF9F812E32703100A8633D /* UIApplication+NJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F062E32703100A8633D /* UIApplication+NJCategory.m */; };
-		BFEF9F822E32703100A8633D /* NJLiveDetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F382E32703100A8633D /* NJLiveDetailAd.mm */; };
-		BFEF9F832E32703100A8633D /* NSURL+NJPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F042E32703100A8633D /* NSURL+NJPath.m */; };
-		BFEF9F842E32703100A8633D /* UIViewController+NJFind.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F082E32703100A8633D /* UIViewController+NJFind.m */; };
-		BFEF9F852E32703100A8633D /* NJApiDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F4F2E32703100A8633D /* NJApiDataItem.m */; };
-		BFEF9F862E32703100A8633D /* NJNetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F522E32703100A8633D /* NJNetworkService.mm */; };
-		BFEF9F872E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F2A2E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.m */; };
-		BFEF9F882E32703100A8633D /* NJSetting.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F612E32703100A8633D /* NJSetting.mm */; };
-		BFEF9F892E32703100A8633D /* NJSearchSquareRecommendEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF9F5C2E32703100A8633D /* NJSearchSquareRecommendEntity.m */; };
-		BFEF9F8A2E32703100A8633D /* NJRcmdCmV2Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F432E32703100A8633D /* NJRcmdCmV2Entry.h */; };
-		BFEF9F8B2E32703100A8633D /* BAPIAppCardV1Card.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F212E32703100A8633D /* BAPIAppCardV1Card.h */; };
-		BFEF9F8C2E32703100A8633D /* NJRcmdCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F3F2E32703100A8633D /* NJRcmdCardHandler.h */; };
-		BFEF9F8D2E32703100A8633D /* BAPIAppCardV1SmallCoverV5.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F222E32703100A8633D /* BAPIAppCardV1SmallCoverV5.h */; };
-		BFEF9F8E2E32703100A8633D /* UIViewController+NJFind.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F072E32703100A8633D /* UIViewController+NJFind.h */; };
-		BFEF9F8F2E32703100A8633D /* NJRcmdBannerV8Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F3B2E32703100A8633D /* NJRcmdBannerV8Entry.h */; };
-		BFEF9F902E32703100A8633D /* NJRcmdCmDoubleV9Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F412E32703100A8633D /* NJRcmdCmDoubleV9Entry.h */; };
-		BFEF9F912E32703100A8633D /* NJSearchSquareRecommendEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F5B2E32703100A8633D /* NJSearchSquareRecommendEntity.h */; };
-		BFEF9F922E32703100A8633D /* NJSearchSquareDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F592E32703100A8633D /* NJSearchSquareDataItem.h */; };
-		BFEF9F932E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F292E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.h */; };
-		BFEF9F942E32703100A8633D /* NJHotTopicCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F192E32703100A8633D /* NJHotTopicCardHandler.h */; };
-		BFEF9F952E32703100A8633D /* NJSearchSquareCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F552E32703100A8633D /* NJSearchSquareCardEntity.h */; };
-		BFEF9F962E32703100A8633D /* BAPIAppCardV1Base.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F202E32703100A8633D /* BAPIAppCardV1Base.h */; };
-		BFEF9F972E32703100A8633D /* NJHotTopicCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F172E32703100A8633D /* NJHotTopicCardEntity.h */; };
-		BFEF9F982E32703100A8633D /* NJHotTopicRcmdOneItemEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F1B2E32703100A8633D /* NJHotTopicRcmdOneItemEntity.h */; };
-		BFEF9F992E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F272E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.h */; };
-		BFEF9F9A2E32703100A8633D /* NJLiveIndexFeedCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F2F2E32703100A8633D /* NJLiveIndexFeedCardHandler.h */; };
-		BFEF9F9B2E32703100A8633D /* NJRcmdCardEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F3D2E32703100A8633D /* NJRcmdCardEntry.h */; };
-		BFEF9F9C2E32703100A8633D /* NSURL+NJPath.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F032E32703100A8633D /* NSURL+NJPath.h */; };
-		BFEF9F9D2E32703100A8633D /* NJLiveSecondGetListDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F352E32703100A8633D /* NJLiveSecondGetListDataItem.h */; };
-		BFEF9F9E2E32703100A8633D /* NJRcmdCardDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F4A2E32703100A8633D /* NJRcmdCardDataItem.h */; };
-		BFEF9F9F2E32703100A8633D /* UIApplication+NJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F052E32703100A8633D /* UIApplication+NJCategory.h */; };
-		BFEF9FA02E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F2B2E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.h */; };
-		BFEF9FA12E32703100A8633D /* NJLiveIndexFeedDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F322E32703100A8633D /* NJLiveIndexFeedDataItem.h */; };
-		BFEF9FA22E32703100A8633D /* NJHotTopicSmallCoverV5Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F1D2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.h */; };
-		BFEF9FA32E32703100A8633D /* NJAnimeChannelCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F112E32703100A8633D /* NJAnimeChannelCardHandler.h */; };
-		BFEF9FA42E32703100A8633D /* NJAnimeChannelDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F142E32703100A8633D /* NJAnimeChannelDataItem.h */; };
-		BFEF9FA52E32703100A8633D /* NJLiveIndexFeedCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F2D2E32703100A8633D /* NJLiveIndexFeedCardEntity.h */; };
-		BFEF9FA62E32703100A8633D /* NJRcmdSmallCoverV2Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F452E32703100A8633D /* NJRcmdSmallCoverV2Entry.h */; };
-		BFEF9FA72E32703100A8633D /* NJAnimeChannelCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F0F2E32703100A8633D /* NJAnimeChannelCardEntity.h */; };
-		BFEF9FA82E32703100A8633D /* NJAnimeChannelBannerEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F0D2E32703100A8633D /* NJAnimeChannelBannerEntity.h */; };
-		BFEF9FA92E32703100A8633D /* NJApiDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F4E2E32703100A8633D /* NJApiDataItem.h */; };
-		BFEF9FAA2E32703100A8633D /* NJApiDataManger.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F502E32703100A8633D /* NJApiDataManger.h */; };
-		BFEF9FAB2E32703100A8633D /* NJSearchSquareCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEF9F572E32703100A8633D /* NJSearchSquareCardHandler.h */; };
+		BF54083A2E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408122E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.m */; };
+		BF54083B2E3CEEFE003D6187 /* NJHotTopicAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5407F02E3CEEFE003D6187 /* NJHotTopicAd.mm */; };
+		BF54083C2E3CEEFE003D6187 /* NJRcmdCmV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408102E3CEEFE003D6187 /* NJRcmdCmV2Entry.m */; };
+		BF54083D2E3CEEFE003D6187 /* NJApiDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54081E2E3CEEFE003D6187 /* NJApiDataItem.m */; };
+		BF54083E2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54082B2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.m */; };
+		BF54083F2E3CEEFE003D6187 /* NJHotTopicCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407E62E3CEEFE003D6187 /* NJHotTopicCardHandler.m */; };
+		BF5408402E3CEEFE003D6187 /* NJRcmdAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5408142E3CEEFE003D6187 /* NJRcmdAd.mm */; };
+		BF5408412E3CEEFE003D6187 /* NJCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408342E3CEEFE003D6187 /* NJCommonDefine.m */; };
+		BF5408422E3CEEFE003D6187 /* NJSetting.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5408302E3CEEFE003D6187 /* NJSetting.mm */; };
+		BF5408432E3CEEFE003D6187 /* NJAnimeChannelTipEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407DE2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.m */; };
+		BF5408442E3CEEFE003D6187 /* NJRcmdCardDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408172E3CEEFE003D6187 /* NJRcmdCardDataItem.m */; };
+		BF5408452E3CEEFE003D6187 /* NJHotTopicCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407E42E3CEEFE003D6187 /* NJHotTopicCardEntity.m */; };
+		BF5408462E3CEEFE003D6187 /* NJSearchSquareCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408272E3CEEFE003D6187 /* NJSearchSquareCardHandler.m */; };
+		BF5408472E3CEEFE003D6187 /* NSURL+NJPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407CB2E3CEEFE003D6187 /* NSURL+NJPath.m */; };
+		BF5408482E3CEEFE003D6187 /* NJNetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5408212E3CEEFE003D6187 /* NJNetworkService.mm */; };
+		BF5408492E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408022E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.m */; };
+		BF54084A2E3CEEFE003D6187 /* NJSearchSquareCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408252E3CEEFE003D6187 /* NJSearchSquareCardEntity.m */; };
+		BF54084B2E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407F82E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.m */; };
+		BF54084C2E3CEEFE003D6187 /* NJSearchSquareDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408292E3CEEFE003D6187 /* NJSearchSquareDataItem.m */; };
+		BF54084D2E3CEEFE003D6187 /* UIViewController+NJFind.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407CF2E3CEEFE003D6187 /* UIViewController+NJFind.m */; };
+		BF54084E2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407FF2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.m */; };
+		BF54084F2E3CEEFE003D6187 /* NJLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54081A2E3CEEFE003D6187 /* NJLaunchAd.m */; };
+		BF5408502E3CEEFE003D6187 /* UIApplication+NJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407CD2E3CEEFE003D6187 /* UIApplication+NJCategory.m */; };
+		BF5408512E3CEEFE003D6187 /* NJDynamicAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5407D42E3CEEFE003D6187 /* NJDynamicAd.mm */; };
+		BF5408522E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54080E2E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.m */; };
+		BF5408532E3CEEFE003D6187 /* NJRcmdCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54080C2E3CEEFE003D6187 /* NJRcmdCardHandler.m */; };
+		BF5408542E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407FA2E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.m */; };
+		BF5408552E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407D82E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.m */; };
+		BF5408562E3CEEFE003D6187 /* NJAnimeChannelDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407E12E3CEEFE003D6187 /* NJAnimeChannelDataItem.m */; };
+		BF5408572E3CEEFE003D6187 /* NJDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5408352E3CEEFE003D6187 /* NJDebug.mm */; };
+		BF5408582E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407EA2E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.m */; };
+		BF5408592E3CEEFE003D6187 /* NJSearchResultAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF54082D2E3CEEFE003D6187 /* NJSearchResultAd.mm */; };
+		BF54085A2E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407E82E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.m */; };
+		BF54085B2E3CEEFE003D6187 /* NJApiDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408202E3CEEFE003D6187 /* NJApiDataManger.m */; };
+		BF54085C2E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407F42E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.m */; };
+		BF54085D2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407DA2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.m */; };
+		BF54085E2E3CEEFE003D6187 /* NJRcmdCardEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54080A2E3CEEFE003D6187 /* NJRcmdCardEntry.m */; };
+		BF54085F2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407DC2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.m */; };
+		BF5408602E3CEEFE003D6187 /* NJSettingSwitchDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408382E3CEEFE003D6187 /* NJSettingSwitchDefine.m */; };
+		BF5408612E3CEEFE003D6187 /* NJLiveDetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5408042E3CEEFE003D6187 /* NJLiveDetailAd.mm */; };
+		BF5408622E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407FC2E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.m */; };
+		BF5408632E3CEEFE003D6187 /* NJRcmdBannerV8Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5408082E3CEEFE003D6187 /* NJRcmdBannerV8Entry.m */; };
+		BF5408642E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5407F62E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.m */; };
+		BF5408652E3CEEFE003D6187 /* NJDetailAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF5407D12E3CEEFE003D6187 /* NJDetailAd.mm */; };
+		BF5408662E3CEEFE003D6187 /* BAPIAppCardV1Card.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407ED2E3CEEFE003D6187 /* BAPIAppCardV1Card.h */; };
+		BF5408672E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407FB2E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.h */; };
+		BF5408682E3CEEFE003D6187 /* NJApiDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF54081D2E3CEEFE003D6187 /* NJApiDataItem.h */; };
+		BF5408692E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407E72E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.h */; };
+		BF54086A2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407DD2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.h */; };
+		BF54086B2E3CEEFE003D6187 /* NJAnimeChannelDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407E02E3CEEFE003D6187 /* NJAnimeChannelDataItem.h */; };
+		BF54086C2E3CEEFE003D6187 /* NJSearchSquareCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408262E3CEEFE003D6187 /* NJSearchSquareCardHandler.h */; };
+		BF54086D2E3CEEFE003D6187 /* NJCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408332E3CEEFE003D6187 /* NJCommonDefine.h */; };
+		BF54086E2E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407E92E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.h */; };
+		BF54086F2E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407F52E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.h */; };
+		BF5408702E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407F72E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.h */; };
+		BF5408712E3CEEFE003D6187 /* NJRcmdCardEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408092E3CEEFE003D6187 /* NJRcmdCardEntry.h */; };
+		BF5408722E3CEEFE003D6187 /* NJRcmdCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF54080B2E3CEEFE003D6187 /* NJRcmdCardHandler.h */; };
+		BF5408732E3CEEFE003D6187 /* NJApiDataManger.h in Headers */ = {isa = PBXBuildFile; fileRef = BF54081F2E3CEEFE003D6187 /* NJApiDataManger.h */; };
+		BF5408742E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF54082A2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.h */; };
+		BF5408752E3CEEFE003D6187 /* NJAnimeChannelCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407DB2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.h */; };
+		BF5408762E3CEEFE003D6187 /* NJRcmdBannerV8Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408072E3CEEFE003D6187 /* NJRcmdBannerV8Entry.h */; };
+		BF5408772E3CEEFE003D6187 /* UIApplication+NJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407CC2E3CEEFE003D6187 /* UIApplication+NJCategory.h */; };
+		BF5408782E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408112E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.h */; };
+		BF5408792E3CEEFE003D6187 /* NJSearchSquareCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408242E3CEEFE003D6187 /* NJSearchSquareCardEntity.h */; };
+		BF54087A2E3CEEFE003D6187 /* BAPIAppCardV1Base.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407EC2E3CEEFE003D6187 /* BAPIAppCardV1Base.h */; };
+		BF54087B2E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407F32E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.h */; };
+		BF54087C2E3CEEFE003D6187 /* NJHotTopicCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407E32E3CEEFE003D6187 /* NJHotTopicCardEntity.h */; };
+		BF54087D2E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408012E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.h */; };
+		BF54087E2E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407F92E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.h */; };
+		BF54087F2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407D92E3CEEFE003D6187 /* NJAnimeChannelCardEntity.h */; };
+		BF5408802E3CEEFE003D6187 /* BAPIAppCardV1SmallCoverV5.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407EE2E3CEEFE003D6187 /* BAPIAppCardV1SmallCoverV5.h */; };
+		BF5408812E3CEEFE003D6187 /* NJRcmdCardDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408162E3CEEFE003D6187 /* NJRcmdCardDataItem.h */; };
+		BF5408822E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF54080D2E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.h */; };
+		BF5408832E3CEEFE003D6187 /* NJHotTopicCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407E52E3CEEFE003D6187 /* NJHotTopicCardHandler.h */; };
+		BF5408842E3CEEFE003D6187 /* NJRcmdCmV2Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF54080F2E3CEEFE003D6187 /* NJRcmdCmV2Entry.h */; };
+		BF5408852E3CEEFE003D6187 /* UIViewController+NJFind.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407CE2E3CEEFE003D6187 /* UIViewController+NJFind.h */; };
+		BF5408862E3CEEFE003D6187 /* NJSettingSwitchDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408372E3CEEFE003D6187 /* NJSettingSwitchDefine.h */; };
+		BF5408872E3CEEFE003D6187 /* NSURL+NJPath.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407CA2E3CEEFE003D6187 /* NSURL+NJPath.h */; };
+		BF5408882E3CEEFE003D6187 /* NJSearchSquareDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5408282E3CEEFE003D6187 /* NJSearchSquareDataItem.h */; };
+		BF5408892E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407D72E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.h */; };
+		BF54088A2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5407FE2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,93 +174,97 @@
 		BF0D035D2DEDA95900115365 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiliBiliMDDylib.h; sourceTree = "<group>"; };
 		BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiliBiliMDDylib.m; sourceTree = "<group>"; };
-		BFB53D012E23D77D0052AAA7 /* NJCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJCommonDefine.h; sourceTree = "<group>"; };
-		BFB53D022E23D77D0052AAA7 /* NJCommonDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJCommonDefine.m; sourceTree = "<group>"; };
-		BFB53D032E23D77D0052AAA7 /* NJDebug.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDebug.mm; sourceTree = "<group>"; };
-		BFB53D042E23D77D0052AAA7 /* NJDebug.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDebug.xm; sourceTree = "<group>"; };
-		BFB53D052E23D77D0052AAA7 /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
-		BFB53D062E23D77D0052AAA7 /* NJDetailAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDetailAd.xm; sourceTree = "<group>"; };
-		BFB53D072E23D77D0052AAA7 /* NJLaunchAd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLaunchAd.m; sourceTree = "<group>"; };
-		BFB53D082E23D77D0052AAA7 /* NJLaunchAd.x */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = NJLaunchAd.x; sourceTree = "<group>"; };
-		BFEF9F032E32703100A8633D /* NSURL+NJPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+NJPath.h"; sourceTree = "<group>"; };
-		BFEF9F042E32703100A8633D /* NSURL+NJPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NJPath.m"; sourceTree = "<group>"; };
-		BFEF9F052E32703100A8633D /* UIApplication+NJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NJCategory.h"; sourceTree = "<group>"; };
-		BFEF9F062E32703100A8633D /* UIApplication+NJCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NJCategory.m"; sourceTree = "<group>"; };
-		BFEF9F072E32703100A8633D /* UIViewController+NJFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJFind.h"; sourceTree = "<group>"; };
-		BFEF9F082E32703100A8633D /* UIViewController+NJFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NJFind.m"; sourceTree = "<group>"; };
-		BFEF9F0A2E32703100A8633D /* NJDynamicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDynamicAd.mm; sourceTree = "<group>"; };
-		BFEF9F0B2E32703100A8633D /* NJDynamicAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDynamicAd.xm; sourceTree = "<group>"; };
-		BFEF9F0D2E32703100A8633D /* NJAnimeChannelBannerEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelBannerEntity.h; sourceTree = "<group>"; };
-		BFEF9F0E2E32703100A8633D /* NJAnimeChannelBannerEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelBannerEntity.m; sourceTree = "<group>"; };
-		BFEF9F0F2E32703100A8633D /* NJAnimeChannelCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelCardEntity.h; sourceTree = "<group>"; };
-		BFEF9F102E32703100A8633D /* NJAnimeChannelCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelCardEntity.m; sourceTree = "<group>"; };
-		BFEF9F112E32703100A8633D /* NJAnimeChannelCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelCardHandler.h; sourceTree = "<group>"; };
-		BFEF9F122E32703100A8633D /* NJAnimeChannelCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelCardHandler.m; sourceTree = "<group>"; };
-		BFEF9F142E32703100A8633D /* NJAnimeChannelDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelDataItem.h; sourceTree = "<group>"; };
-		BFEF9F152E32703100A8633D /* NJAnimeChannelDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelDataItem.m; sourceTree = "<group>"; };
-		BFEF9F172E32703100A8633D /* NJHotTopicCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicCardEntity.h; sourceTree = "<group>"; };
-		BFEF9F182E32703100A8633D /* NJHotTopicCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicCardEntity.m; sourceTree = "<group>"; };
-		BFEF9F192E32703100A8633D /* NJHotTopicCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicCardHandler.h; sourceTree = "<group>"; };
-		BFEF9F1A2E32703100A8633D /* NJHotTopicCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicCardHandler.m; sourceTree = "<group>"; };
-		BFEF9F1B2E32703100A8633D /* NJHotTopicRcmdOneItemEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicRcmdOneItemEntity.h; sourceTree = "<group>"; };
-		BFEF9F1C2E32703100A8633D /* NJHotTopicRcmdOneItemEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicRcmdOneItemEntity.m; sourceTree = "<group>"; };
-		BFEF9F1D2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicSmallCoverV5Entity.h; sourceTree = "<group>"; };
-		BFEF9F1E2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicSmallCoverV5Entity.m; sourceTree = "<group>"; };
-		BFEF9F202E32703100A8633D /* BAPIAppCardV1Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPIAppCardV1Base.h; sourceTree = "<group>"; };
-		BFEF9F212E32703100A8633D /* BAPIAppCardV1Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPIAppCardV1Card.h; sourceTree = "<group>"; };
-		BFEF9F222E32703100A8633D /* BAPIAppCardV1SmallCoverV5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPIAppCardV1SmallCoverV5.h; sourceTree = "<group>"; };
-		BFEF9F242E32703100A8633D /* NJHotTopicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJHotTopicAd.mm; sourceTree = "<group>"; };
-		BFEF9F252E32703100A8633D /* NJHotTopicAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJHotTopicAd.xm; sourceTree = "<group>"; };
-		BFEF9F272E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedActivityCardV1Entity.h; sourceTree = "<group>"; };
-		BFEF9F282E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedActivityCardV1Entity.m; sourceTree = "<group>"; };
-		BFEF9F292E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerV1Entity.h; sourceTree = "<group>"; };
-		BFEF9F2A2E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerV1Entity.m; sourceTree = "<group>"; };
-		BFEF9F2B2E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerV2Entity.h; sourceTree = "<group>"; };
-		BFEF9F2C2E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerV2Entity.m; sourceTree = "<group>"; };
-		BFEF9F2D2E32703100A8633D /* NJLiveIndexFeedCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedCardEntity.h; sourceTree = "<group>"; };
-		BFEF9F2E2E32703100A8633D /* NJLiveIndexFeedCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedCardEntity.m; sourceTree = "<group>"; };
-		BFEF9F2F2E32703100A8633D /* NJLiveIndexFeedCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedCardHandler.h; sourceTree = "<group>"; };
-		BFEF9F302E32703100A8633D /* NJLiveIndexFeedCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedCardHandler.m; sourceTree = "<group>"; };
-		BFEF9F322E32703100A8633D /* NJLiveIndexFeedDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedDataItem.h; sourceTree = "<group>"; };
-		BFEF9F332E32703100A8633D /* NJLiveIndexFeedDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedDataItem.m; sourceTree = "<group>"; };
-		BFEF9F352E32703100A8633D /* NJLiveSecondGetListDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveSecondGetListDataItem.h; sourceTree = "<group>"; };
-		BFEF9F362E32703100A8633D /* NJLiveSecondGetListDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveSecondGetListDataItem.m; sourceTree = "<group>"; };
-		BFEF9F382E32703100A8633D /* NJLiveDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJLiveDetailAd.mm; sourceTree = "<group>"; };
-		BFEF9F392E32703100A8633D /* NJLiveDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJLiveDetailAd.xm; sourceTree = "<group>"; };
-		BFEF9F3B2E32703100A8633D /* NJRcmdBannerV8Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdBannerV8Entry.h; sourceTree = "<group>"; };
-		BFEF9F3C2E32703100A8633D /* NJRcmdBannerV8Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdBannerV8Entry.m; sourceTree = "<group>"; };
-		BFEF9F3D2E32703100A8633D /* NJRcmdCardEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardEntry.h; sourceTree = "<group>"; };
-		BFEF9F3E2E32703100A8633D /* NJRcmdCardEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardEntry.m; sourceTree = "<group>"; };
-		BFEF9F3F2E32703100A8633D /* NJRcmdCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardHandler.h; sourceTree = "<group>"; };
-		BFEF9F402E32703100A8633D /* NJRcmdCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardHandler.m; sourceTree = "<group>"; };
-		BFEF9F412E32703100A8633D /* NJRcmdCmDoubleV9Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCmDoubleV9Entry.h; sourceTree = "<group>"; };
-		BFEF9F422E32703100A8633D /* NJRcmdCmDoubleV9Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCmDoubleV9Entry.m; sourceTree = "<group>"; };
-		BFEF9F432E32703100A8633D /* NJRcmdCmV2Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCmV2Entry.h; sourceTree = "<group>"; };
-		BFEF9F442E32703100A8633D /* NJRcmdCmV2Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCmV2Entry.m; sourceTree = "<group>"; };
-		BFEF9F452E32703100A8633D /* NJRcmdSmallCoverV2Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdSmallCoverV2Entry.h; sourceTree = "<group>"; };
-		BFEF9F462E32703100A8633D /* NJRcmdSmallCoverV2Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdSmallCoverV2Entry.m; sourceTree = "<group>"; };
-		BFEF9F482E32703100A8633D /* NJRcmdAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJRcmdAd.mm; sourceTree = "<group>"; };
-		BFEF9F492E32703100A8633D /* NJRcmdAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJRcmdAd.xm; sourceTree = "<group>"; };
-		BFEF9F4A2E32703100A8633D /* NJRcmdCardDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardDataItem.h; sourceTree = "<group>"; };
-		BFEF9F4B2E32703100A8633D /* NJRcmdCardDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardDataItem.m; sourceTree = "<group>"; };
-		BFEF9F4E2E32703100A8633D /* NJApiDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJApiDataItem.h; sourceTree = "<group>"; };
-		BFEF9F4F2E32703100A8633D /* NJApiDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJApiDataItem.m; sourceTree = "<group>"; };
-		BFEF9F502E32703100A8633D /* NJApiDataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJApiDataManger.h; sourceTree = "<group>"; };
-		BFEF9F512E32703100A8633D /* NJApiDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJApiDataManger.m; sourceTree = "<group>"; };
-		BFEF9F522E32703100A8633D /* NJNetworkService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJNetworkService.mm; sourceTree = "<group>"; };
-		BFEF9F532E32703100A8633D /* NJNetworkService.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJNetworkService.xm; sourceTree = "<group>"; };
-		BFEF9F552E32703100A8633D /* NJSearchSquareCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareCardEntity.h; sourceTree = "<group>"; };
-		BFEF9F562E32703100A8633D /* NJSearchSquareCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareCardEntity.m; sourceTree = "<group>"; };
-		BFEF9F572E32703100A8633D /* NJSearchSquareCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareCardHandler.h; sourceTree = "<group>"; };
-		BFEF9F582E32703100A8633D /* NJSearchSquareCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareCardHandler.m; sourceTree = "<group>"; };
-		BFEF9F592E32703100A8633D /* NJSearchSquareDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareDataItem.h; sourceTree = "<group>"; };
-		BFEF9F5A2E32703100A8633D /* NJSearchSquareDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareDataItem.m; sourceTree = "<group>"; };
-		BFEF9F5B2E32703100A8633D /* NJSearchSquareRecommendEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareRecommendEntity.h; sourceTree = "<group>"; };
-		BFEF9F5C2E32703100A8633D /* NJSearchSquareRecommendEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareRecommendEntity.m; sourceTree = "<group>"; };
-		BFEF9F5E2E32703100A8633D /* NJSearchResultAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSearchResultAd.mm; sourceTree = "<group>"; };
-		BFEF9F5F2E32703100A8633D /* NJSearchResultAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJSearchResultAd.xm; sourceTree = "<group>"; };
-		BFEF9F612E32703100A8633D /* NJSetting.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSetting.mm; sourceTree = "<group>"; };
-		BFEF9F622E32703100A8633D /* NJSetting.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJSetting.xm; sourceTree = "<group>"; };
+		BF5407CA2E3CEEFE003D6187 /* NSURL+NJPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+NJPath.h"; sourceTree = "<group>"; };
+		BF5407CB2E3CEEFE003D6187 /* NSURL+NJPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NJPath.m"; sourceTree = "<group>"; };
+		BF5407CC2E3CEEFE003D6187 /* UIApplication+NJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NJCategory.h"; sourceTree = "<group>"; };
+		BF5407CD2E3CEEFE003D6187 /* UIApplication+NJCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NJCategory.m"; sourceTree = "<group>"; };
+		BF5407CE2E3CEEFE003D6187 /* UIViewController+NJFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJFind.h"; sourceTree = "<group>"; };
+		BF5407CF2E3CEEFE003D6187 /* UIViewController+NJFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NJFind.m"; sourceTree = "<group>"; };
+		BF5407D12E3CEEFE003D6187 /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
+		BF5407D22E3CEEFE003D6187 /* NJDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDetailAd.xm; sourceTree = "<group>"; };
+		BF5407D42E3CEEFE003D6187 /* NJDynamicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDynamicAd.mm; sourceTree = "<group>"; };
+		BF5407D52E3CEEFE003D6187 /* NJDynamicAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDynamicAd.xm; sourceTree = "<group>"; };
+		BF5407D72E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelBannerEntity.h; sourceTree = "<group>"; };
+		BF5407D82E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelBannerEntity.m; sourceTree = "<group>"; };
+		BF5407D92E3CEEFE003D6187 /* NJAnimeChannelCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelCardEntity.h; sourceTree = "<group>"; };
+		BF5407DA2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelCardEntity.m; sourceTree = "<group>"; };
+		BF5407DB2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelCardHandler.h; sourceTree = "<group>"; };
+		BF5407DC2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelCardHandler.m; sourceTree = "<group>"; };
+		BF5407DD2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelTipEntity.h; sourceTree = "<group>"; };
+		BF5407DE2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelTipEntity.m; sourceTree = "<group>"; };
+		BF5407E02E3CEEFE003D6187 /* NJAnimeChannelDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAnimeChannelDataItem.h; sourceTree = "<group>"; };
+		BF5407E12E3CEEFE003D6187 /* NJAnimeChannelDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAnimeChannelDataItem.m; sourceTree = "<group>"; };
+		BF5407E32E3CEEFE003D6187 /* NJHotTopicCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicCardEntity.h; sourceTree = "<group>"; };
+		BF5407E42E3CEEFE003D6187 /* NJHotTopicCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicCardEntity.m; sourceTree = "<group>"; };
+		BF5407E52E3CEEFE003D6187 /* NJHotTopicCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicCardHandler.h; sourceTree = "<group>"; };
+		BF5407E62E3CEEFE003D6187 /* NJHotTopicCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicCardHandler.m; sourceTree = "<group>"; };
+		BF5407E72E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicRcmdOneItemEntity.h; sourceTree = "<group>"; };
+		BF5407E82E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicRcmdOneItemEntity.m; sourceTree = "<group>"; };
+		BF5407E92E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJHotTopicSmallCoverV5Entity.h; sourceTree = "<group>"; };
+		BF5407EA2E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJHotTopicSmallCoverV5Entity.m; sourceTree = "<group>"; };
+		BF5407EC2E3CEEFE003D6187 /* BAPIAppCardV1Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPIAppCardV1Base.h; sourceTree = "<group>"; };
+		BF5407ED2E3CEEFE003D6187 /* BAPIAppCardV1Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPIAppCardV1Card.h; sourceTree = "<group>"; };
+		BF5407EE2E3CEEFE003D6187 /* BAPIAppCardV1SmallCoverV5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPIAppCardV1SmallCoverV5.h; sourceTree = "<group>"; };
+		BF5407F02E3CEEFE003D6187 /* NJHotTopicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJHotTopicAd.mm; sourceTree = "<group>"; };
+		BF5407F12E3CEEFE003D6187 /* NJHotTopicAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJHotTopicAd.xm; sourceTree = "<group>"; };
+		BF5407F32E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedActivityCardV1Entity.h; sourceTree = "<group>"; };
+		BF5407F42E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedActivityCardV1Entity.m; sourceTree = "<group>"; };
+		BF5407F52E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerV1Entity.h; sourceTree = "<group>"; };
+		BF5407F62E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerV1Entity.m; sourceTree = "<group>"; };
+		BF5407F72E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedBannerV2Entity.h; sourceTree = "<group>"; };
+		BF5407F82E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedBannerV2Entity.m; sourceTree = "<group>"; };
+		BF5407F92E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedCardEntity.h; sourceTree = "<group>"; };
+		BF5407FA2E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedCardEntity.m; sourceTree = "<group>"; };
+		BF5407FB2E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedCardHandler.h; sourceTree = "<group>"; };
+		BF5407FC2E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedCardHandler.m; sourceTree = "<group>"; };
+		BF5407FE2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveIndexFeedDataItem.h; sourceTree = "<group>"; };
+		BF5407FF2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveIndexFeedDataItem.m; sourceTree = "<group>"; };
+		BF5408012E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLiveSecondGetListDataItem.h; sourceTree = "<group>"; };
+		BF5408022E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLiveSecondGetListDataItem.m; sourceTree = "<group>"; };
+		BF5408042E3CEEFE003D6187 /* NJLiveDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJLiveDetailAd.mm; sourceTree = "<group>"; };
+		BF5408052E3CEEFE003D6187 /* NJLiveDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJLiveDetailAd.xm; sourceTree = "<group>"; };
+		BF5408072E3CEEFE003D6187 /* NJRcmdBannerV8Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdBannerV8Entry.h; sourceTree = "<group>"; };
+		BF5408082E3CEEFE003D6187 /* NJRcmdBannerV8Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdBannerV8Entry.m; sourceTree = "<group>"; };
+		BF5408092E3CEEFE003D6187 /* NJRcmdCardEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardEntry.h; sourceTree = "<group>"; };
+		BF54080A2E3CEEFE003D6187 /* NJRcmdCardEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardEntry.m; sourceTree = "<group>"; };
+		BF54080B2E3CEEFE003D6187 /* NJRcmdCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardHandler.h; sourceTree = "<group>"; };
+		BF54080C2E3CEEFE003D6187 /* NJRcmdCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardHandler.m; sourceTree = "<group>"; };
+		BF54080D2E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCmDoubleV9Entry.h; sourceTree = "<group>"; };
+		BF54080E2E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCmDoubleV9Entry.m; sourceTree = "<group>"; };
+		BF54080F2E3CEEFE003D6187 /* NJRcmdCmV2Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCmV2Entry.h; sourceTree = "<group>"; };
+		BF5408102E3CEEFE003D6187 /* NJRcmdCmV2Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCmV2Entry.m; sourceTree = "<group>"; };
+		BF5408112E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdSmallCoverV2Entry.h; sourceTree = "<group>"; };
+		BF5408122E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdSmallCoverV2Entry.m; sourceTree = "<group>"; };
+		BF5408142E3CEEFE003D6187 /* NJRcmdAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJRcmdAd.mm; sourceTree = "<group>"; };
+		BF5408152E3CEEFE003D6187 /* NJRcmdAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJRcmdAd.xm; sourceTree = "<group>"; };
+		BF5408162E3CEEFE003D6187 /* NJRcmdCardDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardDataItem.h; sourceTree = "<group>"; };
+		BF5408172E3CEEFE003D6187 /* NJRcmdCardDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardDataItem.m; sourceTree = "<group>"; };
+		BF54081A2E3CEEFE003D6187 /* NJLaunchAd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLaunchAd.m; sourceTree = "<group>"; };
+		BF54081B2E3CEEFE003D6187 /* NJLaunchAd.x */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = NJLaunchAd.x; sourceTree = "<group>"; };
+		BF54081D2E3CEEFE003D6187 /* NJApiDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJApiDataItem.h; sourceTree = "<group>"; };
+		BF54081E2E3CEEFE003D6187 /* NJApiDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJApiDataItem.m; sourceTree = "<group>"; };
+		BF54081F2E3CEEFE003D6187 /* NJApiDataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJApiDataManger.h; sourceTree = "<group>"; };
+		BF5408202E3CEEFE003D6187 /* NJApiDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJApiDataManger.m; sourceTree = "<group>"; };
+		BF5408212E3CEEFE003D6187 /* NJNetworkService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJNetworkService.mm; sourceTree = "<group>"; };
+		BF5408222E3CEEFE003D6187 /* NJNetworkService.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJNetworkService.xm; sourceTree = "<group>"; };
+		BF5408242E3CEEFE003D6187 /* NJSearchSquareCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareCardEntity.h; sourceTree = "<group>"; };
+		BF5408252E3CEEFE003D6187 /* NJSearchSquareCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareCardEntity.m; sourceTree = "<group>"; };
+		BF5408262E3CEEFE003D6187 /* NJSearchSquareCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareCardHandler.h; sourceTree = "<group>"; };
+		BF5408272E3CEEFE003D6187 /* NJSearchSquareCardHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareCardHandler.m; sourceTree = "<group>"; };
+		BF5408282E3CEEFE003D6187 /* NJSearchSquareDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareDataItem.h; sourceTree = "<group>"; };
+		BF5408292E3CEEFE003D6187 /* NJSearchSquareDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareDataItem.m; sourceTree = "<group>"; };
+		BF54082A2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareRecommendEntity.h; sourceTree = "<group>"; };
+		BF54082B2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareRecommendEntity.m; sourceTree = "<group>"; };
+		BF54082D2E3CEEFE003D6187 /* NJSearchResultAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSearchResultAd.mm; sourceTree = "<group>"; };
+		BF54082E2E3CEEFE003D6187 /* NJSearchResultAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJSearchResultAd.xm; sourceTree = "<group>"; };
+		BF5408302E3CEEFE003D6187 /* NJSetting.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSetting.mm; sourceTree = "<group>"; };
+		BF5408312E3CEEFE003D6187 /* NJSetting.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJSetting.xm; sourceTree = "<group>"; };
+		BF5408332E3CEEFE003D6187 /* NJCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJCommonDefine.h; sourceTree = "<group>"; };
+		BF5408342E3CEEFE003D6187 /* NJCommonDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJCommonDefine.m; sourceTree = "<group>"; };
+		BF5408352E3CEEFE003D6187 /* NJDebug.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDebug.mm; sourceTree = "<group>"; };
+		BF5408362E3CEEFE003D6187 /* NJDebug.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDebug.xm; sourceTree = "<group>"; };
+		BF5408372E3CEEFE003D6187 /* NJSettingSwitchDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSettingSwitchDefine.h; sourceTree = "<group>"; };
+		BF5408382E3CEEFE003D6187 /* NJSettingSwitchDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSettingSwitchDefine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -266,7 +274,6 @@
 				icon.png,
 				Info.plist,
 				"Scripts/quick-resign.sh",
-				"TargetApp/put ipa or app here",
 			);
 			target = BF0D03092DEDA95900115365 /* BiliBiliMD */;
 		};
@@ -352,20 +359,15 @@
 		BF0D03272DEDA95900115365 /* Logos */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F092E32703100A8633D /* Category */,
-				BFEF9F0C2E32703100A8633D /* Dynamic */,
-				BFEF9F4D2E32703100A8633D /* Home */,
-				BFEF9F542E32703100A8633D /* Network */,
-				BFEF9F602E32703100A8633D /* Search */,
-				BFEF9F632E32703100A8633D /* Setting */,
-				BFB53D012E23D77D0052AAA7 /* NJCommonDefine.h */,
-				BFB53D022E23D77D0052AAA7 /* NJCommonDefine.m */,
-				BFB53D032E23D77D0052AAA7 /* NJDebug.mm */,
-				BFB53D042E23D77D0052AAA7 /* NJDebug.xm */,
-				BFB53D052E23D77D0052AAA7 /* NJDetailAd.mm */,
-				BFB53D062E23D77D0052AAA7 /* NJDetailAd.xm */,
-				BFB53D072E23D77D0052AAA7 /* NJLaunchAd.m */,
-				BFB53D082E23D77D0052AAA7 /* NJLaunchAd.x */,
+				BF5407D02E3CEEFE003D6187 /* Category */,
+				BF5407D32E3CEEFE003D6187 /* Detail */,
+				BF5407D62E3CEEFE003D6187 /* Dynamic */,
+				BF5408192E3CEEFE003D6187 /* Home */,
+				BF54081C2E3CEEFE003D6187 /* Launch */,
+				BF5408232E3CEEFE003D6187 /* Network */,
+				BF54082F2E3CEEFE003D6187 /* Search */,
+				BF5408322E3CEEFE003D6187 /* Setting */,
+				BF5408392E3CEEFE003D6187 /* Tool */,
 			);
 			path = Logos;
 			sourceTree = "<group>";
@@ -436,221 +438,254 @@
 			path = fishhook;
 			sourceTree = "<group>";
 		};
-		BFEF9F092E32703100A8633D /* Category */ = {
+		BF5407D02E3CEEFE003D6187 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F032E32703100A8633D /* NSURL+NJPath.h */,
-				BFEF9F042E32703100A8633D /* NSURL+NJPath.m */,
-				BFEF9F052E32703100A8633D /* UIApplication+NJCategory.h */,
-				BFEF9F062E32703100A8633D /* UIApplication+NJCategory.m */,
-				BFEF9F072E32703100A8633D /* UIViewController+NJFind.h */,
-				BFEF9F082E32703100A8633D /* UIViewController+NJFind.m */,
+				BF5407CA2E3CEEFE003D6187 /* NSURL+NJPath.h */,
+				BF5407CB2E3CEEFE003D6187 /* NSURL+NJPath.m */,
+				BF5407CC2E3CEEFE003D6187 /* UIApplication+NJCategory.h */,
+				BF5407CD2E3CEEFE003D6187 /* UIApplication+NJCategory.m */,
+				BF5407CE2E3CEEFE003D6187 /* UIViewController+NJFind.h */,
+				BF5407CF2E3CEEFE003D6187 /* UIViewController+NJFind.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
-		BFEF9F0C2E32703100A8633D /* Dynamic */ = {
+		BF5407D32E3CEEFE003D6187 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F0A2E32703100A8633D /* NJDynamicAd.mm */,
-				BFEF9F0B2E32703100A8633D /* NJDynamicAd.xm */,
+				BF5407D12E3CEEFE003D6187 /* NJDetailAd.mm */,
+				BF5407D22E3CEEFE003D6187 /* NJDetailAd.xm */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		BF5407D62E3CEEFE003D6187 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				BF5407D42E3CEEFE003D6187 /* NJDynamicAd.mm */,
+				BF5407D52E3CEEFE003D6187 /* NJDynamicAd.xm */,
 			);
 			path = Dynamic;
 			sourceTree = "<group>";
 		};
-		BFEF9F132E32703100A8633D /* Entity */ = {
+		BF5407DF2E3CEEFE003D6187 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F0D2E32703100A8633D /* NJAnimeChannelBannerEntity.h */,
-				BFEF9F0E2E32703100A8633D /* NJAnimeChannelBannerEntity.m */,
-				BFEF9F0F2E32703100A8633D /* NJAnimeChannelCardEntity.h */,
-				BFEF9F102E32703100A8633D /* NJAnimeChannelCardEntity.m */,
-				BFEF9F112E32703100A8633D /* NJAnimeChannelCardHandler.h */,
-				BFEF9F122E32703100A8633D /* NJAnimeChannelCardHandler.m */,
+				BF5407D72E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.h */,
+				BF5407D82E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.m */,
+				BF5407D92E3CEEFE003D6187 /* NJAnimeChannelCardEntity.h */,
+				BF5407DA2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.m */,
+				BF5407DB2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.h */,
+				BF5407DC2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.m */,
+				BF5407DD2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.h */,
+				BF5407DE2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		BFEF9F162E32703100A8633D /* Anime */ = {
+		BF5407E22E3CEEFE003D6187 /* Anime */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F132E32703100A8633D /* Entity */,
-				BFEF9F142E32703100A8633D /* NJAnimeChannelDataItem.h */,
-				BFEF9F152E32703100A8633D /* NJAnimeChannelDataItem.m */,
+				BF5407DF2E3CEEFE003D6187 /* Entity */,
+				BF5407E02E3CEEFE003D6187 /* NJAnimeChannelDataItem.h */,
+				BF5407E12E3CEEFE003D6187 /* NJAnimeChannelDataItem.m */,
 			);
 			path = Anime;
 			sourceTree = "<group>";
 		};
-		BFEF9F1F2E32703100A8633D /* Entity */ = {
+		BF5407EB2E3CEEFE003D6187 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F172E32703100A8633D /* NJHotTopicCardEntity.h */,
-				BFEF9F182E32703100A8633D /* NJHotTopicCardEntity.m */,
-				BFEF9F192E32703100A8633D /* NJHotTopicCardHandler.h */,
-				BFEF9F1A2E32703100A8633D /* NJHotTopicCardHandler.m */,
-				BFEF9F1B2E32703100A8633D /* NJHotTopicRcmdOneItemEntity.h */,
-				BFEF9F1C2E32703100A8633D /* NJHotTopicRcmdOneItemEntity.m */,
-				BFEF9F1D2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.h */,
-				BFEF9F1E2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.m */,
+				BF5407E32E3CEEFE003D6187 /* NJHotTopicCardEntity.h */,
+				BF5407E42E3CEEFE003D6187 /* NJHotTopicCardEntity.m */,
+				BF5407E52E3CEEFE003D6187 /* NJHotTopicCardHandler.h */,
+				BF5407E62E3CEEFE003D6187 /* NJHotTopicCardHandler.m */,
+				BF5407E72E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.h */,
+				BF5407E82E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.m */,
+				BF5407E92E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.h */,
+				BF5407EA2E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		BFEF9F232E32703100A8633D /* Header */ = {
+		BF5407EF2E3CEEFE003D6187 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F202E32703100A8633D /* BAPIAppCardV1Base.h */,
-				BFEF9F212E32703100A8633D /* BAPIAppCardV1Card.h */,
-				BFEF9F222E32703100A8633D /* BAPIAppCardV1SmallCoverV5.h */,
+				BF5407EC2E3CEEFE003D6187 /* BAPIAppCardV1Base.h */,
+				BF5407ED2E3CEEFE003D6187 /* BAPIAppCardV1Card.h */,
+				BF5407EE2E3CEEFE003D6187 /* BAPIAppCardV1SmallCoverV5.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
 		};
-		BFEF9F262E32703100A8633D /* HotTopic */ = {
+		BF5407F22E3CEEFE003D6187 /* HotTopic */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F1F2E32703100A8633D /* Entity */,
-				BFEF9F232E32703100A8633D /* Header */,
-				BFEF9F242E32703100A8633D /* NJHotTopicAd.mm */,
-				BFEF9F252E32703100A8633D /* NJHotTopicAd.xm */,
+				BF5407EB2E3CEEFE003D6187 /* Entity */,
+				BF5407EF2E3CEEFE003D6187 /* Header */,
+				BF5407F02E3CEEFE003D6187 /* NJHotTopicAd.mm */,
+				BF5407F12E3CEEFE003D6187 /* NJHotTopicAd.xm */,
 			);
 			path = HotTopic;
 			sourceTree = "<group>";
 		};
-		BFEF9F312E32703100A8633D /* Entity */ = {
+		BF5407FD2E3CEEFE003D6187 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F272E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.h */,
-				BFEF9F282E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.m */,
-				BFEF9F292E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.h */,
-				BFEF9F2A2E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.m */,
-				BFEF9F2B2E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.h */,
-				BFEF9F2C2E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.m */,
-				BFEF9F2D2E32703100A8633D /* NJLiveIndexFeedCardEntity.h */,
-				BFEF9F2E2E32703100A8633D /* NJLiveIndexFeedCardEntity.m */,
-				BFEF9F2F2E32703100A8633D /* NJLiveIndexFeedCardHandler.h */,
-				BFEF9F302E32703100A8633D /* NJLiveIndexFeedCardHandler.m */,
+				BF5407F32E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.h */,
+				BF5407F42E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.m */,
+				BF5407F52E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.h */,
+				BF5407F62E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.m */,
+				BF5407F72E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.h */,
+				BF5407F82E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.m */,
+				BF5407F92E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.h */,
+				BF5407FA2E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.m */,
+				BF5407FB2E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.h */,
+				BF5407FC2E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		BFEF9F342E32703100A8633D /* IndexFeed */ = {
+		BF5408002E3CEEFE003D6187 /* IndexFeed */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F312E32703100A8633D /* Entity */,
-				BFEF9F322E32703100A8633D /* NJLiveIndexFeedDataItem.h */,
-				BFEF9F332E32703100A8633D /* NJLiveIndexFeedDataItem.m */,
+				BF5407FD2E3CEEFE003D6187 /* Entity */,
+				BF5407FE2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.h */,
+				BF5407FF2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.m */,
 			);
 			path = IndexFeed;
 			sourceTree = "<group>";
 		};
-		BFEF9F372E32703100A8633D /* SecondGetList */ = {
+		BF5408032E3CEEFE003D6187 /* SecondGetList */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F352E32703100A8633D /* NJLiveSecondGetListDataItem.h */,
-				BFEF9F362E32703100A8633D /* NJLiveSecondGetListDataItem.m */,
+				BF5408012E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.h */,
+				BF5408022E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.m */,
 			);
 			path = SecondGetList;
 			sourceTree = "<group>";
 		};
-		BFEF9F3A2E32703100A8633D /* Live */ = {
+		BF5408062E3CEEFE003D6187 /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F342E32703100A8633D /* IndexFeed */,
-				BFEF9F372E32703100A8633D /* SecondGetList */,
-				BFEF9F382E32703100A8633D /* NJLiveDetailAd.mm */,
-				BFEF9F392E32703100A8633D /* NJLiveDetailAd.xm */,
+				BF5408002E3CEEFE003D6187 /* IndexFeed */,
+				BF5408032E3CEEFE003D6187 /* SecondGetList */,
+				BF5408042E3CEEFE003D6187 /* NJLiveDetailAd.mm */,
+				BF5408052E3CEEFE003D6187 /* NJLiveDetailAd.xm */,
 			);
 			path = Live;
 			sourceTree = "<group>";
 		};
-		BFEF9F472E32703100A8633D /* Entry */ = {
+		BF5408132E3CEEFE003D6187 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F3B2E32703100A8633D /* NJRcmdBannerV8Entry.h */,
-				BFEF9F3C2E32703100A8633D /* NJRcmdBannerV8Entry.m */,
-				BFEF9F3D2E32703100A8633D /* NJRcmdCardEntry.h */,
-				BFEF9F3E2E32703100A8633D /* NJRcmdCardEntry.m */,
-				BFEF9F3F2E32703100A8633D /* NJRcmdCardHandler.h */,
-				BFEF9F402E32703100A8633D /* NJRcmdCardHandler.m */,
-				BFEF9F412E32703100A8633D /* NJRcmdCmDoubleV9Entry.h */,
-				BFEF9F422E32703100A8633D /* NJRcmdCmDoubleV9Entry.m */,
-				BFEF9F432E32703100A8633D /* NJRcmdCmV2Entry.h */,
-				BFEF9F442E32703100A8633D /* NJRcmdCmV2Entry.m */,
-				BFEF9F452E32703100A8633D /* NJRcmdSmallCoverV2Entry.h */,
-				BFEF9F462E32703100A8633D /* NJRcmdSmallCoverV2Entry.m */,
+				BF5408072E3CEEFE003D6187 /* NJRcmdBannerV8Entry.h */,
+				BF5408082E3CEEFE003D6187 /* NJRcmdBannerV8Entry.m */,
+				BF5408092E3CEEFE003D6187 /* NJRcmdCardEntry.h */,
+				BF54080A2E3CEEFE003D6187 /* NJRcmdCardEntry.m */,
+				BF54080B2E3CEEFE003D6187 /* NJRcmdCardHandler.h */,
+				BF54080C2E3CEEFE003D6187 /* NJRcmdCardHandler.m */,
+				BF54080D2E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.h */,
+				BF54080E2E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.m */,
+				BF54080F2E3CEEFE003D6187 /* NJRcmdCmV2Entry.h */,
+				BF5408102E3CEEFE003D6187 /* NJRcmdCmV2Entry.m */,
+				BF5408112E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.h */,
+				BF5408122E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.m */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
 		};
-		BFEF9F4C2E32703100A8633D /* Rcmd */ = {
+		BF5408182E3CEEFE003D6187 /* Rcmd */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F472E32703100A8633D /* Entry */,
-				BFEF9F482E32703100A8633D /* NJRcmdAd.mm */,
-				BFEF9F492E32703100A8633D /* NJRcmdAd.xm */,
-				BFEF9F4A2E32703100A8633D /* NJRcmdCardDataItem.h */,
-				BFEF9F4B2E32703100A8633D /* NJRcmdCardDataItem.m */,
+				BF5408132E3CEEFE003D6187 /* Entry */,
+				BF5408142E3CEEFE003D6187 /* NJRcmdAd.mm */,
+				BF5408152E3CEEFE003D6187 /* NJRcmdAd.xm */,
+				BF5408162E3CEEFE003D6187 /* NJRcmdCardDataItem.h */,
+				BF5408172E3CEEFE003D6187 /* NJRcmdCardDataItem.m */,
 			);
 			path = Rcmd;
 			sourceTree = "<group>";
 		};
-		BFEF9F4D2E32703100A8633D /* Home */ = {
+		BF5408192E3CEEFE003D6187 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F162E32703100A8633D /* Anime */,
-				BFEF9F262E32703100A8633D /* HotTopic */,
-				BFEF9F3A2E32703100A8633D /* Live */,
-				BFEF9F4C2E32703100A8633D /* Rcmd */,
+				BF5407E22E3CEEFE003D6187 /* Anime */,
+				BF5407F22E3CEEFE003D6187 /* HotTopic */,
+				BF5408062E3CEEFE003D6187 /* Live */,
+				BF5408182E3CEEFE003D6187 /* Rcmd */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		BFEF9F542E32703100A8633D /* Network */ = {
+		BF54081C2E3CEEFE003D6187 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F4E2E32703100A8633D /* NJApiDataItem.h */,
-				BFEF9F4F2E32703100A8633D /* NJApiDataItem.m */,
-				BFEF9F502E32703100A8633D /* NJApiDataManger.h */,
-				BFEF9F512E32703100A8633D /* NJApiDataManger.m */,
-				BFEF9F522E32703100A8633D /* NJNetworkService.mm */,
-				BFEF9F532E32703100A8633D /* NJNetworkService.xm */,
+				BF54081A2E3CEEFE003D6187 /* NJLaunchAd.m */,
+				BF54081B2E3CEEFE003D6187 /* NJLaunchAd.x */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		BF5408232E3CEEFE003D6187 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BF54081D2E3CEEFE003D6187 /* NJApiDataItem.h */,
+				BF54081E2E3CEEFE003D6187 /* NJApiDataItem.m */,
+				BF54081F2E3CEEFE003D6187 /* NJApiDataManger.h */,
+				BF5408202E3CEEFE003D6187 /* NJApiDataManger.m */,
+				BF5408212E3CEEFE003D6187 /* NJNetworkService.mm */,
+				BF5408222E3CEEFE003D6187 /* NJNetworkService.xm */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		BFEF9F5D2E32703100A8633D /* SearchSquare */ = {
+		BF54082C2E3CEEFE003D6187 /* SearchSquare */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F552E32703100A8633D /* NJSearchSquareCardEntity.h */,
-				BFEF9F562E32703100A8633D /* NJSearchSquareCardEntity.m */,
-				BFEF9F572E32703100A8633D /* NJSearchSquareCardHandler.h */,
-				BFEF9F582E32703100A8633D /* NJSearchSquareCardHandler.m */,
-				BFEF9F592E32703100A8633D /* NJSearchSquareDataItem.h */,
-				BFEF9F5A2E32703100A8633D /* NJSearchSquareDataItem.m */,
-				BFEF9F5B2E32703100A8633D /* NJSearchSquareRecommendEntity.h */,
-				BFEF9F5C2E32703100A8633D /* NJSearchSquareRecommendEntity.m */,
+				BF5408242E3CEEFE003D6187 /* NJSearchSquareCardEntity.h */,
+				BF5408252E3CEEFE003D6187 /* NJSearchSquareCardEntity.m */,
+				BF5408262E3CEEFE003D6187 /* NJSearchSquareCardHandler.h */,
+				BF5408272E3CEEFE003D6187 /* NJSearchSquareCardHandler.m */,
+				BF5408282E3CEEFE003D6187 /* NJSearchSquareDataItem.h */,
+				BF5408292E3CEEFE003D6187 /* NJSearchSquareDataItem.m */,
+				BF54082A2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.h */,
+				BF54082B2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.m */,
 			);
 			path = SearchSquare;
 			sourceTree = "<group>";
 		};
-		BFEF9F602E32703100A8633D /* Search */ = {
+		BF54082F2E3CEEFE003D6187 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F5D2E32703100A8633D /* SearchSquare */,
-				BFEF9F5E2E32703100A8633D /* NJSearchResultAd.mm */,
-				BFEF9F5F2E32703100A8633D /* NJSearchResultAd.xm */,
+				BF54082C2E3CEEFE003D6187 /* SearchSquare */,
+				BF54082D2E3CEEFE003D6187 /* NJSearchResultAd.mm */,
+				BF54082E2E3CEEFE003D6187 /* NJSearchResultAd.xm */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
-		BFEF9F632E32703100A8633D /* Setting */ = {
+		BF5408322E3CEEFE003D6187 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				BFEF9F612E32703100A8633D /* NJSetting.mm */,
-				BFEF9F622E32703100A8633D /* NJSetting.xm */,
+				BF5408302E3CEEFE003D6187 /* NJSetting.mm */,
+				BF5408312E3CEEFE003D6187 /* NJSetting.xm */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		BF5408392E3CEEFE003D6187 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				BF5408332E3CEEFE003D6187 /* NJCommonDefine.h */,
+				BF5408342E3CEEFE003D6187 /* NJCommonDefine.m */,
+				BF5408352E3CEEFE003D6187 /* NJDebug.mm */,
+				BF5408362E3CEEFE003D6187 /* NJDebug.xm */,
+				BF5408372E3CEEFE003D6187 /* NJSettingSwitchDefine.h */,
+				BF5408382E3CEEFE003D6187 /* NJSettingSwitchDefine.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,7 +695,43 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB53D2D2E23D77D0052AAA7 /* NJCommonDefine.h in Headers */,
+				BF5408662E3CEEFE003D6187 /* BAPIAppCardV1Card.h in Headers */,
+				BF5408672E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.h in Headers */,
+				BF5408682E3CEEFE003D6187 /* NJApiDataItem.h in Headers */,
+				BF5408692E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.h in Headers */,
+				BF54086A2E3CEEFE003D6187 /* NJAnimeChannelTipEntity.h in Headers */,
+				BF54086B2E3CEEFE003D6187 /* NJAnimeChannelDataItem.h in Headers */,
+				BF54086C2E3CEEFE003D6187 /* NJSearchSquareCardHandler.h in Headers */,
+				BF54086D2E3CEEFE003D6187 /* NJCommonDefine.h in Headers */,
+				BF54086E2E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.h in Headers */,
+				BF54086F2E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.h in Headers */,
+				BF5408702E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.h in Headers */,
+				BF5408712E3CEEFE003D6187 /* NJRcmdCardEntry.h in Headers */,
+				BF5408722E3CEEFE003D6187 /* NJRcmdCardHandler.h in Headers */,
+				BF5408732E3CEEFE003D6187 /* NJApiDataManger.h in Headers */,
+				BF5408742E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.h in Headers */,
+				BF5408752E3CEEFE003D6187 /* NJAnimeChannelCardHandler.h in Headers */,
+				BF5408762E3CEEFE003D6187 /* NJRcmdBannerV8Entry.h in Headers */,
+				BF5408772E3CEEFE003D6187 /* UIApplication+NJCategory.h in Headers */,
+				BF5408782E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.h in Headers */,
+				BF5408792E3CEEFE003D6187 /* NJSearchSquareCardEntity.h in Headers */,
+				BF54087A2E3CEEFE003D6187 /* BAPIAppCardV1Base.h in Headers */,
+				BF54087B2E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.h in Headers */,
+				BF54087C2E3CEEFE003D6187 /* NJHotTopicCardEntity.h in Headers */,
+				BF54087D2E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.h in Headers */,
+				BF54087E2E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.h in Headers */,
+				BF54087F2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.h in Headers */,
+				BF5408802E3CEEFE003D6187 /* BAPIAppCardV1SmallCoverV5.h in Headers */,
+				BF5408812E3CEEFE003D6187 /* NJRcmdCardDataItem.h in Headers */,
+				BF5408822E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.h in Headers */,
+				BF5408832E3CEEFE003D6187 /* NJHotTopicCardHandler.h in Headers */,
+				BF5408842E3CEEFE003D6187 /* NJRcmdCmV2Entry.h in Headers */,
+				BF5408852E3CEEFE003D6187 /* UIViewController+NJFind.h in Headers */,
+				BF5408862E3CEEFE003D6187 /* NJSettingSwitchDefine.h in Headers */,
+				BF5408872E3CEEFE003D6187 /* NSURL+NJPath.h in Headers */,
+				BF5408882E3CEEFE003D6187 /* NJSearchSquareDataItem.h in Headers */,
+				BF5408892E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.h in Headers */,
+				BF54088A2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.h in Headers */,
 				BF0D03312DEDA95900115365 /* MDCycriptManager.h in Headers */,
 				BF0D03352DEDA95900115365 /* MDMethodTrace.h in Headers */,
 				BF0D035E2DEDA95900115365 /* fishhook.h in Headers */,
@@ -669,40 +740,6 @@
 				BF0D032D2DEDA95900115365 /* MDConfigManager.h in Headers */,
 				BF0D034C2DEDA95900115365 /* OCSelectorTrampolines.h in Headers */,
 				BF0D03482DEDA95900115365 /* OCMethodTrace.h in Headers */,
-				BFEF9F8A2E32703100A8633D /* NJRcmdCmV2Entry.h in Headers */,
-				BFEF9F8B2E32703100A8633D /* BAPIAppCardV1Card.h in Headers */,
-				BFEF9F8C2E32703100A8633D /* NJRcmdCardHandler.h in Headers */,
-				BFEF9F8D2E32703100A8633D /* BAPIAppCardV1SmallCoverV5.h in Headers */,
-				BFEF9F8E2E32703100A8633D /* UIViewController+NJFind.h in Headers */,
-				BFEF9F8F2E32703100A8633D /* NJRcmdBannerV8Entry.h in Headers */,
-				BFEF9F902E32703100A8633D /* NJRcmdCmDoubleV9Entry.h in Headers */,
-				BFEF9F912E32703100A8633D /* NJSearchSquareRecommendEntity.h in Headers */,
-				BFEF9F922E32703100A8633D /* NJSearchSquareDataItem.h in Headers */,
-				BFEF9F932E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.h in Headers */,
-				BFEF9F942E32703100A8633D /* NJHotTopicCardHandler.h in Headers */,
-				BFEF9F952E32703100A8633D /* NJSearchSquareCardEntity.h in Headers */,
-				BFEF9F962E32703100A8633D /* BAPIAppCardV1Base.h in Headers */,
-				BFEF9F972E32703100A8633D /* NJHotTopicCardEntity.h in Headers */,
-				BFEF9F982E32703100A8633D /* NJHotTopicRcmdOneItemEntity.h in Headers */,
-				BFEF9F992E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.h in Headers */,
-				BFEF9F9A2E32703100A8633D /* NJLiveIndexFeedCardHandler.h in Headers */,
-				BFEF9F9B2E32703100A8633D /* NJRcmdCardEntry.h in Headers */,
-				BFEF9F9C2E32703100A8633D /* NSURL+NJPath.h in Headers */,
-				BFEF9F9D2E32703100A8633D /* NJLiveSecondGetListDataItem.h in Headers */,
-				BFEF9F9E2E32703100A8633D /* NJRcmdCardDataItem.h in Headers */,
-				BFEF9F9F2E32703100A8633D /* UIApplication+NJCategory.h in Headers */,
-				BFEF9FA02E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.h in Headers */,
-				BFEF9FA12E32703100A8633D /* NJLiveIndexFeedDataItem.h in Headers */,
-				BFEF9FA22E32703100A8633D /* NJHotTopicSmallCoverV5Entity.h in Headers */,
-				BFEF9FA32E32703100A8633D /* NJAnimeChannelCardHandler.h in Headers */,
-				BFEF9FA42E32703100A8633D /* NJAnimeChannelDataItem.h in Headers */,
-				BFEF9FA52E32703100A8633D /* NJLiveIndexFeedCardEntity.h in Headers */,
-				BFEF9FA62E32703100A8633D /* NJRcmdSmallCoverV2Entry.h in Headers */,
-				BFEF9FA72E32703100A8633D /* NJAnimeChannelCardEntity.h in Headers */,
-				BFEF9FA82E32703100A8633D /* NJAnimeChannelBannerEntity.h in Headers */,
-				BFEF9FA92E32703100A8633D /* NJApiDataItem.h in Headers */,
-				BFEF9FAA2E32703100A8633D /* NJApiDataManger.h in Headers */,
-				BFEF9FAB2E32703100A8633D /* NJSearchSquareCardHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,16 +907,56 @@
 			files = (
 				BF0D03622DEDA95900115365 /* BiliBiliMDDylib.m in Sources */,
 				BF0D03332DEDA95900115365 /* MDCycriptManager.m in Sources */,
+				BF54083A2E3CEEFE003D6187 /* NJRcmdSmallCoverV2Entry.m in Sources */,
+				BF54083B2E3CEEFE003D6187 /* NJHotTopicAd.mm in Sources */,
+				BF54083C2E3CEEFE003D6187 /* NJRcmdCmV2Entry.m in Sources */,
+				BF54083D2E3CEEFE003D6187 /* NJApiDataItem.m in Sources */,
+				BF54083E2E3CEEFE003D6187 /* NJSearchSquareRecommendEntity.m in Sources */,
+				BF54083F2E3CEEFE003D6187 /* NJHotTopicCardHandler.m in Sources */,
+				BF5408402E3CEEFE003D6187 /* NJRcmdAd.mm in Sources */,
+				BF5408412E3CEEFE003D6187 /* NJCommonDefine.m in Sources */,
+				BF5408422E3CEEFE003D6187 /* NJSetting.mm in Sources */,
+				BF5408432E3CEEFE003D6187 /* NJAnimeChannelTipEntity.m in Sources */,
+				BF5408442E3CEEFE003D6187 /* NJRcmdCardDataItem.m in Sources */,
+				BF5408452E3CEEFE003D6187 /* NJHotTopicCardEntity.m in Sources */,
+				BF5408462E3CEEFE003D6187 /* NJSearchSquareCardHandler.m in Sources */,
+				BF5408472E3CEEFE003D6187 /* NSURL+NJPath.m in Sources */,
+				BF5408482E3CEEFE003D6187 /* NJNetworkService.mm in Sources */,
+				BF5408492E3CEEFE003D6187 /* NJLiveSecondGetListDataItem.m in Sources */,
+				BF54084A2E3CEEFE003D6187 /* NJSearchSquareCardEntity.m in Sources */,
+				BF54084B2E3CEEFE003D6187 /* NJLiveIndexFeedBannerV2Entity.m in Sources */,
+				BF54084C2E3CEEFE003D6187 /* NJSearchSquareDataItem.m in Sources */,
+				BF54084D2E3CEEFE003D6187 /* UIViewController+NJFind.m in Sources */,
+				BF54084E2E3CEEFE003D6187 /* NJLiveIndexFeedDataItem.m in Sources */,
+				BF54084F2E3CEEFE003D6187 /* NJLaunchAd.m in Sources */,
+				BF5408502E3CEEFE003D6187 /* UIApplication+NJCategory.m in Sources */,
+				BF5408512E3CEEFE003D6187 /* NJDynamicAd.mm in Sources */,
+				BF5408522E3CEEFE003D6187 /* NJRcmdCmDoubleV9Entry.m in Sources */,
+				BF5408532E3CEEFE003D6187 /* NJRcmdCardHandler.m in Sources */,
+				BF5408542E3CEEFE003D6187 /* NJLiveIndexFeedCardEntity.m in Sources */,
+				BF5408552E3CEEFE003D6187 /* NJAnimeChannelBannerEntity.m in Sources */,
+				BF5408562E3CEEFE003D6187 /* NJAnimeChannelDataItem.m in Sources */,
+				BF5408572E3CEEFE003D6187 /* NJDebug.mm in Sources */,
+				BF5408582E3CEEFE003D6187 /* NJHotTopicSmallCoverV5Entity.m in Sources */,
+				BF5408592E3CEEFE003D6187 /* NJSearchResultAd.mm in Sources */,
+				BF54085A2E3CEEFE003D6187 /* NJHotTopicRcmdOneItemEntity.m in Sources */,
+				BF54085B2E3CEEFE003D6187 /* NJApiDataManger.m in Sources */,
+				BF54085C2E3CEEFE003D6187 /* NJLiveIndexFeedActivityCardV1Entity.m in Sources */,
+				BF54085D2E3CEEFE003D6187 /* NJAnimeChannelCardEntity.m in Sources */,
+				BF54085E2E3CEEFE003D6187 /* NJRcmdCardEntry.m in Sources */,
+				BF54085F2E3CEEFE003D6187 /* NJAnimeChannelCardHandler.m in Sources */,
+				BF5408602E3CEEFE003D6187 /* NJSettingSwitchDefine.m in Sources */,
+				BF5408612E3CEEFE003D6187 /* NJLiveDetailAd.mm in Sources */,
+				BF5408622E3CEEFE003D6187 /* NJLiveIndexFeedCardHandler.m in Sources */,
+				BF5408632E3CEEFE003D6187 /* NJRcmdBannerV8Entry.m in Sources */,
+				BF5408642E3CEEFE003D6187 /* NJLiveIndexFeedBannerV1Entity.m in Sources */,
+				BF5408652E3CEEFE003D6187 /* NJDetailAd.mm in Sources */,
 				BF0D033C2DEDA95900115365 /* a1a2-selectortramps-arm64.s in Sources */,
 				BF0D033A2DEDA95900115365 /* a1a2-selectortramps-arm.s in Sources */,
 				BF0D03402DEDA95900115365 /* a1a2-selectortramps-x86_64.s in Sources */,
 				BF0D034A2DEDA95900115365 /* OCMethodTrace.m in Sources */,
 				BF0D032F2DEDA95900115365 /* MDConfigManager.m in Sources */,
 				BF0D035C2DEDA95900115365 /* fishhook.c in Sources */,
-				BFB53D352E23D77D0052AAA7 /* NJDetailAd.mm in Sources */,
-				BFB53D3A2E23D77D0052AAA7 /* NJCommonDefine.m in Sources */,
-				BFB53D4C2E23D77D0052AAA7 /* NJLaunchAd.m in Sources */,
-				BFB53D4D2E23D77D0052AAA7 /* NJDebug.mm in Sources */,
 				BF0D03592DEDA95900115365 /* AntiAntiDebug.m in Sources */,
 				BF0D034E2DEDA95900115365 /* OCSelectorTrampolines.mm in Sources */,
 				BF0D033E2DEDA95900115365 /* a1a2-selectortramps-i386.s in Sources */,
@@ -887,44 +964,6 @@
 				BF0D03422DEDA95900115365 /* a2a3-selectortramps-arm.s in Sources */,
 				BF0D03542DEDA95900115365 /* LLDBTools.mm in Sources */,
 				BF0D03462DEDA95900115365 /* a2a3-selectortramps-x86_64.s in Sources */,
-				BFEF9F642E32703100A8633D /* NJHotTopicCardHandler.m in Sources */,
-				BFEF9F652E32703100A8633D /* NJSearchSquareDataItem.m in Sources */,
-				BFEF9F662E32703100A8633D /* NJLiveIndexFeedBannerV2Entity.m in Sources */,
-				BFEF9F672E32703100A8633D /* NJLiveSecondGetListDataItem.m in Sources */,
-				BFEF9F682E32703100A8633D /* NJLiveIndexFeedCardEntity.m in Sources */,
-				BFEF9F692E32703100A8633D /* NJLiveIndexFeedCardHandler.m in Sources */,
-				BFEF9F6A2E32703100A8633D /* NJSearchSquareCardEntity.m in Sources */,
-				BFEF9F6B2E32703100A8633D /* NJRcmdBannerV8Entry.m in Sources */,
-				BFEF9F6C2E32703100A8633D /* NJLiveIndexFeedActivityCardV1Entity.m in Sources */,
-				BFEF9F6D2E32703100A8633D /* NJApiDataManger.m in Sources */,
-				BFEF9F6E2E32703100A8633D /* NJSearchSquareCardHandler.m in Sources */,
-				BFEF9F6F2E32703100A8633D /* NJAnimeChannelDataItem.m in Sources */,
-				BFEF9F702E32703100A8633D /* NJHotTopicCardEntity.m in Sources */,
-				BFEF9F712E32703100A8633D /* NJHotTopicAd.mm in Sources */,
-				BFEF9F722E32703100A8633D /* NJAnimeChannelBannerEntity.m in Sources */,
-				BFEF9F732E32703100A8633D /* NJRcmdCmDoubleV9Entry.m in Sources */,
-				BFEF9F742E32703100A8633D /* NJLiveIndexFeedDataItem.m in Sources */,
-				BFEF9F752E32703100A8633D /* NJRcmdSmallCoverV2Entry.m in Sources */,
-				BFEF9F762E32703100A8633D /* NJRcmdCardHandler.m in Sources */,
-				BFEF9F772E32703100A8633D /* NJRcmdCmV2Entry.m in Sources */,
-				BFEF9F782E32703100A8633D /* NJRcmdCardEntry.m in Sources */,
-				BFEF9F792E32703100A8633D /* NJHotTopicRcmdOneItemEntity.m in Sources */,
-				BFEF9F7A2E32703100A8633D /* NJDynamicAd.mm in Sources */,
-				BFEF9F7B2E32703100A8633D /* NJRcmdCardDataItem.m in Sources */,
-				BFEF9F7C2E32703100A8633D /* NJHotTopicSmallCoverV5Entity.m in Sources */,
-				BFEF9F7D2E32703100A8633D /* NJSearchResultAd.mm in Sources */,
-				BFEF9F7E2E32703100A8633D /* NJAnimeChannelCardEntity.m in Sources */,
-				BFEF9F7F2E32703100A8633D /* NJAnimeChannelCardHandler.m in Sources */,
-				BFEF9F802E32703100A8633D /* NJRcmdAd.mm in Sources */,
-				BFEF9F812E32703100A8633D /* UIApplication+NJCategory.m in Sources */,
-				BFEF9F822E32703100A8633D /* NJLiveDetailAd.mm in Sources */,
-				BFEF9F832E32703100A8633D /* NSURL+NJPath.m in Sources */,
-				BFEF9F842E32703100A8633D /* UIViewController+NJFind.m in Sources */,
-				BFEF9F852E32703100A8633D /* NJApiDataItem.m in Sources */,
-				BFEF9F862E32703100A8633D /* NJNetworkService.mm in Sources */,
-				BFEF9F872E32703100A8633D /* NJLiveIndexFeedBannerV1Entity.m in Sources */,
-				BFEF9F882E32703100A8633D /* NJSetting.mm in Sources */,
-				BFEF9F892E32703100A8633D /* NJSearchSquareRecommendEntity.m in Sources */,
 				BF0D03372DEDA95900115365 /* MDMethodTrace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

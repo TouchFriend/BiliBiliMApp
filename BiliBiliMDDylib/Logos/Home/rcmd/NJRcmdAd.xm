@@ -3,6 +3,7 @@
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
+%group App
 
 // 评分弹窗
 %hook BFCStoreScorePopupManager
@@ -25,4 +26,11 @@
 
 %end
 
+%end
+
+%ctor {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        %init(App);
+    }
+}
 

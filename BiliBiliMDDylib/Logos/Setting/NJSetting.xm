@@ -3,9 +3,6 @@
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
-#define NJUserDefaults [NSUserDefaults standardUserDefaults]
-#define NJAutoKey @"NJAutoKey"
-#define NJAssetPath(path) @"/Library/Caches/NJBilibili/" #path
 
 @interface BBPhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
@@ -28,7 +25,7 @@
 // 保存开关
 %new
 - (void)nj_autoChange:(UISwitch *)autoSwitch {
-    [NJUserDefaults setBool:autoSwitch.isOn forKey:NJAutoKey];
+    [NJ_USER_DEFAULTS setBool:autoSwitch.isOn forKey:NJ_MASTER_SWITCH_KEY];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,14 +37,14 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
         cell.backgroundColor = [UIColor whiteColor];
-        cell.imageView.image = [UIImage imageWithContentsOfFile:NJAssetPath(skull.png)];
+        cell.imageView.image = [UIImage imageWithContentsOfFile:NJ_ASSET_PATH(skull.png)];
     }
     
     if (indexPath.row == 0) {
         cell.textLabel.text = @"总开关";
         UISwitch *autoSwitch = [[UISwitch alloc] init];
         cell.accessoryView = autoSwitch;
-        autoSwitch.on = [NJUserDefaults boolForKey:NJAutoKey];
+        autoSwitch.on = NJ_MASTER_SWITCH_VALUE;
         [autoSwitch addTarget:self action:@selector(nj_autoChange:) forControlEvents:UIControlEventValueChanged];
     }
     return cell;

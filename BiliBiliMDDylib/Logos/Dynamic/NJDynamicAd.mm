@@ -28,19 +28,6 @@
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
-@interface BAPIAppDynamicV2ModuleAdditional : NSObject
-
-
-@property (nonatomic, assign) int type;
-
-
-
-- (BOOL)nj_isFilter;
-
-- (NSSet<NSNumber *> *)nj_filterTypes;
-
-@end
-
 
 #include <substrate.h>
 #if defined(__clang__)
@@ -64,16 +51,31 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BAPIAppDynamicV2DynamicList; @class BAPIAppDynamicV2ModuleDynamic; @class BAPIAppDynamicV2Module; @class BAPIAppDynamicV2DynamicItem; @class BAPIAppDynamicV2ModuleAdditional; 
-static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2ModuleDynamic$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleDynamic* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2Module$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2Module* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2DynamicItem$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicItem* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$_ungrouped$BAPIAppDynamicV2DynamicList$listArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicList* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$_ungrouped$BAPIAppDynamicV2DynamicList$listArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicList* _LOGOS_SELF_CONST, SEL); 
-
-#line 43 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Dynamic/NJDynamicAd.xm"
+@class BAPIAppDynamicV2DynamicList; @class BAPIAppDynamicV2DynamicItem; @class BAPIAppDynamicV2ModuleDynamic; @class BAPIAppDynamicV2Module; @class BAPIAppDynamicV2ModuleAdditional; 
 
 
+#line 30 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Dynamic/NJDynamicAd.xm"
+static BOOL _logos_method$App$BAPIAppDynamicV2ModuleAdditional$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BAPIAppDynamicV2ModuleAdditional$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$App$BAPIAppDynamicV2ModuleDynamic$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleDynamic* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$App$BAPIAppDynamicV2Module$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2Module* _LOGOS_SELF_CONST, SEL); static BOOL _logos_method$App$BAPIAppDynamicV2DynamicItem$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicItem* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$App$BAPIAppDynamicV2DynamicList$listArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicList* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppDynamicV2DynamicList$listArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicList* _LOGOS_SELF_CONST, SEL); 
+
+@interface BAPIAppDynamicV2ModuleAdditional : NSObject
+
+
+@property (nonatomic, assign) int type;
 
 
 
-static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+- (BOOL)nj_isFilter;
+
+- (NSSet<NSNumber *> *)nj_filterTypes;
+
+@end
+
+
+
+
+
+
+static BOOL _logos_method$App$BAPIAppDynamicV2ModuleAdditional$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     if ([[self nj_filterTypes] containsObject:@(self.type)]) {
         return YES;
     }
@@ -82,7 +84,7 @@ static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_isFilte
 
 
 
-static NSSet<NSNumber *> * _logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+static NSSet<NSNumber *> * _logos_method$App$BAPIAppDynamicV2ModuleAdditional$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleAdditional* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
     if (!filterSet) {
         NSArray *types = @[
@@ -125,7 +127,7 @@ static NSSet<NSNumber *> * _logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditi
 
 
 
-static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2ModuleDynamic$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleDynamic* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+static BOOL _logos_method$App$BAPIAppDynamicV2ModuleDynamic$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2ModuleDynamic* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     
     if (self.type == 4) {
         id item = self.dynForward.item;
@@ -156,7 +158,7 @@ static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2ModuleDynamic$nj_isFilter(_
 
 
 
-static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2Module$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2Module* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+static BOOL _logos_method$App$BAPIAppDynamicV2Module$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2Module* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     
     if (self.moduleType == 8) {
         return [self.moduleAdditional nj_isFilter];
@@ -196,7 +198,7 @@ static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2Module$nj_isFilter(_LOGOS_S
 
 
 
-static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2DynamicItem$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicItem* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+static BOOL _logos_method$App$BAPIAppDynamicV2DynamicItem$nj_isFilter(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicItem* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     BOOL isFilter = NO;
     for (BAPIAppDynamicV2Module *item in self.modulesArray) {
         if ([item nj_isFilter]) {
@@ -218,8 +220,8 @@ static BOOL _logos_method$_ungrouped$BAPIAppDynamicV2DynamicItem$nj_isFilter(_LO
 
 
 
-static NSMutableArray * _logos_method$_ungrouped$BAPIAppDynamicV2DynamicList$listArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicList* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    NSMutableArray *origListArray = _logos_orig$_ungrouped$BAPIAppDynamicV2DynamicList$listArray(self, _cmd);
+static NSMutableArray * _logos_method$App$BAPIAppDynamicV2DynamicList$listArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppDynamicV2DynamicList* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    NSMutableArray *origListArray = _logos_orig$App$BAPIAppDynamicV2DynamicList$listArray(self, _cmd);
     NSMutableArray *items = [NSMutableArray array];
     for (BAPIAppDynamicV2DynamicItem *item in origListArray) {
         if ([item nj_isFilter]) {
@@ -233,6 +235,11 @@ static NSMutableArray * _logos_method$_ungrouped$BAPIAppDynamicV2DynamicList$lis
 }
 
 
-static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$BAPIAppDynamicV2ModuleAdditional = objc_getClass("BAPIAppDynamicV2ModuleAdditional"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIAppDynamicV2ModuleAdditional, @selector(nj_isFilter), (IMP)&_logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_isFilter, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIAppDynamicV2ModuleAdditional, @selector(nj_filterTypes), (IMP)&_logos_method$_ungrouped$BAPIAppDynamicV2ModuleAdditional$nj_filterTypes, _typeEncoding); }Class _logos_class$_ungrouped$BAPIAppDynamicV2ModuleDynamic = objc_getClass("BAPIAppDynamicV2ModuleDynamic"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIAppDynamicV2ModuleDynamic, @selector(nj_isFilter), (IMP)&_logos_method$_ungrouped$BAPIAppDynamicV2ModuleDynamic$nj_isFilter, _typeEncoding); }Class _logos_class$_ungrouped$BAPIAppDynamicV2Module = objc_getClass("BAPIAppDynamicV2Module"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIAppDynamicV2Module, @selector(nj_isFilter), (IMP)&_logos_method$_ungrouped$BAPIAppDynamicV2Module$nj_isFilter, _typeEncoding); }Class _logos_class$_ungrouped$BAPIAppDynamicV2DynamicItem = objc_getClass("BAPIAppDynamicV2DynamicItem"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BAPIAppDynamicV2DynamicItem, @selector(nj_isFilter), (IMP)&_logos_method$_ungrouped$BAPIAppDynamicV2DynamicItem$nj_isFilter, _typeEncoding); }Class _logos_class$_ungrouped$BAPIAppDynamicV2DynamicList = objc_getClass("BAPIAppDynamicV2DynamicList"); { MSHookMessageEx(_logos_class$_ungrouped$BAPIAppDynamicV2DynamicList, @selector(listArray), (IMP)&_logos_method$_ungrouped$BAPIAppDynamicV2DynamicList$listArray, (IMP*)&_logos_orig$_ungrouped$BAPIAppDynamicV2DynamicList$listArray);}} }
-#line 208 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Dynamic/NJDynamicAd.xm"
+
+
+
+static __attribute__((constructor)) void _logosLocalCtor_93d10080(int __unused argc, char __unused **argv, char __unused **envp) {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        {Class _logos_class$App$BAPIAppDynamicV2ModuleAdditional = objc_getClass("BAPIAppDynamicV2ModuleAdditional"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppDynamicV2ModuleAdditional, @selector(nj_isFilter), (IMP)&_logos_method$App$BAPIAppDynamicV2ModuleAdditional$nj_isFilter, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppDynamicV2ModuleAdditional, @selector(nj_filterTypes), (IMP)&_logos_method$App$BAPIAppDynamicV2ModuleAdditional$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BAPIAppDynamicV2ModuleDynamic = objc_getClass("BAPIAppDynamicV2ModuleDynamic"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppDynamicV2ModuleDynamic, @selector(nj_isFilter), (IMP)&_logos_method$App$BAPIAppDynamicV2ModuleDynamic$nj_isFilter, _typeEncoding); }Class _logos_class$App$BAPIAppDynamicV2Module = objc_getClass("BAPIAppDynamicV2Module"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppDynamicV2Module, @selector(nj_isFilter), (IMP)&_logos_method$App$BAPIAppDynamicV2Module$nj_isFilter, _typeEncoding); }Class _logos_class$App$BAPIAppDynamicV2DynamicItem = objc_getClass("BAPIAppDynamicV2DynamicItem"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppDynamicV2DynamicItem, @selector(nj_isFilter), (IMP)&_logos_method$App$BAPIAppDynamicV2DynamicItem$nj_isFilter, _typeEncoding); }Class _logos_class$App$BAPIAppDynamicV2DynamicList = objc_getClass("BAPIAppDynamicV2DynamicList"); { MSHookMessageEx(_logos_class$App$BAPIAppDynamicV2DynamicList, @selector(listArray), (IMP)&_logos_method$App$BAPIAppDynamicV2DynamicList$listArray, (IMP*)&_logos_orig$App$BAPIAppDynamicV2DynamicList$listArray);}}
+    }
+}

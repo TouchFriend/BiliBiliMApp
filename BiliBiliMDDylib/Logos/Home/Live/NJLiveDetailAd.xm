@@ -3,6 +3,8 @@
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
+%group App
+
 // 收入面板，包含礼物面板
 %hook BBLiveRevenueCardsContentView
 
@@ -157,5 +159,12 @@
 
 %end
 
+%end
+
+%ctor {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        %init(App);
+    }
+}
 
 

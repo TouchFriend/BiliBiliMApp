@@ -30,6 +30,8 @@
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
+%group App
+
 @interface BBAdUGCContext : NSObject
 
 @end
@@ -202,3 +204,11 @@
 
 
 %end
+
+%end
+
+%ctor {
+    if (NJ_MASTER_SWITCH_VALUE) {
+        %init(App);
+    }
+}
