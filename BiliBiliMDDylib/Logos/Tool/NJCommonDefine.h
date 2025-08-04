@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NJAsset.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +20,7 @@ UIKIT_EXTERN const NSString *nj_logPrefix;
 /// UserDefaults
 #define NJ_USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 /// 资源路径
-#define NJ_ASSET_PATH(path) @"/Library/Caches/NJBilibili/" #path
+#define NJ_ASSET_PATH(path) [NJAsset assetPathWithName:path]
 
 
 /// --------------------- 设置页面 ---------------------

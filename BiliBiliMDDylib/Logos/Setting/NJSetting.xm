@@ -6,6 +6,8 @@
 
 @interface BBPhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (void)nj_autoChange:(UISwitch *)autoSwitch;
+
 @end
 
 %hook BBPhoneSettingMainVC
@@ -37,7 +39,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
         cell.backgroundColor = [UIColor whiteColor];
-        cell.imageView.image = [UIImage imageWithContentsOfFile:NJ_ASSET_PATH(skull.png)];
+        cell.imageView.image = [UIImage imageWithContentsOfFile:NJ_ASSET_PATH(@"skull.png")];
     }
     
     if (indexPath.row == 0) {
