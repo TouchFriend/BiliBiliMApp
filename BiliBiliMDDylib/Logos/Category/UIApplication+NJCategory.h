@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 查找根窗口
 + (UIWindow *_Nullable)nj_keyWindow;
 
+/// 查找前台ViewController
++ (UIViewController *_Nullable)nj_topMostViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END
