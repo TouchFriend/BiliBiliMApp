@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)nj_imageWithTintColor:(UIColor *)color;
 
++ (UIImage *)nj_imageWithColor:(UIColor *)color
+                          size:(CGSize)size;
+
 @end
 
 NS_ASSUME_NONNULL_END

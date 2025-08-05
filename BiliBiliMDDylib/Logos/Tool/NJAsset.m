@@ -6,8 +6,10 @@
 //
 
 #import "NJAsset.h"
-
+// bundle的名称
 NSString *const NJBundleName = @"NJBilibili.bundle";
+// 插件资源主路径
+NSString *const NJTweakAssetMainPath = @"/Library/Caches/";
 
 @implementation NJAsset
 
@@ -38,7 +40,7 @@ NSString *const NJBundleName = @"NJBilibili.bundle";
 /// 插件的资源路径
 /// - Parameter name: 资源名称
 + (NSString *)tweakAssetPathWithName:(NSString *)name {
-    NSString *mainPath = [@"/Library/Caches/" stringByAppendingPathComponent:NJBundleName];
+    NSString *mainPath = [NJTweakAssetMainPath stringByAppendingPathComponent:NJBundleName];
     NSString *assetPath = [mainPath stringByAppendingPathComponent:name];
     return assetPath;
 }

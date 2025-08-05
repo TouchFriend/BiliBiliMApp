@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Setting/NJSetting.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Setting/NJSetting.xm"
 
 
 #import <UIKit/UIKit.h>
@@ -12,6 +12,8 @@
 - (void)nj_autoChange:(UISwitch *)autoSwitch;
 
 - (void)nj_rebootTip;
+
+- (BOOL)isSettingViewController;
 
 @end
 
@@ -39,18 +41,22 @@
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
 @class BBPhoneSettingMainVC; 
-static NSInteger _logos_method$_ungrouped$BBPhoneSettingMainVC$numberOfSectionsInTableView$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *); static NSInteger (*_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$)(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static NSInteger _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static void _logos_method$_ungrouped$BBPhoneSettingMainVC$nj_masterSwitchChange$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UISwitch *); static void _logos_method$_ungrouped$BBPhoneSettingMainVC$nj_rebootTip(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL); static UITableViewCell * (*_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static UITableViewCell * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static CGFloat (*_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static void _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$didSelectRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static UIView * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$viewForHeaderInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForHeaderInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); 
+static NSInteger _logos_method$_ungrouped$BBPhoneSettingMainVC$numberOfSectionsInTableView$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *); static NSInteger (*_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$)(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static NSInteger _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static void _logos_method$_ungrouped$BBPhoneSettingMainVC$nj_masterSwitchChange$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UISwitch *); static void _logos_method$_ungrouped$BBPhoneSettingMainVC$nj_rebootTip(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL); static UITableViewCell * (*_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static UITableViewCell * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static CGFloat (*_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$)(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static void _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$didSelectRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSIndexPath *); static UIView * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$viewForHeaderInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForHeaderInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL, UITableView *, NSInteger); static BOOL _logos_method$_ungrouped$BBPhoneSettingMainVC$isSettingViewController(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST, SEL); 
 
-#line 17 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Setting/NJSetting.xm"
+#line 19 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Setting/NJSetting.xm"
 
 
 
 static NSInteger _logos_method$_ungrouped$BBPhoneSettingMainVC$numberOfSectionsInTableView$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView) {
+    if (![self isSettingViewController]) {
+        return 1;
+    }
     return 2;
 }
 
 static NSInteger _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView, NSInteger section) {
-    if (section == [self numberOfSectionsInTableView:tableView] - 1) {
+    if ([self isSettingViewController] &&
+        section == [self numberOfSectionsInTableView:tableView] - 1) {
         return 1;
     }
     return _logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$(self, _cmd, tableView, section);
@@ -80,7 +86,8 @@ static void _logos_method$_ungrouped$BBPhoneSettingMainVC$nj_rebootTip(_LOGOS_SE
 }
 
 static UITableViewCell * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView, NSIndexPath * indexPath) {
-    if (indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
         return _logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$(self, _cmd, tableView, indexPath);
     }
     NSString *reuseIdentifier = indexPath.row == 0 ? @"masterSwitchCellId" : @"exitCellId";
@@ -90,7 +97,7 @@ static UITableViewCell * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView
     }
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"总开关";
+        [(NJSettingSkullTableViewCell *)cell setTitle:@"总开关"];
         UISwitch *masterSwitch = [[UISwitch alloc] init];
         cell.accessoryView = masterSwitch;
         masterSwitch.on = NJ_MASTER_SWITCH_VALUE;
@@ -100,7 +107,8 @@ static UITableViewCell * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView
 }
 
 static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView, NSIndexPath * indexPath) {
-    if (indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
         return _logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$(self, _cmd, tableView, indexPath);
     }
     return 44;
@@ -108,7 +116,8 @@ static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightFor
 
 
 static void _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$didSelectRowAtIndexPath$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView, NSIndexPath * indexPath) {
-    if (indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -116,7 +125,8 @@ static void _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$didSelectRow
 
 
 static UIView * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$viewForHeaderInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView, NSInteger section) {
-    if (section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        section != [self numberOfSectionsInTableView:tableView] - 1) {
         return nil;
     }
     UIView *headerView = [[UIView alloc] init];
@@ -126,7 +136,8 @@ static UIView * _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$viewForH
 
 
 static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForHeaderInSection$(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UITableView * tableView, NSInteger section) {
-    if (section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        section != [self numberOfSectionsInTableView:tableView] - 1) {
         return 0.01;
     }
     return 14;
@@ -134,8 +145,12 @@ static CGFloat _logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightFor
 
 
 
+static BOOL _logos_method$_ungrouped$BBPhoneSettingMainVC$isSettingViewController(_LOGOS_SELF_TYPE_NORMAL BBPhoneSettingMainVC* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    return [self.navigationItem.title isEqualToString:@"设置"];
+}
+
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$BBPhoneSettingMainVC = objc_getClass("BBPhoneSettingMainVC"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSInteger), strlen(@encode(NSInteger))); i += strlen(@encode(NSInteger)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(numberOfSectionsInTableView:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$numberOfSectionsInTableView$, _typeEncoding); }{ MSHookMessageEx(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:numberOfRowsInSection:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$, (IMP*)&_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$);}{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UISwitch *), strlen(@encode(UISwitch *))); i += strlen(@encode(UISwitch *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(nj_masterSwitchChange:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$nj_masterSwitchChange$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(nj_rebootTip), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$nj_rebootTip, _typeEncoding); }{ MSHookMessageEx(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:cellForRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$);}{ MSHookMessageEx(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:heightForRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$);}{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); memcpy(_typeEncoding + i, @encode(NSIndexPath *), strlen(@encode(NSIndexPath *))); i += strlen(@encode(NSIndexPath *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:didSelectRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$didSelectRowAtIndexPath$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(UIView *), strlen(@encode(UIView *))); i += strlen(@encode(UIView *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); memcpy(_typeEncoding + i, @encode(NSInteger), strlen(@encode(NSInteger))); i += strlen(@encode(NSInteger)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:viewForHeaderInSection:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$viewForHeaderInSection$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(CGFloat), strlen(@encode(CGFloat))); i += strlen(@encode(CGFloat)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); memcpy(_typeEncoding + i, @encode(NSInteger), strlen(@encode(NSInteger))); i += strlen(@encode(NSInteger)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:heightForHeaderInSection:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForHeaderInSection$, _typeEncoding); }} }
-#line 111 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Setting/NJSetting.xm"
+{Class _logos_class$_ungrouped$BBPhoneSettingMainVC = objc_getClass("BBPhoneSettingMainVC"); { char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSInteger), strlen(@encode(NSInteger))); i += strlen(@encode(NSInteger)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(numberOfSectionsInTableView:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$numberOfSectionsInTableView$, _typeEncoding); }{ MSHookMessageEx(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:numberOfRowsInSection:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$, (IMP*)&_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$numberOfRowsInSection$);}{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UISwitch *), strlen(@encode(UISwitch *))); i += strlen(@encode(UISwitch *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(nj_masterSwitchChange:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$nj_masterSwitchChange$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(nj_rebootTip), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$nj_rebootTip, _typeEncoding); }{ MSHookMessageEx(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:cellForRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$cellForRowAtIndexPath$);}{ MSHookMessageEx(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:heightForRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$BBPhoneSettingMainVC$tableView$heightForRowAtIndexPath$);}{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); memcpy(_typeEncoding + i, @encode(NSIndexPath *), strlen(@encode(NSIndexPath *))); i += strlen(@encode(NSIndexPath *)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:didSelectRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$didSelectRowAtIndexPath$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(UIView *), strlen(@encode(UIView *))); i += strlen(@encode(UIView *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); memcpy(_typeEncoding + i, @encode(NSInteger), strlen(@encode(NSInteger))); i += strlen(@encode(NSInteger)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:viewForHeaderInSection:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$viewForHeaderInSection$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(CGFloat), strlen(@encode(CGFloat))); i += strlen(@encode(CGFloat)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; memcpy(_typeEncoding + i, @encode(UITableView *), strlen(@encode(UITableView *))); i += strlen(@encode(UITableView *)); memcpy(_typeEncoding + i, @encode(NSInteger), strlen(@encode(NSInteger))); i += strlen(@encode(NSInteger)); _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(tableView:heightForHeaderInSection:), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$tableView$heightForHeaderInSection$, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(BOOL), strlen(@encode(BOOL))); i += strlen(@encode(BOOL)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$BBPhoneSettingMainVC, @selector(isSettingViewController), (IMP)&_logos_method$_ungrouped$BBPhoneSettingMainVC$isSettingViewController, _typeEncoding); }} }
+#line 126 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Setting/NJSetting.xm"

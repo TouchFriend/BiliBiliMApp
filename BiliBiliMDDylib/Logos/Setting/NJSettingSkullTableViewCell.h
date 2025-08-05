@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NJSettingSkullTableViewCell : UITableViewCell
 
+/// 标题
+@property (nonatomic, strong, readonly) UILabel *titleLabel;
+
+- (void)setTitle:(NSString *)title;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,6 +11,8 @@
 - (void)nj_autoChange:(UISwitch *)autoSwitch;
 // 重启提示
 - (void)nj_rebootTip;
+// 是否是设置页面
+- (BOOL)isSettingViewController;
 
 @end
 
@@ -18,11 +20,15 @@
 
 %new
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (![self isSettingViewController]) {
+        return 1;
+    }
     return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == [self numberOfSectionsInTableView:tableView] - 1) {
+    if ([self isSettingViewController] &&
+        section == [self numberOfSectionsInTableView:tableView] - 1) {
         return 1;
     }
     return %orig;
@@ -52,7 +58,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
         return %orig;
     }
     NSString *reuseIdentifier = indexPath.row == 0 ? @"masterSwitchCellId" : @"exitCellId";
@@ -62,7 +69,7 @@
     }
     // 总开关
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"总开关";
+        [(NJSettingSkullTableViewCell *)cell setTitle:@"总开关"];
         UISwitch *masterSwitch = [[UISwitch alloc] init];
         cell.accessoryView = masterSwitch;
         masterSwitch.on = NJ_MASTER_SWITCH_VALUE;
@@ -72,7 +79,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
         return %orig;
     }
     return 44;
@@ -80,7 +88,8 @@
 
 %new
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        indexPath.section != [self numberOfSectionsInTableView:tableView] - 1) {
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -88,7 +97,8 @@
 
 %new
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        section != [self numberOfSectionsInTableView:tableView] - 1) {
         return nil;
     }
     UIView *headerView = [[UIView alloc] init];
@@ -98,13 +108,18 @@
 
 %new
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section != [self numberOfSectionsInTableView:tableView] - 1) {
+    if (![self isSettingViewController] ||
+        section != [self numberOfSectionsInTableView:tableView] - 1) {
         return 0.01;
     }
     return 14;
 }
 
+// 是否是设置页面
+%new
+- (BOOL)isSettingViewController {
+    return [self.navigationItem.title isEqualToString:@"设置"];
+}
+
 %end
-
-
 
