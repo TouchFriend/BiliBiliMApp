@@ -14,6 +14,7 @@
 #import "NJLiveSecondGetListDataItem.h"
 #import "NJAnimeChannelDataItem.h"
 #import "NJSearchSquareDataItem.h"
+#import "NJTabDataItem.h"
 
 @interface NJApiDataManger ()
 
@@ -102,6 +103,7 @@
                          [NJLiveSecondGetListDataItem class],   // 首页-直播-具体板块数据
                          [NJAnimeChannelDataItem class],        // 首页-动画
                          [NJSearchSquareDataItem class],        // 搜索广场
+                         [NJTabDataItem class],                 // 首页的版块
         ];
     }
     return _itemClasses;
