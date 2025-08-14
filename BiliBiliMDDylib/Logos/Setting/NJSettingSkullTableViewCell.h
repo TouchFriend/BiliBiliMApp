@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NJSettingSkullViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,8 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 标题
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
+/// 数据
+@property (nonatomic, strong, readonly) NJSettingSkullViewModel *viewModle;
 
-- (void)setTitle:(NSString *)title;
+- (void)bindViewModel:(NJSettingSkullViewModel *)viewModle;
+
+- (void)setupUI;
 
 @end
 

@@ -6,43 +6,73 @@
 //
 
 #import "NJAsset.h"
-// bundle的名称
-NSString *const NJBundleName = @"NJBilibili.bundle";
-// 插件资源主路径
-NSString *const NJTweakAssetMainPath = @"/Library/Caches/";
+#import "NSBundle+NJCategory.h"
+#import "NSBundle+NJImageLoading.h"
+
 
 @implementation NJAsset
 
-/// 资源路径
-/// - Parameter name: 资源名称
-+ (NSString *)assetPathWithName:(NSString *)name {
-    NSString *path;
-    // NJ_TWEAK是在工程中添加的宏，类似DEBUG
-#ifdef NJ_TWEAK
-    path = [self tweakAssetPathWithName:name];
-#else
-    path = [self monkeyAppAssetPathWithName:name];
-#endif
-    return path;
+
+/// 获取图片资源路径
+/// @param name 图片名称，比如skull.png
+/// @return 返回图片资源路径
++ (nullable NSString *)pathForImageAsset:(NSString *)name {
+    return [self pathForImageAsset:name
+                       inDirectory:nil];
 }
 
-/// 非越狱App的资源路径
-/// - Parameter name: 资源名称
-+ (NSString *)monkeyAppAssetPathWithName:(NSString *)name {
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:NJBundleName ofType:nil];
-    if (bundlePath.length == 0) {
-        return nil;
-    }
-    NSString *assetPath = [bundlePath stringByAppendingPathComponent:name];
-    return assetPath;
+/// 获取图片资源路径
+/// @param name 图片名称，比如skull.png
+/// @param subpath 存放图片的文件夹
+/// @return 返回图片资源路径
++ (nullable NSString *)pathForImageAsset:(NSString *)name
+                             inDirectory:(nullable NSString *)subpath {
+    return [self pathForImageAsset:name
+                            ofType:nil
+                       inDirectory:subpath];
 }
 
-/// 插件的资源路径
-/// - Parameter name: 资源名称
-+ (NSString *)tweakAssetPathWithName:(NSString *)name {
-    NSString *mainPath = [NJTweakAssetMainPath stringByAppendingPathComponent:NJBundleName];
-    NSString *assetPath = [mainPath stringByAppendingPathComponent:name];
-    return assetPath;
+/// 获取图片资源路径
+/// @param name 图片名称
+/// @param ext 图片类型
+/// @param subpath 图片所在文件夹
+/// @return 返回图片资源路径
++ (nullable NSString *)pathForImageAsset:(NSString *)name
+                                  ofType:(nullable NSString *)ext
+                             inDirectory:(nullable NSString *)subpath {
+    NSBundle *bundle = [NSBundle nj_bilibiliBundle];
+    return [bundle nj_pathForImageResource:name
+                                    ofType:ext
+                               inDirectory:subpath];
+}
+
+
+/// 获取资源路径
+/// - Parameters:
+///   - name: 资源名称
+///   - ext: 资源类型
+///   @return 返回资源路径
++ (nullable NSString *)pathForAsset:(nullable NSString *)name
+                             ofType:(nullable NSString *)ext {
+    return [self pathForAsset:name
+                       ofType:ext
+                  inDirectory:nil];
+}
+
+
+/// 获取资源路径
+/// - Parameters:
+///   - name: 资源名称
+///   - ext: 资源类型
+///   - subpath: 资源所在文件夹
+///   @return 返回资源路径
++ (nullable NSString *)pathForAsset:(nullable NSString *)name
+                             ofType:(nullable NSString *)ext
+                        inDirectory:(nullable NSString *)subpath {
+    NSBundle *bundle = [NSBundle nj_bilibiliBundle];
+    return [bundle pathForResource:name
+                            ofType:ext
+                       inDirectory:subpath];
 }
 
 @end

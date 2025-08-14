@@ -12,17 +12,46 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NJAsset : NSObject
 
-/// 资源路径
-/// - Parameter name: 资源名称
-+ (NSString *)assetPathWithName:(NSString *)name;
 
-/// 非越狱App的资源路径
-/// - Parameter name: 资源名称
-+ (NSString *)monkeyAppAssetPathWithName:(NSString *)name;
+/// 获取图片资源路径
+/// @param name 图片名称，比如skull.png
+/// @return 返回图片资源路径
++ (nullable NSString *)pathForImageAsset:(NSString *)name;
 
-/// 插件的资源路径
-/// - Parameter name: 资源名称
-+ (NSString *)tweakAssetPathWithName:(NSString *)name;
+/// 获取图片资源路径
+/// @param name 图片名称，比如skull.png
+/// @param subpath 存放图片的文件夹
+/// @return 返回图片资源路径
++ (nullable NSString *)pathForImageAsset:(NSString *)name
+                             inDirectory:(nullable NSString *)subpath;
+
+/// 获取图片资源路径
+/// @param name 图片名称
+/// @param ext 图片类型
+/// @param subpath 图片所在文件夹
+/// @return 返回图片资源路径
++ (nullable NSString *)pathForImageAsset:(NSString *)name
+                                  ofType:(nullable NSString *)ext
+                             inDirectory:(nullable NSString *)subpath;
+
+
+/// 获取资源路径
+/// - Parameters:
+///   - name: 资源名称
+///   - ext: 资源类型
+///   @return 返回资源路径
++ (nullable NSString *)pathForAsset:(nullable NSString *)name
+                             ofType:(nullable NSString *)ext;
+
+/// 获取资源路径
+/// - Parameters:
+///   - name: 资源名称
+///   - ext: 资源类型
+///   - subpath: 资源所在文件夹
+///   @return 返回资源路径
++ (nullable NSString *)pathForAsset:(nullable NSString *)name
+                             ofType:(nullable NSString *)ext
+                        inDirectory:(nullable NSString *)subpath;
 
 @end
 

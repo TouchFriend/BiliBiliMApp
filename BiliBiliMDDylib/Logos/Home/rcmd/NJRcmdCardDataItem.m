@@ -7,6 +7,7 @@
 
 #import "NJRcmdCardDataItem.h"
 #import "NJRcmdCardHandler.h"
+#import "NJDiskCacheManager.h"
 
 @interface NJRcmdCardDataItem ()
 
@@ -42,6 +43,9 @@
 
 - (NSData *)handleWithData:(NSData *)data
                   response:(NSURLResponse *)response {
+    // 保存数据到磁盘
+    [self saveDataToDisk:data];
+    
     NSError *error = nil;
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                    options:NSJSONReadingMutableContainers
@@ -79,6 +83,13 @@
 #pragma mark - Public Methods
 
 #pragma mark - Private Methods
+
+/// 保存数据到磁盘
+- (void)saveDataToDisk:(NSData *)data {
+#ifdef DEBUG
+    [[[NJDiskCacheManager sharedManager] homeCache] saveDataToDisk:data];
+#endif
+}
 
 
 #pragma mark - Property Methods
