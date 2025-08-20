@@ -6,6 +6,7 @@
 //
 
 #import "NJDiskCache.h"
+#import "NSDate+NJCategory.h"
 
 // 沙盒缓存文件夹
 NSString *const NJDiskCacheDirName = @"NJCache";
@@ -62,7 +63,7 @@ NSString *const NJDiskCacheDirName = @"NJCache";
     if (!data) return;
     
     dispatch_async(self.ioQueue, ^{
-        NSString *timestamp = [self currentTimestampString];
+        NSString *timestamp = [NSDate nj_currentTimestampString];
         // 文件名加 .txt 扩展名
         NSString *fileName = [NSString stringWithFormat:@"%@_%@.txt", self.filePrefix, timestamp];
         NSString *filePath = [self.cacheDirectory stringByAppendingPathComponent:fileName];
@@ -76,21 +77,6 @@ NSString *const NJDiskCacheDirName = @"NJCache";
         
         [self trimCacheIfNeeded];
     });
-}
-
-/// 毫秒级时间戳
-- (NSString *)currentTimestampString {
-    NSDate *now = [NSDate date];
-    
-    // 格式化到秒
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd-HH:mm:ss";
-    NSString *timePart = [formatter stringFromDate:now];
-    
-    // 毫秒部分
-    long long milliseconds = (long long)([now timeIntervalSince1970] * 1000) % 1000;
-    
-    return [NSString stringWithFormat:@"%@-%03lld", timePart, milliseconds];
 }
 
 /// 删除超出数量限制的最旧文件

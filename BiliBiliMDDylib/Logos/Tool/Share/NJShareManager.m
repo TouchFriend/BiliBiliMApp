@@ -9,6 +9,7 @@
 #import "SSZipArchive.h"
 #import "SVProgressHUD.h"
 #import "UIApplication+NJCategory.h"
+#import "NSDate+NJCategory.h"
 
 // 沙盒缓存文件夹
 UIKIT_EXTERN NSString *const NJDiskCacheDirName;
@@ -41,7 +42,7 @@ UIKIT_EXTERN NSString *const NJDiskCacheDirName;
     
     // 2. 压缩路径
     NSString *tmpPath = NSTemporaryDirectory();
-    NSString *timeStamp = [NSString stringWithFormat:@"%.0f", [[NSDate date] timeIntervalSince1970]];
+    NSString *timeStamp = [NSDate nj_currentTimestampString];
     NSString *zipName = [NSString stringWithFormat:@"NJCache_%@.zip", timeStamp];
     NSString *zipPath = [tmpPath stringByAppendingPathComponent:zipName];
     
