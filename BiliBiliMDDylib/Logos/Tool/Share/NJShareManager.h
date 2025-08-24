@@ -12,11 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NJShareManager : NSObject
 
 /// 分享缓存数据
-+ (void)shareCacheFolder;
+- (void)shareCacheFolder;
+
+/// 分享缓存数据
+/// - Parameter sourceView: sourceView
+- (void)shareCacheFolderWithSourceView:(nullable UIView *)sourceView;
 
 /// 分享缓存数据
 /// - Parameter presenter: 要present的view controller
-+ (void)shareCacheFolderFromViewController:(UIViewController *)presenter;
+/// - Parameter sourceView: sourceView
+- (void)shareCacheFolderFromViewController:(UIViewController *)presenter
+                                sourceView:(nullable UIView *)sourceView;
+
+/// 屏幕旋转
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator;
 
 @end
 

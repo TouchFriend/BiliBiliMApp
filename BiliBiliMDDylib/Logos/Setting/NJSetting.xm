@@ -21,7 +21,8 @@
 - (void)nj_registerCell:(UITableView *)tableView;
 // 注入的数据
 - (NSArray<NJSettingSkullViewModel *> *)nj_injectDatas;
-
+// 分享数据
+- (NJShareManager *)nj_shareManager;
 
 @end
 
@@ -82,7 +83,7 @@
     NJSettingSkullViewModel *viewModel = [self nj_injectDatas][indexPath.row];
     NSString *bizId = viewModel.bizId;
     if ([bizId isEqualToString:NJ_SHARE_DATA_BIZ_ID]) { // 分享数据
-        [NJShareManager shareCacheFolder];
+        [[self nj_shareManager] shareCacheFolder];
     }
 }
 
@@ -124,6 +125,17 @@
     return datas;
 }
 
+// 分享数据
+%new
+- (NJShareManager *)nj_shareManager {
+    NJShareManager *shareManager = objc_getAssociatedObject(self, @selector(nj_shareManager));
+    if (!shareManager) {
+        shareManager = [[NJShareManager alloc] init];
+        objc_setAssociatedObject(self, @selector(nj_shareManager), shareManager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return shareManager;
+}
+
 // 注册cell
 %new
 - (void)nj_registerCell:(UITableView *)tableView {
@@ -136,6 +148,13 @@
         // register Header
         [tableView registerClass:[NJSettingSeparatorHeaderView class] forHeaderFooterViewReuseIdentifier:NJ_SEPARATOR_HEADER_ID];
     }
+}
+
+// 屏幕旋转
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    %orig;
+    
+    [[self nj_shareManager] viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
 %end

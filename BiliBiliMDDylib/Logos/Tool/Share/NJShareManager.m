@@ -15,21 +15,39 @@
 UIKIT_EXTERN NSString *const NJDiskCacheDirName;
 
 @interface NJShareManager : NSObject
-+ (void)shareCacheFolderFromViewController:(UIViewController *)presenter;
+
+/// 活动vc
+@property (nonatomic, strong) UIActivityViewController *activityViewController;
+/// presenter
+@property (nonatomic, strong) UIViewController *presenter;
+/// sourceView
+@property (nonatomic, strong) UIView *sourceView;
+
+
 @end
 
 @implementation NJShareManager
 
+/// 分享缓存数据
+- (void)shareCacheFolder {
+    [self shareCacheFolderWithSourceView:nil];
+}
 
 /// 分享缓存数据
-+ (void)shareCacheFolder {
+/// - Parameter sourceView: sourceView
+- (void)shareCacheFolderWithSourceView:(nullable UIView *)sourceView {
     UIViewController *topMostViewControlle = [UIApplication nj_topMostViewController];
-    [self shareCacheFolderFromViewController:topMostViewControlle];
+    [self shareCacheFolderFromViewController:topMostViewControlle sourceView:sourceView];
 }
 
 /// 分享缓存数据
 /// - Parameter presenter: 要present的view controller
-+ (void)shareCacheFolderFromViewController:(UIViewController *)presenter {
+/// - Parameter sourceView: sourceView
+- (void)shareCacheFolderFromViewController:(UIViewController *)presenter
+                                sourceView:(nullable UIView *)sourceView {
+    self.presenter = presenter;
+    self.sourceView = sourceView;
+    
     // 1. 获取沙盒 Cache/NJCache 路径
     NSString *cacheDir = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
     NSString *folderPath = [cacheDir stringByAppendingPathComponent:NJDiskCacheDirName];
@@ -77,15 +95,14 @@ UIKIT_EXTERN NSString *const NJDiskCacheDirName;
             // 6. 调用系统分享
             NSURL *fileURL = [NSURL fileURLWithPath:zipPath];
             UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[fileURL] applicationActivities:nil];
-            
+            self.activityViewController = activityVC;
             if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-                activityVC.popoverPresentationController.sourceView = presenter.view;
-                activityVC.popoverPresentationController.sourceRect = CGRectMake(presenter.view.bounds.size.width / 2,
-                                                                                  presenter.view.bounds.size.height,
-                                                                                  1.0, 1.0);
+                activityVC.popoverPresentationController.sourceView = [self getSourceView];
+                activityVC.popoverPresentationController.sourceRect = [self calculateSourceRect];
             }
             
             // 7. 分享完成后删除压缩包
+            __weak typeof(self) weakSelf = self;
             activityVC.completionWithItemsHandler = ^(UIActivityType activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
                 NSError *removeError = nil;
                 [[NSFileManager defaultManager] removeItemAtPath:zipPath error:&removeError];
@@ -94,11 +111,55 @@ UIKIT_EXTERN NSString *const NJDiskCacheDirName;
                 } else {
                     NSLog(@"[NJShareManager] 已删除压缩包: %@", zipPath);
                 }
+                // 清除引用
+                if (weakSelf) {
+                    weakSelf.activityViewController = nil;
+                    weakSelf.presenter = nil;
+                    weakSelf.sourceView = nil;
+                }
             };
             
             [presenter presentViewController:activityVC animated:YES completion:nil];
         });
     });
+}
+
+/// 屏幕旋转
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    if (!self.activityViewController) {
+        return;
+    }
+    
+    // 使用 __weak 避免循环引用
+    __weak typeof(self) weakSelf = self;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+            weakSelf.activityViewController.popoverPresentationController.sourceRect = [weakSelf calculateSourceRect];
+        } completion:nil];
+    }
+}
+
+/// 获取sourceView
+- (UIView *)getSourceView {
+    if (self.sourceView) {
+        return self.sourceView;
+    }
+    return self.presenter.view;
+}
+
+/// 计算sourceRect
+- (CGRect)calculateSourceRect {
+    if (self.sourceView) {
+        return CGRectMake(self.sourceView.bounds.size.width * 0.5,
+                          self.sourceView.bounds.size.height * 0.5,
+                          1.0,
+                          1.0);
+    }
+    return CGRectMake(self.presenter.view.bounds.size.width / 2,
+                      self.presenter.view.bounds.size.height,
+                      1.0,
+                      1.0);
 }
 
 @end

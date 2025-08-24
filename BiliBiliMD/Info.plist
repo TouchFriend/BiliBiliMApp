@@ -60,7 +60,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.touchWorld.biliBiliMD</string>
+	<string>com.cxz.test.BiliBiliMD</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
