@@ -1,4 +1,4 @@
-// 设置页面
+// HD设置页面
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
@@ -11,7 +11,7 @@
 #import "NJSettingInjectDataProvider.h"
 #import "NJShareManager.h"
 
-@interface BBPhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface BBHD2PhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 // 是否是设置页面
 - (BOOL)nj_isSettingViewController;
@@ -25,7 +25,7 @@
 
 @end
 
-%hook BBPhoneSettingMainVC
+%hook BBHD2PhoneSettingMainVC
 
 // 是否注册过cell
 %property (nonatomic, strong) NSNumber *nj_isRegisteredCell;
@@ -139,4 +139,5 @@
 }
 
 %end
+
 

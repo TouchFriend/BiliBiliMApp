@@ -215,6 +215,7 @@
 		BFD54A082E57093D00E3B297 /* NJSettingSkullViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD549012E57093D00E3B297 /* NJSettingSkullViewModel.h */; };
 		BFD54A092E57093D00E3B297 /* NJDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD549042E57093D00E3B297 /* NJDiskCache.h */; };
 		BFD54A0A2E57093D00E3B297 /* NJHotTopicCardEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD548A62E57093D00E3B297 /* NJHotTopicCardEntity.h */; };
+		BFD5B8252E5ABC3A0011FACE /* NJHD2Setting.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFD5B8242E5ABC3A0011FACE /* NJHD2Setting.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,7 +296,7 @@
 		BFD5488F2E57093D00E3B297 /* UIViewController+NJFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJFind.h"; sourceTree = "<group>"; };
 		BFD548902E57093D00E3B297 /* UIViewController+NJFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NJFind.m"; sourceTree = "<group>"; };
 		BFD548922E57093D00E3B297 /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
-		BFD548932E57093D00E3B297 /* NJDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDetailAd.xm; sourceTree = "<group>"; };
+		BFD548932E57093D00E3B297 /* NJDetailAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDetailAd.xm; sourceTree = "<group>"; };
 		BFD548942E57093D00E3B297 /* NJUpperRcmdDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJUpperRcmdDataItem.h; sourceTree = "<group>"; };
 		BFD548952E57093D00E3B297 /* NJUpperRcmdDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJUpperRcmdDataItem.m; sourceTree = "<group>"; };
 		BFD548972E57093D00E3B297 /* NJDynamicAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDynamicAd.mm; sourceTree = "<group>"; };
@@ -352,7 +353,7 @@
 		BFD548D42E57093D00E3B297 /* NJRcmdSmallCoverV2Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdSmallCoverV2Entry.h; sourceTree = "<group>"; };
 		BFD548D52E57093D00E3B297 /* NJRcmdSmallCoverV2Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdSmallCoverV2Entry.m; sourceTree = "<group>"; };
 		BFD548D72E57093D00E3B297 /* NJRcmdAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJRcmdAd.mm; sourceTree = "<group>"; };
-		BFD548D82E57093D00E3B297 /* NJRcmdAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJRcmdAd.xm; sourceTree = "<group>"; };
+		BFD548D82E57093D00E3B297 /* NJRcmdAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJRcmdAd.xm; sourceTree = "<group>"; };
 		BFD548D92E57093D00E3B297 /* NJRcmdCardDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCardDataItem.h; sourceTree = "<group>"; };
 		BFD548DA2E57093D00E3B297 /* NJRcmdCardDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCardDataItem.m; sourceTree = "<group>"; };
 		BFD548DC2E57093D00E3B297 /* NJTabDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJTabDataItem.h; sourceTree = "<group>"; };
@@ -376,7 +377,7 @@
 		BFD548F32E57093D00E3B297 /* NJSearchResultAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSearchResultAd.mm; sourceTree = "<group>"; };
 		BFD548F42E57093D00E3B297 /* NJSearchResultAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJSearchResultAd.xm; sourceTree = "<group>"; };
 		BFD548F62E57093D00E3B297 /* NJSetting.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJSetting.mm; sourceTree = "<group>"; };
-		BFD548F72E57093D00E3B297 /* NJSetting.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJSetting.xm; sourceTree = "<group>"; };
+		BFD548F72E57093D00E3B297 /* NJSetting.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = NJSetting.xm; sourceTree = "<group>"; };
 		BFD548F82E57093D00E3B297 /* NJSettingDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSettingDefine.h; sourceTree = "<group>"; };
 		BFD548F92E57093D00E3B297 /* NJSettingInjectDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSettingInjectDataProvider.h; sourceTree = "<group>"; };
 		BFD548FA2E57093D00E3B297 /* NJSettingInjectDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSettingInjectDataProvider.m; sourceTree = "<group>"; };
@@ -466,6 +467,8 @@
 		BFD549572E57093D00E3B297 /* NJDebug.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDebug.xm; sourceTree = "<group>"; };
 		BFD549582E57093D00E3B297 /* NJPluginInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPluginInfo.h; sourceTree = "<group>"; };
 		BFD549592E57093D00E3B297 /* NJPluginInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPluginInfo.m; sourceTree = "<group>"; };
+		BFD5B8232E5ABC2B0011FACE /* NJHD2Setting.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJHD2Setting.xm; sourceTree = "<group>"; };
+		BFD5B8242E5ABC3A0011FACE /* NJHD2Setting.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJHD2Setting.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -914,6 +917,8 @@
 				BFD549002E57093D00E3B297 /* NJSettingSkullTableViewCell.m */,
 				BFD549012E57093D00E3B297 /* NJSettingSkullViewModel.h */,
 				BFD549022E57093D00E3B297 /* NJSettingSkullViewModel.m */,
+				BFD5B8242E5ABC3A0011FACE /* NJHD2Setting.mm */,
+				BFD5B8232E5ABC2B0011FACE /* NJHD2Setting.xm */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1407,6 +1412,7 @@
 				BFD549952E57093D00E3B297 /* NJHotTopicAd.mm in Sources */,
 				BFD549962E57093D00E3B297 /* NJSettingSkullTableViewCell.m in Sources */,
 				BFD549972E57093D00E3B297 /* NJRcmdCardDataItem.m in Sources */,
+				BFD5B8252E5ABC3A0011FACE /* NJHD2Setting.mm in Sources */,
 				BFD549982E57093D00E3B297 /* NJRcmdAd.mm in Sources */,
 				BFD549992E57093D00E3B297 /* NJLaunchAd.m in Sources */,
 				BFD5499A2E57093D00E3B297 /* NJAnimeChannelDataItem.m in Sources */,

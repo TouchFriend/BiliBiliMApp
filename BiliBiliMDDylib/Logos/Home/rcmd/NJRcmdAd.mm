@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Rcmd/NJRcmdAd.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/Rcmd/NJRcmdAd.xm"
 
 
 #import <UIKit/UIKit.h>
@@ -30,7 +30,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BFCStoreScorePopupManager; 
 
 
-#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Rcmd/NJRcmdAd.xm"
+#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/Rcmd/NJRcmdAd.xm"
 static void (*_logos_meta_orig$App$BFCStoreScorePopupManager$showWithNeed$close$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, id); static void _logos_meta_method$App$BFCStoreScorePopupManager$showWithNeed$close$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, id); static void (*_logos_meta_orig$App$BFCStoreScorePopupManager$showFromJSBWithNeed$close$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, id); static void _logos_meta_method$App$BFCStoreScorePopupManager$showFromJSBWithNeed$close$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, id); static void (*_logos_meta_orig$App$BFCStoreScorePopupManager$showWithParam$need$close$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, id, id); static void _logos_meta_method$App$BFCStoreScorePopupManager$showWithParam$need$close$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id, id, id); static void (*_logos_orig$App$BFCStoreScorePopupManager$showWithAttentionCount$shareCount$likeCount$watchVideoCount$popperConfig$)(_LOGOS_SELF_TYPE_NORMAL BFCStoreScorePopupManager* _LOGOS_SELF_CONST, SEL, unsigned long long, unsigned long long, unsigned long long, unsigned long long, id); static void _logos_method$App$BFCStoreScorePopupManager$showWithAttentionCount$shareCount$likeCount$watchVideoCount$popperConfig$(_LOGOS_SELF_TYPE_NORMAL BFCStoreScorePopupManager* _LOGOS_SELF_CONST, SEL, unsigned long long, unsigned long long, unsigned long long, unsigned long long, id); 
 
 

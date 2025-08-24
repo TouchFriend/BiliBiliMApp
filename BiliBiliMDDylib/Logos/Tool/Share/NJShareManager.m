@@ -81,7 +81,7 @@ UIKIT_EXTERN NSString *const NJDiskCacheDirName;
             if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
                 activityVC.popoverPresentationController.sourceView = presenter.view;
                 activityVC.popoverPresentationController.sourceRect = CGRectMake(presenter.view.bounds.size.width / 2,
-                                                                                  presenter.view.bounds.size.height / 2,
+                                                                                  presenter.view.bounds.size.height,
                                                                                   1.0, 1.0);
             }
             
