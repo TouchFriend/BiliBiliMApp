@@ -14,7 +14,7 @@
 // 沙盒缓存文件夹
 UIKIT_EXTERN NSString *const NJDiskCacheDirName;
 
-@interface NJShareManager : NSObject
+@interface NJShareManager : NSObject <UIPopoverPresentationControllerDelegate>
 
 /// 活动vc
 @property (nonatomic, strong) UIActivityViewController *activityViewController;
@@ -97,6 +97,7 @@ UIKIT_EXTERN NSString *const NJDiskCacheDirName;
             UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[fileURL] applicationActivities:nil];
             self.activityViewController = activityVC;
             if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                activityVC.popoverPresentationController.delegate = self;
                 activityVC.popoverPresentationController.sourceView = [self getSourceView];
                 activityVC.popoverPresentationController.sourceRect = [self calculateSourceRect];
             }
@@ -160,6 +161,12 @@ UIKIT_EXTERN NSString *const NJDiskCacheDirName;
                       self.presenter.view.bounds.size.height,
                       1.0,
                       1.0);
+}
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller traitCollection:(nonnull UITraitCollection *)traitCollection {
+    return UIModalPresentationNone; // 使用弹窗样式
 }
 
 @end
