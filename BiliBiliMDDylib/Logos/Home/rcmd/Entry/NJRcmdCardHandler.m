@@ -12,6 +12,7 @@
 #import "NJRcmdCmV1Entry.h"
 #import "NJRcmdCmV2Entry.h"
 #import "NJRcmdCmDoubleV9Entry.h"
+#import "NJRcmdBannerIPadV8Entry.h"
 
 @interface NJRcmdCardHandler ()
 
@@ -83,11 +84,12 @@
 
 - (NSArray<Class> *)cardEntryClasses {
     if (!_cardEntryClasses) {
-        _cardEntryClasses = @[[NJRcmdSmallCoverV2Entry class],  //
-                              [NJRcmdBannerV8Entry class],  // banner
-                              [NJRcmdCmV1Entry class],  // 小卡片广告
-                              [NJRcmdCmV2Entry class],  // 小卡片广告
-                              [NJRcmdCmDoubleV9Entry class],    // 大卡片广告
+        _cardEntryClasses = @[[NJRcmdSmallCoverV2Entry class],      //
+                              [NJRcmdBannerV8Entry class],          // banner
+                              [NJRcmdBannerIPadV8Entry class],      // iPad banner
+                              [NJRcmdCmV1Entry class],              // 小卡片广告
+                              [NJRcmdCmV2Entry class],              // 小卡片广告
+                              [NJRcmdCmDoubleV9Entry class],        // 大卡片广告
         ];
     }
     return _cardEntryClasses;

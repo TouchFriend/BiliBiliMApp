@@ -41,6 +41,8 @@
 		BF0D03622DEDA95900115365 /* BiliBiliMDDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */; };
 		BF2FF1712E5DAF5E006E3287 /* NJRcmdCmV1Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FF1702E5DAF5E006E3287 /* NJRcmdCmV1Entry.m */; };
 		BF2FF1722E5DAF5E006E3287 /* NJRcmdCmV1Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF2FF16F2E5DAF5E006E3287 /* NJRcmdCmV1Entry.h */; };
+		BF2FF1752E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FF1742E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.m */; };
+		BF2FF1762E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF2FF1732E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.h */; };
 		BFD5495B2E57093D00E3B297 /* NJLiveIndexFeedActivityCardV1Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD548B72E57093D00E3B297 /* NJLiveIndexFeedActivityCardV1Entity.m */; };
 		BFD5495C2E57093D00E3B297 /* NJApiDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD548E42E57093D00E3B297 /* NJApiDataItem.m */; };
 		BFD5495D2E57093D00E3B297 /* UIApplication+NJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD548892E57093D00E3B297 /* UIApplication+NJCategory.m */; };
@@ -282,6 +284,8 @@
 		BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiliBiliMDDylib.m; sourceTree = "<group>"; };
 		BF2FF16F2E5DAF5E006E3287 /* NJRcmdCmV1Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdCmV1Entry.h; sourceTree = "<group>"; };
 		BF2FF1702E5DAF5E006E3287 /* NJRcmdCmV1Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdCmV1Entry.m; sourceTree = "<group>"; };
+		BF2FF1732E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRcmdBannerIPadV8Entry.h; sourceTree = "<group>"; };
+		BF2FF1742E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRcmdBannerIPadV8Entry.m; sourceTree = "<group>"; };
 		BFD548802E57093D00E3B297 /* NSBundle+NJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NJCategory.h"; sourceTree = "<group>"; };
 		BFD548812E57093D00E3B297 /* NSBundle+NJCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+NJCategory.m"; sourceTree = "<group>"; };
 		BFD548822E57093D00E3B297 /* NSBundle+NJImageLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NJImageLoading.h"; sourceTree = "<group>"; };
@@ -811,18 +815,20 @@
 			children = (
 				BFD548CA2E57093D00E3B297 /* NJRcmdBannerV8Entry.h */,
 				BFD548CB2E57093D00E3B297 /* NJRcmdBannerV8Entry.m */,
+				BF2FF1732E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.h */,
+				BF2FF1742E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.m */,
 				BFD548CC2E57093D00E3B297 /* NJRcmdCardEntry.h */,
 				BFD548CD2E57093D00E3B297 /* NJRcmdCardEntry.m */,
 				BFD548CE2E57093D00E3B297 /* NJRcmdCardHandler.h */,
 				BFD548CF2E57093D00E3B297 /* NJRcmdCardHandler.m */,
 				BFD548D02E57093D00E3B297 /* NJRcmdCmDoubleV9Entry.h */,
 				BFD548D12E57093D00E3B297 /* NJRcmdCmDoubleV9Entry.m */,
+				BF2FF16F2E5DAF5E006E3287 /* NJRcmdCmV1Entry.h */,
+				BF2FF1702E5DAF5E006E3287 /* NJRcmdCmV1Entry.m */,
 				BFD548D22E57093D00E3B297 /* NJRcmdCmV2Entry.h */,
 				BFD548D32E57093D00E3B297 /* NJRcmdCmV2Entry.m */,
 				BFD548D42E57093D00E3B297 /* NJRcmdSmallCoverV2Entry.h */,
 				BFD548D52E57093D00E3B297 /* NJRcmdSmallCoverV2Entry.m */,
-				BF2FF16F2E5DAF5E006E3287 /* NJRcmdCmV1Entry.h */,
-				BF2FF1702E5DAF5E006E3287 /* NJRcmdCmV1Entry.m */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -1170,6 +1176,7 @@
 				BFD549F62E57093D00E3B297 /* NJShareManager.h in Headers */,
 				BFD549F72E57093D00E3B297 /* NJUpperRcmdDataItem.h in Headers */,
 				BFD549F82E57093D00E3B297 /* NJRcmdSmallCoverV2Entry.h in Headers */,
+				BF2FF1762E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.h in Headers */,
 				BFD549F92E57093D00E3B297 /* mz_strm_os.h in Headers */,
 				BFD549FA2E57093D00E3B297 /* NJAnimeChannelDataItem.h in Headers */,
 				BFD549FB2E57093D00E3B297 /* mz_compat.h in Headers */,
@@ -1447,6 +1454,7 @@
 				BF0D035C2DEDA95900115365 /* fishhook.c in Sources */,
 				BF0D03592DEDA95900115365 /* AntiAntiDebug.m in Sources */,
 				BF0D034E2DEDA95900115365 /* OCSelectorTrampolines.mm in Sources */,
+				BF2FF1752E5DB517006E3287 /* NJRcmdBannerIPadV8Entry.m in Sources */,
 				BF0D033E2DEDA95900115365 /* a1a2-selectortramps-i386.s in Sources */,
 				BF0D03442DEDA95900115365 /* a2a3-selectortramps-i386.s in Sources */,
 				BF0D03422DEDA95900115365 /* a2a3-selectortramps-arm.s in Sources */,
