@@ -14,10 +14,7 @@
 }
 
 - (NSDictionary *)handleData:(NSMutableDictionary *)data {
-    if (data[@"ad_info"]) {
-        return nil;
-    }
-    return data;
+    return nil;
 }
 
 @end
