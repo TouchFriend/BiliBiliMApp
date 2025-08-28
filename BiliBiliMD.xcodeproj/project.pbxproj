@@ -1536,7 +1536,7 @@
 					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
 					"-lcycript",
 					"-framework",
-					RevealServer,
+					LookinServer,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
