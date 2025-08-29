@@ -114,13 +114,13 @@
 @implementation NJDetailIntroductionCardFilterTool
 
 /*
-    relate_card_type: AV relateCardType:1           // 普通视频卡片
-    relate_card_type: RESOURCE relateCardType:3     // 商品卡片
-    relate_card_type: GAME relateCardType:4         // 游戏卡片
-    relate_card_type: CM relateCardType:5           // 广告卡片
-    relate_card_type: LIVE relateCardType:6         // 直播卡片
+    relate_card_type: AV relateCardType:1               // 普通视频卡片
+    relate_card_type: RESOURCE relateCardType:3         // 商品卡片
+    relate_card_type: GAME relateCardType:4             // 游戏卡片
+    relate_card_type: CM relateCardType:5               // 广告卡片
+    relate_card_type: LIVE relateCardType:6             // 直播卡片
+    relate_card_type: SPECIAL relateCardType:10         // 特殊活动卡片
     
- cxzcxz:relateCardType3
  */
 + (NSSet<NSNumber *> *)filterTypes {
     static NSSet *filterSet;
@@ -130,6 +130,7 @@
             @(4),   // GAME, 游戏卡片
             @(5),   // CM, 广告卡片
             @(6),   // LIVE, 直播卡片
+            @(10),  // SPECIAL, 特殊活动卡片
         ];
         filterSet = [NSSet setWithArray:types];
     }

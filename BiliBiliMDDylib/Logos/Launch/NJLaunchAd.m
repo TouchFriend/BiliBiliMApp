@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Launch/NJLaunchAd.x"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Launch/NJLaunchAd.x"
 
 
 #import <UIKit/UIKit.h>
@@ -30,7 +30,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BFCSplashWindow; 
 
 
-#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Launch/NJLaunchAd.x"
+#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Launch/NJLaunchAd.x"
 static BFCSplashWindow* (*_logos_orig$App$BFCSplashWindow$initWithFrame$)(_LOGOS_SELF_TYPE_INIT BFCSplashWindow*, SEL, CGRect) _LOGOS_RETURN_RETAINED; static BFCSplashWindow* _logos_method$App$BFCSplashWindow$initWithFrame$(_LOGOS_SELF_TYPE_INIT BFCSplashWindow*, SEL, CGRect) _LOGOS_RETURN_RETAINED; 
 
 @interface BFCSplashWindow : UIWindow
