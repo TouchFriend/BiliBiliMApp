@@ -14,6 +14,10 @@
 }
 
 - (NSDictionary *)handleData:(NSMutableDictionary *)data {
+    // 特殊活动
+    if ([data[@"card_goto"] isEqualToString:@"special_s"]) {
+        return nil;
+    }
     return data;
 }
 
