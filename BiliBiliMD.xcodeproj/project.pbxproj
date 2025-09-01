@@ -35,8 +35,6 @@
 		BF0D03522DEDA95900115365 /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D03512DEDA95900115365 /* LLDBTools.h */; };
 		BF0D03542DEDA95900115365 /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03532DEDA95900115365 /* LLDBTools.mm */; };
 		BF0D03592DEDA95900115365 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03582DEDA95900115365 /* AntiAntiDebug.m */; };
-		BF0D035C2DEDA95900115365 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = BF0D035B2DEDA95900115365 /* fishhook.c */; };
-		BF0D035E2DEDA95900115365 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035D2DEDA95900115365 /* fishhook.h */; };
 		BF0D03602DEDA95900115365 /* BiliBiliMDDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */; };
 		BF0D03622DEDA95900115365 /* BiliBiliMDDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */; };
 		BF334D512E6539B400EE7523 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF334D3F2E6539B400EE7523 /* SVIndefiniteAnimatedView.m */; };
@@ -220,6 +218,8 @@
 		BF334E032E6539B400EE7523 /* NJLiveIndexFeedCardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF334CAE2E6539B400EE7523 /* NJLiveIndexFeedCardHandler.h */; };
 		BF334E042E6539B400EE7523 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BF334D452E6539B400EE7523 /* SVRadialGradientLayer.h */; };
 		BF334E052E6539B400EE7523 /* NJApiDataManger.h in Headers */ = {isa = PBXBuildFile; fileRef = BF334CD92E6539B400EE7523 /* NJApiDataManger.h */; };
+		BFDA21812E65CD7300E3249E /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDA217F2E65CD7300E3249E /* fishhook.h */; };
+		BFDA21822E65CD7300E3249E /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = BFDA21802E65CD7300E3249E /* fishhook.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,8 +278,6 @@
 		BF0D03532DEDA95900115365 /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LLDBTools.mm; sourceTree = "<group>"; };
 		BF0D03562DEDA95900115365 /* BiliBiliMDDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BiliBiliMDDylib-Prefix.pch"; path = "../BiliBiliMDDylib-Prefix.pch"; sourceTree = "<group>"; };
 		BF0D03582DEDA95900115365 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
-		BF0D035B2DEDA95900115365 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
-		BF0D035D2DEDA95900115365 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiliBiliMDDylib.h; sourceTree = "<group>"; };
 		BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiliBiliMDDylib.m; sourceTree = "<group>"; };
 		BF334C702E6539B400EE7523 /* NSBundle+NJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NJCategory.h"; sourceTree = "<group>"; };
@@ -477,6 +475,8 @@
 		BF334D4D2E6539B400EE7523 /* NJDebug.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDebug.xm; sourceTree = "<group>"; };
 		BF334D4E2E6539B400EE7523 /* NJPluginInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPluginInfo.h; sourceTree = "<group>"; };
 		BF334D4F2E6539B400EE7523 /* NJPluginInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPluginInfo.m; sourceTree = "<group>"; };
+		BFDA217F2E65CD7300E3249E /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		BFDA21802E65CD7300E3249E /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -652,8 +652,8 @@
 		BF0D035A2DEDA95900115365 /* fishhook */ = {
 			isa = PBXGroup;
 			children = (
-				BF0D035B2DEDA95900115365 /* fishhook.c */,
-				BF0D035D2DEDA95900115365 /* fishhook.h */,
+				BFDA217F2E65CD7300E3249E /* fishhook.h */,
+				BFDA21802E65CD7300E3249E /* fishhook.c */,
 			);
 			path = fishhook;
 			sourceTree = "<group>";
@@ -1191,10 +1191,10 @@
 				BF334E042E6539B400EE7523 /* SVRadialGradientLayer.h in Headers */,
 				BF334E052E6539B400EE7523 /* NJApiDataManger.h in Headers */,
 				BF0D03352DEDA95900115365 /* MDMethodTrace.h in Headers */,
-				BF0D035E2DEDA95900115365 /* fishhook.h in Headers */,
 				BF0D03522DEDA95900115365 /* LLDBTools.h in Headers */,
 				BF0D03602DEDA95900115365 /* BiliBiliMDDylib.h in Headers */,
 				BF0D032D2DEDA95900115365 /* MDConfigManager.h in Headers */,
+				BFDA21812E65CD7300E3249E /* fishhook.h in Headers */,
 				BF0D034C2DEDA95900115365 /* OCSelectorTrampolines.h in Headers */,
 				BF0D03482DEDA95900115365 /* OCMethodTrace.h in Headers */,
 			);
@@ -1366,6 +1366,7 @@
 				BF0D03332DEDA95900115365 /* MDCycriptManager.m in Sources */,
 				BF0D033C2DEDA95900115365 /* a1a2-selectortramps-arm64.s in Sources */,
 				BF0D033A2DEDA95900115365 /* a1a2-selectortramps-arm.s in Sources */,
+				BFDA21822E65CD7300E3249E /* fishhook.c in Sources */,
 				BF0D03402DEDA95900115365 /* a1a2-selectortramps-x86_64.s in Sources */,
 				BF334D512E6539B400EE7523 /* SVIndefiniteAnimatedView.m in Sources */,
 				BF334D522E6539B400EE7523 /* NJDebug.mm in Sources */,
@@ -1452,7 +1453,6 @@
 				BF334DA32E6539B400EE7523 /* NJApiDataManger.m in Sources */,
 				BF0D034A2DEDA95900115365 /* OCMethodTrace.m in Sources */,
 				BF0D032F2DEDA95900115365 /* MDConfigManager.m in Sources */,
-				BF0D035C2DEDA95900115365 /* fishhook.c in Sources */,
 				BF0D03592DEDA95900115365 /* AntiAntiDebug.m in Sources */,
 				BF0D034E2DEDA95900115365 /* OCSelectorTrampolines.mm in Sources */,
 				BF0D033E2DEDA95900115365 /* a1a2-selectortramps-i386.s in Sources */,
