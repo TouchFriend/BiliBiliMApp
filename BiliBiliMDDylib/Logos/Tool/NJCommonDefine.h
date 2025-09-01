@@ -22,6 +22,35 @@ UIKIT_EXTERN const NSString *nj_logPrefix;
 /// 资源路径
 #define NJ_ASSET_PATH(path) [NJAsset pathForImageAsset:path]
 
+/// --------------------- 用户信息 ---------------------
+/// BFCUserModel
+/// BFCAccountUserModel
+
+@interface BFCAccountUserModel : NSObject
+
+@property (nonatomic) long long mid;
+@property (copy, nonatomic) NSString *name;
+
+@end
+
+@interface BBMallAccountManager : NSObject
+
+@property (readonly, nonatomic) BFCAccountUserModel *userModel;
+@property (readonly, copy, nonatomic) NSString *userId;
+
++ (id)defaultManager;
+
+@end
+
+#define NJ_MID [[[NSClassFromString(@"BBMallAccountManager") defaultManager] userModel] mid]
+#define NJ_MID_STR [NSString stringWithFormat:@"%lld", NJ_MID]
+
+#define NJ_UID NJ_MID
+#define NJ_UID_STR NJ_MID_STR
+
+/// --------------------- 用户信息 ---------------------
+
+
 
 /// --------------------- 设置页面 ---------------------
 /// 总开关
