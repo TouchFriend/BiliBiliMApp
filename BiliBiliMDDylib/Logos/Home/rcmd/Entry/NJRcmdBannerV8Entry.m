@@ -46,6 +46,9 @@
     if ([bannerDic[@"type"] isEqualToString:@"ad_inline_av"]) {
         return nil;
     }
+    if ([bannerDic[@"type"] isEqualToString:@"inline_live"]) {
+        return nil;
+    }
     return bannerDic;
 }
 
