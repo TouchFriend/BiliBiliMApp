@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJDetailAd.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/NJDetailAd.xm"
 
 
 
@@ -54,10 +54,10 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BAPIAppViewuniteV1RelatesFeedReply; @class BAPIAppViewuniteCommonRelates; @class BBAdUGCContext; @class BBAdCommonBaseModel; @class BAPIAppViewuniteV1IntroductionTab; @class BBAdSourceContent; 
+@class BAPIAppViewuniteV1IntroductionTab; @class BBAdSourceContent; @class BBAdUGCContext; @class BAPIAppViewuniteCommonRelates; @class BBAdCommonBaseModel; @class BAPIAppViewuniteV1RelatesFeedReply; 
 
 
-#line 33 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJDetailAd.xm"
+#line 33 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/NJDetailAd.xm"
 static BBAdUGCContext* (*_logos_orig$App$BBAdUGCContext$initWithResovler$)(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCContext* _logos_method$App$BBAdUGCContext$initWithResovler$(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static NSMutableArray * (*_logos_orig$App$BAPIAppViewuniteV1IntroductionTab$modulesArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$modulesArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$App$BAPIAppViewuniteCommonRelates$cardsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppViewuniteCommonRelates$cardsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static BAPIAppViewuniteV1RelatesFeedReply* (*_logos_orig$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppViewuniteV1RelatesFeedReply* _logos_method$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* (*_logos_orig$App$BBAdSourceContent$init)(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* _logos_method$App$BBAdSourceContent$init(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static id (*_logos_meta_orig$App$BBAdCommonBaseModel$modelWithMossMessage$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id _logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); 
 
 @interface BBAdUGCContext : NSObject

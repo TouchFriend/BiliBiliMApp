@@ -26,6 +26,15 @@
 
 %end
 
+// 打开推送通知弹窗
+%hook BFCPushGuideSheetView
+
+- (id)initWithModel:(id)model delegate:(id)delegate spmid:(id)spmid {
+    return nil;
+}
+
+%end
+
 %end
 
 %ctor {
