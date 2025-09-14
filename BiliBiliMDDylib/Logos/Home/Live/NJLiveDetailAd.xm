@@ -54,9 +54,18 @@
 
 %end
 
+// 人气榜
 %hook BBLiveBasePopularRankEntryView
 
 - (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+%end
+
+%hook BBLiveVerticalPanelViewController
+
+- (id)popularRankEntryViews {
     return nil;
 }
 
