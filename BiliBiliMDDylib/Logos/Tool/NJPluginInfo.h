@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NJPluginInfo : NSObject
 
-/// 版本信息，由App版本+插件版本构成，比如:1.0.v0.1-1
+/// 版本信息，由App版本+插件版本构成，比如:1.0.v0.1.0
 + (NSString *)versionInfo;
 
 /// 插件版本
