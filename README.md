@@ -1,5 +1,5 @@
 # BiliBiliMApp
-https://img.shields.io/badge/platform-iOS,iPadOS-blue.svg
+![Platform](https://img.shields.io/badge/platform-iOS%2CiPadOS-blue.svg)
 
 [![Release](https://img.shields.io/github/v/release/TouchFriend/BiliBiliMApp?color=brightgreen)](https://github.com/TouchFriend/BiliBiliMApp/releases)
 ![support](https://img.shields.io/badge/support-bilibili%208.41.0+-blue.svg)
