@@ -19,8 +19,10 @@
 ## 如何安装
 
 - 安装[MonkeyDev](https://github.com/AloneMonkey/MonkeyDev)
+- 项目使用`Lookin`查看视图层级，当然你也可以选择使用`Reveal`
+  - 如果使用[Lookin](https://lookin.work/)，下载`Lookin`的[LookinServer.framework](https://github.com/QMUI/LookinServer)，放到`/opt/MonkeyDev/Frameworks`目录
+  - 如果使用[Reveal](https://revealapp.com/)，那么修改`Xcode`工程，`TARGETS` => `BiliBiliMDDylib` => `Build Settings` => `Other Linker Flags`，将`LookinServer`改为`Reveal`
 
-- 下载[Lookin](https://lookin.work)的[LookinServer.framework](https://github.com/QMUI/LookinServer)，放到`/opt/MonkeyDev/Frameworks`目录
 - 拷贝`BiliBiliMApp`仓库到本地
 
 ```
@@ -45,10 +47,4 @@ Telegram: https://t.me/Qwer6us28FuckAd
 侵权联系本人删除
 
 感谢使用
-
-## 致谢
-
-- [MonkeyDev](https://github.com/AloneMonkey/MonkeyDev)
-- [Lookin](https://lookin.work)
-- 等等
 
