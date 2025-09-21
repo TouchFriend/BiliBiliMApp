@@ -94,6 +94,14 @@
 
 %end
 
+// 卡片的基本信息
+@interface BAPIAppViewuniteCommonCardBasicInfo : NSObject
+
+// operation, 后台添加，固定位置的广告
+@property (copy, nonatomic) NSString *from;
+
+@end
+
 // 简介的首屏卡片
 @interface BAPIAppViewuniteCommonRelateCard : NSObject
 
@@ -101,6 +109,8 @@
 @property (nonatomic, assign) int relateCardType;
 /// 是否是广告（买了推广的）
 @property (nonatomic) _Bool hasCmStock;
+/// 基本信息
+@property (retain, nonatomic) BAPIAppViewuniteCommonCardBasicInfo *basicInfo;
 
 @end
 
@@ -153,6 +163,10 @@
     for (BAPIAppViewuniteCommonRelateCard *item in origCards) {
         if ([[NJDetailIntroductionCardFilterTool filterTypes] containsObject:@(item.relateCardType)] ||
             item.hasCmStock) {
+            continue;
+        }
+        // 后台添加，固定位置的广告
+        if ([item.basicInfo.from isEqualToString:@"operation"]) {
             continue;
         }
         [items addObject:item];

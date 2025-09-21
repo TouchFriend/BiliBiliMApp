@@ -60,7 +60,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBPlayerPortraitScreenBottomWidget; @class BBPlayerUpTagWidget; 
+@class BBPlayerUpTagWidget; @class BBPlayerPortraitScreenBottomWidget; 
 
 
 #line 39 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJDetailPlayerAd.xm"
