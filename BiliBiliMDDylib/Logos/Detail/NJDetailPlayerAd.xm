@@ -19,6 +19,8 @@
     
  BBPlayerControlContainerRootWidget //  控制根组件
     BBPlayerWidget *_leftBarWidget;    // 左边条组件：BBPlayerFullScreenLeftWidget
+    BBPlayerBeyondBoundsWidget *_btmBarWidget;  // 底部条组件
+    - (void)_setupSubWidgets;  // 设置子组件
  
  BBPlayerFullScreenLeftWidget   // 全屏左边组件（横屏）
     BBPlayerFlexContainerWidget *_topControlWidget  // 头部控制组件
@@ -31,6 +33,22 @@
         NSArray *subWidgets // 拥有的子组件
             BBPlayerTimeWidget  // 时间组件, 00:00/37:30
  
+ 
+ BBPlayerBeyondBoundsWidget // 底部条组件
+    NSArray *subWidgets;    // 拥有的子组件
+        BBPlayerHalfScreenBottomWidget // 半屏底部组件
+ 
+ 
+ BBPlayerHalfScreenBottomWidget // 半屏底部组件
+    BBPlayerFlexContainerWidget *_leftControlWidget;    // 左边控制组件
+        NSArray *subWidgets // 拥有的子组件
+            BBPlayerPlayAndPauseWidget      // 播放和暂停
+            BBPlayerSeekbarWidgetV2         // 时间滑动条
+            BBPlayerTimeHintLabelWidget     // 时间提示标签
+    BBPlayerFlexContainerWidget *_rightControlWidget;   // 右边控制组件
+        NSArray *subWidgets // 拥有的子组件
+            BBPlayerSwitchScreenWidget      //  全屏按钮
+            BBPlayerBizGotoStoryWidget      //  横屏视频的竖屏全屏按钮
  */
 
 #import <UIKit/UIKit.h>
@@ -56,6 +74,15 @@
 // 处理_upTagWidget为nil时的奔溃问题；_firstControlWidget包含_upTagWidget。
 - (void)setupFirstControlConstraints {
     
+}
+
+%end
+
+// 横屏视频的竖屏全屏按钮
+%hook BBPlayerBizGotoStoryWidget
+
+- (id)initWithContext:(id)context {
+    return nil;
 }
 
 %end
