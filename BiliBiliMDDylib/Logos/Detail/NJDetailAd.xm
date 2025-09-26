@@ -13,6 +13,7 @@
  
  BAPIAppViewuniteCommonModule：简介视图统一通用模块
     BAPIAppViewuniteCommonHeadline:视频标题；type: UGC_HEADLINE
+    BAPIAppViewuniteCommonLikeComment: 点赞后显示的[鼓励UP主继续创作]，比如成为老粉 type: LIKE_COMMENT
     BAPIAppViewuniteCommonUgcIntroduction：UGC简介，比如标签、评分、通用排名等等；type: UGC_INTRODUCTION
     BAPIAppViewuniteCommonKingPosition：操作栏，比如点赞，不喜欢，投币等等； type: KING_POSITION
     BAPIAppViewuniteCommonSpecialTag：特殊标签；type: SPECIALTAG
@@ -54,6 +55,16 @@
 
 @end
 
+%hook BAPIAppViewuniteCommonModule
+
+- (NSString *)description {
+    NSString *orig = %orig;
+    NSString *ret = [orig stringByAppendingFormat:@"type: %@", @(self.type)];
+    return ret;
+}
+
+%end
+
 @interface BAPIAppViewuniteV1IntroductionTab : NSObject
 
 @property (retain, nonatomic) NSMutableArray *modulesArray;
@@ -64,6 +75,7 @@
 
 %hook BAPIAppViewuniteV1IntroductionTab
 
+// 简介版块的所有数据
 - (NSMutableArray *)modulesArray {
     NSMutableArray *origModules = %orig;
     NSMutableArray *items = [NSMutableArray array];
@@ -85,6 +97,7 @@
         NSArray *types = @[
             @(55),      // MERCHANDISE, UP主分享好物
             @(29),      // PAY_BAR, 大会员
+            @(34),      // LIKE_COMMENT, 鼓励UP主继续创作
         ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
