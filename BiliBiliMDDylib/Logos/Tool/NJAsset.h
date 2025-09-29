@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 获取资源路径
+/// @param name 资源名称
+/// @return 返回资源路径
++ (nullable NSString *)pathForAsset:(nullable NSString *)name;
+
+/// 获取资源路径
 /// - Parameters:
 ///   - name: 资源名称
 ///   - ext: 资源类型

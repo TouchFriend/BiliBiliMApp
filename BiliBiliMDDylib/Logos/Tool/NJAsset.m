@@ -6,7 +6,7 @@
 //
 
 #import "NJAsset.h"
-#import "NSBundle+NJCategory.h"
+#import "NSBundle+NJBundleCategory.h"
 #import "NSBundle+NJImageLoading.h"
 
 
@@ -40,12 +40,19 @@
 + (nullable NSString *)pathForImageAsset:(NSString *)name
                                   ofType:(nullable NSString *)ext
                              inDirectory:(nullable NSString *)subpath {
-    NSBundle *bundle = [NSBundle nj_bilibiliBundle];
+    NSBundle *bundle = [NSBundle nj_mainBundle];
     return [bundle nj_pathForImageResource:name
                                     ofType:ext
                                inDirectory:subpath];
 }
 
+/// 获取资源路径
+/// @param name 资源名称
+/// @return 返回资源路径
++ (nullable NSString *)pathForAsset:(nullable NSString *)name {
+    return [self pathForAsset:name
+                       ofType:nil];
+}
 
 /// 获取资源路径
 /// - Parameters:
@@ -69,7 +76,7 @@
 + (nullable NSString *)pathForAsset:(nullable NSString *)name
                              ofType:(nullable NSString *)ext
                         inDirectory:(nullable NSString *)subpath {
-    NSBundle *bundle = [NSBundle nj_bilibiliBundle];
+    NSBundle *bundle = [NSBundle nj_mainBundle];
     return [bundle pathForResource:name
                             ofType:ext
                        inDirectory:subpath];

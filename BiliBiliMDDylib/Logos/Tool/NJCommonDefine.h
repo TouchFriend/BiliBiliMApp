@@ -19,8 +19,10 @@ UIKIT_EXTERN const NSString *nj_logPrefix;
 
 /// UserDefaults
 #define NJ_USER_DEFAULTS [NSUserDefaults standardUserDefaults]
+/// 图片资源路径
+#define NJ_IMAGE_ASSET_PATH(path) [NJAsset pathForImageAsset:path]
 /// 资源路径
-#define NJ_ASSET_PATH(path) [NJAsset pathForImageAsset:path]
+#define NJ_ASSET_PATH(path) [NJAsset pathForAsset:path]
 
 /// --------------------- 用户信息 ---------------------
 /// BFCUserModel

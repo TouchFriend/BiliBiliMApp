@@ -153,10 +153,10 @@
 /// 调整图片
 - (void)updateImagesForCurrentStyle {
     if (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-        NSURL *skullImageUrl = [NSURL fileURLWithPath:NJ_ASSET_PATH(NJ_SETTING_SKULL_DARK_IMAGE)];
+        NSURL *skullImageUrl = [NSURL fileURLWithPath:NJ_IMAGE_ASSET_PATH(NJ_SETTING_SKULL_DARK_IMAGE)];
         [self.skullImageView liveSD_setImageWithURL:skullImageUrl];
     } else {
-        NSURL *skullImageUrl = [NSURL fileURLWithPath:NJ_ASSET_PATH(NJ_SETTING_SKULL_IMAGE)];
+        NSURL *skullImageUrl = [NSURL fileURLWithPath:NJ_IMAGE_ASSET_PATH(NJ_SETTING_SKULL_IMAGE)];
         [self.skullImageView liveSD_setImageWithURL:skullImageUrl];
     }
     
