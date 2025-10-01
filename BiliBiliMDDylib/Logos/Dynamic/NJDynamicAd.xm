@@ -161,7 +161,7 @@
 - (NSMutableArray *)modulesArray {
     NSMutableArray *origModulesArray = %orig;
     for (BAPIAppDynamicV2Module *item in origModulesArray) {
-        NSLog(@"cxzcxz:moduleType:%d-type:%d", item.moduleType, item.moduleDynamic.type);
+        NSLog(@"%@:moduleType:%d-type:%d", nj_logPrefix, item.moduleType, item.moduleDynamic.type);
     }
     return origModulesArray;
 }

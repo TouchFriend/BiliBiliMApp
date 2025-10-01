@@ -51,7 +51,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BAPIAppDynamicV2DynamicItem; @class BAPIAppDynamicV2ModuleAdditional; @class BAPIAppDynamicV2DynamicList; @class BAPIAppDynamicV2Module; @class BAPIAppDynamicV2ModuleDynamic; 
+@class BAPIAppDynamicV2DynamicList; @class BAPIAppDynamicV2ModuleDynamic; @class BAPIAppDynamicV2Module; @class BAPIAppDynamicV2DynamicItem; @class BAPIAppDynamicV2ModuleAdditional; 
 
 
 #line 30 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Dynamic/NJDynamicAd.xm"

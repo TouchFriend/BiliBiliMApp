@@ -7,6 +7,7 @@
 
 #import "NJAnimeChannelDataItem.h"
 #import "NJAnimeChannelCardHandler.h"
+#import "NJCommonDefine.h"
 
 @interface NJAnimeChannelDataItem ()
 
@@ -66,7 +67,7 @@
                                                           options:0
                                                             error:&serializationError];
         if (serializationError) {
-            NSLog(@"cxzcxz:JSON 序列化失败: %@", serializationError.localizedDescription);
+            NSLog(@"%@:JSON 序列化失败: %@", nj_logPrefix, serializationError.localizedDescription);
         } else {
             data = jsonData;
         }

@@ -8,6 +8,7 @@
 #import "NJRcmdCardDataItem.h"
 #import "NJRcmdCardHandler.h"
 #import "NJDiskCacheManager.h"
+#import "NJCommonDefine.h"
 
 @interface NJRcmdCardDataItem ()
 
@@ -70,7 +71,7 @@
                                                           options:0
                                                             error:&serializationError];
         if (serializationError) {
-            NSLog(@"cxzcxz:JSON 序列化失败: %@", serializationError.localizedDescription);
+            NSLog(@"%@:JSON 序列化失败: %@", nj_logPrefix, serializationError.localizedDescription);
         } else {
             data = jsonData;
         }
