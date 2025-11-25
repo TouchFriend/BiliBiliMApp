@@ -18,28 +18,23 @@
  BBPlayerContext    // 上下文
     BBPlayerControlWidgetService *controlWidgetService; // 控制组建服务
         Class rootWidgetClass; // 根组件类型：BBPlayerControlContainerRootWidget
-    
+   
+ */
+
+/*
+ **************** 半屏-横屏视频 ****************
+ 
  BBPlayerControlContainerRootWidget //  控制根组件
     BBPlayerWidget *_leftBarWidget;    // 左边条组件：BBPlayerFullScreenLeftWidget
     BBPlayerBeyondBoundsWidget *_btmBarWidget;  // 底部条组件
     - (void)_setupSubWidgets;  // 设置子组件
- 
- BBPlayerFullScreenLeftWidget   // 全屏左边组件（横屏）
-    BBPlayerFlexContainerWidget *_topControlWidget  // 头部控制组件
-        NSArray *subWidgets // 拥有的子组件
-            BBPlayerOnlineCounterWidget     // 在线人数
-            BBPlayerUpTagWidget             // up主头像
-            BBPlayerOperationTagWidget      // 运营标签
- 
-    BBPlayerFlexContainerWidget *_bottomControlWidget;  // 底部控制组件
-        NSArray *subWidgets // 拥有的子组件
-            BBPlayerTimeWidget  // 时间组件, 00:00/37:30
  
  
  BBPlayerBeyondBoundsWidget // 底部条组件
     NSArray *subWidgets;    // 拥有的子组件
         BBPlayerHalfScreenBottomWidget // 半屏底部组件
  
+ **************** 半屏底部组件 ****************
  
  BBPlayerHalfScreenBottomWidget // 半屏底部组件
     BBPlayerFlexContainerWidget *_leftControlWidget;    // 左边控制组件
@@ -60,6 +55,68 @@
     @property (nonatomic) unsigned long long type;
         type:1      // UP主都在用的宝藏功能
         type:7      // 使用的BGM
+ 
+ **************** 半屏底部组件 ****************
+ 
+ */
+/*
+ **************** 全屏-横屏视频 ****************
+ 
+ BBPlayerControlContainerRootWidget //  控制根组件
+    BBPlayerWidget *_leftBarWidget;    // 左边条组件：BBPlayerFullScreenLeftWidget
+    BBPlayerBeyondBoundsWidget *_btmBarWidget;  // 底部条组件
+    - (void)_setupSubWidgets;  // 设置子组件
+ 
+ **************** 全屏左边组件 ****************
+ 
+ BBPlayerFullScreenLeftWidget   // 全屏左边组件（横屏）
+    BBPlayerFlexContainerWidget *_topControlWidget  // 头部控制组件
+        NSArray *subWidgets // 拥有的子组件
+            BBPlayerOnlineCounterWidget     // 在线人数
+            BBPlayerUpTagWidget             // up主头像
+            BBPlayerOperationTagWidget      // 运营标签
+ 
+    BBPlayerFlexContainerWidget *_bottomControlWidget;  // 底部控制组件
+        NSArray *subWidgets // 拥有的子组件
+            BBPlayerTimeWidget  // 时间组件, 00:00/37:30
+ 
+ **************** 全屏左边组 ****************
+ 
+ **************** 全屏底部组件 ****************
+ 
+ BBPlayerBeyondBoundsWidget // 底部条组件
+    NSArray *subWidgets;    // 拥有的子组件
+        // 头部
+        BBPlayerSeekbarWidgetV2 // 滑动条组件
+        // 左边
+        BBPlayerPlayAndPauseWidget              // 播放和暂停按钮组件
+        BBPlayerFullScreenNextEpisodeWidget     // 全屏下一集组件
+        BBPlayerDanmakuSwitchWidget             // 弹幕开关组件
+        BBPlayerDanmakuSettingEntranceWidget    // 弹幕设置入口组件
+        BBPlayerDanmakuEntranceWidget           // 发送弹幕组件
+        // 右边
+        BBPlayerVideoQualityWidget                      // 视频质量组件
+        BBPlayerLossLessBtnWidget                       // 无损按钮组件
+        BBPlayerDolbyBtnWidget                          // 杜比按钮组件
+        BBPlayerPlaybackRateWidget                      // 播放速度组件
+        BBPlayerFullScreenEpisodeBtnWidget              // 全屏剧集按钮组件
+        BBPlayerCaptionWidget                           // 字幕组件
+        BBPlayerAIAudioBtnWidget                        // 人工智能音频按钮组件
+        BBPlayerInteractiveStoryListEntranceWidget      // 互动故事列表入口组件
+ 
+ **************** 全屏底部组件 ****************
+ */
+/*
+ **************** 半屏-竖屏视频 ****************
+ 
+ */
+/*
+ **************** 全屏-竖屏视频 ****************
+ 
+ */
+
+/*
+ 当前播放速度可以从 BBPlayerObject => BBPlayerContext => BBPlayerPlayback => playbackRate
  */
 
 #import <UIKit/UIKit.h>
@@ -68,6 +125,9 @@
 %group App
 
 @interface BBPlayerWidget : NSObject
+
+@property (readonly, weak, nonatomic) BBPlayerWidget *superWidget;
+@property (readonly, copy, nonatomic) NSArray *subWidgets;
 
 @end
 
@@ -169,6 +229,7 @@
 
 %end
 
+ 
 %end
 
 %ctor {

@@ -7,5 +7,4 @@
 
 #import "NJCommonDefine.h"
 
-const NSString *nj_logPrefix = @"cxzcxz";
 

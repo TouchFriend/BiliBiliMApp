@@ -24,4 +24,14 @@
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
+/// 是否是插件
+/// @return 返回是否是插件
++ (BOOL)isPlugin {
+#ifdef NJ_TWEAK
+    return YES;
+#else
+    return NO;
+#endif
+}
+
 @end

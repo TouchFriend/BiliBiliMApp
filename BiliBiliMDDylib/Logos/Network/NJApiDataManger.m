@@ -16,6 +16,7 @@
 #import "NJSearchSquareDataItem.h"
 #import "NJTabDataItem.h"
 #import "NJUpperRcmdDataItem.h"
+#import "NJShareChannelsDataItem.h"
 
 @interface NJApiDataManger ()
 
@@ -106,6 +107,7 @@
                          [NJSearchSquareDataItem class],        // 搜索广场
                          [NJTabDataItem class],                 // 首页的版块
                          [NJUpperRcmdDataItem class],           // 详情-你可能感兴趣的up主
+                         [NJShareChannelsDataItem class],       // 详情页-分享频道
         ];
     }
     return _itemClasses;

@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// App版本
 + (NSString *)appVersion;
 
+/// 是否是插件
+/// @return 返回是否是插件
++ (BOOL)isPlugin;
+
 @end
 
 NS_ASSUME_NONNULL_END
