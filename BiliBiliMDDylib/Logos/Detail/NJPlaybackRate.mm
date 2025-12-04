@@ -34,7 +34,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBPlayerSupportedPlaybackRate; @class NSArray; @class IJKFFMoviePlayerControllerFFPlay; @class BBPlayerPlayerRateModel; @class VKSettingViewSelectModel; 
+@class VKSettingViewSelectModel; @class BBPlayerPlayerRateModel; @class IJKFFMoviePlayerControllerFFPlay; @class BBPlayerSupportedPlaybackRate; @class NSArray; 
 
 
 #line 13 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/NJPlaybackRate.xm"
@@ -85,6 +85,9 @@ static NSString * _logos_method$App$BBPlayerPlayerRateModel$description(_LOGOS_S
 __attribute__((used)) static NSNumber * _logos_property$App$VKSettingViewSelectModel$nj_isChangeFlag(VKSettingViewSelectModel * __unused self, SEL __unused _cmd) { return (NSNumber *)objc_getAssociatedObject(self, (void *)_logos_property$App$VKSettingViewSelectModel$nj_isChangeFlag); }; __attribute__((used)) static void _logos_property$App$VKSettingViewSelectModel$setNj_isChangeFlag(VKSettingViewSelectModel * __unused self, SEL __unused _cmd, NSNumber * rawValue) { objc_setAssociatedObject(self, (void *)_logos_property$App$VKSettingViewSelectModel$nj_isChangeFlag, rawValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC); }
 
 static NSString * _logos_method$App$VKSettingViewSelectModel$name(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    if (![NJPluginInfo isPlugin]) {
+        return _logos_orig$App$VKSettingViewSelectModel$name(self, _cmd);
+    }
     NSString *name = _logos_orig$App$VKSettingViewSelectModel$name(self, _cmd);
     if ([name isEqualToString:@"倍速"] && (![self nj_isChangeFlag] || ![[self nj_isChangeFlag] boolValue])) {
         [self setNj_isChangeFlag:@(1)];
@@ -140,7 +143,7 @@ static NSArray* _logos_meta_method$App$NSArray$arrayWithObjects$count$(_LOGOS_SE
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_b4352501(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_18bd9d6c(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE && [NJChangePlaybackRateTool compatibleCurrentSystemVersion]) {
         {Class _logos_class$App$IJKFFMoviePlayerControllerFFPlay = objc_getClass("IJKFFMoviePlayerControllerFFPlay"); { MSHookMessageEx(_logos_class$App$IJKFFMoviePlayerControllerFFPlay, @selector(setPlaybackRate:), (IMP)&_logos_method$App$IJKFFMoviePlayerControllerFFPlay$setPlaybackRate$, (IMP*)&_logos_orig$App$IJKFFMoviePlayerControllerFFPlay$setPlaybackRate$);}Class _logos_class$App$BBPlayerPlayerRateModel = objc_getClass("BBPlayerPlayerRateModel"); { MSHookMessageEx(_logos_class$App$BBPlayerPlayerRateModel, @selector(description), (IMP)&_logos_method$App$BBPlayerPlayerRateModel$description, (IMP*)&_logos_orig$App$BBPlayerPlayerRateModel$description);}Class _logos_class$App$VKSettingViewSelectModel = objc_getClass("_TtC13VKSettingView11SelectModel"); { objc_property_attribute_t _attributes[16]; unsigned int attrc = 0; _attributes[attrc++] = (objc_property_attribute_t) { "T", "@\"NSNumber\"" }; _attributes[attrc++] = (objc_property_attribute_t) { "&", "" }; _attributes[attrc++] = (objc_property_attribute_t) { "N", "" }; class_addProperty(_logos_class$App$VKSettingViewSelectModel, "nj_isChangeFlag", _attributes, attrc); size_t _nBytes = 1024; char _typeEncoding[_nBytes]; snprintf(_typeEncoding, _nBytes, "%s@:", @encode(NSNumber *)); class_addMethod(_logos_class$App$VKSettingViewSelectModel, @selector(nj_isChangeFlag), (IMP)&_logos_property$App$VKSettingViewSelectModel$nj_isChangeFlag, _typeEncoding); snprintf(_typeEncoding, _nBytes, "v@:%s", @encode(NSNumber *)); class_addMethod(_logos_class$App$VKSettingViewSelectModel, @selector(setNj_isChangeFlag:), (IMP)&_logos_property$App$VKSettingViewSelectModel$setNj_isChangeFlag, _typeEncoding); } { MSHookMessageEx(_logos_class$App$VKSettingViewSelectModel, @selector(name), (IMP)&_logos_method$App$VKSettingViewSelectModel$name, (IMP*)&_logos_orig$App$VKSettingViewSelectModel$name);}Class _logos_class$App$BBPlayerSupportedPlaybackRate = objc_getClass("BBPlayerSupportedPlaybackRate"); Class _logos_metaclass$App$BBPlayerSupportedPlaybackRate = object_getClass(_logos_class$App$BBPlayerSupportedPlaybackRate); { MSHookMessageEx(_logos_metaclass$App$BBPlayerSupportedPlaybackRate, @selector(supportedPlaybackRateModelArr), (IMP)&_logos_meta_method$App$BBPlayerSupportedPlaybackRate$supportedPlaybackRateModelArr, (IMP*)&_logos_meta_orig$App$BBPlayerSupportedPlaybackRate$supportedPlaybackRateModelArr);}Class _logos_class$App$NSArray = objc_getClass("NSArray"); Class _logos_metaclass$App$NSArray = object_getClass(_logos_class$App$NSArray); { MSHookMessageEx(_logos_metaclass$App$NSArray, @selector(arrayWithObjects:count:), (IMP)&_logos_meta_method$App$NSArray$arrayWithObjects$count$, (IMP*)&_logos_meta_orig$App$NSArray$arrayWithObjects$count$);}}
     }
@@ -153,7 +156,11 @@ extern "C" {
 
 void *orig_change_LandscapeVideo_HalfScreenPlayback_rate_tip;
 
-void my_change_LandscapeVideo_HalfScreenPlayback_rate_tip(long long a1, unsigned long long a2, long long a3, long long a4);
+void my_change_LandscapeVideo_HalfScreenPlayback_rate_tip(int64_t a1, uint64_t a2, int64_t a3, int64_t a4);
+
+void *orig_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip;
+
+int64_t my_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip(int64_t a1, uint64_t a2, int64_t a3, int64_t a4, int64_t a5);
 
 
 void *orig_landscapeVideo_fullScreenPlayback_RateModelArr;
@@ -163,7 +170,7 @@ int64_t my_landscapeVideo_fullScreenPlayback_RateModelArr();
 
 void *orig_get_max_playback_rate;
 
-double my_get_max_playback_rate(long long a1);
+double my_get_max_playback_rate(int64_t a1);
 
 #ifdef __cplusplus
 }
@@ -229,10 +236,32 @@ static void changePlaybackRates_LandscapeVideo_HalfScreenPlayback() {
     write_string_to_address(g_slide+0x116E603C0, [playbackRates[3] UTF8String]);
     
     
-    write_string_to_address(g_slide+0x116E603D0 , [playbackRates[4] UTF8String]);
+    write_string_to_address(g_slide+0x116E603D0, [playbackRates[4] UTF8String]);
     
     
     write_string_to_address(g_slide+0x116E603E0, [playbackRates[5] UTF8String]);
+}
+
+
+static void changePlaybackRates_VerticalVideo_FullScreenPlayback_VerticalModePlayback() {
+    NSArray<NSString *> *playbackRates = [NJChangePlaybackRateTool playbackRates];
+    
+    write_string_to_address(g_slide+0x116E789A0, [playbackRates[0] UTF8String]);
+    
+    
+    write_string_to_address(g_slide+0x116E789B0, [playbackRates[1] UTF8String]);
+    
+    
+    write_string_to_address(g_slide+0x116E789C0, [playbackRates[2] UTF8String]);
+    
+    
+    write_string_to_address(g_slide+0x116E789D0, [playbackRates[3] UTF8String]);
+    
+    
+    write_string_to_address(g_slide+0x116E789E0, [playbackRates[4] UTF8String]);
+    
+    
+    write_string_to_address(g_slide+0x116E789F0, [playbackRates[5] UTF8String]);
 }
 
 __attribute__((constructor)) static void __init__(void) {
@@ -260,6 +289,14 @@ __attribute__((constructor)) static void __init__(void) {
     
     
     
+    long long change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address = g_slide+0x10B2AC4B0;
+    NSLog(@"[%@] cal func change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address address:0x%llx", nj_logPrefix, change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address);
+    MSHookFunction((void *)change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address,
+                   (void*)my_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip,
+                   (void**)&orig_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip);
+    
+    
+    
     long long landscapeVideo_fullScreenPlayback_RateModelArr_address = g_slide+0x10D82E870;
     NSLog(@"[%@] cal func landscapeVideo_fullScreenPlayback_RateModelArr_address address:0x%llx", nj_logPrefix, landscapeVideo_fullScreenPlayback_RateModelArr_address);
     MSHookFunction((void *)landscapeVideo_fullScreenPlayback_RateModelArr_address,
@@ -269,6 +306,8 @@ __attribute__((constructor)) static void __init__(void) {
     
     changePlaybackRates_LandscapeVideo_HalfScreenPlayback();
     
+    
+    changePlaybackRates_VerticalVideo_FullScreenPlayback_VerticalModePlayback();
 }
 
 
