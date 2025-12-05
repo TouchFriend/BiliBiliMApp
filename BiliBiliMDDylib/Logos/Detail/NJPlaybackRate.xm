@@ -10,6 +10,9 @@
 #import "NJPluginInfo.h"
 
 
+// 播放速度-目标固定16字节数据块
+const size_t NJ_RATE_BLOCK_SIZE = 16;
+
 %group App
 
 /// 视频播放器
@@ -50,25 +53,6 @@
 @property (nonatomic, strong) NSNumber *nj_isChangeFlag;
 
 @end
-
-// [横屏视频-半屏播放]的播放速度-修复显示倍速问题
-%hook VKSettingViewSelectModel
-
-%property (nonatomic, strong) NSNumber *nj_isChangeFlag;
-
-- (NSString *)name {
-    if (![NJPluginInfo isPlugin]) {
-        return %orig;
-    }
-    NSString *name = %orig;
-    if ([name isEqualToString:@"倍速"] && (![self nj_isChangeFlag] || ![[self nj_isChangeFlag] boolValue])) {
-        [self setNj_isChangeFlag:@(1)];
-        [self setItems:[NJChangePlaybackRateTool playbackRates]];
-    }
-    return name;
-}
-
-%end
 
 
 %hook BBPlayerSupportedPlaybackRate
@@ -126,15 +110,6 @@
 extern "C" {
 #endif
 
-void *orig_change_LandscapeVideo_HalfScreenPlayback_rate_tip;
-// [横屏视频-半屏播放]的播放速度-修复点击提示问题
-void my_change_LandscapeVideo_HalfScreenPlayback_rate_tip(int64_t a1, uint64_t a2, int64_t a3, int64_t a4);
-
-void *orig_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip;
-// [竖屏视频-全屏播放-用竖屏模式播放]的播放速度-修复点击提示问题
-int64_t my_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip(int64_t a1, uint64_t a2, int64_t a3, int64_t a4, int64_t a5);
-
-
 void *orig_landscapeVideo_fullScreenPlayback_RateModelArr;
 // [横屏视频-全屏播放]播放速度数组
 int64_t my_landscapeVideo_fullScreenPlayback_RateModelArr();
@@ -178,62 +153,77 @@ static void _register_func_for_add_image(const struct mach_header *header, intpt
 }
 
 
-static int write_string_to_address(uintptr_t dest_addr, const char *str) {
-    if (str == NULL) {
+/// 将速度写入到内存地址
+/// - Parameters:
+///   - dest_addr: 目标内存地址
+///   - str: 速度字符串，比如"1.0"
+static int write_rate_string_to_address(uintptr_t dest_addr, NSString *str) {
+    if (str == nil) {
         return -1;
     }
 
-    char *dest = (char *)dest_addr;
+    // UTF8 字符串
+    const char *utf8Str = [str UTF8String];
+    size_t strLength = strlen(utf8Str);   // 字符数（不含 \0）
 
-    // 注意：这里没有进一步的安全校验（例如页面可写性、缓冲区大小等）
-    strcpy(dest, str);
+    if (strLength > (NJ_RATE_BLOCK_SIZE - 1)) {
+        // 只能容纳前15字节 + 最后一字节用于 E0+strLength
+        strLength = NJ_RATE_BLOCK_SIZE - 1;
+    }
+
+    uint8_t block[NJ_RATE_BLOCK_SIZE];
+    memset(block, 0, NJ_RATE_BLOCK_SIZE);
+
+    // 前 strLength 字节写入字符串
+    memcpy(block, utf8Str, strLength);
+
+    // 最后一个字节写入：E0 + 长度
+    block[NJ_RATE_BLOCK_SIZE - 1] = 0xE0 + (uint8_t)strLength;
+
+    // 将 block 写到目标地址
+    memcpy((void *)dest_addr, block, NJ_RATE_BLOCK_SIZE);
 
     return 0;
 }
 
 
+/// 将速度写入到内存地址
+/// - Parameter baseAddress: 起始内存地址
+static void write_rate_to_address(uintptr_t baseAddress) {
+    NSArray<NSString *> *playbackRates = [NJChangePlaybackRateTool playbackRates];
+    NSInteger count = playbackRates.count;
+    for (NSInteger i = 0; i < count; i++) {
+        uintptr_t currentAddress = baseAddress + i * NJ_RATE_BLOCK_SIZE;
+        write_rate_string_to_address(currentAddress, playbackRates[i]);
+    }
+}
+
 // [横屏视频-半屏播放]的播放速度
 static void changePlaybackRates_LandscapeVideo_HalfScreenPlayback() {
-    NSArray<NSString *> *playbackRates = [NJChangePlaybackRateTool playbackRates];
-    // 0000000116E60390  30 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  0.5.............
-    write_string_to_address(g_slide+0x116E60390, [playbackRates[0] UTF8String]);
-    
-    // 0000000116E603A0  30 2E 37 35 00 00 00 00  00 00 00 00 00 00 00 E4  0.75............
-    write_string_to_address(g_slide+0x116E603A0, [playbackRates[1] UTF8String]);
-    
-    // 0000000116E603B0  31 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.0.............
-    write_string_to_address(g_slide+0x116E603B0, [playbackRates[2] UTF8String]);
-    
-    // 0000000116E603C0  31 2E 32 35 00 00 00 00  00 00 00 00 00 00 00 E4  1.25............
-    write_string_to_address(g_slide+0x116E603C0, [playbackRates[3] UTF8String]);
-    
-    // 0000000116E603D0  31 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.5.............
-    write_string_to_address(g_slide+0x116E603D0, [playbackRates[4] UTF8String]);
-    
-    // 0000000116E603E0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
-    write_string_to_address(g_slide+0x116E603E0, [playbackRates[5] UTF8String]);
+    /*
+     0000000116E60390  30 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  0.5.............
+     0000000116E603A0  30 2E 37 35 00 00 00 00  00 00 00 00 00 00 00 E4  0.75............
+     0000000116E603B0  31 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.0.............
+     0000000116E603C0  31 2E 32 35 00 00 00 00  00 00 00 00 00 00 00 E4  1.25............
+     0000000116E603D0  31 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.5.............
+     0000000116E603E0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
+     */
+    uintptr_t baseAddress = g_slide + 0x116E60390;
+    write_rate_to_address(baseAddress);
 }
 
 // [竖屏视频-全屏播放-用竖屏模式播放]的播放速度
 static void changePlaybackRates_VerticalVideo_FullScreenPlayback_VerticalModePlayback() {
-    NSArray<NSString *> *playbackRates = [NJChangePlaybackRateTool playbackRates];
-    // 0000000116E789A0  30 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  0.5.............
-    write_string_to_address(g_slide+0x116E789A0, [playbackRates[0] UTF8String]);
-    
-    // 0000000116E789B0  30 2E 37 35 00 00 00 00  00 00 00 00 00 00 00 E4  0.75............
-    write_string_to_address(g_slide+0x116E789B0, [playbackRates[1] UTF8String]);
-    
-    // 0000000116E789C0  31 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.0.............
-    write_string_to_address(g_slide+0x116E789C0, [playbackRates[2] UTF8String]);
-    
-    // 0000000116E789D0  31 2E 32 35 00 00 00 00  00 00 00 00 00 00 00 E4  1.25............
-    write_string_to_address(g_slide+0x116E789D0, [playbackRates[3] UTF8String]);
-    
-    // 0000000116E789E0  31 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.5.............
-    write_string_to_address(g_slide+0x116E789E0, [playbackRates[4] UTF8String]);
-    
-    // 0000000116E789F0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
-    write_string_to_address(g_slide+0x116E789F0, [playbackRates[5] UTF8String]);
+    /*
+     0000000116E789A0  30 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  0.5.............
+     0000000116E789B0  30 2E 37 35 00 00 00 00  00 00 00 00 00 00 00 E4  0.75............
+     0000000116E789C0  31 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.0.............
+     0000000116E789D0  31 2E 32 35 00 00 00 00  00 00 00 00 00 00 00 E4  1.25............
+     0000000116E789E0  31 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.5.............
+     0000000116E789F0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
+     */
+    uintptr_t baseAddress = g_slide+0x116E789A0;
+    write_rate_to_address(baseAddress);
 }
 
 __attribute__((constructor)) static void __init__(void) {
@@ -250,22 +240,6 @@ __attribute__((constructor)) static void __init__(void) {
     MSHookFunction((void *)get_max_playback_rate_address,
                    (void*)my_get_max_playback_rate,
                    (void**)&orig_get_max_playback_rate);
-    
-    // void __fastcall sub_10A9966AC(__int64 a1, unsigned __int64 a2, __int64 a3, __int64 a4)
-    // [横屏视频-半屏播放]的播放速度-修复点击提示问题
-    long long change_LandscapeVideo_HalfScreenPlayback_rate_tip_address = g_slide+0x10A9966AC;
-    NSLog(@"[%@] cal func change_LandscapeVideo_HalfScreenPlayback_rate_tip_address address:0x%llx", nj_logPrefix, change_LandscapeVideo_HalfScreenPlayback_rate_tip_address);
-    MSHookFunction((void *)change_LandscapeVideo_HalfScreenPlayback_rate_tip_address,
-                   (void*)my_change_LandscapeVideo_HalfScreenPlayback_rate_tip,
-                   (void**)&orig_change_LandscapeVideo_HalfScreenPlayback_rate_tip);
-    
-    // __int64 __fastcall sub_10B2AC4B0(__int64 a1, unsigned __int64 a2, __int64 a3, __int64 a4, __int64 a5)
-    // [竖屏视频-全屏播放-用竖屏模式播放]的播放速度-修复点击提示问题
-    long long change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address = g_slide+0x10B2AC4B0;
-    NSLog(@"[%@] cal func change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address address:0x%llx", nj_logPrefix, change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address);
-    MSHookFunction((void *)change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip_address,
-                   (void*)my_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip,
-                   (void**)&orig_change_VerticalVideo_FullScreenPlayback_VerticalModePlayback_rate_tip);
     
     // __int64 sub_10D82E870()
     // [横屏视频-全屏播放]播放速度数组
