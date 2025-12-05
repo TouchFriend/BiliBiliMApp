@@ -54,17 +54,6 @@ const size_t NJ_RATE_BLOCK_SIZE = 16;
 
 @end
 
-
-%hook BBPlayerSupportedPlaybackRate
-
-+ (id)supportedPlaybackRateModelArr {
-    id ret = %orig;
-    NSLog(@"%@:%@-%p-%s-ret:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, ret);
-    return ret;
-}
-
-%end
-
 // [竖屏视频-全屏播放]的播放速度
 %hook NSArray
 
