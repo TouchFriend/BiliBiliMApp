@@ -7,6 +7,11 @@
 
 越狱手机版本：[去除哔哩哔哩广告插件](https://github.com/TouchFriend/BiliBiliTweak)
 
+## 功能
+
+- 去除绝大多数广告
+- 增加三倍速播放（仅限`8.41.0`版本）
+
 ## 快速使用
 
 去[Releases](https://github.com/TouchFriend/BiliBiliMApp/releases)页面下载`ipa`包
@@ -32,14 +37,10 @@
 
 ## 如何使用
 
-- 将**脱壳**的`bili-universal.app`放入`BiliBiliMApp/BiliBiliMD/TargetApp`目录中
+- 去[Releases](https://github.com/TouchFriend/BiliBiliMApp/releases)页面下载`bili-universal.app-xxx.zip`，解压得到**脱壳**的`bili-universal.app`，放入`BiliBiliMApp/BiliBiliMD/TargetApp`目录中
+  - 或者自行**脱壳**得到`bili-universal.app`，放入`BiliBiliMApp/BiliBiliMD/TargetApp`目录中
 
 - 打开`Xcode`，编译运行
-
-
-## 技术交流
-
-Telegram: https://t.me/Qwer6us28FuckAd
 
 ## 声明
 
