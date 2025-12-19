@@ -34,8 +34,8 @@
 3. 使用任意重签名工具安装到手机，例如：
 
 - [iOS App Signer](https://github.com/DanTheMan827/ios-app-signer)
-- [Sideloadly](https://sideloadly.io/)
 - [SideStore](https://sidestore.io)
+- [Sideloadly](https://sideloadly.io/)
 - [AltStore](https://altstore.io)
 
 > 📱 适用于未越狱设备（需 Apple ID）
@@ -102,6 +102,10 @@ BiliBiliMApp/BiliBiliMD/TargetApp
 3. 编译并运行即可
 
 ---
+
+# 📚 参考资料
+
+- [iOS逆向-哔哩哔哩增加3倍速播放（1）-最大播放速度](https://juejin.cn/post/7582063437414285350)
 
 ## ⚠️ 免责声明
 
