@@ -11,7 +11,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
-	<string>哔哩哔哩Dev</string>
+	<string>哔哩哔哩</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -60,11 +60,11 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.touchWorld.bilibiliMD</string>
+	<string>tv.danmaku.bilianime</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>哔哩哔哩Dev</string>
+	<string>哔哩哔哩</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
