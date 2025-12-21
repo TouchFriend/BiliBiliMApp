@@ -9,18 +9,22 @@
     BAPIAppDynamicV2Module：模块信息
         BAPIAppDynamicV2ModuleAuthor：作者信息
         BAPIAppDynamicV2ModuleOpusSummary：作品摘要
-        BAPIAppDynamicV2ModuleAdditional：额外模块，比如UP主的推荐
-        BAPIAppDynamicV2ModuleDynamic: 转发的动态信息
+        BAPIAppDynamicV2ModuleAdditional：额外模块，比如UP主的推荐。 moduleType:8
+        BAPIAppDynamicV2ModuleDynamic: 转发的动态信息。moduleType:4
             
  BAPIAppDynamicV2ModuleAdditional：额外模块
     BAPIAppDynamicV2AdditionalPGC：
-    BAPIAppDynamicV2AdditionGoods：商品
+    BAPIAppDynamicV2AdditionGoods：商品, type:2
     BAPIAppDynamicV2AdditionVote：投票
-    BAPIAppDynamicV2AdditionCommon：
+    BAPIAppDynamicV2AdditionCommon：通用类型，比如相关游戏。type:4
     BAPIAppDynamicV2AdditionEsport：电子竞技
  
  BAPIAppDynamicV2ModuleDynamic: 转发的动态信息
     BAPIAppDynamicV2MdlDynForward：动态信息
+ 
+ 
+ BAPIAppDynamicV2AdditionCommon: 通用类型，比如相关游戏
+    相关游戏: type: "8", card_type: "game"
  
  */
 
@@ -29,10 +33,54 @@
 
 %group App
 
+// 通用类型
+@interface BAPIAppDynamicV2AdditionCommon : NSObject
+
+@property (copy, nonatomic) NSString *type;
+@property (copy, nonatomic) NSString *cardType;
+
+/// 是否过滤
+/// @return YES:过滤，NO：不过滤
+- (BOOL)nj_isFilter;
+/// 过滤类型
+- (NSSet<NSNumber *> *)nj_filterTypes;
+
+@end
+
+%hook BAPIAppDynamicV2AdditionCommon
+
+/// 是否过滤
+/// @return YES:过滤，NO：不过滤
+%new
+- (BOOL)nj_isFilter {
+    if ([[self nj_filterTypes] containsObject:@([self.type integerValue])]) {
+        return YES;
+    }
+    return NO;
+}
+
+/// 过滤类型
+%new
+- (NSSet<NSNumber *> *)nj_filterTypes {
+    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
+    if (!filterSet) {
+        NSArray *types = @[
+            @(8),   // 相关游戏: type: "8", card_type: "game"
+        ];
+        filterSet = [NSSet setWithArray:types];
+        objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return filterSet;
+}
+
+%end
+
+// 额外模块
 @interface BAPIAppDynamicV2ModuleAdditional : NSObject
 
 /// 类型
 @property (nonatomic, assign) int type;
+@property (retain, nonatomic) BAPIAppDynamicV2AdditionCommon *common;
 
 /// 是否过滤
 /// @return YES:过滤，NO：不过滤
@@ -50,6 +98,10 @@
 - (BOOL)nj_isFilter {
     if ([[self nj_filterTypes] containsObject:@(self.type)]) {
         return YES;
+    }
+    // 通用类型，比如相关游戏
+    if (self.type == 4) {
+        return [self.common nj_isFilter];
     }
     return NO;
 }
@@ -71,7 +123,7 @@
 %end
 
 
-
+// 转发
 @interface BAPIAppDynamicV2MdlDynForward : NSObject
 
 /// 动态信息
@@ -81,6 +133,7 @@
 
 @class BAPIAppDynamicV2DynamicItem;
 
+// 转发的动态信息
 @interface BAPIAppDynamicV2ModuleDynamic : NSObject
 
 /// 类型
@@ -110,6 +163,7 @@
 
 %end
 
+// 模块信息
 @interface BAPIAppDynamicV2Module : NSObject
 
 /// 模块类型
@@ -161,7 +215,7 @@
 - (NSMutableArray *)modulesArray {
     NSMutableArray *origModulesArray = %orig;
     for (BAPIAppDynamicV2Module *item in origModulesArray) {
-        NSLog(@"%@:moduleType:%d-type:%d", nj_logPrefix, item.moduleType, item.moduleDynamic.type);
+        NSLog(@"%@:moduleType:%d-moduleDynamicType:%d-moduleAdditionalType:%d-item：%@", nj_logPrefix, item.moduleType, item.moduleDynamic.type, item.moduleAdditional.type, item);
     }
     return origModulesArray;
 }

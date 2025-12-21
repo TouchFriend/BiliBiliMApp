@@ -37,7 +37,7 @@ const size_t NJ_RATE_BLOCK_SIZE = 16;
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBPlayerPlayerRateModel; @class NSArray; @class IJKFFMoviePlayerControllerFFPlay; 
+@class IJKFFMoviePlayerControllerFFPlay; @class BBPlayerPlayerRateModel; @class NSArray; 
 
 
 #line 16 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJPlaybackRate.xm"
