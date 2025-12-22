@@ -99,6 +99,7 @@
             @(29),      // PAY_BAR, 大会员
             @(34),      // LIKE_COMMENT, 鼓励UP主继续创作
             @(36),      // COVENANTER, 成为UP主的"老粉"
+            @(12),      // LIVE_ORDER, 预约直播
         ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

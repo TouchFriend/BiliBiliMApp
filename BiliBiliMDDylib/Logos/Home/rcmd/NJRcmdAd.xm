@@ -35,6 +35,15 @@
 
 %end
 
+// +号气泡弹窗，比如提示二次元妆造挑战
+%hook BBPhoneTabBarBubbleView
+
+- (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+%end
+
 %end
 
 %ctor {
