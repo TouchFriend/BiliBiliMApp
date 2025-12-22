@@ -55,7 +55,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BAPIAppViewuniteV1IntroductionTab; @class BAPIAppViewuniteCommonModule; @class BAPIAppViewuniteV1RelatesFeedReply; @class BBAdUGCContext; @class BBAdSourceContent; @class BAPIAppViewuniteCommonRelates; @class BBAdCommonBaseModel; 
+@class BBAdCommonBaseModel; @class BAPIAppViewuniteV1RelatesFeedReply; @class BAPIAppViewuniteCommonRelates; @class BBAdUGCContext; @class BAPIAppViewuniteV1IntroductionTab; @class BAPIAppViewuniteCommonModule; @class BBAdSourceContent; 
 
 
 #line 34 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/NJDetailAd.xm"
@@ -126,6 +126,7 @@ static NSSet<NSNumber *> * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$n
             @(55),      
             @(29),      
             @(34),      
+            @(36),      
         ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -267,7 +268,7 @@ static id _logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$(_LOGO
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_91ad58fc(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_c101bfae(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
         {Class _logos_class$App$BBAdUGCContext = objc_getClass("BBAdUGCContext"); { MSHookMessageEx(_logos_class$App$BBAdUGCContext, @selector(initWithResovler:), (IMP)&_logos_method$App$BBAdUGCContext$initWithResovler$, (IMP*)&_logos_orig$App$BBAdUGCContext$initWithResovler$);}Class _logos_class$App$BAPIAppViewuniteCommonModule = objc_getClass("BAPIAppViewuniteCommonModule"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteCommonModule, @selector(description), (IMP)&_logos_method$App$BAPIAppViewuniteCommonModule$description, (IMP*)&_logos_orig$App$BAPIAppViewuniteCommonModule$description);}Class _logos_class$App$BAPIAppViewuniteV1IntroductionTab = objc_getClass("BAPIAppViewuniteV1IntroductionTab"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1IntroductionTab, @selector(modulesArray), (IMP)&_logos_method$App$BAPIAppViewuniteV1IntroductionTab$modulesArray, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1IntroductionTab$modulesArray);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppViewuniteV1IntroductionTab, @selector(nj_filterTypes), (IMP)&_logos_method$App$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BAPIAppViewuniteCommonRelates = objc_getClass("BAPIAppViewuniteCommonRelates"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteCommonRelates, @selector(cardsArray), (IMP)&_logos_method$App$BAPIAppViewuniteCommonRelates$cardsArray, (IMP*)&_logos_orig$App$BAPIAppViewuniteCommonRelates$cardsArray);}Class _logos_class$App$BAPIAppViewuniteV1RelatesFeedReply = objc_getClass("BAPIAppViewuniteV1RelatesFeedReply"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1RelatesFeedReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$);}Class _logos_class$App$BBAdSourceContent = objc_getClass("BBAdSourceContent"); { MSHookMessageEx(_logos_class$App$BBAdSourceContent, @selector(init), (IMP)&_logos_method$App$BBAdSourceContent$init, (IMP*)&_logos_orig$App$BBAdSourceContent$init);}Class _logos_class$App$BBAdCommonBaseModel = objc_getClass("BBAdCommonBaseModel"); Class _logos_metaclass$App$BBAdCommonBaseModel = object_getClass(_logos_class$App$BBAdCommonBaseModel); { MSHookMessageEx(_logos_metaclass$App$BBAdCommonBaseModel, @selector(modelWithMossMessage:), (IMP)&_logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$, (IMP*)&_logos_meta_orig$App$BBAdCommonBaseModel$modelWithMossMessage$);}}
     }
