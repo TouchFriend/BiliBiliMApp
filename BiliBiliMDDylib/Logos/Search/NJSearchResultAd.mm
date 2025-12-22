@@ -76,6 +76,7 @@ static NSSet<NSString *> * _logos_method$App$BAPIPolymerAppSearchV1SearchAllResp
                            @"video_ad",         
                            @"picture_ad",       
                            @"related_search",   
+                           @"brand_ad_giant",   
         ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterCardTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -87,7 +88,7 @@ static NSSet<NSString *> * _logos_method$App$BAPIPolymerAppSearchV1SearchAllResp
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_9f2e78ec(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_99ca4bba(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
         {Class _logos_class$App$BAPIPolymerAppSearchV1SearchAllResponse = objc_getClass("BAPIPolymerAppSearchV1SearchAllResponse"); { MSHookMessageEx(_logos_class$App$BAPIPolymerAppSearchV1SearchAllResponse, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIPolymerAppSearchV1SearchAllResponse$initWithData$extensionRegistry$error$);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSString *> *), strlen(@encode(NSSet<NSString *> *))); i += strlen(@encode(NSSet<NSString *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIPolymerAppSearchV1SearchAllResponse, @selector(nj_filterCardTypes), (IMP)&_logos_method$App$BAPIPolymerAppSearchV1SearchAllResponse$nj_filterCardTypes, _typeEncoding); }}
     }

@@ -48,6 +48,7 @@
                            @"video_ad",         // 视频广告
                            @"picture_ad",       // 图片广告
                            @"related_search",   // 相关搜索
+                           @"brand_ad_giant",   // 品牌广告
         ];
         filterSet = [NSSet setWithArray:types];
         objc_setAssociatedObject(self, @selector(nj_filterCardTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
