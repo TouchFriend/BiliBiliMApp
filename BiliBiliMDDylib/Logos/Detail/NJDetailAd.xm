@@ -28,6 +28,17 @@
  
  */
 
+// 提示
+/*
+ BBPlayerToastWidgetService
+    BBPlayerToastContainerWidget
+        BBPlayerToastContainerWidgetView
+ 
+ BBPlayerNetworkPlayerItemService
+    BBPlayerToastWidgetService
+ 
+ */
+
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
@@ -218,6 +229,7 @@
 
 %end
 
+/****************************** 简介标签 ************************************/
 
 /****************************** 评论标签 ************************************/
 
@@ -238,6 +250,29 @@
 
 
 %end
+
+/****************************** 评论标签 ************************************/
+
+/****************************** 提示 ************************************/
+
+%hook BBPlayerToastContainerWidget
+
+- (id)presentOperableToastWithHintText:(id)hintText descText:(id)descText actionText:(id)actionText actionBlock:(id)actionBlock closeBlock:(id)closeBlock {
+    return %orig;
+}
+
+%end
+
+// 流量广告，比如[2亿+人都领取过，80G大流量月月享>]
+%hook BBPlayerNetworkPlayerItemRecorder
+
+- (long long)isCellularNetworkToastShowed {
+    return NSIntegerMax;
+}
+
+%end
+
+/****************************** 提示 ************************************/
 
 %end
 

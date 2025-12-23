@@ -29,6 +29,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
 
@@ -55,11 +66,11 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBAdSourceContent; @class BAPIAppViewuniteV1IntroductionTab; @class BAPIAppViewuniteCommonRelates; @class BAPIAppViewuniteV1RelatesFeedReply; @class BBAdCommonBaseModel; @class BBAdUGCContext; @class BAPIAppViewuniteCommonModule; 
+@class BAPIAppViewuniteCommonRelates; @class BBPlayerToastContainerWidget; @class BBAdCommonBaseModel; @class BBAdSourceContent; @class BAPIAppViewuniteV1IntroductionTab; @class BAPIAppViewuniteCommonModule; @class BBPlayerNetworkPlayerItemRecorder; @class BAPIAppViewuniteV1RelatesFeedReply; @class BBAdUGCContext; 
 
 
-#line 34 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/NJDetailAd.xm"
-static BBAdUGCContext* (*_logos_orig$App$BBAdUGCContext$initWithResovler$)(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCContext* _logos_method$App$BBAdUGCContext$initWithResovler$(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static NSString * (*_logos_orig$App$BAPIAppViewuniteCommonModule$description)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonModule* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$App$BAPIAppViewuniteCommonModule$description(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonModule* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$App$BAPIAppViewuniteV1IntroductionTab$modulesArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$modulesArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$App$BAPIAppViewuniteCommonRelates$cardsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppViewuniteCommonRelates$cardsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static BAPIAppViewuniteV1RelatesFeedReply* (*_logos_orig$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppViewuniteV1RelatesFeedReply* _logos_method$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* (*_logos_orig$App$BBAdSourceContent$init)(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* _logos_method$App$BBAdSourceContent$init(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static id (*_logos_meta_orig$App$BBAdCommonBaseModel$modelWithMossMessage$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id _logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); 
+#line 45 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/NJDetailAd.xm"
+static BBAdUGCContext* (*_logos_orig$App$BBAdUGCContext$initWithResovler$)(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static BBAdUGCContext* _logos_method$App$BBAdUGCContext$initWithResovler$(_LOGOS_SELF_TYPE_INIT BBAdUGCContext*, SEL, id) _LOGOS_RETURN_RETAINED; static NSString * (*_logos_orig$App$BAPIAppViewuniteCommonModule$description)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonModule* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$App$BAPIAppViewuniteCommonModule$description(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonModule* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$App$BAPIAppViewuniteV1IntroductionTab$modulesArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$modulesArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteV1IntroductionTab* _LOGOS_SELF_CONST, SEL); static NSMutableArray * (*_logos_orig$App$BAPIAppViewuniteCommonRelates$cardsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppViewuniteCommonRelates$cardsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppViewuniteCommonRelates* _LOGOS_SELF_CONST, SEL); static BAPIAppViewuniteV1RelatesFeedReply* (*_logos_orig$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppViewuniteV1RelatesFeedReply* _logos_method$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1RelatesFeedReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* (*_logos_orig$App$BBAdSourceContent$init)(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static BBAdSourceContent* _logos_method$App$BBAdSourceContent$init(_LOGOS_SELF_TYPE_INIT BBAdSourceContent*, SEL) _LOGOS_RETURN_RETAINED; static id (*_logos_meta_orig$App$BBAdCommonBaseModel$modelWithMossMessage$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id _logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, id); static id (*_logos_orig$App$BBPlayerToastContainerWidget$presentOperableToastWithHintText$descText$actionText$actionBlock$closeBlock$)(_LOGOS_SELF_TYPE_NORMAL BBPlayerToastContainerWidget* _LOGOS_SELF_CONST, SEL, id, id, id, id, id); static id _logos_method$App$BBPlayerToastContainerWidget$presentOperableToastWithHintText$descText$actionText$actionBlock$closeBlock$(_LOGOS_SELF_TYPE_NORMAL BBPlayerToastContainerWidget* _LOGOS_SELF_CONST, SEL, id, id, id, id, id); static long long (*_logos_orig$App$BBPlayerNetworkPlayerItemRecorder$isCellularNetworkToastShowed)(_LOGOS_SELF_TYPE_NORMAL BBPlayerNetworkPlayerItemRecorder* _LOGOS_SELF_CONST, SEL); static long long _logos_method$App$BBPlayerNetworkPlayerItemRecorder$isCellularNetworkToastShowed(_LOGOS_SELF_TYPE_NORMAL BBPlayerNetworkPlayerItemRecorder* _LOGOS_SELF_CONST, SEL); 
 
 @interface BBAdUGCContext : NSObject
 
@@ -252,6 +263,7 @@ static BAPIAppViewuniteV1RelatesFeedReply* _logos_method$App$BAPIAppViewuniteV1R
 
 
 
+
 static BBAdSourceContent* _logos_method$App$BBAdSourceContent$init(_LOGOS_SELF_TYPE_INIT BBAdSourceContent* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
     return nil;
 }
@@ -269,8 +281,31 @@ static id _logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$(_LOGO
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_a63c6e76(int __unused argc, char __unused **argv, char __unused **envp) {
+
+
+
+
+static id _logos_method$App$BBPlayerToastContainerWidget$presentOperableToastWithHintText$descText$actionText$actionBlock$closeBlock$(_LOGOS_SELF_TYPE_NORMAL BBPlayerToastContainerWidget* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id hintText, id descText, id actionText, id actionBlock, id closeBlock) {
+    return _logos_orig$App$BBPlayerToastContainerWidget$presentOperableToastWithHintText$descText$actionText$actionBlock$closeBlock$(self, _cmd, hintText, descText, actionText, actionBlock, closeBlock);
+}
+
+
+
+
+
+
+static long long _logos_method$App$BBPlayerNetworkPlayerItemRecorder$isCellularNetworkToastShowed(_LOGOS_SELF_TYPE_NORMAL BBPlayerNetworkPlayerItemRecorder* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    return NSIntegerMax;
+}
+
+
+
+
+
+
+
+static __attribute__((constructor)) void _logosLocalCtor_d31f369b(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
-        {Class _logos_class$App$BBAdUGCContext = objc_getClass("BBAdUGCContext"); { MSHookMessageEx(_logos_class$App$BBAdUGCContext, @selector(initWithResovler:), (IMP)&_logos_method$App$BBAdUGCContext$initWithResovler$, (IMP*)&_logos_orig$App$BBAdUGCContext$initWithResovler$);}Class _logos_class$App$BAPIAppViewuniteCommonModule = objc_getClass("BAPIAppViewuniteCommonModule"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteCommonModule, @selector(description), (IMP)&_logos_method$App$BAPIAppViewuniteCommonModule$description, (IMP*)&_logos_orig$App$BAPIAppViewuniteCommonModule$description);}Class _logos_class$App$BAPIAppViewuniteV1IntroductionTab = objc_getClass("BAPIAppViewuniteV1IntroductionTab"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1IntroductionTab, @selector(modulesArray), (IMP)&_logos_method$App$BAPIAppViewuniteV1IntroductionTab$modulesArray, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1IntroductionTab$modulesArray);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppViewuniteV1IntroductionTab, @selector(nj_filterTypes), (IMP)&_logos_method$App$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BAPIAppViewuniteCommonRelates = objc_getClass("BAPIAppViewuniteCommonRelates"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteCommonRelates, @selector(cardsArray), (IMP)&_logos_method$App$BAPIAppViewuniteCommonRelates$cardsArray, (IMP*)&_logos_orig$App$BAPIAppViewuniteCommonRelates$cardsArray);}Class _logos_class$App$BAPIAppViewuniteV1RelatesFeedReply = objc_getClass("BAPIAppViewuniteV1RelatesFeedReply"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1RelatesFeedReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$);}Class _logos_class$App$BBAdSourceContent = objc_getClass("BBAdSourceContent"); { MSHookMessageEx(_logos_class$App$BBAdSourceContent, @selector(init), (IMP)&_logos_method$App$BBAdSourceContent$init, (IMP*)&_logos_orig$App$BBAdSourceContent$init);}Class _logos_class$App$BBAdCommonBaseModel = objc_getClass("BBAdCommonBaseModel"); Class _logos_metaclass$App$BBAdCommonBaseModel = object_getClass(_logos_class$App$BBAdCommonBaseModel); { MSHookMessageEx(_logos_metaclass$App$BBAdCommonBaseModel, @selector(modelWithMossMessage:), (IMP)&_logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$, (IMP*)&_logos_meta_orig$App$BBAdCommonBaseModel$modelWithMossMessage$);}}
+        {Class _logos_class$App$BBAdUGCContext = objc_getClass("BBAdUGCContext"); { MSHookMessageEx(_logos_class$App$BBAdUGCContext, @selector(initWithResovler:), (IMP)&_logos_method$App$BBAdUGCContext$initWithResovler$, (IMP*)&_logos_orig$App$BBAdUGCContext$initWithResovler$);}Class _logos_class$App$BAPIAppViewuniteCommonModule = objc_getClass("BAPIAppViewuniteCommonModule"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteCommonModule, @selector(description), (IMP)&_logos_method$App$BAPIAppViewuniteCommonModule$description, (IMP*)&_logos_orig$App$BAPIAppViewuniteCommonModule$description);}Class _logos_class$App$BAPIAppViewuniteV1IntroductionTab = objc_getClass("BAPIAppViewuniteV1IntroductionTab"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1IntroductionTab, @selector(modulesArray), (IMP)&_logos_method$App$BAPIAppViewuniteV1IntroductionTab$modulesArray, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1IntroductionTab$modulesArray);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPIAppViewuniteV1IntroductionTab, @selector(nj_filterTypes), (IMP)&_logos_method$App$BAPIAppViewuniteV1IntroductionTab$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BAPIAppViewuniteCommonRelates = objc_getClass("BAPIAppViewuniteCommonRelates"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteCommonRelates, @selector(cardsArray), (IMP)&_logos_method$App$BAPIAppViewuniteCommonRelates$cardsArray, (IMP*)&_logos_orig$App$BAPIAppViewuniteCommonRelates$cardsArray);}Class _logos_class$App$BAPIAppViewuniteV1RelatesFeedReply = objc_getClass("BAPIAppViewuniteV1RelatesFeedReply"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1RelatesFeedReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1RelatesFeedReply$initWithData$extensionRegistry$error$);}Class _logos_class$App$BBAdSourceContent = objc_getClass("BBAdSourceContent"); { MSHookMessageEx(_logos_class$App$BBAdSourceContent, @selector(init), (IMP)&_logos_method$App$BBAdSourceContent$init, (IMP*)&_logos_orig$App$BBAdSourceContent$init);}Class _logos_class$App$BBAdCommonBaseModel = objc_getClass("BBAdCommonBaseModel"); Class _logos_metaclass$App$BBAdCommonBaseModel = object_getClass(_logos_class$App$BBAdCommonBaseModel); { MSHookMessageEx(_logos_metaclass$App$BBAdCommonBaseModel, @selector(modelWithMossMessage:), (IMP)&_logos_meta_method$App$BBAdCommonBaseModel$modelWithMossMessage$, (IMP*)&_logos_meta_orig$App$BBAdCommonBaseModel$modelWithMossMessage$);}Class _logos_class$App$BBPlayerToastContainerWidget = objc_getClass("BBPlayerToastContainerWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerToastContainerWidget, @selector(presentOperableToastWithHintText:descText:actionText:actionBlock:closeBlock:), (IMP)&_logos_method$App$BBPlayerToastContainerWidget$presentOperableToastWithHintText$descText$actionText$actionBlock$closeBlock$, (IMP*)&_logos_orig$App$BBPlayerToastContainerWidget$presentOperableToastWithHintText$descText$actionText$actionBlock$closeBlock$);}Class _logos_class$App$BBPlayerNetworkPlayerItemRecorder = objc_getClass("BBPlayerNetworkPlayerItemRecorder"); { MSHookMessageEx(_logos_class$App$BBPlayerNetworkPlayerItemRecorder, @selector(isCellularNetworkToastShowed), (IMP)&_logos_method$App$BBPlayerNetworkPlayerItemRecorder$isCellularNetworkToastShowed, (IMP*)&_logos_orig$App$BBPlayerNetworkPlayerItemRecorder$isCellularNetworkToastShowed);}}
     }
 }
