@@ -17,5 +17,6 @@
 #define NJ_MASTER_SWITCH_BIZ_ID @"masterSwitch"
 #define NJ_SHARE_DATA_BIZ_ID @"shareData"
 #define NJ_APP_VERSION_BIZ_ID @"appVersion"
+#define NJ_OFFICIAL_WEBSITE_BIZ_ID @"officialWebsite"
 
 #endif /* NJSettingDefine_h */

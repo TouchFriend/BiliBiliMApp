@@ -23,6 +23,9 @@
                                                              cellId:NJ_COMMON_CELL_ID
                                                               title:@"分享数据"]];
     [datas addObject:[self version]];
+    [datas addObject:[[NJSettingSkullViewModel alloc] initWithBizId:NJ_OFFICIAL_WEBSITE_BIZ_ID
+                                                             cellId:NJ_COMMON_CELL_ID
+                                                              title:@"官网"]];
     return [datas copy];
 }
 

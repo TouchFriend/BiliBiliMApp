@@ -150,6 +150,10 @@ static int write_rate_string_to_address(uintptr_t dest_addr, NSString *str) {
     if (str == nil) {
         return -1;
     }
+    // 地址有效性判断
+    if (dest_addr == 0) {
+        return -1;
+    }
 
     // UTF8 字符串
     const char *utf8Str = [str UTF8String];
@@ -211,7 +215,7 @@ static void changePlaybackRates_VerticalVideo_FullScreenPlayback_VerticalModePla
      0000000116E789E0  31 2E 35 00 00 00 00 00  00 00 00 00 00 00 00 E3  1.5.............
      0000000116E789F0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
      */
-    uintptr_t baseAddress = g_slide+0x116E789A0;
+    uintptr_t baseAddress = g_slide + 0x116E789A0;
     write_rate_to_address(baseAddress);
 }
 
@@ -224,19 +228,25 @@ __attribute__((constructor)) static void __init__(void) {
     }
     
     // 获取最大播放速度方法
-    long long get_max_playback_rate_address = g_slide+0x10F10449C;
+    long long get_max_playback_rate_address = g_slide + 0x10F10449C;
     NSLog(@"[%@] cal func get_max_playback_rate address:0x%llx", nj_logPrefix, get_max_playback_rate_address);
-    MSHookFunction((void *)get_max_playback_rate_address,
-                   (void*)my_get_max_playback_rate,
-                   (void**)&orig_get_max_playback_rate);
+    // 地址有效性判断
+    if (get_max_playback_rate_address != 0) {
+        MSHookFunction((void *)get_max_playback_rate_address,
+                       (void*)my_get_max_playback_rate,
+                       (void**)&orig_get_max_playback_rate);
+    }
     
     // __int64 sub_10D82E870()
     // [横屏视频-全屏播放]播放速度数组
-    long long landscapeVideo_fullScreenPlayback_RateModelArr_address = g_slide+0x10D82E870;
+    long long landscapeVideo_fullScreenPlayback_RateModelArr_address = g_slide + 0x10D82E870;
     NSLog(@"[%@] cal func landscapeVideo_fullScreenPlayback_RateModelArr_address address:0x%llx", nj_logPrefix, landscapeVideo_fullScreenPlayback_RateModelArr_address);
-    MSHookFunction((void *)landscapeVideo_fullScreenPlayback_RateModelArr_address,
-                   (void*)my_landscapeVideo_fullScreenPlayback_RateModelArr,
-                   (void**)&orig_landscapeVideo_fullScreenPlayback_RateModelArr);
+    // 地址有效性判断
+    if (landscapeVideo_fullScreenPlayback_RateModelArr_address != 0) {
+        MSHookFunction((void *)landscapeVideo_fullScreenPlayback_RateModelArr_address,
+                       (void*)my_landscapeVideo_fullScreenPlayback_RateModelArr,
+                       (void**)&orig_landscapeVideo_fullScreenPlayback_RateModelArr);
+    }
     
     // [横屏视频-半屏播放]的播放速度
     changePlaybackRates_LandscapeVideo_HalfScreenPlayback();

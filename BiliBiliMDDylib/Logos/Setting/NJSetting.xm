@@ -9,7 +9,7 @@
 #import "NJSettingSeparatorHeaderView.h"
 #import "NJSettingDefine.h"
 #import "NJSettingInjectDataProvider.h"
-#import "NJShareManager.h"
+#import "NJSettingBizHandler.h"
 
 @interface BBPhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
@@ -21,8 +21,8 @@
 - (void)nj_registerCell:(UITableView *)tableView;
 // 注入的数据
 - (NSArray<NJSettingSkullViewModel *> *)nj_injectDatas;
-// 分享数据
-- (NJShareManager *)nj_shareManager;
+// 处理业务
+- (NJSettingBizHandler *)nj_bizHandler;
 
 @end
 
@@ -81,10 +81,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NJSettingSkullViewModel *viewModel = [self nj_injectDatas][indexPath.row];
-    NSString *bizId = viewModel.bizId;
-    if ([bizId isEqualToString:NJ_SHARE_DATA_BIZ_ID]) { // 分享数据
-        [[self nj_shareManager] shareCacheFolder];
-    }
+    [[self nj_bizHandler] handleBizWithViewModel:viewModel];
 }
 
 %new
@@ -125,15 +122,15 @@
     return datas;
 }
 
-// 分享数据
+// 处理业务
 %new
-- (NJShareManager *)nj_shareManager {
-    NJShareManager *shareManager = objc_getAssociatedObject(self, @selector(nj_shareManager));
-    if (!shareManager) {
-        shareManager = [[NJShareManager alloc] init];
-        objc_setAssociatedObject(self, @selector(nj_shareManager), shareManager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (NJSettingBizHandler *)nj_bizHandler {
+    NJSettingBizHandler *bizHandler = objc_getAssociatedObject(self, @selector(nj_bizHandler));
+    if (!bizHandler) {
+        bizHandler = [[NJSettingBizHandler alloc] init];
+        objc_setAssociatedObject(self, @selector(nj_bizHandler), bizHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return shareManager;
+    return bizHandler;
 }
 
 // 注册cell
@@ -154,7 +151,7 @@
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     %orig;
     
-    [[self nj_shareManager] viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [[[self nj_bizHandler] shareManager] viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
 %end
