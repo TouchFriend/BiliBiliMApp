@@ -168,6 +168,44 @@
 
 %end
 
+%hook BBLiveFullScreenFloatPanelView
+
+// 修复8.76.0奔溃
+- (void)registerComponent:(id)component {
+    if (!component) {
+        return;
+    }
+    %orig;
+}
+
+%end
+
+// 热门榜、人气榜
+%hook LynxView
+
+- (id)initWithCoder:(id)coder {
+    return nil;
+}
+
+- (id)init {
+    return nil;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    return nil;
+}
+
+- (id)initWithBuilderBlock:(id)block {
+    return nil;
+}
+
+- (id)initWithoutRender {
+    return nil;
+}
+
+%end
+
+
 %end
 
 %ctor {

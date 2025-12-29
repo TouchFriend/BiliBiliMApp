@@ -5,7 +5,7 @@
 	<key>AVInitialRouteSharingPolicy</key>
 	<string>LongFormVideo</string>
 	<key>BuildMachineOSBuild</key>
-	<string>23F79</string>
+	<string>24F74</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -28,8 +28,6 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>bili-universal</string>
-	<key>CFBundleGetInfoString</key>
-	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>BiliBiliMD/icon.png</string>
@@ -68,7 +66,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>8.41.0</string>
+	<string>8.76.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -196,6 +194,30 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1158523682358502</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>cloudpay.bilibili.universal.2233</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.421683425039-5uqkrh3d5mi74mqp50viiprv0u7b3s8v</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>cyberidentity</string>
 			<key>CFBundleURLSchemes</key>
@@ -205,25 +227,35 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>84100100</string>
+	<string>87600100</string>
 	<key>DTAppStoreToolsBuild</key>
-	<string>16E137</string>
+	<string>17C53</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>22C146</string>
+	<string>22F76</string>
 	<key>DTPlatformName</key>
 	<string>iphoneos</string>
 	<key>DTPlatformVersion</key>
-	<string>18.2</string>
+	<string>18.5</string>
 	<key>DTSDKBuild</key>
-	<string>22C146</string>
+	<string>22F76</string>
 	<key>DTSDKName</key>
-	<string>iphoneos18.2</string>
+	<string>iphoneos18.5</string>
 	<key>DTXcode</key>
-	<string>1620</string>
+	<string>1640</string>
 	<key>DTXcodeBuild</key>
-	<string>16C5032a</string>
+	<string>16F6</string>
+	<key>FacebookAppID</key>
+	<string>1158523682358502</string>
+	<key>FacebookClientToken</key>
+	<string>0d8ad855400f9330907c288f35bbabf9</string>
+	<key>FacebookDisplayName</key>
+	<string>哔哩哔哩</string>
+	<key>GIDClientID</key>
+	<string>421683425039-5uqkrh3d5mi74mqp50viiprv0u7b3s8v.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>421683425039-ag6ege5sbhca236dr7785k39jo75d7oj.apps.googleusercontent.com</string>
 	<key>INAlternativeAppNames</key>
 	<array>
 		<dict>
@@ -255,8 +287,6 @@
 		<string>uppaywallet</string>
 		<string>sinaweibo</string>
 		<string>sinaweibohd</string>
-		<string>sinaweibosso</string>
-		<string>sinaweibohdsso</string>
 		<string>weibosdk</string>
 		<string>weibosdk2.5</string>
 		<string>mqqopensdknopasteboard</string>
@@ -271,15 +301,17 @@
 		<string>mqq</string>
 		<string>mqqopensdkapiV4</string>
 		<string>mqqopensdkminiapp</string>
-		<string>mqqbrowser</string>
-		<string>mttbrowser</string>
+		<string>fbapi</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>fb-messenger-share-api</string>
 		<string>alipay</string>
-		<string>mqqwallet</string>
+		<string>mqqwalletv3</string>
 		<string>dragon1967</string>
 		<string>openapp.jdmobile</string>
 		<string>vipshop</string>
 		<string>imeituan</string>
-		<string>fleamarket</string>
+		<string>dewuapp</string>
 		<string>taobao</string>
 		<string>tbopen</string>
 		<string>wireless1688</string>
@@ -288,7 +320,7 @@
 		<string>eleme</string>
 		<string>bililive</string>
 		<string>qklink</string>
-		<string>ctrip</string>
+		<string>tongyi</string>
 		<string>qqmusic</string>
 		<string>cyberidentity</string>
 	</array>
@@ -306,41 +338,43 @@
 		<true/>
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>用于直播时插入背景音乐</string>
+	<string>NSAppleMusicUsageDescription</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>用于获取您手机当前的蓝牙设备连接状态、扫描周围的蓝牙列表，提供蓝牙耳机音量调节、控制视频播放和暂停、控制视频录制和暂停、为视频点赞、监测蓝牙设备连接状态、面对面干杯活动发现周围设备、BW展会线下互动游戏功能</string>
+	<string>NSBluetoothAlwaysUsageDescription</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>用于获取您手机当前的蓝牙设备连接状态、扫描周围的蓝牙列表，提供蓝牙耳机音量调节、控制视频播放和暂停、控制视频录制和暂停、为视频点赞、监测蓝牙设备连接状态、面对面干杯活动发现周围设备、BW展会线下互动游戏功能</string>
+	<string>NSBluetoothPeripheralUsageDescription</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_bbcast-local-permission._tcp</string>
 	</array>
 	<key>NSCalendarsFullAccessUsageDescription</key>
-	<string>用于商品、直播、视频预约提醒功能</string>
+	<string>NSCalendarsFullAccessUsageDescription</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>用于商品、直播、视频预约提醒功能</string>
+	<string>NSCalendarsUsageDescription</string>
 	<key>NSCalendarsWriteOnlyAccessUsageDescription</key>
-	<string>用于商品、直播、视频预约提醒功能</string>
+	<string>NSCalendarsWriteOnlyAccessUsageDescription</string>
 	<key>NSCameraUsageDescription</key>
-	<string>用于拍照、拍摄、直播、人脸识别、扫描二维码、图片识别功能</string>
+	<string>NSCameraUsageDescription</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>我们需要访问您的面部ID以便更好地保护您的账户安全</string>
+	<string>NSFaceIDUsageDescription</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>如果不允许，您将无法正常搜索到电视播放设备</string>
+	<string>NSLocalNetworkUsageDescription</string>
 	<key>NSLocationDefaultAccuracyReduced</key>
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>用于安全保障以及基于地理位置的相关功能（动态发布展示当前位置，展示、推荐当前位置周边的内容、商品）</string>
+	<string>NSLocationWhenInUseUsageDescription</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>用于拍摄、直播功能</string>
+	<string>NSMicrophoneUsageDescription</string>
 	<key>NSMotionUsageDescription</key>
-	<string>支持于BilibiliWorld展会线下小操场互动游戏，帮助互动游戏获取用户跳舞时运动轨迹，从而识别与评分。</string>
+	<string>NSMotionUsageDescription</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>允许写入相册内信息，用于图片存储、拍摄、录制GIF功能</string>
+	<string>NSPhotoLibraryAddUsageDescription</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>允许读取和使用相册内信息，用于图片/音视频/文件的上传与发送、素材分析成片、图片识别功能</string>
+	<string>NSPhotoLibraryUsageDescription</string>
 	<key>NSSiriUsageDescription</key>
-	<string>如果不允许，您将无法使用捷径等功能。</string>
+	<string>NSSiriUsageDescription</string>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>BFCAttentionIntent</string>
@@ -348,7 +382,7 @@
 		<string>INSendMessageIntent</string>
 	</array>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>为了为您更精准地推荐个性化内容，申请获取您的广告标识符</string>
+	<string>NSUserTrackingUsageDescription</string>
 	<key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
 	<true/>
 	<key>PackageInitTimestamp</key>
@@ -387,6 +421,8 @@
 		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
+	<key>UIDesignRequiresCompatibility</key>
+	<true/>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>

@@ -46,6 +46,7 @@
         NSArray *subWidgets // 拥有的子组件
             BBPlayerSwitchScreenWidget      //  全屏按钮
             BBPlayerBizGotoStoryWidget      //  横屏视频的竖屏全屏按钮
+            BBPlayerGotoStoryWidget         //  横屏视频的竖屏全屏按钮(8.76.0)
  
  BBPlayerOperationTagWidget
     NSArray *_tagModels;
@@ -183,6 +184,15 @@
 
 %end
 
+// 横屏视频的竖屏全屏按钮(8.76.0)
+%hook BBPlayerGotoStoryWidget
+
+- (id)initWithContext:(id)context flexConfiguration:(id)configuration {
+    return nil;
+}
+
+%end
+
 @interface BBPlayerCoreOperationTagModel : NSObject
 
 @property (nonatomic) unsigned long long type;
@@ -229,6 +239,18 @@
 
 %end
 
+@interface BBPlayerFlexContainerWidget : BBPlayerWidget
+
+@end
+
+%hook BBPlayerFlexContainerWidget
+
+- (void)didLayoutSubWidgets {
+//    NSLog(@"%@:%@-%p-%s-subWidgets:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, [self subWidgets]);
+    %orig;
+}
+
+%end
  
 %end
 
