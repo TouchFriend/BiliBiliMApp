@@ -526,6 +526,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				icon.png,
+				Info.plist,
 				"Scripts/quick-resign.sh",
 			);
 			target = BF0D03092DEDA95900115365 /* BiliBiliMD */;
