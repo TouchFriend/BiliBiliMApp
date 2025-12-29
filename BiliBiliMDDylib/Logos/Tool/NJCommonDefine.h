@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// --------------------- 设置页面 ---------------------
 /// 总开关
-#define NJ_MASTER_SWITCH_KEY @"NJJB_MASTER_SWITCH_KEY"
+#define NJ_MASTER_SWITCH_KEY @"NJ_MASTER_SWITCH_KEY"
 /// 总开关的值
 #define NJ_MASTER_SWITCH_VALUE (![NJ_USER_DEFAULTS objectForKey:NJ_MASTER_SWITCH_KEY] || \
 [NJ_USER_DEFAULTS boolForKey:NJ_MASTER_SWITCH_KEY])
