@@ -6,9 +6,11 @@
 //
 
 #import "NSBundle+NJLoadBundle.h"
+#import <rootless.h>
 
 // 插件资源主路径
-NSString *const NJTweakAssetMainPath = @"/Library/Caches/";
+#define NJ_TWEAK_ASSET_MAIN_PATH ROOT_PATH_NS(@"/Library/Caches/")
+
 
 @implementation NSBundle (NJLoadBundle)
 
@@ -41,7 +43,7 @@ NSString *const NJTweakAssetMainPath = @"/Library/Caches/";
 /// @param bundleName bundle的名称
 /// @return 返回bundle的路径
 + (NSString *)nj_bundlePathForTweakWithName:(NSString *)bundleName {
-    return [NJTweakAssetMainPath stringByAppendingPathComponent:bundleName];
+    return [NJ_TWEAK_ASSET_MAIN_PATH stringByAppendingPathComponent:bundleName];
 }
 
 @end

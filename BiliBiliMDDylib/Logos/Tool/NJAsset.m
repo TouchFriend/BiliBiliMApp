@@ -41,9 +41,11 @@
                                   ofType:(nullable NSString *)ext
                              inDirectory:(nullable NSString *)subpath {
     NSBundle *bundle = [NSBundle nj_mainBundle];
-    return [bundle nj_pathForImageResource:name
-                                    ofType:ext
-                               inDirectory:subpath];
+    NSString *imagePath = [bundle nj_pathForImageResource:name
+                                              ofType:ext
+                                         inDirectory:subpath];
+    imagePath = imagePath ?: @"";
+    return imagePath;
 }
 
 /// 获取资源路径
@@ -77,9 +79,11 @@
                              ofType:(nullable NSString *)ext
                         inDirectory:(nullable NSString *)subpath {
     NSBundle *bundle = [NSBundle nj_mainBundle];
-    return [bundle pathForResource:name
-                            ofType:ext
-                       inDirectory:subpath];
+    NSString *assetPath = [bundle pathForResource:name
+                                           ofType:ext
+                                      inDirectory:subpath];
+    assetPath = assetPath ?: @"";
+    return assetPath;
 }
 
 @end

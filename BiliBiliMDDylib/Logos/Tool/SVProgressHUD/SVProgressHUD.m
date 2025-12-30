@@ -109,6 +109,9 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
       return [NSBundle bundleWithURL:url];
      */
     NSURL *url = [NSURL fileURLWithPath:[NJAsset pathForAsset:@"SVProgressHUD" ofType:@"bundle"]];
+    if (!url) {
+        return nil;
+    }
     return [NSBundle bundleWithURL:url];
  }
 

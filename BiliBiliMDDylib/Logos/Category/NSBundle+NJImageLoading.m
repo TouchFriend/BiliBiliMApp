@@ -102,12 +102,12 @@
     for (NSString *suffix in suffixes) {
         NSString *resourceName = [NSString stringWithFormat:@"%@%@", name, suffix];
         NSString *path = [self pathForResource:resourceName ofType:type inDirectory:directory];
-        if (path) {
+        if (path.length > 0) {
             return path;
         }
     }
     
-    return nil; // 未找到任何匹配的图片
+    return @""; // 未找到任何匹配的图片
 }
 
 
