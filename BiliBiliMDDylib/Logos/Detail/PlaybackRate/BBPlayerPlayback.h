@@ -8,7 +8,7 @@
 #ifndef BBPlayerPlayback_h
 #define BBPlayerPlayback_h
 
-@interface BBPlayerPlayback
+@interface BBPlayerPlayback : NSObject
 
 @property (nonatomic) double playbackRate;
 

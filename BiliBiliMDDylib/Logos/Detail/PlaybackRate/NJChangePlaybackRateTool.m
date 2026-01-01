@@ -8,6 +8,7 @@
 #import "NJChangePlaybackRateTool.h"
 #import "NJCommonDefine.h"
 #import "NJPluginInfo.h"
+#import "NJAppCompatibleDefine.h"
 
 static const double NJChangePlaybackRateFlag = 3.0;
 
@@ -126,7 +127,7 @@ static const double NJChangePlaybackRateFlag = 3.0;
 /// 兼容的系统版本
 /// @return 返回兼容的系统版本
 + (NSArray<NSString *> *)compatibleSystemVersions {
-    return @[@"8.41.0"];
+    return @[NJ_APP_VERSION_8_41_0, NJ_APP_VERSION_8_76_0];
 }
 
 /// 是否兼容当前系统版本
