@@ -12,23 +12,7 @@
 #import "NJPlaybackRateWriteMemoryTool.h"
 #import "NJAppCompatibleDefine.h"
 #import "NJPluginInfo.h"
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-extern void *orig_landscapeVideo_fullScreenPlayback_RateModelArr;
-// [横屏视频-全屏播放]播放速度数组
-int64_t my_landscapeVideo_fullScreenPlayback_RateModelArr(void);
-
-
-extern void *orig_get_max_playback_rate;
-// 获取最大播放速度方法
-double my_get_max_playback_rate(int64_t a1);
-
-#ifdef __cplusplus
-}
-#endif
+#import "NJChangePlaybackRateDefine.h"
 
 @interface NJAppCompatible_8_41_0_Handler ()
 
@@ -72,9 +56,12 @@ double my_get_max_playback_rate(int64_t a1);
     NSLog(@"[%@] cal func get_max_playback_rate address:0x%llx", nj_logPrefix, get_max_playback_rate_address);
     // 地址有效性判断
     if (get_max_playback_rate_address != 0) {
+        orig_get_max_playback_rate_type origGetMaxRate = NULL;
         MSHookFunction((void *)get_max_playback_rate_address,
                        (void*)my_get_max_playback_rate,
-                       (void**)&orig_get_max_playback_rate);
+                       (void**)&origGetMaxRate);
+        // 把 orig 传给 Swift
+        set_orig_get_max_playback_rate(origGetMaxRate);
     }
     
     // __int64 sub_10D82E870()
@@ -83,9 +70,11 @@ double my_get_max_playback_rate(int64_t a1);
     NSLog(@"[%@] cal func landscapeVideo_fullScreenPlayback_RateModelArr_address address:0x%llx", nj_logPrefix, landscapeVideo_fullScreenPlayback_RateModelArr_address);
     // 地址有效性判断
     if (landscapeVideo_fullScreenPlayback_RateModelArr_address != 0) {
+        orig_landscapeVideo_fullScreenPlayback_RateModelArr_type origArr = NULL;
         MSHookFunction((void *)landscapeVideo_fullScreenPlayback_RateModelArr_address,
                        (void*)my_landscapeVideo_fullScreenPlayback_RateModelArr,
-                       (void**)&orig_landscapeVideo_fullScreenPlayback_RateModelArr);
+                       (void**)&origArr);
+        set_orig_landscapeVideo_fullScreenPlayback_RateModelArr(origArr);
     }
     
     // [横屏视频-半屏播放]的播放速度

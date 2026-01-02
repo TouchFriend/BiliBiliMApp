@@ -15,9 +15,21 @@ public let maxPlaybackRateValue = 4.0
 // 声明原函数类型
 public typealias orig_get_max_playback_rate_type = @convention(c) (_ a1: Int64) -> Double
 
-// 定义全局函数指针变量，并绑定一个 C 名字
-@_silgen_name("orig_get_max_playback_rate")
-nonisolated(unsafe) public var orig_get_max_playback_rate: orig_get_max_playback_rate_type? = nil
+// Swift 内部保存
+nonisolated(unsafe)
+private var orig_get_max_playback_rate: orig_get_max_playback_rate_type? = nil
+
+// Swift 导出: Getter
+@_cdecl("get_orig_get_max_playback_rate")
+func get_orig_get_max_playback_rate() -> orig_get_max_playback_rate_type? {
+    return orig_get_max_playback_rate
+}
+
+// Swift 导出: Setter
+@_cdecl("set_orig_get_max_playback_rate")
+func set_orig_get_max_playback_rate(_ fn: orig_get_max_playback_rate_type?) {
+    orig_get_max_playback_rate = fn
+}
 
 // 获取最大播放速度方法
 @_cdecl("my_get_max_playback_rate")
@@ -29,9 +41,25 @@ func my_get_max_playback_rate(a1: Int64) -> Double {
 // 声明原函数类型
 public typealias orig_landscapeVideo_fullScreenPlayback_RateModelArr_type = @convention(c) () -> Int64
 
-// 定义全局函数指针变量，并绑定一个 C 名字
-@_silgen_name("orig_landscapeVideo_fullScreenPlayback_RateModelArr")
-nonisolated(unsafe) public var orig_landscapeVideo_fullScreenPlayback_RateModelArr: orig_landscapeVideo_fullScreenPlayback_RateModelArr_type? = nil
+// Swift 内部保存
+nonisolated(unsafe)
+private var orig_landscapeVideo_fullScreenPlayback_RateModelArr: orig_landscapeVideo_fullScreenPlayback_RateModelArr_type? = nil
+
+// Swift 导出: Getter
+@_cdecl("get_orig_landscapeVideo_fullScreenPlayback_RateModelArr")
+func get_orig_landscapeVideo_fullScreenPlayback_RateModelArr()
+    -> orig_landscapeVideo_fullScreenPlayback_RateModelArr_type? {
+    return orig_landscapeVideo_fullScreenPlayback_RateModelArr
+}
+
+// Swift 导出: Setter
+@_cdecl("set_orig_landscapeVideo_fullScreenPlayback_RateModelArr")
+func set_orig_landscapeVideo_fullScreenPlayback_RateModelArr(
+    _ fn: orig_landscapeVideo_fullScreenPlayback_RateModelArr_type?
+) {
+    orig_landscapeVideo_fullScreenPlayback_RateModelArr = fn
+}
+
 // [横屏视频-全屏播放]播放速度数组
 @_cdecl("my_landscapeVideo_fullScreenPlayback_RateModelArr")
 func my_landscapeVideo_fullScreenPlayback_RateModelArr() -> Int64 {
