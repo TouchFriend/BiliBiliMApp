@@ -347,7 +347,7 @@
 		BFE0C18D2F076AFF00366DB3 /* NJChangePlaybackRateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJChangePlaybackRateTool.h; sourceTree = "<group>"; };
 		BFE0C18E2F076AFF00366DB3 /* NJChangePlaybackRateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJChangePlaybackRateTool.m; sourceTree = "<group>"; };
 		BFE0C18F2F076AFF00366DB3 /* NJPlaybackRate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJPlaybackRate.mm; sourceTree = "<group>"; };
-		BFE0C1902F076AFF00366DB3 /* NJPlaybackRate.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJPlaybackRate.xm; sourceTree = "<group>"; };
+		BFE0C1902F076AFF00366DB3 /* NJPlaybackRate.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJPlaybackRate.xm; sourceTree = "<group>"; };
 		BFE0C1912F076AFF00366DB3 /* NJPlaybackRateWriteMemoryTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPlaybackRateWriteMemoryTool.h; sourceTree = "<group>"; };
 		BFE0C1922F076AFF00366DB3 /* NJPlaybackRateWriteMemoryTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPlaybackRateWriteMemoryTool.m; sourceTree = "<group>"; };
 		BFE0C1942F076AFF00366DB3 /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
