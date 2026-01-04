@@ -31,7 +31,10 @@
 
 1. 前往 [Releases](https://github.com/TouchFriend/BiliBiliMApp/releases) 页面
 2. 下载已编译好的 `ipa` 文件
-3. 使用任意重签名工具安装到手机，例如：
+3. 由于 `ipa` 使用的是**官方包名**（`tv.danmaku.bilianime`），如果设备中已安装官方哔哩哔哩客户端：
+   - **方案一：** 先卸载官方哔哩哔哩，再安装该 `ipa`
+   - **方案二：** 修改包名后再安装，可与官方哔哩哔哩**同时存在**
+4. 使用任意重签名工具安装到手机，例如：
 
 - [iOS App Signer](https://github.com/DanTheMan827/ios-app-signer)
 - [SideStore](https://sidestore.io)
