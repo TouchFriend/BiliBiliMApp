@@ -37,6 +37,52 @@
 
 %end
 
+// 全屏topBar
+@interface BBLivePoliticalFullScreenTopBar : UIView
+
+// 用户排名列表
+@property (retain, nonatomic) UIView *userRankListEntryView;
+
+@end
+
+%hook BBLivePoliticalFullScreenTopBar
+
+- (void)layoutSubviews {
+    %orig;
+    // 用户排名列表
+    [self.userRankListEntryView removeFromSuperview];
+    self.userRankListEntryView = nil;
+}
+
+- (void)_updateUserRankListEntryViewIfNeed {
+    
+}
+
+%end
+
+// 竖屏topBar
+@interface BBLiveVerticalTopBar : UIView
+
+// 用户排名列表
+@property (retain, nonatomic) UIView *userRankListEntryView;
+
+@end
+
+%hook BBLiveVerticalTopBar
+
+- (void)layoutSubviews {
+    %orig;
+    // 用户排名列表
+    [self.userRankListEntryView removeFromSuperview];
+    self.userRankListEntryView = nil;
+}
+
+- (void)_updateUserRankListEntryViewIfNeed {
+    
+}
+
+%end
+
 // 人气榜
 %hook BBLiveBasePopularHotRankEntryView
 
@@ -46,13 +92,6 @@
 
 %end
 
-%hook BBLiveBaseUserRankListEntryView
-
-- (id)initWithFrame:(CGRect)frame {
-    return nil;
-}
-
-%end
 
 // 人气榜
 %hook BBLiveBasePopularRankEntryView
