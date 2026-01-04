@@ -7,17 +7,32 @@
 
 #import "NJTabDataItem.h"
 #import "NJCommonDefine.h"
+#import "NJTabDataDispatcher.h"
+
+@interface NJTabDataItem ()
+
+/// 数据分发器
+@property (nonatomic, strong) NJTabDataDispatcher *dataDispatcher;
+
+
+@end
 
 @implementation NJTabDataItem
 
 #pragma mark - Life Cycle Methods
 
-
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self doInit];
+    }
+    return self;
+}
 
 #pragma mark - Do Init
 
 - (void)doInit {
-    
+    self.dataDispatcher = [[NJTabDataDispatcher alloc] init];
 }
 
 #pragma mark - Override Methods
@@ -34,17 +49,11 @@
                                                      error:&error];
     if ([jsonObject isKindOfClass:[NSMutableDictionary class]]) {
         NSMutableDictionary *allDataDic = (NSMutableDictionary *)jsonObject;
-        if ([allDataDic[@"data"][@"tab"] isKindOfClass:[NSMutableArray class]]) {
-            NSMutableArray *items = allDataDic[@"data"][@"tab"];
-            NSMutableArray *newItems = [NSMutableArray array];
-            for (NSMutableDictionary *itemDic in items) {
-                NSDictionary *cardData = [self handleTabData:itemDic];
-                if (cardData) {
-                    [newItems addObject:cardData];
-                }
-            }
-            [items removeAllObjects];
-            [items addObjectsFromArray:newItems];
+        if ([allDataDic[@"data"] isKindOfClass:[NSMutableDictionary class]]) {
+            NSMutableDictionary *dataDic = allDataDic[@"data"];
+            NSDictionary *dataHandled = [self.dataDispatcher handleTabData:dataDic];
+            [dataDic removeAllObjects];
+            [dataDic addEntriesFromDictionary:dataHandled];
         }
         NSError *serializationError = nil;
         // 序列化为 JSON Data
