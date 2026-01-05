@@ -17,6 +17,7 @@
 #import "NJTabDataItem.h"
 #import "NJUpperRcmdDataItem.h"
 #import "NJShareChannelsDataItem.h"
+#import "NJMineDataItem.h"
 
 @interface NJApiDataManger ()
 
@@ -108,6 +109,7 @@
                          [NJTabDataItem class],                 // 首页的版块
                          [NJUpperRcmdDataItem class],           // 详情-你可能感兴趣的up主
                          [NJShareChannelsDataItem class],       // 详情页-分享频道
+                         [NJMineDataItem class],                // 我的
         ];
     }
     return _itemClasses;
