@@ -7,12 +7,12 @@
 
 #import "NJMineDataItem.h"
 #import "NJCommonDefine.h"
-#import "NJMineDataDispatcher.h"
+#import "NJMineDataHandler.h"
 
 @interface NJMineDataItem ()
 
-/// 数据分发器
-@property (nonatomic, strong) NJMineDataDispatcher *dataDispatcher;
+/// 数据处理器
+@property (nonatomic, strong) NJMineDataHandler *dataHandler;
 
 
 @end
@@ -32,7 +32,7 @@
 #pragma mark - Do Init
 
 - (void)doInit {
-    self.dataDispatcher = [[NJMineDataDispatcher alloc] init];
+    self.dataHandler = [[NJMineDataHandler alloc] init];
 }
 
 #pragma mark - Override Methods
@@ -51,7 +51,7 @@
         NSMutableDictionary *allDataDic = (NSMutableDictionary *)jsonObject;
         if ([allDataDic[@"data"][@"sections_v2"] isKindOfClass:[NSMutableArray class]]) {
             NSMutableArray *dataArr = allDataDic[@"data"][@"sections_v2"];
-            NSArray *dataHandled = [self.dataDispatcher handleData:dataArr];
+            NSArray *dataHandled = [self.dataHandler handleData:dataArr];
             [dataArr removeAllObjects];
             [dataArr addObjectsFromArray:dataHandled];
         }

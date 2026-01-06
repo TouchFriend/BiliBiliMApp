@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Launch/NJLaunchAd.x"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Launch/NJLaunchAd.x"
 
 
 #import <UIKit/UIKit.h>
@@ -27,10 +27,10 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BFCBrandSplashViewController; @class BFCSplashManager; 
+@class BFCSplashManager; @class BFCBrandSplashViewController; 
 
 
-#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Launch/NJLaunchAd.x"
+#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Launch/NJLaunchAd.x"
 static id (*_logos_orig$App$BFCSplashManager$showSplashWithStyle$delegate$launchInfo$)(_LOGOS_SELF_TYPE_NORMAL BFCSplashManager* _LOGOS_SELF_CONST, SEL, unsigned long long, id, id); static id _logos_method$App$BFCSplashManager$showSplashWithStyle$delegate$launchInfo$(_LOGOS_SELF_TYPE_NORMAL BFCSplashManager* _LOGOS_SELF_CONST, SEL, unsigned long long, id, id); static void (*_logos_orig$App$BFCBrandSplashViewController$setDuration$)(_LOGOS_SELF_TYPE_NORMAL BFCBrandSplashViewController* _LOGOS_SELF_CONST, SEL, double); static void _logos_method$App$BFCBrandSplashViewController$setDuration$(_LOGOS_SELF_TYPE_NORMAL BFCBrandSplashViewController* _LOGOS_SELF_CONST, SEL, double); 
 
 

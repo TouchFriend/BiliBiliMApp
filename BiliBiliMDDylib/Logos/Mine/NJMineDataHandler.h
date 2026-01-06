@@ -11,13 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NJMineDataHandler : NSObject
 
-/// 业务类型
-- (NSString *)bizType;
+- (instancetype)init;
 
 /// 处理数据
-/// - Parameter data: 要处理的数据
+/// - Parameter tabData: 要处理的数据
 /// @return 处理后的数据
-- (NSDictionary *)handleData:(NSDictionary *)data;
+- (NSArray *)handleData:(NSArray *)mineData;
 
 @end
 
