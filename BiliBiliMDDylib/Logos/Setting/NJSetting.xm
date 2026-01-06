@@ -4,12 +4,12 @@
 #import "NJCommonDefine.h"
 #import <objc/objc-runtime.h>
 #import "NJSettingSkullTableViewCell.h"
-#import "NJSettingMasterSwitchTableViewCell.h"
 #import "NJSettingSkullViewModel.h"
 #import "NJSettingSeparatorHeaderView.h"
 #import "NJSettingDefine.h"
 #import "NJSettingInjectDataProvider.h"
 #import "NJSettingBizHandler.h"
+#import "NJSettingSwitchTableViewCell.h"
 
 @interface BBPhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
@@ -60,6 +60,7 @@
     NSString *reuseIdentifier = viewModel.cellId;
     NJSettingSkullTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier
                                     forIndexPath:indexPath];
+    cell.eventManager = self.nj_bizHandler.eventManager;
     [cell bindViewModel:viewModel];
     return cell;
 }
@@ -113,13 +114,7 @@
 // 注入的数据
 %new
 - (NSArray<NJSettingSkullViewModel *> *)nj_injectDatas {
-    NSArray *datas = objc_getAssociatedObject(self, @selector(nj_injectDatas));
-    if (!datas) {
-        NJSettingInjectDataProvider *dataProvider = [[NJSettingInjectDataProvider alloc] init];
-        datas = [dataProvider injectDatas];
-        objc_setAssociatedObject(self, @selector(nj_injectDatas), datas, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return datas;
+    return self.nj_bizHandler.injectDatas;
 }
 
 // 处理业务
@@ -139,7 +134,7 @@
     if (!self.nj_isRegisteredCell || ![self.nj_isRegisteredCell boolValue]) {
         self.nj_isRegisteredCell = @(YES);
         // register cell
-        [tableView registerClass:[NJSettingMasterSwitchTableViewCell class] forCellReuseIdentifier:NJ_MASTER_SWITCH_CELL_ID];
+        [tableView registerClass:[NJSettingSwitchTableViewCell class] forCellReuseIdentifier:NJ_SWITCH_CELL_ID];
         [tableView registerClass:[NJSettingSkullTableViewCell class] forCellReuseIdentifier:NJ_COMMON_CELL_ID];
         
         // register Header

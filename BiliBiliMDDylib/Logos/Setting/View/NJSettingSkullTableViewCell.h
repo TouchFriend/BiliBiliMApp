@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NJSettingSkullViewModel.h"
+#import "NJSettingEventManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,9 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 标题
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
 /// 数据
-@property (nonatomic, strong, readonly) NJSettingSkullViewModel *viewModle;
+@property (nonatomic, strong, readonly) NJSettingSkullViewModel *viewModel;
+/// 事件管理者
+@property (nonatomic, strong) NJSettingEventManager *eventManager;
 
-- (void)bindViewModel:(NJSettingSkullViewModel *)viewModle;
+
+- (void)bindViewModel:(NJSettingSkullViewModel *)viewModel;
 
 - (void)setupUI;
 

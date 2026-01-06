@@ -8,10 +8,17 @@
 #import <Foundation/Foundation.h>
 #import "NJSettingSkullViewModel.h"
 #import "NJShareManager.h"
+#import "NJSettingEventManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NJSettingBizHandler : NSObject
+
+/// 要注入的数据
+@property (nonatomic, strong) NSArray<NJSettingSkullViewModel *> *injectDatas;
+/// 事件管理者
+@property (nonatomic, strong) NJSettingEventManager *eventManager;
+
 
 /// 分享数据
 @property (nonatomic, strong) NJShareManager *shareManager;

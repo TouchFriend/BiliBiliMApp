@@ -56,6 +56,24 @@ NS_ASSUME_NONNULL_BEGIN
 #define NJ_MASTER_SWITCH_VALUE (![NJ_USER_DEFAULTS objectForKey:NJ_MASTER_SWITCH_KEY] || \
 [NJ_USER_DEFAULTS boolForKey:NJ_MASTER_SWITCH_KEY])
 
+/// 底部栏-发布(+)
+#define NJ_PUBLISH_KEY @"NJ_PUBLISH_KEY"
+/// 底部栏-发布(+)的值
+#define NJ_PUBLISH_VALUE ([NJ_USER_DEFAULTS objectForKey:NJ_PUBLISH_KEY] && \
+[NJ_USER_DEFAULTS boolForKey:NJ_PUBLISH_KEY])
+
+/// 底部栏-会员购
+#define NJ_MALL_KEY @"NJ_MALL_KEY"
+/// 底部栏-会员购的值
+#define NJ_MALL_VALUE ([NJ_USER_DEFAULTS objectForKey:NJ_MALL_KEY] && \
+[NJ_USER_DEFAULTS boolForKey:NJ_MALL_KEY])
+
+/// 我的-不常用服务
+#define NJ_UNUSED_SERVICE_KEY @"NJ_UNUSED_SERVICE_KEY"
+/// 底部栏-会员购的值
+#define NJ_UNUSED_SERVICE_VALUE ([NJ_USER_DEFAULTS objectForKey:NJ_UNUSED_SERVICE_KEY] && \
+[NJ_USER_DEFAULTS boolForKey:NJ_UNUSED_SERVICE_KEY])
+
 /// --------------------- 设置页面 ---------------------
 
 /// --------------------- 单例 ---------------------

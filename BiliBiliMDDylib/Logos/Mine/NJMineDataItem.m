@@ -49,7 +49,8 @@
                                                      error:&error];
     if ([jsonObject isKindOfClass:[NSMutableDictionary class]]) {
         NSMutableDictionary *allDataDic = (NSMutableDictionary *)jsonObject;
-        if ([allDataDic[@"data"][@"sections_v2"] isKindOfClass:[NSMutableArray class]]) {
+        if ([allDataDic[@"data"][@"sections_v2"] isKindOfClass:[NSMutableArray class]] &&
+            !NJ_UNUSED_SERVICE_VALUE) {
             NSMutableArray *dataArr = allDataDic[@"data"][@"sections_v2"];
             NSArray *dataHandled = [self.dataHandler handleData:dataArr];
             [dataArr removeAllObjects];

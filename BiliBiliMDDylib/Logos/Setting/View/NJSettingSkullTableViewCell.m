@@ -24,7 +24,7 @@
 /// 副标题
 @property (nonatomic, strong, readwrite) UILabel *subTitleLabel;
 /// 数据
-@property (nonatomic, strong, readwrite) NJSettingSkullViewModel *viewModle;
+@property (nonatomic, strong, readwrite) NJSettingSkullViewModel *viewModel;
 /// 分割线
 @property (nonatomic, strong) UIView *separatorView;
 
@@ -165,10 +165,10 @@
 
 #pragma mark - Public Methods
 
-- (void)bindViewModel:(NJSettingSkullViewModel *)viewModle {
-    self.viewModle = viewModle;
-    self.titleLabel.text = viewModle.title;
-    self.subTitleLabel.text = viewModle.subTitle;
+- (void)bindViewModel:(NJSettingSkullViewModel *)viewModel {
+    self.viewModel = viewModel;
+    self.titleLabel.text = viewModel.title;
+    self.subTitleLabel.text = viewModel.subTitle;
 }
 
 #pragma mark - Private Methods

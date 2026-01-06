@@ -6,6 +6,7 @@
 //
 
 #import "NJTabDataBottomHandler.h"
+#import "NJCommonDefine.h"
 
 @implementation NJTabDataBottomHandler
 
@@ -47,11 +48,11 @@
         return tabData;
     }
     // 发布（+号）
-    if ([tabId isEqualToString:@"publish"]) {
+    if ([tabId isEqualToString:@"publish"] && !NJ_PUBLISH_VALUE) {
         return nil;
     }
     // 会员购
-    if ([tabId isEqualToString:@"会员购Bottom"]) {
+    if ([tabId isEqualToString:@"会员购Bottom"] && !NJ_MALL_VALUE) {
         return nil;
     }
     return tabData;
