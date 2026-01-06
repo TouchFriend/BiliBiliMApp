@@ -3,7 +3,7 @@ name: Bug 报告
 about: 报告遇到的 bug
 title: ''
 labels: bug
-assignees: ''
+assignees: TouchFriend
 
 ---
 
