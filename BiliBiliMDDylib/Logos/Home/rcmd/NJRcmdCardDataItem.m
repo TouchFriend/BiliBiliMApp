@@ -87,9 +87,7 @@
 
 /// 保存数据到磁盘
 - (void)saveDataToDisk:(NSData *)data {
-#ifdef DEBUG
     [[[NJDiskCacheManager sharedManager] homeCache] saveDataToDisk:data];
-#endif
 }
 
 

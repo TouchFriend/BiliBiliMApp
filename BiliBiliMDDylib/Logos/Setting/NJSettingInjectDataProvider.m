@@ -35,13 +35,9 @@
                                                            cellId:NJ_SWITCH_CELL_ID
                                                             title:@"我的-不常用服务"
                                                                   on:NJ_UNUSED_SERVICE_VALUE saveKey:NJ_UNUSED_SERVICE_KEY]];
-    
-#ifdef DEBUG
     [datas addObject:[[NJSettingSkullViewModel alloc] initWithBizId:NJ_SHARE_DATA_BIZ_ID
                                                              cellId:NJ_COMMON_CELL_ID
                                                               title:@"分享数据"]];
-#endif
-    
     [datas addObject:[self version]];
     [datas addObject:[[NJSettingSkullViewModel alloc] initWithBizId:NJ_OFFICIAL_WEBSITE_BIZ_ID
                                                              cellId:NJ_COMMON_CELL_ID
