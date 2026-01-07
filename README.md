@@ -117,7 +117,7 @@ BiliBiliMApp/BiliBiliMD/TargetApp
 
 在**「我的 → 设置」**中提供多种配置选项，支持按需自由调整。
 
-<img src="Screenshot/setting.PNG" style="zoom: 33%;" />
+<img src="Screenshot/setting.PNG" style="width:40%;" />
 
 
 
