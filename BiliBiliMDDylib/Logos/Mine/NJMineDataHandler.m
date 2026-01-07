@@ -10,7 +10,7 @@
 @interface NJMineDataHandler ()
 
 /// 业务id白名单
-@property (nonatomic, strong) NSArray<NSNumber *> *bizIdWhiteList;
+@property (nonatomic, strong) NSSet<NSNumber *> *bizIdWhiteList;
 
 
 @end
@@ -32,12 +32,13 @@
 #pragma mark - Do Init
 
 - (void)doInit {
-    self.bizIdWhiteList = @[@(396),     // 离线缓存
-                            @(397),     // 历史记录
-                            @(3072),    // 我的收藏
-                            @(2830),    // 稍后再看
-                            @(407),     // 联系客服
-                            @(410),     // 设置
+    self.bizIdWhiteList = [[NSSet alloc] initWithObjects:@(396),     // 离线缓存
+                                                         @(397),     // 历史记录
+                                                         @(3072),    // 我的收藏
+                                                         @(2830),    // 稍后再看
+                                                         @(407),     // 联系客服
+                                                         @(410),     // 设置
+                                                         nil
     ];
 }
 

@@ -44,6 +44,16 @@
 
 %end
 
+// 未成年人模式弹窗
+%hook BFCRestrictedModeTeenagersAlertView
+
+// 是否显示未成年人模式弹窗
++ (BOOL)needShowTeenagersAlert {
+    return NO;
+}
+
+%end
+
 %end
 
 %ctor {
