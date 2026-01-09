@@ -1,23 +1,23 @@
 //
-//  NJTabDataItem.m
+//  NJStoryDataItem.m
 //  BiliBiliTweak
 //
-//  Created by touchWorld on 2025/8/6.
+//  Created by touchWorld on 2026/1/9.
 //
 
-#import "NJTabDataItem.h"
+#import "NJStoryDataItem.h"
+#import "NJStoryDataDispatcher.h"
 #import "NJCommonDefine.h"
-#import "NJTabDataDispatcher.h"
 
-@interface NJTabDataItem ()
+@interface NJStoryDataItem ()
 
 /// 数据分发器
-@property (nonatomic, strong) NJTabDataDispatcher *dataDispatcher;
+@property (nonatomic, strong) NJStoryDataDispatcher *dataDispatcher;
 
 
 @end
 
-@implementation NJTabDataItem
+@implementation NJStoryDataItem
 
 #pragma mark - Life Cycle Methods
 
@@ -32,13 +32,13 @@
 #pragma mark - Do Init
 
 - (void)doInit {
-    self.dataDispatcher = [[NJTabDataDispatcher alloc] init];
+    self.dataDispatcher = [[NJStoryDataDispatcher alloc] init];
 }
 
 #pragma mark - Override Methods
 
 - (NSString *)url {
-    return @"https://app.bilibili.com/x/resource/show/tab/v2";
+    return @"https://app.bilibili.com/x/v2/feed/index/story";
 }
 
 - (NSData *)handleWithData:(NSData *)data
@@ -49,11 +49,11 @@
                                                      error:&error];
     if ([jsonObject isKindOfClass:[NSMutableDictionary class]]) {
         NSMutableDictionary *allDataDic = (NSMutableDictionary *)jsonObject;
-        if ([allDataDic[@"data"] isKindOfClass:[NSMutableDictionary class]]) {
-            NSMutableDictionary *dataDic = allDataDic[@"data"];
-            NSDictionary *dataHandled = [self.dataDispatcher handleTabData:dataDic];
-            [dataDic removeAllObjects];
-            [dataDic addEntriesFromDictionary:dataHandled];
+        if ([allDataDic[@"data"][@"items"] isKindOfClass:[NSMutableArray class]]) {
+            NSMutableArray *dataArr = allDataDic[@"data"][@"items"];
+            NSArray *dataHandled = [self.dataDispatcher handleData:dataArr];
+            [dataArr removeAllObjects];
+            [dataArr addObjectsFromArray:dataHandled];
         }
         NSError *serializationError = nil;
         // 序列化为 JSON Data
@@ -81,3 +81,4 @@
 
 
 @end
+

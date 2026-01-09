@@ -18,6 +18,7 @@
 #import "NJUpperRcmdDataItem.h"
 #import "NJShareChannelsDataItem.h"
 #import "NJMineDataItem.h"
+#import "NJStoryDataItem.h"
 
 @interface NJApiDataManger ()
 
@@ -110,6 +111,7 @@
                          [NJUpperRcmdDataItem class],           // 详情-你可能感兴趣的up主
                          [NJShareChannelsDataItem class],       // 详情页-分享频道
                          [NJMineDataItem class],                // 我的
+                         [NJStoryDataItem class],               // 竖屏模式
         ];
     }
     return _itemClasses;
