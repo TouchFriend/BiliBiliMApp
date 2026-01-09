@@ -7,6 +7,7 @@
 
 #import "NSBundle+NJLoadBundle.h"
 #import <rootless.h>
+#import "NJPluginInfo.h"
 
 // 插件资源主路径
 #define NJ_TWEAK_ASSET_MAIN_PATH ROOT_PATH_NS(@"/Library/Caches/")
@@ -19,12 +20,11 @@
 /// @return 返回bundle的路径
 + (NSString *_Nullable)nj_bundlePathWithName:(NSString *)bundleName {
     NSString *path;
-    // NJ_TWEAK是在工程中添加的宏，类似DEBUG
-#ifdef NJ_TWEAK
-    path = [self nj_bundlePathForTweakWithName:bundleName];
-#else
-    path = [self nj_bundlePathForMonkeyAppWithName:bundleName];
-#endif
+    if ([NJPluginInfo isPlugin]) {
+        path = [self nj_bundlePathForTweakWithName:bundleName];
+    } else {
+        path = [self nj_bundlePathForMonkeyAppWithName:bundleName];
+    }
     return path;
 }
 
