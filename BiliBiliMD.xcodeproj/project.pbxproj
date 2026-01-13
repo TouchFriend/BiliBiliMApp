@@ -394,7 +394,7 @@
 		BF1425A62F10E232007F032D /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
 		BF1425A72F10E232007F032D /* NJDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDetailAd.xm; sourceTree = "<group>"; };
 		BF1425A82F10E232007F032D /* NJDetailPlayerAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailPlayerAd.mm; sourceTree = "<group>"; };
-		BF1425A92F10E232007F032D /* NJDetailPlayerAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDetailPlayerAd.xm; sourceTree = "<group>"; };
+		BF1425A92F10E232007F032D /* NJDetailPlayerAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDetailPlayerAd.xm; sourceTree = "<group>"; };
 		BF1425AA2F10E232007F032D /* NJShareChannelsDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJShareChannelsDataItem.h; sourceTree = "<group>"; };
 		BF1425AB2F10E232007F032D /* NJShareChannelsDataItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJShareChannelsDataItem.m; sourceTree = "<group>"; };
 		BF1425AC2F10E232007F032D /* NJUpperRcmdDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJUpperRcmdDataItem.h; sourceTree = "<group>"; };

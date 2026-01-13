@@ -251,6 +251,25 @@
 }
 
 %end
+
+// 移除投票/点赞+投币+收藏+关注/推荐视频/评分
+@interface BFCCRONRenderBaseView : UIView
+
+@end
+
+%hook BFCCRONRenderBaseView
+
+- (void)runPackageWrapper:(id)wrapper completion:(id)completion {
+
+}
+
+- (void)runPackageWrapper:(id)wrapper
+         withCustomScript:(id)script
+               completion:(id)completion {
+    
+}
+
+%end
  
 %end
 
