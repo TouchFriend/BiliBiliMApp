@@ -252,22 +252,76 @@
 
 %end
 
+
 // 移除投票/点赞+投币+收藏+关注/推荐视频/评分
-@interface BFCCRONRenderBaseView : UIView
+// 弹幕命令
+@interface BAPICommunityServiceDmV1CommandDm : NSObject
+
+/// 类型
+@property (nonatomic) int type;
 
 @end
 
-%hook BFCCRONRenderBaseView
+@interface BAPICommunityServiceDmV1Command : NSObject
 
-- (void)runPackageWrapper:(id)wrapper completion:(id)completion {
+/// 弹幕命令
+@property (retain, nonatomic) NSMutableArray *commandDmsArray;
 
+@end
+
+/// 请求弹幕数据
+@interface BAPICommunityServiceDmV1DmViewReply : NSObject
+
+@property (retain, nonatomic) BAPICommunityServiceDmV1Command *command;
+
+// 弹幕命令
+- (void)nj_filterCommandDmsArray;
+/// 过滤类型
+- (NSSet<NSNumber *> *)nj_filterTypes;
+
+@end
+
+%hook BAPICommunityServiceDmV1DmViewReply
+
+- (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
+    BAPICommunityServiceDmV1DmViewReply *ret = %orig;
+    // 过滤弹幕命令
+    [ret nj_filterCommandDmsArray];
+    return ret;
 }
 
-- (void)runPackageWrapper:(id)wrapper
-         withCustomScript:(id)script
-               completion:(id)completion {
-    
+// 过滤弹幕命令
+%new
+- (void)nj_filterCommandDmsArray {
+    NSMutableArray *origModules = self.command.commandDmsArray;
+    NSMutableArray *items = [NSMutableArray array];
+    for (BAPICommunityServiceDmV1CommandDm *item in origModules) {
+        if ([[self nj_filterTypes] containsObject:@(item.type)]) {
+            continue;
+        }
+        [items addObject:item];
+    }
+    // 保存过滤后的数据
+    [origModules removeAllObjects];
+    [origModules addObjectsFromArray:items];
 }
+
+%new
+- (NSSet<NSNumber *> *)nj_filterTypes {
+    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
+    if (!filterSet) {
+        NSArray *types = @[
+            @(9),           // 投票弹幕
+            @(5),           // 关注弹幕
+            @(2),           // 链接弹幕
+            @(11),          // 评分弹幕
+        ];
+        filterSet = [NSSet setWithArray:types];
+        objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return filterSet;
+}
+
 
 %end
  

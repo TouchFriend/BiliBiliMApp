@@ -17,24 +17,29 @@
 %hook GPBMessage
 
 - (id)init {
-    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
-    return %orig;
+    id ret = %orig;
+    NSLog(@"%@:%@-%p-%s-ret:%@", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__, ret);
+    return ret;
 }
 
 - (id)initWithData:(id)data error:(id *)error {
-    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
-    return %orig;
+    id ret = %orig;
+    NSLog(@"%@:%@-%p-%s-ret:%@", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__, ret);
+    return ret;
 }
 
 - (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
-    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
-    return %orig;
+    id ret = %orig;
+    NSLog(@"%@:%@-%p-%s-ret:%@", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__, ret);
+    return ret;
 }
 
 - (id)initWithCodedInputStream:(id)stream extensionRegistry:(id)registry error:(id *)error {
-    NSLog(@"%@:%@-%p-%s", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__);
-    return %orig;
+    id ret = %orig;
+    NSLog(@"%@:%@-%p-%s-ret:%@", nj_logPrefix, NSStringFromClass([self class]), self, __FUNCTION__, ret);
+    return ret;
 }
+
 
 %end
 */
