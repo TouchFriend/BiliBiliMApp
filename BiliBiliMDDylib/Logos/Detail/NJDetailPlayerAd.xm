@@ -267,33 +267,19 @@
 /// 弹幕命令
 @property (retain, nonatomic) NSMutableArray *commandDmsArray;
 
-@end
-
-/// 请求弹幕数据
-@interface BAPICommunityServiceDmV1DmViewReply : NSObject
-
-@property (retain, nonatomic) BAPICommunityServiceDmV1Command *command;
-
-// 弹幕命令
+// 过滤弹幕命令
 - (void)nj_filterCommandDmsArray;
 /// 过滤类型
 - (NSSet<NSNumber *> *)nj_filterTypes;
 
 @end
 
-%hook BAPICommunityServiceDmV1DmViewReply
-
-- (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
-    BAPICommunityServiceDmV1DmViewReply *ret = %orig;
-    // 过滤弹幕命令
-    [ret nj_filterCommandDmsArray];
-    return ret;
-}
+%hook BAPICommunityServiceDmV1Command
 
 // 过滤弹幕命令
 %new
 - (void)nj_filterCommandDmsArray {
-    NSMutableArray *origModules = self.command.commandDmsArray;
+    NSMutableArray *origModules = self.commandDmsArray;
     NSMutableArray *items = [NSMutableArray array];
     for (BAPICommunityServiceDmV1CommandDm *item in origModules) {
         if ([[self nj_filterTypes] containsObject:@(item.type)]) {
@@ -322,6 +308,23 @@
     return filterSet;
 }
 
+%end
+
+/// 请求弹幕数据
+@interface BAPICommunityServiceDmV1DmViewReply : NSObject
+
+@property (retain, nonatomic) BAPICommunityServiceDmV1Command *command;
+
+@end
+
+%hook BAPICommunityServiceDmV1DmViewReply
+
+- (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
+    BAPICommunityServiceDmV1DmViewReply *ret = %orig;
+    // 过滤弹幕命令
+    [ret.command nj_filterCommandDmsArray];
+    return ret;
+}
 
 %end
  
