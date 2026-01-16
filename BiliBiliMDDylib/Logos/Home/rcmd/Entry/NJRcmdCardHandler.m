@@ -14,6 +14,7 @@
 #import "NJRcmdCmDoubleV9Entry.h"
 #import "NJRcmdBannerIPadV8Entry.h"
 #import "NJRcmdCmDoubleV7Entry.h"
+#import "NJRcmdSmallCoverV9Entry.h"
 
 @interface NJRcmdCardHandler ()
 
@@ -92,6 +93,7 @@
                               [NJRcmdCmV2Entry class],              // 小卡片广告
                               [NJRcmdCmDoubleV9Entry class],        // 大卡片广告
                               [NJRcmdCmDoubleV7Entry class],        // 大卡片广告
+                              [NJRcmdSmallCoverV9Entry class],      // 直播
         ];
     }
     return _cardEntryClasses;
