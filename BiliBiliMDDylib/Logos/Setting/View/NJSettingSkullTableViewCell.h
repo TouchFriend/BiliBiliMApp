@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 标题
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
+/// 副标题
+@property (nonatomic, strong, readonly) UILabel *subTitleLabel;
 /// 数据
 @property (nonatomic, strong, readonly) NJSettingSkullViewModel *viewModel;
 /// 事件管理者

@@ -11,6 +11,7 @@
 #import "NJPluginInfo.h"
 #import "NJSettingSwitchViewModel.h"
 #import "NJCommonDefine.h"
+#import "NJCache.h"
 
 @implementation NJSettingInjectDataProvider
 
@@ -35,6 +36,7 @@
                                                            cellId:NJ_SWITCH_CELL_ID
                                                             title:@"我的-不常用服务"
                                                                   on:NJ_UNUSED_SERVICE_VALUE saveKey:NJ_UNUSED_SERVICE_KEY]];
+    [datas addObject:[self defaultPlaybackRate]];
     [datas addObject:[[NJSettingSkullViewModel alloc] initWithBizId:NJ_SHARE_DATA_BIZ_ID
                                                              cellId:NJ_COMMON_CELL_ID
                                                               title:@"分享数据"]];
@@ -45,6 +47,16 @@
     return [datas copy];
 }
 
+/// 默认播放速度
+- (NJSettingSkullViewModel *)defaultPlaybackRate {
+    NJSettingSkullViewModel *model = [[NJSettingSkullViewModel alloc] initWithBizId:NJ_DEFAULT_PLAYBACK_RATE
+                                                                             cellId:NJ_ARROW_CELL_ID
+                                                                              title:@"默认播放速度"];
+    model.subTitle = [[NJCache sharedInstance] defaultPlaybackRate];
+    return model;
+}
+
+/// 版本
 - (NJSettingSkullViewModel *)version {
     NJSettingSkullViewModel *model = [[NJSettingSkullViewModel alloc] initWithBizId:NJ_APP_VERSION_BIZ_ID
                                                                              cellId:NJ_COMMON_CELL_ID
@@ -52,5 +64,7 @@
     model.subTitle = [NJPluginInfo versionInfo];
     return model;
 }
+
+
 
 @end

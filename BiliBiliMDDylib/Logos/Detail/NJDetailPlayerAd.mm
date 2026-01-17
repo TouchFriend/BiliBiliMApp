@@ -147,7 +147,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBPlayerOperationTagService; @class BBPlayerBizGotoStoryWidget; @class BBPlayerFlexContainerWidget; @class BBPlayerUpTagWidget; @class BAPICommunityServiceDmV1DmViewReply; @class BBPlayerGotoStoryWidget; @class BBPlayerPortraitScreenBottomWidget; @class BAPICommunityServiceDmV1Command; 
+@class BBPlayerOperationTagService; @class BAPICommunityServiceDmV1Command; @class BBPlayerGotoStoryWidget; @class BBPlayerUpTagWidget; @class BBPlayerBizGotoStoryWidget; @class BAPICommunityServiceDmV1DmViewReply; @class BBPlayerFlexContainerWidget; @class BBPlayerPortraitScreenBottomWidget; 
 
 
 #line 126 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJDetailPlayerAd.xm"

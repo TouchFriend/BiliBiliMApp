@@ -18,10 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray<NJSettingSkullViewModel *> *injectDatas;
 /// 事件管理者
 @property (nonatomic, strong) NJSettingEventManager *eventManager;
-
-
 /// 分享数据
 @property (nonatomic, strong) NJShareManager *shareManager;
+/// 设置vc
+@property (nonatomic, weak) UIViewController *settingViewController;
+/// tableView
+@property (nonatomic, strong) UITableView *tableView;
+
+
+- (instancetype)initWithSettingViewController:(UIViewController *)settingViewController tableView:(UITableView *)tableView;
 
 /// 处理业务
 /// - Parameter viewModel: 数据

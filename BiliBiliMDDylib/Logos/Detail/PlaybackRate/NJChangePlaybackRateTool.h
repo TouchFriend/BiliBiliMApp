@@ -24,9 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @return 返回播放速度的c数组
 + (__unsafe_unretained id _Nonnull *_Nonnull)playbackRatesCArrayWithCount:(NSUInteger *)outCount;
 
-/// 获取旧的播放速度
+/// 获取当前的播放速度
 /// @return 返回旧的播放速度
-+ (NSArray<NSString *> *)oldPlaybackRates;
++ (NSArray<NSString *> *)currentPlaybackRates;
 
 /// 获取旧的播放速度的c数组
 /// @param outCount 数组长度

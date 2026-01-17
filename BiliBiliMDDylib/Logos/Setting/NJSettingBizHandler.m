@@ -10,6 +10,9 @@
 #import "NJSettingInjectDataProvider.h"
 #import "NJCommonDefine.h"
 #import "UIApplication+NJCategory.h"
+#import "NJInlineSettingViewController.h"
+#import "NJChangePlaybackRateTool.h"
+#import "NJCache.h"
 
 // 官网地址
 #define NJ_OFFICIAL_WEBSITE_URL_STR @"https://github.com/TouchFriend/BiliBiliMApp"
@@ -28,9 +31,11 @@
 
 #pragma mark - Life Cycle Methods
 
-- (instancetype)init {
+- (instancetype)initWithSettingViewController:(UIViewController *)settingViewController tableView:(UITableView *)tableView {
     self = [super init];
     if (self) {
+        self.settingViewController = settingViewController;
+        self.tableView = tableView;
         [self doInit];
     }
     return self;
@@ -75,9 +80,41 @@
                                  completionHandler:nil];
         return;
     }
+    // 默认播放速度
+    if ([bizId isEqualToString:NJ_DEFAULT_PLAYBACK_RATE]) {
+        [self handleDefaultPlaybackRateWithViewModel:viewModel];
+        return;
+    }
 }
 
 #pragma mark - Private Methods
+
+- (void)handleDefaultPlaybackRateWithViewModel:(NJSettingSkullViewModel *)viewModel {
+    NSString *selectedValue = viewModel.subTitle;
+    NSMutableArray<NJInlineSettingModel *> *dataSource = [NSMutableArray array];
+    NSArray<NSString *> *oldPlaybackRates = [NJChangePlaybackRateTool currentPlaybackRates];
+    for (NSString *rate in oldPlaybackRates) {
+        BOOL selected = rate.doubleValue == selectedValue.doubleValue;
+        NJInlineSettingModel *model = [[NJInlineSettingModel alloc] initWithTitle:rate bizId:rate selected:selected];
+        [dataSource addObject:model];
+    }
+    
+    NJInlineSettingViewController *inlineVC = [[NJInlineSettingViewController alloc] initWithStyle:UITableViewStylePlain title:@"默认播放速度" dataSource:[dataSource copy]];
+    __weak typeof(self) weakSelf = self;
+    inlineVC.selectedHandler = ^(NJInlineSettingModel * _Nonnull model) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf handleChangeDefaultPlaybackRate:model viewModel:viewModel];
+    };
+    [self.settingViewController.navigationController pushViewController:inlineVC animated:YES];
+}
+
+- (void)handleChangeDefaultPlaybackRate:(NJInlineSettingModel *)model viewModel:(NJSettingSkullViewModel *)viewModel {
+    NSString *rate = model.title;
+    viewModel.subTitle = rate;
+    // 保存
+    [[NJCache sharedInstance] saveDefaultPlaybackRate:rate];
+    [self.tableView reloadData];
+}
 
 - (void)aSwitchChange:(UISwitch *)aSwitch
             viewModel:(NJSettingSwitchViewModel *)viewModel {
@@ -93,11 +130,10 @@
     }
     self.isRebootTip = YES;
     
-    UIViewController *vc = [UIApplication nj_topMostViewController];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"重启应用生效"
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleAlert];
-    [vc presentViewController:alert animated:YES completion:^{
+    [self.settingViewController presentViewController:alert animated:YES completion:^{
         // 当弹窗展示完成后，延迟2秒再自动关闭
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)),
                        dispatch_get_main_queue(), ^{

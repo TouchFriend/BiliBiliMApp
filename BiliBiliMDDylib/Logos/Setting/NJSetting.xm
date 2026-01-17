@@ -10,9 +10,11 @@
 #import "NJSettingInjectDataProvider.h"
 #import "NJSettingBizHandler.h"
 #import "NJSettingSwitchTableViewCell.h"
+#import "NJSettingArrowTableViewCell.h"
 
 @interface BBPhoneSettingMainVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (retain, nonatomic) UITableView *tableView;
 // 是否是设置页面
 - (BOOL)nj_isSettingViewController;
 /// 是否注册过cell
@@ -122,7 +124,7 @@
 - (NJSettingBizHandler *)nj_bizHandler {
     NJSettingBizHandler *bizHandler = objc_getAssociatedObject(self, @selector(nj_bizHandler));
     if (!bizHandler) {
-        bizHandler = [[NJSettingBizHandler alloc] init];
+        bizHandler = [[NJSettingBizHandler alloc] initWithSettingViewController:self tableView:self.tableView];
         objc_setAssociatedObject(self, @selector(nj_bizHandler), bizHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return bizHandler;
@@ -136,6 +138,7 @@
         // register cell
         [tableView registerClass:[NJSettingSwitchTableViewCell class] forCellReuseIdentifier:NJ_SWITCH_CELL_ID];
         [tableView registerClass:[NJSettingSkullTableViewCell class] forCellReuseIdentifier:NJ_COMMON_CELL_ID];
+        [tableView registerClass:[NJSettingArrowTableViewCell class] forCellReuseIdentifier:NJ_ARROW_CELL_ID];
         
         // register Header
         [tableView registerClass:[NJSettingSeparatorHeaderView class] forHeaderFooterViewReuseIdentifier:NJ_SEPARATOR_HEADER_ID];

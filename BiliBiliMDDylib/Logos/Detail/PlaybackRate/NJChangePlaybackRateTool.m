@@ -71,9 +71,9 @@ static const double NJChangePlaybackRateFlag = 3.0;
     return newRates;
 }
 
-/// 获取旧的播放速度
+/// 获取当前的播放速度
 /// @return 返回旧的播放速度
-+ (NSArray<NSString *> *)oldPlaybackRates {
++ (NSArray<NSString *> *)currentPlaybackRates {
     NSUInteger count = 0;
     __unsafe_unretained id *cArray = [self oldPlaybackRatesCArrayWithCount:&count];
     NSArray<NSString *> *ratesArray = [NSArray arrayWithObjects:cArray count:count];
