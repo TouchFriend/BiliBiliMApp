@@ -244,6 +244,18 @@
 
 %end
 
+// 直播详情-弹幕底部的功能卡
+%hook BBLChronFunctionCard
+
+- (id)initWithStore:(id)store {
+    return nil;
+}
+
+- (id)init {
+    return nil;
+}
+
+%end
 
 %end
 
