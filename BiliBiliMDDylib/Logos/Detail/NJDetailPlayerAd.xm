@@ -254,59 +254,14 @@
 
 
 // 移除投票/点赞+投币+收藏+关注/推荐视频/评分
-// 弹幕命令
-@interface BAPICommunityServiceDmV1CommandDm : NSObject
-
-/// 类型
-@property (nonatomic) int type;
-
-@end
-
 @interface BAPICommunityServiceDmV1Command : NSObject
 
-/// 弹幕命令
+/// 弹幕命令，比如投票弹幕、关注弹幕
 @property (retain, nonatomic) NSMutableArray *commandDmsArray;
-
-// 过滤弹幕命令
-- (void)nj_filterCommandDmsArray;
-/// 过滤类型
-- (NSSet<NSNumber *> *)nj_filterTypes;
 
 @end
 
 %hook BAPICommunityServiceDmV1Command
-
-// 过滤弹幕命令
-%new
-- (void)nj_filterCommandDmsArray {
-    NSMutableArray *origModules = self.commandDmsArray;
-    NSMutableArray *items = [NSMutableArray array];
-    for (BAPICommunityServiceDmV1CommandDm *item in origModules) {
-        if ([[self nj_filterTypes] containsObject:@(item.type)]) {
-            continue;
-        }
-        [items addObject:item];
-    }
-    // 保存过滤后的数据
-    [origModules removeAllObjects];
-    [origModules addObjectsFromArray:items];
-}
-
-%new
-- (NSSet<NSNumber *> *)nj_filterTypes {
-    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
-    if (!filterSet) {
-        NSArray *types = @[
-            @(9),           // 投票弹幕
-            @(5),           // 关注弹幕
-            @(2),           // 链接弹幕
-            @(11),          // 评分弹幕
-        ];
-        filterSet = [NSSet setWithArray:types];
-        objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return filterSet;
-}
 
 %end
 
@@ -314,6 +269,8 @@
 @interface BAPICommunityServiceDmV1DmViewReply : NSObject
 
 @property (retain, nonatomic) BAPICommunityServiceDmV1Command *command;
+/// 活动，比如云视听小电视
+@property (retain, nonatomic) NSMutableArray *activityMetaArray;
 
 @end
 
@@ -321,8 +278,35 @@
 
 - (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
     BAPICommunityServiceDmV1DmViewReply *ret = %orig;
-    // 过滤弹幕命令
-    [ret.command nj_filterCommandDmsArray];
+    // 移除所有弹幕命令，比如投票弹幕、关注弹幕
+    [ret.command.commandDmsArray removeAllObjects];
+    // 移除所有活动，比如云视听小电视
+    [ret.activityMetaArray removeAllObjects];
+    return ret;
+}
+
+%end
+
+@interface BAPIAppViewuniteV1DmResource : NSObject
+
+@property (retain, nonatomic) NSMutableArray *commandDmsArray;
+/// 卡片，比如一键追番
+@property (retain, nonatomic) NSMutableArray *cardsArray;
+
+@end
+
+@interface BAPIAppViewuniteV1ViewProgressReply : NSObject
+
+@property (retain, nonatomic) BAPIAppViewuniteV1DmResource *dm;
+
+@end
+
+%hook BAPIAppViewuniteV1ViewProgressReply
+
+- (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
+    BAPIAppViewuniteV1ViewProgressReply *ret = %orig;
+    // 移除所有卡片，比如一键追番
+    [ret.dm.cardsArray removeAllObjects];
     return ret;
 }
 

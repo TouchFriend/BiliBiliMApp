@@ -147,11 +147,11 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBPlayerOperationTagService; @class BAPICommunityServiceDmV1Command; @class BBPlayerGotoStoryWidget; @class BBPlayerUpTagWidget; @class BBPlayerBizGotoStoryWidget; @class BAPICommunityServiceDmV1DmViewReply; @class BBPlayerFlexContainerWidget; @class BBPlayerPortraitScreenBottomWidget; 
+@class BAPICommunityServiceDmV1DmViewReply; @class BBPlayerBizGotoStoryWidget; @class BAPIAppViewuniteV1ViewProgressReply; @class BBPlayerPortraitScreenBottomWidget; @class BBPlayerFlexContainerWidget; @class BBPlayerUpTagWidget; @class BBPlayerGotoStoryWidget; @class BAPICommunityServiceDmV1Command; @class BBPlayerOperationTagService; 
 
 
 #line 126 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJDetailPlayerAd.xm"
-static BBPlayerUpTagWidget* (*_logos_orig$App$BBPlayerUpTagWidget$initWithContext$)(_LOGOS_SELF_TYPE_INIT BBPlayerUpTagWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static BBPlayerUpTagWidget* _logos_method$App$BBPlayerUpTagWidget$initWithContext$(_LOGOS_SELF_TYPE_INIT BBPlayerUpTagWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints)(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints)(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static BBPlayerBizGotoStoryWidget* (*_logos_orig$App$BBPlayerBizGotoStoryWidget$initWithContext$)(_LOGOS_SELF_TYPE_INIT BBPlayerBizGotoStoryWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static BBPlayerBizGotoStoryWidget* _logos_method$App$BBPlayerBizGotoStoryWidget$initWithContext$(_LOGOS_SELF_TYPE_INIT BBPlayerBizGotoStoryWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static BBPlayerGotoStoryWidget* (*_logos_orig$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$)(_LOGOS_SELF_TYPE_INIT BBPlayerGotoStoryWidget*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBPlayerGotoStoryWidget* _logos_method$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$(_LOGOS_SELF_TYPE_INIT BBPlayerGotoStoryWidget*, SEL, id, id) _LOGOS_RETURN_RETAINED; static NSArray * (*_logos_orig$App$BBPlayerOperationTagService$tagModels)(_LOGOS_SELF_TYPE_NORMAL BBPlayerOperationTagService* _LOGOS_SELF_CONST, SEL); static NSArray * _logos_method$App$BBPlayerOperationTagService$tagModels(_LOGOS_SELF_TYPE_NORMAL BBPlayerOperationTagService* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BBPlayerOperationTagService$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BBPlayerOperationTagService* _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets)(_LOGOS_SELF_TYPE_NORMAL BBPlayerFlexContainerWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets(_LOGOS_SELF_TYPE_NORMAL BBPlayerFlexContainerWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BAPICommunityServiceDmV1Command$nj_filterCommandDmsArray(_LOGOS_SELF_TYPE_NORMAL BAPICommunityServiceDmV1Command* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BAPICommunityServiceDmV1Command$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPICommunityServiceDmV1Command* _LOGOS_SELF_CONST, SEL); static BAPICommunityServiceDmV1DmViewReply* (*_logos_orig$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPICommunityServiceDmV1DmViewReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPICommunityServiceDmV1DmViewReply* _logos_method$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPICommunityServiceDmV1DmViewReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; 
+static BBPlayerUpTagWidget* (*_logos_orig$App$BBPlayerUpTagWidget$initWithContext$)(_LOGOS_SELF_TYPE_INIT BBPlayerUpTagWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static BBPlayerUpTagWidget* _logos_method$App$BBPlayerUpTagWidget$initWithContext$(_LOGOS_SELF_TYPE_INIT BBPlayerUpTagWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static void (*_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints)(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints)(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints(_LOGOS_SELF_TYPE_NORMAL BBPlayerPortraitScreenBottomWidget* _LOGOS_SELF_CONST, SEL); static BBPlayerBizGotoStoryWidget* (*_logos_orig$App$BBPlayerBizGotoStoryWidget$initWithContext$)(_LOGOS_SELF_TYPE_INIT BBPlayerBizGotoStoryWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static BBPlayerBizGotoStoryWidget* _logos_method$App$BBPlayerBizGotoStoryWidget$initWithContext$(_LOGOS_SELF_TYPE_INIT BBPlayerBizGotoStoryWidget*, SEL, id) _LOGOS_RETURN_RETAINED; static BBPlayerGotoStoryWidget* (*_logos_orig$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$)(_LOGOS_SELF_TYPE_INIT BBPlayerGotoStoryWidget*, SEL, id, id) _LOGOS_RETURN_RETAINED; static BBPlayerGotoStoryWidget* _logos_method$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$(_LOGOS_SELF_TYPE_INIT BBPlayerGotoStoryWidget*, SEL, id, id) _LOGOS_RETURN_RETAINED; static NSArray * (*_logos_orig$App$BBPlayerOperationTagService$tagModels)(_LOGOS_SELF_TYPE_NORMAL BBPlayerOperationTagService* _LOGOS_SELF_CONST, SEL); static NSArray * _logos_method$App$BBPlayerOperationTagService$tagModels(_LOGOS_SELF_TYPE_NORMAL BBPlayerOperationTagService* _LOGOS_SELF_CONST, SEL); static NSSet<NSNumber *> * _logos_method$App$BBPlayerOperationTagService$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BBPlayerOperationTagService* _LOGOS_SELF_CONST, SEL); static void (*_logos_orig$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets)(_LOGOS_SELF_TYPE_NORMAL BBPlayerFlexContainerWidget* _LOGOS_SELF_CONST, SEL); static void _logos_method$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets(_LOGOS_SELF_TYPE_NORMAL BBPlayerFlexContainerWidget* _LOGOS_SELF_CONST, SEL); static BAPICommunityServiceDmV1DmViewReply* (*_logos_orig$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPICommunityServiceDmV1DmViewReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPICommunityServiceDmV1DmViewReply* _logos_method$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPICommunityServiceDmV1DmViewReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppViewuniteV1ViewProgressReply* (*_logos_orig$App$BAPIAppViewuniteV1ViewProgressReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1ViewProgressReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppViewuniteV1ViewProgressReply* _logos_method$App$BAPIAppViewuniteV1ViewProgressReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1ViewProgressReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; 
 
 @interface BBPlayerWidget : NSObject
 
@@ -282,59 +282,14 @@ static void _logos_method$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets(_L
 
 
 
-
-@interface BAPICommunityServiceDmV1CommandDm : NSObject
-
-
-@property (nonatomic) int type;
-
-@end
-
 @interface BAPICommunityServiceDmV1Command : NSObject
 
 
 @property (retain, nonatomic) NSMutableArray *commandDmsArray;
 
-
-- (void)nj_filterCommandDmsArray;
-
-- (NSSet<NSNumber *> *)nj_filterTypes;
-
 @end
 
 
-
-
-
-static void _logos_method$App$BAPICommunityServiceDmV1Command$nj_filterCommandDmsArray(_LOGOS_SELF_TYPE_NORMAL BAPICommunityServiceDmV1Command* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    NSMutableArray *origModules = self.commandDmsArray;
-    NSMutableArray *items = [NSMutableArray array];
-    for (BAPICommunityServiceDmV1CommandDm *item in origModules) {
-        if ([[self nj_filterTypes] containsObject:@(item.type)]) {
-            continue;
-        }
-        [items addObject:item];
-    }
-    
-    [origModules removeAllObjects];
-    [origModules addObjectsFromArray:items];
-}
-
-
-static NSSet<NSNumber *> * _logos_method$App$BAPICommunityServiceDmV1Command$nj_filterTypes(_LOGOS_SELF_TYPE_NORMAL BAPICommunityServiceDmV1Command* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-    NSSet *filterSet = objc_getAssociatedObject(self, @selector(nj_filterTypes));
-    if (!filterSet) {
-        NSArray *types = @[
-            @(9),           
-            @(5),           
-            @(2),           
-            @(11),          
-        ];
-        filterSet = [NSSet setWithArray:types];
-        objc_setAssociatedObject(self, @selector(nj_filterTypes), filterSet, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return filterSet;
-}
 
 
 
@@ -343,6 +298,8 @@ static NSSet<NSNumber *> * _logos_method$App$BAPICommunityServiceDmV1Command$nj_
 
 @property (retain, nonatomic) BAPICommunityServiceDmV1Command *command;
 
+@property (retain, nonatomic) NSMutableArray *activityMetaArray;
+
 @end
 
 
@@ -350,7 +307,34 @@ static NSSet<NSNumber *> * _logos_method$App$BAPICommunityServiceDmV1Command$nj_
 static BAPICommunityServiceDmV1DmViewReply* _logos_method$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPICommunityServiceDmV1DmViewReply* __unused self, SEL __unused _cmd, id data, id registry, id * error) _LOGOS_RETURN_RETAINED {
     BAPICommunityServiceDmV1DmViewReply *ret = _logos_orig$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$(self, _cmd, data, registry, error);
     
-    [ret.command nj_filterCommandDmsArray];
+    [ret.command.commandDmsArray removeAllObjects];
+    
+    [ret.activityMetaArray removeAllObjects];
+    return ret;
+}
+
+
+
+@interface BAPIAppViewuniteV1DmResource : NSObject
+
+@property (retain, nonatomic) NSMutableArray *commandDmsArray;
+
+@property (retain, nonatomic) NSMutableArray *cardsArray;
+
+@end
+
+@interface BAPIAppViewuniteV1ViewProgressReply : NSObject
+
+@property (retain, nonatomic) BAPIAppViewuniteV1DmResource *dm;
+
+@end
+
+
+
+static BAPIAppViewuniteV1ViewProgressReply* _logos_method$App$BAPIAppViewuniteV1ViewProgressReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppViewuniteV1ViewProgressReply* __unused self, SEL __unused _cmd, id data, id registry, id * error) _LOGOS_RETURN_RETAINED {
+    BAPIAppViewuniteV1ViewProgressReply *ret = _logos_orig$App$BAPIAppViewuniteV1ViewProgressReply$initWithData$extensionRegistry$error$(self, _cmd, data, registry, error);
+    
+    [ret.dm.cardsArray removeAllObjects];
     return ret;
 }
 
@@ -358,8 +342,8 @@ static BAPICommunityServiceDmV1DmViewReply* _logos_method$App$BAPICommunityServi
  
 
 
-static __attribute__((constructor)) void _logosLocalCtor_bb471524(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_b8fa6d4d(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
-        {Class _logos_class$App$BBPlayerUpTagWidget = objc_getClass("BBPlayerUpTagWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerUpTagWidget, @selector(initWithContext:), (IMP)&_logos_method$App$BBPlayerUpTagWidget$initWithContext$, (IMP*)&_logos_orig$App$BBPlayerUpTagWidget$initWithContext$);}Class _logos_class$App$BBPlayerPortraitScreenBottomWidget = objc_getClass("BBPlayerPortraitScreenBottomWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerPortraitScreenBottomWidget, @selector(setupFirstControlConstraints), (IMP)&_logos_method$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints, (IMP*)&_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints);}{ MSHookMessageEx(_logos_class$App$BBPlayerPortraitScreenBottomWidget, @selector(setupSecondControlConstraints), (IMP)&_logos_method$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints, (IMP*)&_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints);}Class _logos_class$App$BBPlayerBizGotoStoryWidget = objc_getClass("BBPlayerBizGotoStoryWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerBizGotoStoryWidget, @selector(initWithContext:), (IMP)&_logos_method$App$BBPlayerBizGotoStoryWidget$initWithContext$, (IMP*)&_logos_orig$App$BBPlayerBizGotoStoryWidget$initWithContext$);}Class _logos_class$App$BBPlayerGotoStoryWidget = objc_getClass("BBPlayerGotoStoryWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerGotoStoryWidget, @selector(initWithContext:flexConfiguration:), (IMP)&_logos_method$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$, (IMP*)&_logos_orig$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$);}Class _logos_class$App$BBPlayerOperationTagService = objc_getClass("BBPlayerOperationTagService"); { MSHookMessageEx(_logos_class$App$BBPlayerOperationTagService, @selector(tagModels), (IMP)&_logos_method$App$BBPlayerOperationTagService$tagModels, (IMP*)&_logos_orig$App$BBPlayerOperationTagService$tagModels);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BBPlayerOperationTagService, @selector(nj_filterTypes), (IMP)&_logos_method$App$BBPlayerOperationTagService$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BBPlayerFlexContainerWidget = objc_getClass("BBPlayerFlexContainerWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerFlexContainerWidget, @selector(didLayoutSubWidgets), (IMP)&_logos_method$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets, (IMP*)&_logos_orig$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets);}Class _logos_class$App$BAPICommunityServiceDmV1Command = objc_getClass("BAPICommunityServiceDmV1Command"); { char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPICommunityServiceDmV1Command, @selector(nj_filterCommandDmsArray), (IMP)&_logos_method$App$BAPICommunityServiceDmV1Command$nj_filterCommandDmsArray, _typeEncoding); }{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BAPICommunityServiceDmV1Command, @selector(nj_filterTypes), (IMP)&_logos_method$App$BAPICommunityServiceDmV1Command$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BAPICommunityServiceDmV1DmViewReply = objc_getClass("BAPICommunityServiceDmV1DmViewReply"); { MSHookMessageEx(_logos_class$App$BAPICommunityServiceDmV1DmViewReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$);}}
+        {Class _logos_class$App$BBPlayerUpTagWidget = objc_getClass("BBPlayerUpTagWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerUpTagWidget, @selector(initWithContext:), (IMP)&_logos_method$App$BBPlayerUpTagWidget$initWithContext$, (IMP*)&_logos_orig$App$BBPlayerUpTagWidget$initWithContext$);}Class _logos_class$App$BBPlayerPortraitScreenBottomWidget = objc_getClass("BBPlayerPortraitScreenBottomWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerPortraitScreenBottomWidget, @selector(setupFirstControlConstraints), (IMP)&_logos_method$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints, (IMP*)&_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupFirstControlConstraints);}{ MSHookMessageEx(_logos_class$App$BBPlayerPortraitScreenBottomWidget, @selector(setupSecondControlConstraints), (IMP)&_logos_method$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints, (IMP*)&_logos_orig$App$BBPlayerPortraitScreenBottomWidget$setupSecondControlConstraints);}Class _logos_class$App$BBPlayerBizGotoStoryWidget = objc_getClass("BBPlayerBizGotoStoryWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerBizGotoStoryWidget, @selector(initWithContext:), (IMP)&_logos_method$App$BBPlayerBizGotoStoryWidget$initWithContext$, (IMP*)&_logos_orig$App$BBPlayerBizGotoStoryWidget$initWithContext$);}Class _logos_class$App$BBPlayerGotoStoryWidget = objc_getClass("BBPlayerGotoStoryWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerGotoStoryWidget, @selector(initWithContext:flexConfiguration:), (IMP)&_logos_method$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$, (IMP*)&_logos_orig$App$BBPlayerGotoStoryWidget$initWithContext$flexConfiguration$);}Class _logos_class$App$BBPlayerOperationTagService = objc_getClass("BBPlayerOperationTagService"); { MSHookMessageEx(_logos_class$App$BBPlayerOperationTagService, @selector(tagModels), (IMP)&_logos_method$App$BBPlayerOperationTagService$tagModels, (IMP*)&_logos_orig$App$BBPlayerOperationTagService$tagModels);}{ char _typeEncoding[1024]; unsigned int i = 0; memcpy(_typeEncoding + i, @encode(NSSet<NSNumber *> *), strlen(@encode(NSSet<NSNumber *> *))); i += strlen(@encode(NSSet<NSNumber *> *)); _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$App$BBPlayerOperationTagService, @selector(nj_filterTypes), (IMP)&_logos_method$App$BBPlayerOperationTagService$nj_filterTypes, _typeEncoding); }Class _logos_class$App$BBPlayerFlexContainerWidget = objc_getClass("BBPlayerFlexContainerWidget"); { MSHookMessageEx(_logos_class$App$BBPlayerFlexContainerWidget, @selector(didLayoutSubWidgets), (IMP)&_logos_method$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets, (IMP*)&_logos_orig$App$BBPlayerFlexContainerWidget$didLayoutSubWidgets);}Class _logos_class$App$BAPICommunityServiceDmV1DmViewReply = objc_getClass("BAPICommunityServiceDmV1DmViewReply"); { MSHookMessageEx(_logos_class$App$BAPICommunityServiceDmV1DmViewReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPICommunityServiceDmV1DmViewReply$initWithData$extensionRegistry$error$);}Class _logos_class$App$BAPIAppViewuniteV1ViewProgressReply = objc_getClass("BAPIAppViewuniteV1ViewProgressReply"); { MSHookMessageEx(_logos_class$App$BAPIAppViewuniteV1ViewProgressReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppViewuniteV1ViewProgressReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppViewuniteV1ViewProgressReply$initWithData$extensionRegistry$error$);}}
     }
 }
