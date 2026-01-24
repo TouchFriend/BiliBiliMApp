@@ -85,10 +85,17 @@
         [self handleDefaultPlaybackRateWithViewModel:viewModel];
         return;
     }
+    // 关注的默认版块
+    if ([bizId isEqualToString:NJ_FOLLOW_DEFAULT_TAB]) {
+        [self handleFollowDefaultTabWithViewModel:viewModel];
+        return;
+    }
 }
 
 #pragma mark - Private Methods
 
+/// 点击默认播放速度
+/// - Parameter viewModel: 数据
 - (void)handleDefaultPlaybackRateWithViewModel:(NJSettingSkullViewModel *)viewModel {
     NSString *selectedValue = viewModel.subTitle;
     NSMutableArray<NJInlineSettingModel *> *dataSource = [NSMutableArray array];
@@ -113,6 +120,32 @@
     viewModel.subTitle = rate;
     // 保存
     [[NJCache sharedInstance] saveDefaultPlaybackRate:rate];
+    [self.tableView reloadData];
+}
+
+/// 点击关注的默认版块
+/// - Parameter viewModel: 数据
+- (void)handleFollowDefaultTabWithViewModel:(NJSettingSkullViewModel *)viewModel {
+    NSString *subTitle = viewModel.subTitle;
+    NSArray<NJInlineSettingModel *> *followTabs = [self.dataProvider followTabs];
+    for (NJInlineSettingModel *model in followTabs) {
+        model.selected = [model.title isEqualToString:subTitle];
+    }
+    
+    NJInlineSettingViewController *inlineVC = [[NJInlineSettingViewController alloc] initWithStyle:UITableViewStylePlain title:@"关注页的默认版块" dataSource:followTabs];
+    __weak typeof(self) weakSelf = self;
+    inlineVC.selectedHandler = ^(NJInlineSettingModel * _Nonnull model) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf handleChangeFollowDefaultTab:model viewModel:viewModel];
+    };
+    [self.settingViewController.navigationController pushViewController:inlineVC animated:YES];
+}
+
+- (void)handleChangeFollowDefaultTab:(NJInlineSettingModel *)model viewModel:(NJSettingSkullViewModel *)viewModel {
+    [self rebootTip];
+    viewModel.subTitle = model.title;
+    // 保存
+    [[NJCache sharedInstance] saveFollowDefaultTab:model.bizId];
     [self.tableView reloadData];
 }
 

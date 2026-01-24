@@ -30,6 +30,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
+#import "NJCache.h"
 
 %group App
 
@@ -258,6 +259,45 @@
     // 保存过滤后的数据
     [self setListArray:items];
     return origListArray;
+}
+
+%end
+
+@interface BAPIAppDynamicV2DynScreenTab : NSObject
+
+/// 名称，比如all(全部)、video(视频)
+@property (copy, nonatomic) NSString *name;
+/// 是否是默认版块
+@property (nonatomic) _Bool defaultTab;
+
+@end
+
+/// 动态版块信息
+@interface BAPIAppDynamicV2DynTabReply : NSObject
+
+@property (retain, nonatomic) NSMutableArray *dynTabArray;
+@property (retain, nonatomic) NSMutableArray *screenTabArray;
+
+@end
+
+%hook BAPIAppDynamicV2DynTabReply
+
+- (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
+    BAPIAppDynamicV2DynTabReply *ret = %orig;
+    NSString *defaultName = [[NJCache sharedInstance] followDefaultTab];
+    BOOL isFind = NO;
+    for (BAPIAppDynamicV2DynScreenTab *tab in ret.screenTabArray) {
+        if ([tab.name isEqualToString:defaultName]) {
+            isFind = YES;
+            break;
+        }
+    }
+    if (isFind) {
+        for (BAPIAppDynamicV2DynScreenTab *tab in ret.screenTabArray) {
+            tab.defaultTab = [tab.name isEqualToString:defaultName];
+        }
+    }
+    return ret;
 }
 
 %end

@@ -27,6 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 保存默认播放速度
 - (void)saveDefaultPlaybackRate:(NSString *)rate;
 
+/// 关注的默认版块
+- (NSString *)followDefaultTab;
+
+/// 保存关注的默认版块
+- (void)saveFollowDefaultTab:(NSString *)tab;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -29,6 +29,8 @@
 #define NJ_UNUSED_SERVICE_BIZ_ID @"my_unusedService"
 // 默认播放速度
 #define NJ_DEFAULT_PLAYBACK_RATE @"defaultPlaybackRate"
+// 关注的默认版块
+#define NJ_FOLLOW_DEFAULT_TAB @"followDefaultTab"
 // 分享数据
 #define NJ_SHARE_DATA_BIZ_ID @"shareData"
 // 版本

@@ -12,6 +12,7 @@
 #import "NJSettingSwitchViewModel.h"
 #import "NJCommonDefine.h"
 #import "NJCache.h"
+#import "NJInlineSettingModel.h"
 
 @implementation NJSettingInjectDataProvider
 
@@ -37,6 +38,7 @@
                                                             title:@"我的-不常用服务"
                                                                   on:NJ_UNUSED_SERVICE_VALUE saveKey:NJ_UNUSED_SERVICE_KEY]];
     [datas addObject:[self defaultPlaybackRate]];
+    [datas addObject:[self followDefaultTab]];
     [datas addObject:[[NJSettingSkullViewModel alloc] initWithBizId:NJ_SHARE_DATA_BIZ_ID
                                                              cellId:NJ_COMMON_CELL_ID
                                                               title:@"分享数据"]];
@@ -54,6 +56,34 @@
                                                                               title:@"默认播放速度"];
     model.subTitle = [[NJCache sharedInstance] defaultPlaybackRate];
     return model;
+}
+
+/// 关注页的默认版块
+- (NJSettingSkullViewModel *)followDefaultTab {
+    NJSettingSkullViewModel *model = [[NJSettingSkullViewModel alloc] initWithBizId:NJ_FOLLOW_DEFAULT_TAB
+                                                                             cellId:NJ_ARROW_CELL_ID
+                                                                              title:@"关注页的默认版块"];
+    model.subTitle = [self followDefaultTabSubTitle];
+    return model;
+}
+
+- (NSString *)followDefaultTabSubTitle {
+    NSString *followDefaultTab = [[NJCache sharedInstance] followDefaultTab];
+    NSArray<NJInlineSettingModel *> *tabs = [self followTabs];
+    for (NJInlineSettingModel *model in tabs) {
+        if ([model.bizId isEqualToString:followDefaultTab]) {
+            return model.title;
+        }
+    }
+    return @"";
+}
+
+/// 关注的版块数据
+- (NSArray<NJInlineSettingModel *> *)followTabs {
+    NSMutableArray<NJInlineSettingModel *> *tabs = [NSMutableArray array];
+    [tabs addObject:[[NJInlineSettingModel alloc] initWithTitle:@"全部" bizId:@"all" selected:NO]];
+    [tabs addObject:[[NJInlineSettingModel alloc] initWithTitle:@"视频" bizId:@"video" selected:NO]];
+    return [tabs copy];
 }
 
 /// 版本
