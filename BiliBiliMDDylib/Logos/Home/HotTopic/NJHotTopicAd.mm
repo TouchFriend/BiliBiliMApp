@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/HotTopic/NJHotTopicAd.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/HotTopic/NJHotTopicAd.xm"
 
 
 
@@ -40,11 +40,21 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BAPIAppCardV1PopularTopEntrance; @class BAPIAppShowPopularV1PopularReply; 
+@class BAPIAppShowPopularV1PopularReply; @class BAPIAppCardV1PopularTopEntrance; @class BAPIAppCardV1Card; 
 
 
-#line 19 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/HotTopic/NJHotTopicAd.xm"
-static BAPIAppShowPopularV1PopularReply* (*_logos_orig$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppShowPopularV1PopularReply* _logos_method$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static NSMutableArray * (*_logos_orig$App$BAPIAppCardV1PopularTopEntrance$itemsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppCardV1PopularTopEntrance$itemsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST, SEL); 
+#line 19 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Home/HotTopic/NJHotTopicAd.xm"
+static NSString * (*_logos_orig$App$BAPIAppCardV1Card$description)(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1Card* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$App$BAPIAppCardV1Card$description(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1Card* _LOGOS_SELF_CONST, SEL); static BAPIAppShowPopularV1PopularReply* (*_logos_orig$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppShowPopularV1PopularReply* _logos_method$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppShowPopularV1PopularReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static NSMutableArray * (*_logos_orig$App$BAPIAppCardV1PopularTopEntrance$itemsArray)(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST, SEL); static NSMutableArray * _logos_method$App$BAPIAppCardV1PopularTopEntrance$itemsArray(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1PopularTopEntrance* _LOGOS_SELF_CONST, SEL); 
+
+
+
+static NSString * _logos_method$App$BAPIAppCardV1Card$description(_LOGOS_SELF_TYPE_NORMAL BAPIAppCardV1Card* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+    NSString *ret = _logos_orig$App$BAPIAppCardV1Card$description(self, _cmd);
+    ret = [NSString stringWithFormat:@"%@,itemOneOfCase:%d", ret, self.itemOneOfCase];
+    return ret;
+}
+
+
 
 @interface BAPIAppShowPopularV1PopularReply : NSObject
 
@@ -116,9 +126,9 @@ static NSMutableArray * _logos_method$App$BAPIAppCardV1PopularTopEntrance$itemsA
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_a0d0ee7f(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_d3183886(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
-        {Class _logos_class$App$BAPIAppShowPopularV1PopularReply = objc_getClass("BAPIAppShowPopularV1PopularReply"); { objc_property_attribute_t _attributes[16]; unsigned int attrc = 0; _attributes[attrc++] = (objc_property_attribute_t) { "T", "@\"NJHotTopicCardHandler\"" }; _attributes[attrc++] = (objc_property_attribute_t) { "&", "" }; _attributes[attrc++] = (objc_property_attribute_t) { "N", "" }; class_addProperty(_logos_class$App$BAPIAppShowPopularV1PopularReply, "nj_cardHandler", _attributes, attrc); char _typeEncoding[1024]; snprintf(_typeEncoding, 1024, "%s@:", @encode(NJHotTopicCardHandler *)); class_addMethod(_logos_class$App$BAPIAppShowPopularV1PopularReply, @selector(nj_cardHandler), (IMP)&_logos_property$App$BAPIAppShowPopularV1PopularReply$nj_cardHandler, _typeEncoding); snprintf(_typeEncoding, 1024, "v@:%s", @encode(NJHotTopicCardHandler *)); class_addMethod(_logos_class$App$BAPIAppShowPopularV1PopularReply, @selector(setNj_cardHandler:), (IMP)&_logos_property$App$BAPIAppShowPopularV1PopularReply$setNj_cardHandler, _typeEncoding); } { MSHookMessageEx(_logos_class$App$BAPIAppShowPopularV1PopularReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$);}Class _logos_class$App$BAPIAppCardV1PopularTopEntrance = objc_getClass("BAPIAppCardV1PopularTopEntrance"); { MSHookMessageEx(_logos_class$App$BAPIAppCardV1PopularTopEntrance, @selector(itemsArray), (IMP)&_logos_method$App$BAPIAppCardV1PopularTopEntrance$itemsArray, (IMP*)&_logos_orig$App$BAPIAppCardV1PopularTopEntrance$itemsArray);}}
+        {Class _logos_class$App$BAPIAppCardV1Card = objc_getClass("BAPIAppCardV1Card"); { MSHookMessageEx(_logos_class$App$BAPIAppCardV1Card, @selector(description), (IMP)&_logos_method$App$BAPIAppCardV1Card$description, (IMP*)&_logos_orig$App$BAPIAppCardV1Card$description);}Class _logos_class$App$BAPIAppShowPopularV1PopularReply = objc_getClass("BAPIAppShowPopularV1PopularReply"); { objc_property_attribute_t _attributes[16]; unsigned int attrc = 0; _attributes[attrc++] = (objc_property_attribute_t) { "T", "@\"NJHotTopicCardHandler\"" }; _attributes[attrc++] = (objc_property_attribute_t) { "&", "" }; _attributes[attrc++] = (objc_property_attribute_t) { "N", "" }; class_addProperty(_logos_class$App$BAPIAppShowPopularV1PopularReply, "nj_cardHandler", _attributes, attrc); char _typeEncoding[1024]; snprintf(_typeEncoding, 1024, "%s@:", @encode(NJHotTopicCardHandler *)); class_addMethod(_logos_class$App$BAPIAppShowPopularV1PopularReply, @selector(nj_cardHandler), (IMP)&_logos_property$App$BAPIAppShowPopularV1PopularReply$nj_cardHandler, _typeEncoding); snprintf(_typeEncoding, 1024, "v@:%s", @encode(NJHotTopicCardHandler *)); class_addMethod(_logos_class$App$BAPIAppShowPopularV1PopularReply, @selector(setNj_cardHandler:), (IMP)&_logos_property$App$BAPIAppShowPopularV1PopularReply$setNj_cardHandler, _typeEncoding); } { MSHookMessageEx(_logos_class$App$BAPIAppShowPopularV1PopularReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppShowPopularV1PopularReply$initWithData$extensionRegistry$error$);}Class _logos_class$App$BAPIAppCardV1PopularTopEntrance = objc_getClass("BAPIAppCardV1PopularTopEntrance"); { MSHookMessageEx(_logos_class$App$BAPIAppCardV1PopularTopEntrance, @selector(itemsArray), (IMP)&_logos_method$App$BAPIAppCardV1PopularTopEntrance$itemsArray, (IMP*)&_logos_orig$App$BAPIAppCardV1PopularTopEntrance$itemsArray);}}
     }
 }
 

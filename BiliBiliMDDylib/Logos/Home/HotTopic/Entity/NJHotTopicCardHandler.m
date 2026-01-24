@@ -9,6 +9,7 @@
 #import "NJHotTopicCardEntity.h"
 #import "NJHotTopicRcmdOneItemEntity.h"
 #import "NJHotTopicSmallCoverV5Entity.h"
+#import "NJHotTopicSmallCoverV5AdEntity.h"
 
 @interface NJHotTopicCardHandler ()
 
@@ -83,6 +84,7 @@
         _cardEntityClasses = @[
             [NJHotTopicRcmdOneItemEntity class],    // 推荐一个卡片，rcmd_one_item
             [NJHotTopicSmallCoverV5Entity class],   // 小封面卡片，small_cover_v5
+            [NJHotTopicSmallCoverV5AdEntity class], // 小封面卡片广告, small_cover_v5_ad
         ];
     }
     return _cardEntityClasses;

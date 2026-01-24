@@ -18,6 +18,16 @@
 
 %group App
 
+%hook BAPIAppCardV1Card
+
+- (NSString *)description {
+    NSString *ret = %orig;
+    ret = [NSString stringWithFormat:@"%@,itemOneOfCase:%d", ret, self.itemOneOfCase];
+    return ret;
+}
+
+%end
+
 @interface BAPIAppShowPopularV1PopularReply : NSObject
 
 @property (retain, nonatomic) NSMutableArray *itemsArray;
