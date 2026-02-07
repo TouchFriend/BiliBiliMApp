@@ -31,6 +31,8 @@
 #define NJ_DEFAULT_PLAYBACK_RATE @"defaultPlaybackRate"
 // 关注的默认版块
 #define NJ_FOLLOW_DEFAULT_TAB @"followDefaultTab"
+// 竖屏模式
+#define NJ_VERTICAL_SCREEN_MODE_BIZ_ID @"verticalScreenMode"
 // 分享数据
 #define NJ_SHARE_DATA_BIZ_ID @"shareData"
 // 版本

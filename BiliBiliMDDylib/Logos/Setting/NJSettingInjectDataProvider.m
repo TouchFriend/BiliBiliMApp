@@ -39,6 +39,10 @@
                                                                   on:NJ_UNUSED_SERVICE_VALUE saveKey:NJ_UNUSED_SERVICE_KEY]];
     [datas addObject:[self defaultPlaybackRate]];
     [datas addObject:[self followDefaultTab]];
+    [datas addObject:[[NJSettingSwitchViewModel alloc] initWithBizId:NJ_VERTICAL_SCREEN_MODE_BIZ_ID
+                                                           cellId:NJ_SWITCH_CELL_ID
+                                                            title:@"竖屏模式"
+                                                                  on:NJ_VERTICAL_SCREEN_MODE_VALUE saveKey:NJ_VERTICAL_SCREEN_MODE_KEY]];
     [datas addObject:[[NJSettingSkullViewModel alloc] initWithBizId:NJ_SHARE_DATA_BIZ_ID
                                                              cellId:NJ_COMMON_CELL_ID
                                                               title:@"分享数据"]];

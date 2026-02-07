@@ -179,6 +179,9 @@
 %hook BBPlayerBizGotoStoryWidget
 
 - (id)initWithContext:(id)context {
+    if (NJ_VERTICAL_SCREEN_MODE_VALUE) {
+        return %orig;
+    }
     return nil;
 }
 
@@ -188,6 +191,9 @@
 %hook BBPlayerGotoStoryWidget
 
 - (id)initWithContext:(id)context flexConfiguration:(id)configuration {
+    if (NJ_VERTICAL_SCREEN_MODE_VALUE) {
+        return %orig;
+    }
     return nil;
 }
 

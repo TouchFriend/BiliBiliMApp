@@ -71,9 +71,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 我的-不常用服务
 #define NJ_UNUSED_SERVICE_KEY @"NJ_UNUSED_SERVICE_KEY"
-/// 底部栏-会员购的值
+/// 我的-不常用服务的值
 #define NJ_UNUSED_SERVICE_VALUE ([NJ_SETTING_CACHE containsObjectForKey:NJ_UNUSED_SERVICE_KEY] && \
 [(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_UNUSED_SERVICE_KEY] boolValue])
+
+/// 竖屏模式
+#define NJ_VERTICAL_SCREEN_MODE_KEY @"NJ_VERTICAL_SCREEN_MODE_KEY"
+/// 竖屏模式的值
+#define NJ_VERTICAL_SCREEN_MODE_VALUE ([NJ_SETTING_CACHE containsObjectForKey:NJ_VERTICAL_SCREEN_MODE_KEY] && \
+[(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_VERTICAL_SCREEN_MODE_KEY] boolValue])
 
 /// --------------------- 设置页面 ---------------------
 
