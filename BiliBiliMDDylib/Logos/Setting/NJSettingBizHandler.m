@@ -12,7 +12,7 @@
 #import "UIApplication+NJCategory.h"
 #import "NJInlineSettingViewController.h"
 #import "NJChangePlaybackRateTool.h"
-#import "NJCache.h"
+#import "NJSettingCache.h"
 
 // 官网地址
 #define NJ_OFFICIAL_WEBSITE_URL_STR @"https://github.com/TouchFriend/BiliBiliMApp"
@@ -119,7 +119,7 @@
     NSString *rate = model.title;
     viewModel.subTitle = rate;
     // 保存
-    [[NJCache sharedInstance] saveDefaultPlaybackRate:rate];
+    [[NJSettingCache sharedInstance] saveDefaultPlaybackRate:rate];
     [self.tableView reloadData];
 }
 
@@ -145,14 +145,14 @@
     [self rebootTip];
     viewModel.subTitle = model.title;
     // 保存
-    [[NJCache sharedInstance] saveFollowDefaultTab:model.bizId];
+    [[NJSettingCache sharedInstance] saveFollowDefaultTab:model.bizId];
     [self.tableView reloadData];
 }
 
 - (void)aSwitchChange:(UISwitch *)aSwitch
             viewModel:(NJSettingSwitchViewModel *)viewModel {
     NSString *saveKey = viewModel.saveKey;
-    [NJ_USER_DEFAULTS setBool:viewModel.on forKey:saveKey];
+    [NJ_SETTING_CACHE setObject:@(viewModel.on) forKey:saveKey];
     [self rebootTip];
 }
 

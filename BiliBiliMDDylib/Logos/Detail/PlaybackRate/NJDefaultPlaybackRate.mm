@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
-#import "NJCache.h"
+#import "NJSettingCache.h"
 
 
 #define NJ_ORIGIN_DEFAULT_PLAYBACK_RATE 1.0
@@ -60,7 +60,7 @@ __attribute__((used)) static NSNumber * _logos_property$App$BBPlayerPlayback$nj_
 __attribute__((used)) static NSObject * _logos_property$App$BBPlayerPlayback$nj_currentItem(BBPlayerPlayback * __unused self, SEL __unused _cmd) { return (NSObject *)objc_getAssociatedObject(self, (void *)_logos_property$App$BBPlayerPlayback$nj_currentItem); }; __attribute__((used)) static void _logos_property$App$BBPlayerPlayback$setNj_currentItem(BBPlayerPlayback * __unused self, SEL __unused _cmd, NSObject * rawValue) { objc_setAssociatedObject(self, (void *)_logos_property$App$BBPlayerPlayback$nj_currentItem, rawValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC); }
 
 static void _logos_method$App$BBPlayerPlayback$setPlaybackRate$(_LOGOS_SELF_TYPE_NORMAL BBPlayerPlayback* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, double playbackRate) {
-    double rateValue = [[NJCache sharedInstance] defaultPlaybackRateValue];
+    double rateValue = [[NJSettingCache sharedInstance] defaultPlaybackRateValue];
     if (rateValue == NJ_ORIGIN_DEFAULT_PLAYBACK_RATE) {
         _logos_orig$App$BBPlayerPlayback$setPlaybackRate$(self, _cmd, playbackRate);
         return;
@@ -103,7 +103,7 @@ static void _logos_method$App$BBPlayerPlayback$setPlaybackRate$(_LOGOS_SELF_TYPE
 
 
 static BPInlinePlayableOptions* _logos_method$App$BPInlinePlayableOptions$init(_LOGOS_SELF_TYPE_INIT BPInlinePlayableOptions* __unused self, SEL __unused _cmd) _LOGOS_RETURN_RETAINED {
-    double rateValue = [[NJCache sharedInstance] defaultPlaybackRateValue];
+    double rateValue = [[NJSettingCache sharedInstance] defaultPlaybackRateValue];
     if (rateValue == NJ_ORIGIN_DEFAULT_PLAYBACK_RATE) {
         return _logos_orig$App$BPInlinePlayableOptions$init(self, _cmd);
     }

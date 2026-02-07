@@ -31,7 +31,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
-#import "NJCache.h"
+#import "NJSettingCache.h"
 
 
 #include <substrate.h>
@@ -312,7 +312,7 @@ static NSMutableArray * _logos_method$App$BAPIAppDynamicV2DynamicList$listArray(
 
 static BAPIAppDynamicV2DynTabReply* _logos_method$App$BAPIAppDynamicV2DynTabReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppDynamicV2DynTabReply* __unused self, SEL __unused _cmd, id data, id registry, id * error) _LOGOS_RETURN_RETAINED {
     BAPIAppDynamicV2DynTabReply *ret = _logos_orig$App$BAPIAppDynamicV2DynTabReply$initWithData$extensionRegistry$error$(self, _cmd, data, registry, error);
-    NSString *defaultName = [[NJCache sharedInstance] followDefaultTab];
+    NSString *defaultName = [[NJSettingCache sharedInstance] followDefaultTab];
     BOOL isFind = NO;
     for (BAPIAppDynamicV2DynScreenTab *tab in ret.screenTabArray) {
         if ([tab.name isEqualToString:defaultName]) {

@@ -1,5 +1,5 @@
 //
-//  NJCache.h
+//  NJSettingCache.h
 //  BiliBiliTweak
 //
 //  Created by touchWorld on 2026/1/17.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NJCache : NSObject
+@interface NJSettingCache : NSObject
 
 /// YYCache
 @property (nonatomic, strong) YYCache *cache;

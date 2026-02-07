@@ -1,11 +1,11 @@
 //
-//  NJCache.m
+//  NJSettingCache.m
 //  BiliBiliTweak
 //
 //  Created by touchWorld on 2026/1/17.
 //
 
-#import "NJCache.h"
+#import "NJSettingCache.h"
 
 /// 默认播放速度
 #define NJ_SETTING_DEFAULT_PLAYBACK_RATE_KEY @"SETTING_DEFAULT_PLAYBACK_RATE"
@@ -14,15 +14,15 @@
 #define NJ_SETTING_FOLLOW_DEFAULT_TAB_KEY @"SETTING_FOLLOW_DEFAULT_TAB"
 #define NJ_SETTING_FOLLOW_DEFAULT_TAB_VALUE @"all"
 
-@implementation NJCache
+@implementation NJSettingCache
 
 #pragma mark - Life Cycle Methods
 
 + (instancetype)sharedInstance {
-    static NJCache *_sharedInstance = nil;
+    static NJSettingCache *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[NJCache alloc] init];
+        _sharedInstance = [[NJSettingCache alloc] init];
     });
     return _sharedInstance;
 }

@@ -11,7 +11,7 @@
 #import "NJPluginInfo.h"
 #import "NJSettingSwitchViewModel.h"
 #import "NJCommonDefine.h"
-#import "NJCache.h"
+#import "NJSettingCache.h"
 #import "NJInlineSettingModel.h"
 
 @implementation NJSettingInjectDataProvider
@@ -54,7 +54,7 @@
     NJSettingSkullViewModel *model = [[NJSettingSkullViewModel alloc] initWithBizId:NJ_DEFAULT_PLAYBACK_RATE
                                                                              cellId:NJ_ARROW_CELL_ID
                                                                               title:@"默认播放速度"];
-    model.subTitle = [[NJCache sharedInstance] defaultPlaybackRate];
+    model.subTitle = [[NJSettingCache sharedInstance] defaultPlaybackRate];
     return model;
 }
 
@@ -68,7 +68,7 @@
 }
 
 - (NSString *)followDefaultTabSubTitle {
-    NSString *followDefaultTab = [[NJCache sharedInstance] followDefaultTab];
+    NSString *followDefaultTab = [[NJSettingCache sharedInstance] followDefaultTab];
     NSArray<NJInlineSettingModel *> *tabs = [self followTabs];
     for (NJInlineSettingModel *model in tabs) {
         if ([model.bizId isEqualToString:followDefaultTab]) {

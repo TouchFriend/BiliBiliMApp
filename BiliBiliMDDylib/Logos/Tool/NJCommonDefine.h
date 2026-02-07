@@ -8,12 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "NJAsset.h"
 #import "NJCommonDefineForSwift.h"
+#import "NJSettingCache.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-/// UserDefaults
-#define NJ_USER_DEFAULTS [NSUserDefaults standardUserDefaults]
+/// 设置的缓存
+#define NJ_SETTING_CACHE [NJSettingCache sharedInstance].cache
 /// 图片资源路径
 #define NJ_IMAGE_ASSET_PATH(path) [NJAsset pathForImageAsset:path]
 /// 资源路径
@@ -53,26 +54,26 @@ NS_ASSUME_NONNULL_BEGIN
 /// 总开关
 #define NJ_MASTER_SWITCH_KEY @"NJ_MASTER_SWITCH_KEY"
 /// 总开关的值
-#define NJ_MASTER_SWITCH_VALUE (![NJ_USER_DEFAULTS objectForKey:NJ_MASTER_SWITCH_KEY] || \
-[NJ_USER_DEFAULTS boolForKey:NJ_MASTER_SWITCH_KEY])
+#define NJ_MASTER_SWITCH_VALUE (![NJ_SETTING_CACHE containsObjectForKey:NJ_MASTER_SWITCH_KEY] || \
+[(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_MASTER_SWITCH_KEY] boolValue])
 
 /// 底部栏-发布(+)
 #define NJ_PUBLISH_KEY @"NJ_PUBLISH_KEY"
 /// 底部栏-发布(+)的值
-#define NJ_PUBLISH_VALUE ([NJ_USER_DEFAULTS objectForKey:NJ_PUBLISH_KEY] && \
-[NJ_USER_DEFAULTS boolForKey:NJ_PUBLISH_KEY])
+#define NJ_PUBLISH_VALUE ([NJ_SETTING_CACHE containsObjectForKey:NJ_PUBLISH_KEY] && \
+[(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_PUBLISH_KEY] boolValue])
 
 /// 底部栏-会员购
 #define NJ_MALL_KEY @"NJ_MALL_KEY"
 /// 底部栏-会员购的值
-#define NJ_MALL_VALUE ([NJ_USER_DEFAULTS objectForKey:NJ_MALL_KEY] && \
-[NJ_USER_DEFAULTS boolForKey:NJ_MALL_KEY])
+#define NJ_MALL_VALUE ([NJ_SETTING_CACHE containsObjectForKey:NJ_MALL_KEY] && \
+[(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_MALL_KEY] boolValue])
 
 /// 我的-不常用服务
 #define NJ_UNUSED_SERVICE_KEY @"NJ_UNUSED_SERVICE_KEY"
 /// 底部栏-会员购的值
-#define NJ_UNUSED_SERVICE_VALUE ([NJ_USER_DEFAULTS objectForKey:NJ_UNUSED_SERVICE_KEY] && \
-[NJ_USER_DEFAULTS boolForKey:NJ_UNUSED_SERVICE_KEY])
+#define NJ_UNUSED_SERVICE_VALUE ([NJ_SETTING_CACHE containsObjectForKey:NJ_UNUSED_SERVICE_KEY] && \
+[(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_UNUSED_SERVICE_KEY] boolValue])
 
 /// --------------------- 设置页面 ---------------------
 
