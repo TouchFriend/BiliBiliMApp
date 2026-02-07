@@ -6,14 +6,13 @@
 //
 
 #import "NJStoryDataItem.h"
-#import "NJStoryDataDispatcher.h"
 #import "NJCommonDefine.h"
+#import "NJStoryPipeline.h"
 
 @interface NJStoryDataItem ()
 
-/// 数据分发器
-@property (nonatomic, strong) NJStoryDataDispatcher *dataDispatcher;
-
+/// 流水线
+@property (nonatomic, strong) NJStoryPipeline *pipeline;
 
 @end
 
@@ -32,7 +31,7 @@
 #pragma mark - Do Init
 
 - (void)doInit {
-    self.dataDispatcher = [[NJStoryDataDispatcher alloc] init];
+    self.pipeline = [[NJStoryPipeline alloc] init];
 }
 
 #pragma mark - Override Methods
@@ -51,7 +50,7 @@
         NSMutableDictionary *allDataDic = (NSMutableDictionary *)jsonObject;
         if ([allDataDic[@"data"][@"items"] isKindOfClass:[NSMutableArray class]]) {
             NSMutableArray *dataArr = allDataDic[@"data"][@"items"];
-            NSArray *dataHandled = [self.dataDispatcher handleData:dataArr];
+            NSArray *dataHandled = [self.pipeline handleData:dataArr];
             [dataArr removeAllObjects];
             [dataArr addObjectsFromArray:dataHandled];
         }
