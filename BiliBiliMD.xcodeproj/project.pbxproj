@@ -313,6 +313,7 @@
 		BF29780F2F3753F0003948CF /* NJRcmdCmV2Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2976352F3753F0003948CF /* NJRcmdCmV2Entry.m */; };
 		BF2978102F3753F0003948CF /* NJDynamicAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF2975F12F3753F0003948CF /* NJDynamicAd.mm */; };
 		BF2978112F3753F0003948CF /* NJSearchSquareCardEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF29765F2F3753F0003948CF /* NJSearchSquareCardEntity.m */; };
+		BF297B0A2F3772FA003948CF /* NJStoryAd.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF297B092F3772FA003948CF /* NJStoryAd.mm */; };
 		BFB4F2E12F03FB1C004F7292 /* libroot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4F2E02F03FB1C004F7292 /* libroot.a */; };
 		BFDA21812E65CD7300E3249E /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDA217F2E65CD7300E3249E /* fishhook.h */; };
 		BFDA21822E65CD7300E3249E /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = BFDA21802E65CD7300E3249E /* fishhook.c */; };
@@ -431,7 +432,7 @@
 		BF2975E52F3753F0003948CF /* NJStoryPipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJStoryPipeline.h; sourceTree = "<group>"; };
 		BF2975E62F3753F0003948CF /* NJStoryPipeline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJStoryPipeline.m; sourceTree = "<group>"; };
 		BF2975E82F3753F0003948CF /* NJDetailAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailAd.mm; sourceTree = "<group>"; };
-		BF2975E92F3753F0003948CF /* NJDetailAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDetailAd.xm; sourceTree = "<group>"; };
+		BF2975E92F3753F0003948CF /* NJDetailAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDetailAd.xm; sourceTree = "<group>"; };
 		BF2975EA2F3753F0003948CF /* NJDetailPlayerAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDetailPlayerAd.mm; sourceTree = "<group>"; };
 		BF2975EB2F3753F0003948CF /* NJDetailPlayerAd.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDetailPlayerAd.xm; sourceTree = "<group>"; };
 		BF2975EC2F3753F0003948CF /* NJShareChannelsDataItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJShareChannelsDataItem.h; sourceTree = "<group>"; };
@@ -528,7 +529,7 @@
 		BF2976592F3753F0003948CF /* NJApiDataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJApiDataManger.h; sourceTree = "<group>"; };
 		BF29765A2F3753F0003948CF /* NJApiDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJApiDataManger.m; sourceTree = "<group>"; };
 		BF29765B2F3753F0003948CF /* NJNetworkService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJNetworkService.mm; sourceTree = "<group>"; };
-		BF29765C2F3753F0003948CF /* NJNetworkService.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJNetworkService.xm; sourceTree = "<group>"; };
+		BF29765C2F3753F0003948CF /* NJNetworkService.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJNetworkService.xm; sourceTree = "<group>"; };
 		BF29765E2F3753F0003948CF /* NJSearchSquareCardEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareCardEntity.h; sourceTree = "<group>"; };
 		BF29765F2F3753F0003948CF /* NJSearchSquareCardEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSearchSquareCardEntity.m; sourceTree = "<group>"; };
 		BF2976602F3753F0003948CF /* NJSearchSquareCardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSearchSquareCardHandler.h; sourceTree = "<group>"; };
@@ -664,11 +665,13 @@
 		BF2976F42F3753F0003948CF /* NJCommonDefineForSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJCommonDefineForSwift.h; sourceTree = "<group>"; };
 		BF2976F52F3753F0003948CF /* NJCommonDefineForSwift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJCommonDefineForSwift.m; sourceTree = "<group>"; };
 		BF2976F62F3753F0003948CF /* NJDebug.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJDebug.mm; sourceTree = "<group>"; };
-		BF2976F72F3753F0003948CF /* NJDebug.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJDebug.xm; sourceTree = "<group>"; };
+		BF2976F72F3753F0003948CF /* NJDebug.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJDebug.xm; sourceTree = "<group>"; };
 		BF2976F82F3753F0003948CF /* NJPluginInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPluginInfo.h; sourceTree = "<group>"; };
 		BF2976F92F3753F0003948CF /* NJPluginInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPluginInfo.m; sourceTree = "<group>"; };
 		BF2976FA2F3753F0003948CF /* NJSettingCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSettingCache.h; sourceTree = "<group>"; };
 		BF2976FB2F3753F0003948CF /* NJSettingCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSettingCache.m; sourceTree = "<group>"; };
+		BF297B082F3772EA003948CF /* NJStoryAd.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJStoryAd.xm; sourceTree = "<group>"; };
+		BF297B092F3772FA003948CF /* NJStoryAd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJStoryAd.mm; sourceTree = "<group>"; };
 		BFB4F2E02F03FB1C004F7292 /* libroot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libroot.a; path = ../../../../../../../opt/theos/vendor/lib/libroot.a; sourceTree = "<group>"; };
 		BFDA217F2E65CD7300E3249E /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		BFDA21802E65CD7300E3249E /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
@@ -926,6 +929,8 @@
 				BF2975E42F3753F0003948CF /* NJStoryDataItem.m */,
 				BF2975E52F3753F0003948CF /* NJStoryPipeline.h */,
 				BF2975E62F3753F0003948CF /* NJStoryPipeline.m */,
+				BF297B092F3772FA003948CF /* NJStoryAd.mm */,
+				BF297B082F3772EA003948CF /* NJStoryAd.xm */,
 			);
 			path = VerticalMode;
 			sourceTree = "<group>";
@@ -1910,6 +1915,7 @@
 				BF2977E62F3753F0003948CF /* NJAppCompatible_8_41_0_Handler.m in Sources */,
 				BF2977E72F3753F0003948CF /* NJAppCompatible_8_76_0_Handler.m in Sources */,
 				BF2977E82F3753F0003948CF /* NJHotTopicCardHandler.m in Sources */,
+				BF297B0A2F3772FA003948CF /* NJStoryAd.mm in Sources */,
 				BF2977E92F3753F0003948CF /* NJLiveIndexFeedDataItem.m in Sources */,
 				BF2977EA2F3753F0003948CF /* NJDiskCache.m in Sources */,
 				BF2977EB2F3753F0003948CF /* NJDefaultPlaybackRate.mm in Sources */,

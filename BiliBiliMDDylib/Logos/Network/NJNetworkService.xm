@@ -3,7 +3,7 @@
 #import <UIKit/UIKit.h>
 #import "NJApiDataManger.h"
 #import "NJCommonDefine.h"
-
+#import "NSURL+NJPath.h"
 
 @protocol BFCApiMetrics <NSObject>
 
@@ -25,6 +25,21 @@
        metricsHandler:(void (^)(id<BFCApiMetrics> metrics))metricsHandler
     completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler {
         void (^hookCompletionHandler)(NSData *, NSURLResponse *, NSError *) = ^(NSData *data, NSURLResponse *response, NSError *error) {
+            /*
+            if (data) {
+                NSString *urlStr = response.URL.nj_fullPath;
+                id jsonObject = [NSJSONSerialization JSONObjectWithData:data
+                                                               options:NSJSONReadingMutableContainers
+                                                                 error:nil];
+                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject
+                                                                 options:NSJSONWritingPrettyPrinted
+                                                                   error:nil];
+
+                NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                              encoding:NSUTF8StringEncoding];
+                NSLog(@"%@:url:%@ \n%@", nj_logPrefix, urlStr, jsonString);
+            }
+             */
             if (completionHandler) {
                 data = [[NJApiDataManger sharedInstance] handleWithData:data
                                                                response:response

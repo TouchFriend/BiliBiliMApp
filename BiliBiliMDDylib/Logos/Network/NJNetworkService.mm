@@ -1,10 +1,10 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Network/NJNetworkService.xm"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Network/NJNetworkService.xm"
 
 
 #import <UIKit/UIKit.h>
 #import "NJApiDataManger.h"
 #import "NJCommonDefine.h"
-
+#import "NSURL+NJPath.h"
 
 @protocol BFCApiMetrics <NSObject>
 
@@ -37,7 +37,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BFCRequest; 
 
 
-#line 13 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Network/NJNetworkService.xm"
+#line 13 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Network/NJNetworkService.xm"
 static BFCRequest* (*_logos_orig$App$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$)(_LOGOS_SELF_TYPE_INIT BFCRequest*, SEL, NSURLRequest *, unsigned long long, long long, void (^)(long long param1, long long param2, long long param3), void (^)(id<BFCApiMetrics> metrics), void (^)(NSData *data, NSURLResponse *response, NSError *error)) _LOGOS_RETURN_RETAINED; static BFCRequest* _logos_method$App$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$(_LOGOS_SELF_TYPE_INIT BFCRequest*, SEL, NSURLRequest *, unsigned long long, long long, void (^)(long long param1, long long param2, long long param3), void (^)(id<BFCApiMetrics> metrics), void (^)(NSData *data, NSURLResponse *response, NSError *error)) _LOGOS_RETURN_RETAINED; 
 
 @interface BFCRequest : NSObject
@@ -53,6 +53,21 @@ static BFCRequest* (*_logos_orig$App$BFCRequest$initWithRequest$taskType$priorit
 
 static BFCRequest* _logos_method$App$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$(_LOGOS_SELF_TYPE_INIT BFCRequest* __unused self, SEL __unused _cmd, NSURLRequest * request, unsigned long long type, long long priority, void (^progressHandler)(long long param1, long long param2, long long param3), void (^metricsHandler)(id<BFCApiMetrics> metrics), void (^completionHandler)(NSData *data, NSURLResponse *response, NSError *error)) _LOGOS_RETURN_RETAINED {
         void (^hookCompletionHandler)(NSData *, NSURLResponse *, NSError *) = ^(NSData *data, NSURLResponse *response, NSError *error) {
+            
+            if (data) {
+                NSString *urlStr = response.URL.nj_fullPath;
+                id jsonObject = [NSJSONSerialization JSONObjectWithData:data
+                                                               options:NSJSONReadingMutableContainers
+                                                                 error:nil];
+                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject
+                                                                 options:NSJSONWritingPrettyPrinted
+                                                                   error:nil];
+
+                NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                              encoding:NSUTF8StringEncoding];
+                NSLog(@"%@:url:%@ \n%@", nj_logPrefix, urlStr, jsonString);
+            }
+             
             if (completionHandler) {
                 data = [[NJApiDataManger sharedInstance] handleWithData:data
                                                                response:response
@@ -75,7 +90,7 @@ static BFCRequest* _logos_method$App$BFCRequest$initWithRequest$taskType$priorit
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_34069789(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_ca6a4934(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
         {Class _logos_class$App$BFCRequest = objc_getClass("BFCRequest"); { MSHookMessageEx(_logos_class$App$BFCRequest, @selector(initWithRequest:taskType:priority:progressHandler:metricsHandler:completionHandler:), (IMP)&_logos_method$App$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$, (IMP*)&_logos_orig$App$BFCRequest$initWithRequest$taskType$priority$progressHandler$metricsHandler$completionHandler$);}}
     }
