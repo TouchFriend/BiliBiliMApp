@@ -57,6 +57,15 @@
 
 %end
 
+// 视频下方广告
+%hook BBAdCommonBaseModel
+
++ (id)modelWithMossMessage:(id)message {
+    return nil;
+}
+
+%end
+
 /****************************** 简介标签 ************************************/
 
 // 简介-UP主分享好物
@@ -235,22 +244,14 @@
 /****************************** 评论标签 ************************************/
 
 // 评论顶部黄色广告条
-%hook BBAdSourceContent
+//%hook BBAdSourceContent
+//
+//- (id)init {
+//    return nil;
+//}
+//
+//%end
 
-- (id)init {
-    return nil;
-}
-
-%end
-
-%hook BBAdCommonBaseModel
-
-+ (id)modelWithMossMessage:(id)message {
-    return nil;
-}
-
-
-%end
 
 /****************************** 评论标签 ************************************/
 

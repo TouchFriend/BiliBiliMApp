@@ -33,6 +33,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 #line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Detail/VerticalMode/NJStoryAd.xm"
 static BAPIAppStoryV1BottomDiversionEntranceReply* (*_logos_orig$App$BAPIAppStoryV1BottomDiversionEntranceReply$initWithData$extensionRegistry$error$)(_LOGOS_SELF_TYPE_INIT BAPIAppStoryV1BottomDiversionEntranceReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; static BAPIAppStoryV1BottomDiversionEntranceReply* _logos_method$App$BAPIAppStoryV1BottomDiversionEntranceReply$initWithData$extensionRegistry$error$(_LOGOS_SELF_TYPE_INIT BAPIAppStoryV1BottomDiversionEntranceReply*, SEL, id, id, id *) _LOGOS_RETURN_RETAINED; 
 
+
 @interface BAPIAppStoryV1BottomDiversionEntranceReply : NSObject
 
 @property (retain, nonatomic) NSMutableArray *diversionEntranceListArray;
@@ -51,7 +52,7 @@ static BAPIAppStoryV1BottomDiversionEntranceReply* _logos_method$App$BAPIAppStor
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_b3e0c1f1(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_4028b031(int __unused argc, char __unused **argv, char __unused **envp) {
     if (NJ_MASTER_SWITCH_VALUE) {
         {Class _logos_class$App$BAPIAppStoryV1BottomDiversionEntranceReply = objc_getClass("BAPIAppStoryV1BottomDiversionEntranceReply"); { MSHookMessageEx(_logos_class$App$BAPIAppStoryV1BottomDiversionEntranceReply, @selector(initWithData:extensionRegistry:error:), (IMP)&_logos_method$App$BAPIAppStoryV1BottomDiversionEntranceReply$initWithData$extensionRegistry$error$, (IMP*)&_logos_orig$App$BAPIAppStoryV1BottomDiversionEntranceReply$initWithData$extensionRegistry$error$);}}
     }
