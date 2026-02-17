@@ -28,10 +28,6 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>bili-universal</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>BiliBiliMD/icon.png</string>
-	</array>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundlePrimaryIcon</key>
