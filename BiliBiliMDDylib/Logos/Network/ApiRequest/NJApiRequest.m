@@ -40,9 +40,10 @@
 /// - Parameter model: 大会员福利 model
 + (void)receiveCouponWithModel:(NJMyPrivilegeModel *)model {
     NSArray<NJCouponInfo *> *list = model.list;
+    NSArray *couponBlacklist = @[@(8), @(9), @(21), @(24), @(25), @(26), @(27)];
     for (NJCouponInfo *info in list) {
         // 领取优惠券
-        if (info.type != 8 && info.type != 9 && info.state == 0 && info.vip_type > 0) {
+        if (![couponBlacklist containsObject:@(info.type)] && info.state == 0 && info.vip_type > 0) {
             [self receiveCouponWithType:info.type completionHandler:^(NSDictionary *dict) {
                 NSLog(@"%@:%@-%p-%s-领取优惠券成功，type:%ld,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, info.type, dict);
             } errorHandler:^(NSError *error, NSDictionary *dict) {
