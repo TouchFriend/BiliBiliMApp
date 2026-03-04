@@ -39,6 +39,10 @@
                                                                   on:NJ_UNUSED_SERVICE_VALUE saveKey:NJ_UNUSED_SERVICE_KEY]];
     [datas addObject:[self defaultPlaybackRate]];
     [datas addObject:[self followDefaultTab]];
+    [datas addObject:[[NJSettingSwitchViewModel alloc] initWithBizId:NJ_AUTO_RECEIVE_COUPON_BIZ_ID
+                                                           cellId:NJ_SWITCH_CELL_ID
+                                                            title:@"自动领取大会员福利"
+                                                                  on:NJ_AUTO_RECEIVE_COUPON_VALUE saveKey:NJ_AUTO_RECEIVE_COUPON_KEY]];
     [datas addObject:[[NJSettingSwitchViewModel alloc] initWithBizId:NJ_VERTICAL_SCREEN_MODE_BIZ_ID
                                                            cellId:NJ_SWITCH_CELL_ID
                                                             title:@"竖屏模式"

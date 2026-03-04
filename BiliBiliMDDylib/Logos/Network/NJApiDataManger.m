@@ -19,6 +19,7 @@
 #import "NJShareChannelsDataItem.h"
 #import "NJMineDataItem.h"
 #import "NJStoryDataItem.h"
+#import "NJSkinDataItem.h"
 
 @interface NJApiDataManger ()
 
@@ -112,6 +113,7 @@
                          [NJShareChannelsDataItem class],       // 详情页-分享频道
                          [NJMineDataItem class],                // 我的
                          [NJStoryDataItem class],               // 竖屏模式
+                         [NJSkinDataItem class],                // 皮肤
         ];
     }
     return _itemClasses;

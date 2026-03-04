@@ -9,6 +9,7 @@
 #import "NJAsset.h"
 #import "NJCommonDefineForSwift.h"
 #import "NJSettingCache.h"
+#import "BFCAccountUserModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,13 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// --------------------- 用户信息 ---------------------
 /// BFCUserModel
 /// BFCAccountUserModel
-
-@interface BFCAccountUserModel : NSObject
-
-@property (nonatomic) long long mid;
-@property (copy, nonatomic) NSString *name;
-
-@end
 
 @interface BBMallAccountManager : NSObject
 
@@ -74,6 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 我的-不常用服务的值
 #define NJ_UNUSED_SERVICE_VALUE ([NJ_SETTING_CACHE containsObjectForKey:NJ_UNUSED_SERVICE_KEY] && \
 [(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_UNUSED_SERVICE_KEY] boolValue])
+
+/// 自动领取大会员福利
+#define NJ_AUTO_RECEIVE_COUPON_KEY @"NJ_AUTO_RECEIVE_COUPON_KEY"
+/// 自动领取大会员福利的值
+#define NJ_AUTO_RECEIVE_COUPON_VALUE (![NJ_SETTING_CACHE containsObjectForKey:NJ_AUTO_RECEIVE_COUPON_KEY] || \
+[(NSNumber *)[NJ_SETTING_CACHE objectForKey:NJ_AUTO_RECEIVE_COUPON_KEY] boolValue])
 
 /// 竖屏模式
 #define NJ_VERTICAL_SCREEN_MODE_KEY @"NJ_VERTICAL_SCREEN_MODE_KEY"

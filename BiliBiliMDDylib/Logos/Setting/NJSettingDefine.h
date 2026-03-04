@@ -31,6 +31,8 @@
 #define NJ_DEFAULT_PLAYBACK_RATE @"defaultPlaybackRate"
 // 关注的默认版块
 #define NJ_FOLLOW_DEFAULT_TAB @"followDefaultTab"
+// 自动领取大会员福利
+#define NJ_AUTO_RECEIVE_COUPON_BIZ_ID @"autoReceiveCoupon"
 // 竖屏模式
 #define NJ_VERTICAL_SCREEN_MODE_BIZ_ID @"verticalScreenMode"
 // 分享数据

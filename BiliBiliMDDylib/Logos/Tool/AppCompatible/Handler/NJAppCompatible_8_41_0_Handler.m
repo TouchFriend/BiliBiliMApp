@@ -101,6 +101,7 @@
      0000000116E603E0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
      */
     uintptr_t baseAddress = self.aslr + 0x116E60390;
+    NSLog(@"[%@] cal func landscapeVideo_HalfScreenPlayback rate address:0x%lx", nj_logPrefix, baseAddress);
     [self.writeMemoryTool write_rate_to_address:baseAddress];
 }
 
@@ -115,6 +116,7 @@
      0000000116E789F0  32 2E 30 00 00 00 00 00  00 00 00 00 00 00 00 E3  2.0.............
      */
     uintptr_t baseAddress = self.aslr + 0x116E789A0;
+    NSLog(@"[%@] cal func verticalVideo_FullScreenPlayback_VerticalModePlayback rate address:0x%lx", nj_logPrefix, baseAddress);
     [self.writeMemoryTool write_rate_to_address:baseAddress];
 }
 
