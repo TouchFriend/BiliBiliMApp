@@ -32,6 +32,13 @@
     } errorHandler:^(NSError *error, NSDictionary *dict) {
         NSLog(@"%@:%@-%p-%s-获取大会员卡券列表失败，error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
     }];
+    
+    // 每日视频分享经验
+    [self receiveShareExperienceWithCompletionHandler:^(NSDictionary *dict) {
+        NSLog(@"%@:%@-%p-%s-领取每日视频分享经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
+    } errorHandler:^(NSError *error, NSDictionary *dict) {
+        NSLog(@"%@:%@-%p-%s-领取每日视频分享经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
+    }];
 }
 
 
@@ -59,13 +66,6 @@
             continue;
         }
     }
-    
-    // 每日视频分享经验
-    [self receiveShareExperienceWithCompletionHandler:^(NSDictionary *dict) {
-        NSLog(@"%@:%@-%p-%s-领取每日视频分享经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
-    } errorHandler:^(NSError *error, NSDictionary *dict) {
-        NSLog(@"%@:%@-%p-%s-领取每日视频分享经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
-    }];
 }
 
 
