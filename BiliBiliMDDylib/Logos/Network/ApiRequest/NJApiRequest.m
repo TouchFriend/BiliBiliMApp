@@ -71,7 +71,7 @@
         }];
     }
     
-
+    
     // 领取每日经验
     if ([[NJDailyTaskManager shared] canRunTask:NJ_RECEIVE_DAILY_EXPERIENCE_KEY]) {
         [self receiveDailyExperienceWithCompletionHandler:^(NSDictionary *dict) {
