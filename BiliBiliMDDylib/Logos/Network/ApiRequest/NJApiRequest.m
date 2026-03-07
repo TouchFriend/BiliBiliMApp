@@ -14,6 +14,12 @@
 #import "BFCAccountHTTPCookie.h"
 #import "NJMyPrivilegeModel.h"
 #import "NJResponseModel.h"
+#import "NJDailyTaskManager.h"
+
+// 领取每日视频分享经验
+#define NJ_RECEIVE_SHARE_EXPERIENCE_KEY @"NJ_RECEIVE_SHARE_EXPERIENCE_KEY"
+// 领取每日经验
+#define NJ_RECEIVE_DAILY_EXPERIENCE_KEY @"NJ_RECEIVE_DAILY_EXPERIENCE_KEY"
 
 @implementation NJApiRequest
 
@@ -39,11 +45,14 @@
     }];
     
     // 每日视频分享经验
-    [self receiveShareExperienceWithCompletionHandler:^(NSDictionary *dict) {
-        NSLog(@"%@:%@-%p-%s-领取每日视频分享经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
-    } errorHandler:^(NSError *error, NSDictionary *dict) {
-        NSLog(@"%@:%@-%p-%s-领取每日视频分享经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
-    }];
+    if ([[NJDailyTaskManager shared] canRunTask:NJ_RECEIVE_SHARE_EXPERIENCE_KEY]) {
+        [self receiveShareExperienceWithCompletionHandler:^(NSDictionary *dict) {
+            NSLog(@"%@:%@-%p-%s-领取每日视频分享经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
+            [[NJDailyTaskManager shared] markTaskDone:NJ_RECEIVE_SHARE_EXPERIENCE_KEY];
+        } errorHandler:^(NSError *error, NSDictionary *dict) {
+            NSLog(@"%@:%@-%p-%s-领取每日视频分享经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
+        }];
+    }
 }
 
 
@@ -61,10 +70,13 @@
             } errorHandler:^(NSError *error, NSDictionary *dict) {
                 NSLog(@"%@:%@-%p-%s-领取优惠券失败，type:%ld,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, info.type, error, dict);
             }];
-        } else if (info.type == 9 && info.state == 0 && info.vip_type > 0) {
+        } else if (info.type == 9 && info.state == 0
+                   && info.vip_type > 0 &&
+                   [[NJDailyTaskManager shared] canRunTask:NJ_RECEIVE_DAILY_EXPERIENCE_KEY]) {
             // 领取每日经验
-            [self receiveExperienceWithCompletionHandler:^(NSDictionary *dict) {
+            [self receiveDailyExperienceWithCompletionHandler:^(NSDictionary *dict) {
                 NSLog(@"%@:%@-%p-%s-领取每日经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
+                [[NJDailyTaskManager shared] markTaskDone:NJ_RECEIVE_DAILY_EXPERIENCE_KEY];
             } errorHandler:^(NSError *error, NSDictionary *dict) {
                 NSLog(@"%@:%@-%p-%s-领取每日经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
             }];
@@ -109,7 +121,7 @@
 }
 
 /// 领取每日经验
-+ (void)receiveExperienceWithCompletionHandler:(void (^)(NSDictionary *dict))completionHandler
++ (void)receiveDailyExperienceWithCompletionHandler:(void (^)(NSDictionary *dict))completionHandler
                                   errorHandler:(void (^)(NSError *error, NSDictionary *dict))errorHandler {
     NSString *cookieBiliJct = [NSClassFromString(@"BFCAccount") nj_getCookieBiliJct];
     BFCApiOptions *options = [NSClassFromString(@"BFCApiOptions") optionsWithBaseUrl:@"https://api.bilibili.com/x/vip/experience/add"];

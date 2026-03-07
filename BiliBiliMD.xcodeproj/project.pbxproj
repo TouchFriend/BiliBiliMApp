@@ -37,6 +37,8 @@
 		BF0D03592DEDA95900115365 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03582DEDA95900115365 /* AntiAntiDebug.m */; };
 		BF0D03602DEDA95900115365 /* BiliBiliMDDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */; };
 		BF0D03622DEDA95900115365 /* BiliBiliMDDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */; };
+		BF58295D2F5C0B0700923748 /* NJDailyTaskManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF58295B2F5C0B0700923748 /* NJDailyTaskManager.h */; };
+		BF58295E2F5C0B0700923748 /* NJDailyTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF58295C2F5C0B0700923748 /* NJDailyTaskManager.m */; };
 		BFB4F2E12F03FB1C004F7292 /* libroot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4F2E02F03FB1C004F7292 /* libroot.a */; };
 		BFDA21812E65CD7300E3249E /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDA217F2E65CD7300E3249E /* fishhook.h */; };
 		BFDA21822E65CD7300E3249E /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = BFDA21802E65CD7300E3249E /* fishhook.c */; };
@@ -396,6 +398,8 @@
 		BF0D03582DEDA95900115365 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
 		BF0D035F2DEDA95900115365 /* BiliBiliMDDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiliBiliMDDylib.h; sourceTree = "<group>"; };
 		BF0D03612DEDA95900115365 /* BiliBiliMDDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiliBiliMDDylib.m; sourceTree = "<group>"; };
+		BF58295B2F5C0B0700923748 /* NJDailyTaskManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDailyTaskManager.h; sourceTree = "<group>"; };
+		BF58295C2F5C0B0700923748 /* NJDailyTaskManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJDailyTaskManager.m; sourceTree = "<group>"; };
 		BFB4F2E02F03FB1C004F7292 /* libroot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libroot.a; path = ../../../../../../../opt/theos/vendor/lib/libroot.a; sourceTree = "<group>"; };
 		BFDA217F2E65CD7300E3249E /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		BFDA21802E65CD7300E3249E /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
@@ -880,6 +884,15 @@
 				BFDA21802E65CD7300E3249E /* fishhook.c */,
 			);
 			path = fishhook;
+			sourceTree = "<group>";
+		};
+		BF58295F2F5C0B1300923748 /* DailyTaskManager */ = {
+			isa = PBXGroup;
+			children = (
+				BF58295B2F5C0B0700923748 /* NJDailyTaskManager.h */,
+				BF58295C2F5C0B0700923748 /* NJDailyTaskManager.m */,
+			);
+			path = DailyTaskManager;
 			sourceTree = "<group>";
 		};
 		BFDFC2C72F5BC2A000CB3E3D /* Category */ = {
@@ -1530,6 +1543,7 @@
 		BFDFC41D2F5BC2A000CB3E3D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BF58295F2F5C0B1300923748 /* DailyTaskManager */,
 				BFDFC3AC2F5BC2A000CB3E3D /* Account */,
 				BFDFC3B82F5BC2A000CB3E3D /* AppCompatible */,
 				BFDFC3BD2F5BC2A000CB3E3D /* DiskCache */,
@@ -1631,6 +1645,7 @@
 				BFDFC4CF2F5BC2A000CB3E3D /* NJAnimeChannelBannerEntity.h in Headers */,
 				BFDFC4D02F5BC2A000CB3E3D /* NJCouponInfo.h in Headers */,
 				BFDFC4D12F5BC2A000CB3E3D /* NJShareChannelsDataItem.h in Headers */,
+				BF58295D2F5C0B0700923748 /* NJDailyTaskManager.h in Headers */,
 				BFDFC4D22F5BC2A000CB3E3D /* BFCAccountHTTPCookie.h in Headers */,
 				BFDFC4D32F5BC2A000CB3E3D /* NJAnimeChannelCardEntity.h in Headers */,
 				BFDFC4D42F5BC2A000CB3E3D /* NJSettingSkullTableViewCell.h in Headers */,
@@ -1978,6 +1993,7 @@
 				BFDFC4572F5BC2A000CB3E3D /* NJDiskCache.m in Sources */,
 				BFDFC4582F5BC2A000CB3E3D /* NJLiveIndexFeedCardEntity.m in Sources */,
 				BFDFC4592F5BC2A000CB3E3D /* NJTabDataHandler.m in Sources */,
+				BF58295E2F5C0B0700923748 /* NJDailyTaskManager.m in Sources */,
 				BFDFC45A2F5BC2A000CB3E3D /* NJResponseModel.m in Sources */,
 				BFDFC45B2F5BC2A000CB3E3D /* NJTabDataTopHandler.m in Sources */,
 				BFDFC45C2F5BC2A000CB3E3D /* NJLiveIndexFeedDataItem.m in Sources */,
