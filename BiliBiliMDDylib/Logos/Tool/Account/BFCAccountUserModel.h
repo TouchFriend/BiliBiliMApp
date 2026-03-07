@@ -6,6 +6,9 @@
 //
 
 @interface BFCAccountUserModelVip : NSObject
+// vip类型
+// type = 0 普通用户
+// type > 0 大会员
 @property (nonatomic) long long type;
 @property (nonatomic) long long status;
 @property (nonatomic) long long dueDate;

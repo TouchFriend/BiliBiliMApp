@@ -37,7 +37,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BFCApiOptions; @class BFCAccountHTTPCookie; @class BFCApiRequest; @class BFCApiModelDescription; @class BFCRequest; @class BFCApiRequestOperation; 
+@class BFCApiRequest; @class BFCApiOptions; @class BFCRequest; @class BFCApiModelDescription; @class BFCAccountHTTPCookie; @class BFCApiRequestOperation; 
 
 
 #line 16 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Network/NJNetworkService.xm"

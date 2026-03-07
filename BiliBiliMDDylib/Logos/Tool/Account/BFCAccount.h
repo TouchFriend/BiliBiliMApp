@@ -31,4 +31,7 @@
 /// 是否已经登录
 + (BOOL)nj_isLogin;
 
+// 是否是大会员
++ (BOOL)nj_isVip;
+
 @end

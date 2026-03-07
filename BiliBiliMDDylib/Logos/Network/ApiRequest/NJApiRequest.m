@@ -20,11 +20,14 @@
 #define NJ_RECEIVE_SHARE_EXPERIENCE_KEY @"NJ_RECEIVE_SHARE_EXPERIENCE_KEY"
 // 领取每日经验
 #define NJ_RECEIVE_DAILY_EXPERIENCE_KEY @"NJ_RECEIVE_DAILY_EXPERIENCE_KEY"
+// 获取大会员卡券列表
+#define NJ_LOAD_MY_PRIVILEGE_KEY @"NJ_LOAD_MY_PRIVILEGE_KEY"
 
 @implementation NJApiRequest
 
-/// 自动领取大会员福利
-+ (void)couponAutoReceiver {
+/// 执行启动任务
++ (void)runLaunchTasks {
+    // 设置页开关
     if (!NJ_AUTO_RECEIVE_COUPON_VALUE) {
         return;
     }
@@ -34,17 +37,10 @@
         return;
     }
     
-    __weak typeof(self) weakSelf = self;
-    // 获取大会员卡券列表
-    [self loadMyPrivilegeWithCompletionHandler:^(NJMyPrivilegeModel *model) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        NSLog(@"%@:%@-%p-%s-获取大会员卡券列表成功，list count:%ld", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, [model list].count);
-        [strongSelf receiveCouponWithModel:model];
-    } errorHandler:^(NSError *error, NSDictionary *dict) {
-        NSLog(@"%@:%@-%p-%s-获取大会员卡券列表失败，error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
-    }];
+    // 自动领取大会员福利
+    [self couponAutoReceiver];
     
-    // 每日视频分享经验
+    // 领取每日视频分享经验
     if ([[NJDailyTaskManager shared] canRunTask:NJ_RECEIVE_SHARE_EXPERIENCE_KEY]) {
         [self receiveShareExperienceWithCompletionHandler:^(NSDictionary *dict) {
             NSLog(@"%@:%@-%p-%s-领取每日视频分享经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
@@ -55,6 +51,37 @@
     }
 }
 
+/// 自动领取大会员福利
++ (void)couponAutoReceiver {
+    // 不是大会员
+    if (![NSClassFromString(@"BFCAccount") nj_isVip]) {
+        return;
+    }
+    
+    // 获取大会员卡券列表
+    if ([[NJDailyTaskManager shared] canRunTask:NJ_LOAD_MY_PRIVILEGE_KEY]) {
+        __weak typeof(self) weakSelf = self;
+        [self loadMyPrivilegeWithCompletionHandler:^(NJMyPrivilegeModel *model) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            NSLog(@"%@:%@-%p-%s-获取大会员卡券列表成功，list count:%ld", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, [model list].count);
+            [[NJDailyTaskManager shared] markTaskDone:NJ_LOAD_MY_PRIVILEGE_KEY];
+            [strongSelf receiveCouponWithModel:model];
+        } errorHandler:^(NSError *error, NSDictionary *dict) {
+            NSLog(@"%@:%@-%p-%s-获取大会员卡券列表失败，error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
+        }];
+    }
+    
+
+    // 领取每日经验
+    if ([[NJDailyTaskManager shared] canRunTask:NJ_RECEIVE_DAILY_EXPERIENCE_KEY]) {
+        [self receiveDailyExperienceWithCompletionHandler:^(NSDictionary *dict) {
+            NSLog(@"%@:%@-%p-%s-领取每日经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
+            [[NJDailyTaskManager shared] markTaskDone:NJ_RECEIVE_DAILY_EXPERIENCE_KEY];
+        } errorHandler:^(NSError *error, NSDictionary *dict) {
+            NSLog(@"%@:%@-%p-%s-领取每日经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
+        }];
+    }
+}
 
 
 /// 领取优惠券
@@ -70,17 +97,6 @@
             } errorHandler:^(NSError *error, NSDictionary *dict) {
                 NSLog(@"%@:%@-%p-%s-领取优惠券失败，type:%ld,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, info.type, error, dict);
             }];
-        } else if (info.type == 9 && info.state == 0
-                   && info.vip_type > 0 &&
-                   [[NJDailyTaskManager shared] canRunTask:NJ_RECEIVE_DAILY_EXPERIENCE_KEY]) {
-            // 领取每日经验
-            [self receiveDailyExperienceWithCompletionHandler:^(NSDictionary *dict) {
-                NSLog(@"%@:%@-%p-%s-领取每日经验成功,dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, dict);
-                [[NJDailyTaskManager shared] markTaskDone:NJ_RECEIVE_DAILY_EXPERIENCE_KEY];
-            } errorHandler:^(NSError *error, NSDictionary *dict) {
-                NSLog(@"%@:%@-%p-%s-领取每日经验失败,error:%@-dict:%@", nj_logPrefix, NSStringFromClass([(id)self class]), self, __FUNCTION__, error, dict);
-            }];
-            continue;
         }
     }
 }

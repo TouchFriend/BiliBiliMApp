@@ -60,8 +60,8 @@
 
 - (void)viewDidLoad {
     %orig;
-    // 自动领取大会员福利
-    [NJApiRequest couponAutoReceiver];
+    // 执行启动任务
+    [NJApiRequest runLaunchTasks];
 }
 
 %end

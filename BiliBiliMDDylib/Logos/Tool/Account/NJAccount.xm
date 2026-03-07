@@ -54,6 +54,17 @@
     return userModel != nil;
 }
 
+// 是否是大会员
+%new
++ (BOOL)nj_isVip {
+    if (![self nj_isLogin]) {
+        return NO;
+    }
+    BFCAccountUserModel *userModel = [NSClassFromString(@"BFCAccount") currentUser];
+    BFCAccountUserModelVip *vip = userModel.vip;
+    return vip.type > 0;
+}
+
 %end
 
 

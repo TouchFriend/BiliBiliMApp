@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NJApiRequest : NSObject
 
-/// 自动领取大会员福利
-+ (void)couponAutoReceiver;
+/// 执行启动任务
++ (void)runLaunchTasks;
 
 @end
 

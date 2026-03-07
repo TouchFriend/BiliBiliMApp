@@ -28,7 +28,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BFCStoreScorePopupManager; @class BBPhoneTabBarBubbleView; @class BFCRestrictedModeTeenagersAlertView; @class BFCPushGuideSheetView; @class BBPegasusViewController; 
+@class BFCRestrictedModeTeenagersAlertView; @class BBPegasusViewController; @class BBPhoneTabBarBubbleView; @class BFCPushGuideSheetView; @class BFCStoreScorePopupManager; 
 
 
 #line 7 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Home/Rcmd/NJRcmdAd.xm"
@@ -89,7 +89,7 @@ static BOOL _logos_meta_method$App$BFCRestrictedModeTeenagersAlertView$needShowT
 static void _logos_method$App$BBPegasusViewController$viewDidLoad(_LOGOS_SELF_TYPE_NORMAL id _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
     _logos_orig$App$BBPegasusViewController$viewDidLoad(self, _cmd);
     
-    [NJApiRequest couponAutoReceiver];
+    [NJApiRequest runLaunchTasks];
 }
 
 
