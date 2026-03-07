@@ -11,7 +11,7 @@
 
 /// 获取SESSDATA的cookie
 %new
-+ (NSString *)getCookieSESSDATA {
++ (NSString *)nj_getCookieSESSDATA {
     BFCAccountSSOModel *ssoModel = [NSClassFromString(@"BFCAccount") currentSSO];
     NSArray *cookies = ssoModel.cookieInfo.cookies;
     NSString *cookieSESSDATA = @"";
@@ -26,7 +26,7 @@
 
 /// 获取bili_jct的cookie
 %new
-+ (NSString *)getCookieBiliJct {
++ (NSString *)nj_getCookieBiliJct {
     BFCAccountSSOModel *ssoModel = [NSClassFromString(@"BFCAccount") currentSSO];
     NSArray *cookies = ssoModel.cookieInfo.cookies;
     NSString *cookieBiliJct = @"";
@@ -41,10 +41,17 @@
 
 /// 获取accessKey
 %new
-+ (NSString *)accessKey {
++ (NSString *)nj_accessKey {
     BFCAccountSSOModel *ssoModel = [NSClassFromString(@"BFCAccount") currentSSO];
     NSString *accessKey = ssoModel.tokenInfo.accessToken;
     return accessKey;
+}
+
+/// 是否已经登录
+%new
++ (BOOL)nj_isLogin {
+    BFCAccountUserModel *userModel = [NSClassFromString(@"BFCAccount") currentUser];
+    return userModel != nil;
 }
 
 %end

@@ -23,6 +23,11 @@
         return;
     }
     
+    // 用户未登录
+    if (![NSClassFromString(@"BFCAccount") nj_isLogin]) {
+        return;
+    }
+    
     __weak typeof(self) weakSelf = self;
     // 获取大会员卡券列表
     [self loadMyPrivilegeWithCompletionHandler:^(NJMyPrivilegeModel *model) {
@@ -47,7 +52,7 @@
 /// - Parameter model: 大会员福利 model
 + (void)receiveCouponWithModel:(NJMyPrivilegeModel *)model {
     NSArray<NJCouponInfo *> *list = model.list;
-    NSArray *couponBlacklist = @[@(8), @(9), @(21), @(24), @(25), @(26), @(27)];
+    NSArray *couponBlacklist = @[@(8), @(9), @(14), @(20), @(21), @(24), @(25), @(26), @(27)];
     for (NJCouponInfo *info in list) {
         // 领取优惠券
         if (![couponBlacklist containsObject:@(info.type)] && info.state == 0 && info.vip_type > 0) {
@@ -74,7 +79,7 @@
 + (void)receiveCouponWithType:(NSInteger)type
             completionHandler:(void (^)(NSDictionary *dict))completionHandler
                  errorHandler:(void (^)(NSError *error, NSDictionary *dict))errorHandler {
-    NSString *cookieBiliJct = [NSClassFromString(@"BFCAccount") getCookieBiliJct];
+    NSString *cookieBiliJct = [NSClassFromString(@"BFCAccount") nj_getCookieBiliJct];
     BFCApiOptions *options = [NSClassFromString(@"BFCApiOptions") optionsWithBaseUrl:@"https://api.bilibili.com/x/vip/privilege/receive"];
     // POST
     options.requestMethod = 1;
@@ -106,7 +111,7 @@
 /// 领取每日经验
 + (void)receiveExperienceWithCompletionHandler:(void (^)(NSDictionary *dict))completionHandler
                                   errorHandler:(void (^)(NSError *error, NSDictionary *dict))errorHandler {
-    NSString *cookieBiliJct = [NSClassFromString(@"BFCAccount") getCookieBiliJct];
+    NSString *cookieBiliJct = [NSClassFromString(@"BFCAccount") nj_getCookieBiliJct];
     BFCApiOptions *options = [NSClassFromString(@"BFCApiOptions") optionsWithBaseUrl:@"https://api.bilibili.com/x/vip/experience/add"];
     // POST
     options.requestMethod = 1;
@@ -133,7 +138,6 @@
     // https://github.com/pskdje/bilibili-API-collect/blob/main/docs/vip/info.md
     BFCApiOptions *options = [NSClassFromString(@"BFCApiOptions") optionsWithBaseUrl:@"https://api.bilibili.com/x/vip/privilege/my"];
     options.params = @{};
-//    options.extraHTTPHeader = @{@"Cookie": cookie};
     BFCApiModelDescription *coupon_Des = [NSClassFromString(@"BFCApiModelDescription") modelWith:@"/data" mappingClass:NSClassFromString(@"NJMyPrivilegeModel") isArray:NO isOptional:YES];
     options.modelDescriptions = @[coupon_Des];
     BFCApiRequest *request = [(BFCApiRequest *)[NSClassFromString(@"BFCApiRequest") alloc] initWithOptions:options];
@@ -168,7 +172,11 @@
                       @"267714",
                       @"270380",];
     NSString *sid = sids.count ? sids[arc4random_uniform((u_int32_t)sids.count)] : nil;
-    NSString *accessKey = [NSClassFromString(@"BFCAccount") accessKey];
+    NSString *accessKey = [NSClassFromString(@"BFCAccount") nj_accessKey];
+    if (oid.length == 0 || sid.length == 0 ||
+        accessKey.length == 0) {
+        return;
+    }
     NSDictionary *params = @{@"access_key" : accessKey,
                              @"oid" : oid,
                              @"panel_type" : @"1",

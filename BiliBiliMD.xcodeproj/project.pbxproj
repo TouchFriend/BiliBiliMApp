@@ -614,7 +614,7 @@
 		BFDFC3A82F5BC2A000CB3E3D /* BFCAccountSSOModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFCAccountSSOModel.h; sourceTree = "<group>"; };
 		BFDFC3A92F5BC2A000CB3E3D /* BFCAccountUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFCAccountUserModel.h; sourceTree = "<group>"; };
 		BFDFC3AA2F5BC2A000CB3E3D /* NJAccount.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NJAccount.mm; sourceTree = "<group>"; };
-		BFDFC3AB2F5BC2A000CB3E3D /* NJAccount.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = NJAccount.xm; sourceTree = "<group>"; };
+		BFDFC3AB2F5BC2A000CB3E3D /* NJAccount.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = NJAccount.xm; sourceTree = "<group>"; };
 		BFDFC3AD2F5BC2A000CB3E3D /* NJAppCompatible_8_41_0_Handler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAppCompatible_8_41_0_Handler.h; sourceTree = "<group>"; };
 		BFDFC3AE2F5BC2A000CB3E3D /* NJAppCompatible_8_41_0_Handler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAppCompatible_8_41_0_Handler.m; sourceTree = "<group>"; };
 		BFDFC3AF2F5BC2A000CB3E3D /* NJAppCompatible_8_76_0_Handler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAppCompatible_8_76_0_Handler.h; sourceTree = "<group>"; };

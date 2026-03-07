@@ -20,12 +20,15 @@
 + (id)fastLoginModel;
 
 /// 获取SESSDATA的cookie
-+ (NSString *)getCookieSESSDATA;
++ (NSString *)nj_getCookieSESSDATA;
 
 /// 获取bili_jct的cookie
-+ (NSString *)getCookieBiliJct;
++ (NSString *)nj_getCookieBiliJct;
 
 /// 获取accessKey
-+ (NSString *)accessKey;
++ (NSString *)nj_accessKey;
+
+/// 是否已经登录
++ (BOOL)nj_isLogin;
 
 @end
