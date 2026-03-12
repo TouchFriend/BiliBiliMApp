@@ -19,7 +19,7 @@
 
 + (instancetype)sharedInstance;
 
-- (void)addClassTrace:(NSString *) className;
+- (void)addClassTrace:(NSString *)className;
 
 - (void)addClassTrace:(NSString *)className methodName:(NSString *)methodName;
 

@@ -9,10 +9,11 @@
 //
 
 #import "MDMethodTrace.h"
-#import <objc/runtime.h>
-#import <AVFoundation/AVFoundation.h>
 #import "MDConfigManager.h"
 #import "OCMethodTrace.h"
+
+#import <objc/runtime.h>
+#import <AVFoundation/AVFoundation.h>
 
 //#define USE_DDLOG // 使用外部日志系统，日志多的时候特别有用
 #ifdef USE_DDLOG
@@ -20,8 +21,7 @@
 static const int ddLogLevel = DDLogLevelVerbose;
 #define MDLog(fmt, ...)     DDLogDebug((@"[MethodTrace] " fmt), ##__VA_ARGS__)
 #else
-//#define MDLog(fmt, ...)     NSLog((@"[MethodTrace] " fmt), ##__VA_ARGS__)
-#define MDLog(fmt, ...)     printf("[MethodTrace] %s\n",[[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
+#define MDLog(fmt, ...)     NSLog(@"[MethodTrace] %s", [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
 #endif
 
 #define SAFE_CHECK(_object, _type)  (_type *)[[self class] safeCheck:_object class:[_type class]]
@@ -337,11 +337,6 @@ typedef NS_ENUM(NSUInteger, MDTraceSource) {
 
 #pragma mark - Trace utils
 
-+ (NSString *)docPath
-{
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-}
-
 // 安全检查
 + (id)safeCheck:(id)content class:(Class)cls
 {
@@ -512,7 +507,8 @@ typedef NS_ENUM(NSUInteger, MDTraceSource) {
             self.logWhen = MDTraceLogWhenStartup;
             MDLog(@"Volume control log is not supported when simulator, reset logWhen to %tu", self.logWhen);
 #else
-            self.lastSystemVolume = [[AVAudioSession sharedInstance] outputVolume];
+            // 必须屏蔽该句，否则在Tweak会导致Tweak无法工作！！！
+            //self.lastSystemVolume = [[AVAudioSession sharedInstance] outputVolume];
             // 需要异步注册通知，否则无法工作
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self addVolumeObserver];
@@ -543,11 +539,19 @@ typedef NS_ENUM(NSUInteger, MDTraceSource) {
 
 - (void)onSystemVolumeChanged:(NSNotification *)notification
 {
+    bool shouldShow = false;
     NSString *category = notification.userInfo[@"AVSystemController_AudioCategoryNotificationParameter"];
     NSString *changeReason = notification.userInfo[@"AVSystemController_AudioVolumeChangeReasonNotificationParameter"];
-    if (![category isEqualToString:@"Audio/Video"] || ![changeReason isEqualToString:@"ExplicitVolumeChange"]) {
+    if ([category isEqualToString:@"Audio/Video"] || // 正常场景下控制音量
+        [category isEqualToString:@"PhoneCall"]) { // 视频电话中控制音量，比如微信视频通话中
+        if ([changeReason isEqualToString:@"ExplicitVolumeChange"]) {
+            shouldShow = true;
+        }
+    }
+    if (!shouldShow) {
         return;
     }
+    
     CGFloat volume = [[notification userInfo][@"AVSystemController_AudioVolumeNotificationParameter"] floatValue];
     [OCMethodTrace sharedInstance].disableTrace = volume < self.lastSystemVolume; // 音量升高触发日志输出
     self.lastSystemVolume = volume;
@@ -722,12 +726,16 @@ typedef NS_ENUM(NSUInteger, MDTraceSource) {
     MDLog(@"////////////////////////////////////////////////////////////////////////////////");
     MDLog(@" ");
     
+    int j = 0;
     NSArray *classInfoList = [self classInfoList];
     for (int i = 0; i < classInfoList.count; i++) {
         MDTraceClassInfo *info = classInfoList[i];
+        // 该类关闭trace也跳过，避免打印太多日志
         if (nil != objc_getClass([info.name UTF8String])) {
-            MDLog(@"ClassList[%05d]: %@", i, info.name);
-            [self traceClass:info];
+            if (info.mode != MDTraceModeOff) {
+                MDLog(@"ClassList[%05d]: %@", j++, info.name);
+                [self traceClass:info];
+            }
         } else {
             MDLog(@"Cannot find class %@", info.name);
         }
