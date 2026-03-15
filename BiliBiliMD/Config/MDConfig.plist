@@ -13,7 +13,7 @@
 		<key>TraceFlag</key>
 		<integer>2</integer>
 		<key>TraceObject</key>
-		<integer>2</integer>
+		<integer>0</integer>
 		<key>ClassRegexString</key>
 		<string></string>
 		<key>CORE_CLASS_LIST</key>
@@ -138,19 +138,6 @@
 				<integer>0</integer>
 				<key>MethodWhiteList</key>
 				<array/>
-				<key>MethodBlackList</key>
-				<array/>
-			</dict>
-			<key>BFCLogEngine</key>
-			<dict>
-				<key>TraceMode</key>
-				<integer>2</integer>
-				<key>TraceFlag</key>
-				<integer>0</integer>
-				<key>MethodWhiteList</key>
-				<array>
-					<string>log:level:flag:file:function:line:tag:format:args:</string>
-				</array>
 				<key>MethodBlackList</key>
 				<array/>
 			</dict>

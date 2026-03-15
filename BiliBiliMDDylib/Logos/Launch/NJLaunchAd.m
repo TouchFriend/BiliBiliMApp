@@ -1,4 +1,4 @@
-#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Launch/NJLaunchAd.x"
+#line 1 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Launch/NJLaunchAd.x"
 
 
 #import <UIKit/UIKit.h>
@@ -30,7 +30,7 @@ __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 @class BFCSplashLaunchInfo; 
 
 
-#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Launch/NJLaunchAd.x"
+#line 6 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliMApp/BiliBiliMDDylib/Logos/Launch/NJLaunchAd.x"
 static NSString * (*_logos_orig$App$BFCSplashLaunchInfo$description)(_LOGOS_SELF_TYPE_NORMAL BFCSplashLaunchInfo* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$App$BFCSplashLaunchInfo$description(_LOGOS_SELF_TYPE_NORMAL BFCSplashLaunchInfo* _LOGOS_SELF_CONST, SEL); static id (*_logos_meta_orig$App$BFCSplashLaunchInfo$infoWith$linkAwake$inHot$)(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, _Bool, _Bool, _Bool); static id _logos_meta_method$App$BFCSplashLaunchInfo$infoWith$linkAwake$inHot$(_LOGOS_SELF_TYPE_NORMAL Class _LOGOS_SELF_CONST, SEL, _Bool, _Bool, _Bool); 
 
 @interface BFCSplashLaunchInfo : NSObject
