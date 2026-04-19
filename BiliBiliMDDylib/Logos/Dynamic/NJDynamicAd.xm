@@ -30,7 +30,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
-#import "NJCache.h"
+#import "NJSettingCache.h"
 
 %group App
 
@@ -284,7 +284,7 @@
 
 - (id)initWithData:(id)data extensionRegistry:(id)registry error:(id *)error {
     BAPIAppDynamicV2DynTabReply *ret = %orig;
-    NSString *defaultName = [[NJCache sharedInstance] followDefaultTab];
+    NSString *defaultName = [[NJSettingCache sharedInstance] followDefaultTab];
     BOOL isFind = NO;
     for (BAPIAppDynamicV2DynScreenTab *tab in ret.screenTabArray) {
         if ([tab.name isEqualToString:defaultName]) {

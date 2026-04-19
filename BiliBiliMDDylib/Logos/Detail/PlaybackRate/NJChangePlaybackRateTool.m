@@ -110,7 +110,7 @@ static const double NJChangePlaybackRateFlag = 3.0;
     if (![self shouldChange:rateArray]) {
         return rateArray;
     }
-//    NSLog(@"[%@] change before rateArray = %@, class:%@", nj_logPrefix, rateArray, NSStringFromClass([rateArray class]));
+//    NSLog(@"%@ change before rateArray = %@, class:%@", nj_logPrefix, rateArray, NSStringFromClass([rateArray class]));
     NSInteger rateCount = rateArray.count;
     NSInteger newRateCount = self.playbackRates.count;
     NSInteger count = MIN(rateCount, newRateCount);
@@ -120,7 +120,7 @@ static const double NJChangePlaybackRateFlag = 3.0;
         rateModel.value = newRateStr.doubleValue;
         rateModel.text = newRateStr;
     }
-//    NSLog(@"[%@] change after rateArray = %@, class:%@", nj_logPrefix, rateArray, NSStringFromClass([rateArray class]));
+//    NSLog(@"%@ change after rateArray = %@, class:%@", nj_logPrefix, rateArray, NSStringFromClass([rateArray class]));
     return rateArray;
 }
 

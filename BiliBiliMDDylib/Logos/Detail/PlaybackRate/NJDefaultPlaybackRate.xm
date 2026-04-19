@@ -2,7 +2,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NJCommonDefine.h"
-#import "NJCache.h"
+#import "NJSettingCache.h"
 
 // 原始默认播放速度
 #define NJ_ORIGIN_DEFAULT_PLAYBACK_RATE 1.0
@@ -32,7 +32,7 @@
 %property (nonatomic, strong) NSObject *nj_currentItem;
 
 - (void)setPlaybackRate:(double)playbackRate {
-    double rateValue = [[NJCache sharedInstance] defaultPlaybackRateValue];
+    double rateValue = [[NJSettingCache sharedInstance] defaultPlaybackRateValue];
     if (rateValue == NJ_ORIGIN_DEFAULT_PLAYBACK_RATE) {
         %orig;
         return;
@@ -75,7 +75,7 @@
 %hook BPInlinePlayableOptions
 
 - (id)init {
-    double rateValue = [[NJCache sharedInstance] defaultPlaybackRateValue];
+    double rateValue = [[NJSettingCache sharedInstance] defaultPlaybackRateValue];
     if (rateValue == NJ_ORIGIN_DEFAULT_PLAYBACK_RATE) {
         return %orig;
     }

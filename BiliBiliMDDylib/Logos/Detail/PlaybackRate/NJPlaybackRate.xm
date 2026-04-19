@@ -99,7 +99,7 @@ static void _register_func_for_add_image(const struct mach_header *header, intpt
     Dl_info image_info;
     int result = dladdr(header, &image_info);
     if (result == 0) {
-        NSLog(@"[%@] load mach_header failed", nj_logPrefix);
+        NSLog(@"%@ load mach_header failed", nj_logPrefix);
         return;
     }
     //获取当前的可执行文件路径
@@ -107,7 +107,7 @@ static void _register_func_for_add_image(const struct mach_header *header, intpt
     NSString *execPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingFormat:@"/%@", execName];
     if (strcmp([execPath UTF8String], image_info.dli_fname) == 0) {
         g_slide = slide;
-        NSLog(@"[%@] g_slide:0x%lx", nj_logPrefix, g_slide);
+        NSLog(@"%@ g_slide:0x%lx", nj_logPrefix, g_slide);
     }
     
     //如果需要获取可执行文件中引入的某一个模块(如你加入的XXX.dylib)在内存中的偏移量

@@ -13,14 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 从根窗口递归查找目标控制器
 /// - Parameter targetClass: 目标控制器类型
-+ (UIViewController *_Nullable)findViewControllerOfClass:(Class)targetClass;
++ (UIViewController *_Nullable)nj_findViewControllerOfClass:(Class)targetClass;
 
 
 /// 递归查找目标控制器
 /// - Parameters:
 ///   - vc: 在哪个viewController里查找
 ///   - targetClass: 目标控制器类型
-+ (UIViewController *_Nullable)recursiveFindViewController:(UIViewController *)vc
++ (UIViewController *_Nullable)nj_recursiveFindViewController:(UIViewController *)vc
                                       targetClass:(Class)targetClass;
 
 @end

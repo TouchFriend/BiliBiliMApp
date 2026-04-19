@@ -7,4 +7,4 @@
 
 #import "NJCommonDefineForSwift.h"
 
-const NSString *nj_logPrefix = @"cxzcxz";
+const NSString *nj_logPrefix = @"[cxzcxz]";

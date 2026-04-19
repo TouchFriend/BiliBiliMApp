@@ -53,7 +53,7 @@
     // 获取最大播放速度方法
     // double __fastcall sub_114699400(__int64 a1)
     long long get_max_playback_rate_address = aslr + 0x114699400;
-    NSLog(@"[%@] cal func get_max_playback_rate address:0x%llx", nj_logPrefix, get_max_playback_rate_address);
+    NSLog(@"%@ cal func get_max_playback_rate address:0x%llx", nj_logPrefix, get_max_playback_rate_address);
     // 地址有效性判断
     if (get_max_playback_rate_address != 0) {
         orig_get_max_playback_rate_type origGetMaxRate = NULL;
@@ -67,7 +67,7 @@
     // __int64 sub_10481EDA4()
     // [横屏视频-全屏播放]播放速度数组
     long long landscapeVideo_fullScreenPlayback_RateModelArr_address = aslr + 0x10481EDA4;
-    NSLog(@"[%@] cal func landscapeVideo_fullScreenPlayback_RateModelArr_address address:0x%llx", nj_logPrefix, landscapeVideo_fullScreenPlayback_RateModelArr_address);
+    NSLog(@"%@ cal func landscapeVideo_fullScreenPlayback_RateModelArr_address address:0x%llx", nj_logPrefix, landscapeVideo_fullScreenPlayback_RateModelArr_address);
     // 地址有效性判断
     if (landscapeVideo_fullScreenPlayback_RateModelArr_address != 0) {
         orig_landscapeVideo_fullScreenPlayback_RateModelArr_type origArr = NULL;

@@ -66,7 +66,7 @@
 
 __asm__(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class BBAdCommonBaseModel; @class BBPlayerNetworkPlayerItemRecorder; @class BAPIAppViewuniteV1RelatesFeedReply; @class BAPIAppViewuniteCommonRelates; @class BAPIAppViewuniteCommonModule; @class BAPIAppViewuniteV1IntroductionTab; @class BBPlayerToastContainerWidget; @class BBAdUGCContext; 
+@class BBAdUGCContext; @class BBAdCommonBaseModel; @class BAPIAppViewuniteCommonModule; @class BBPlayerNetworkPlayerItemRecorder; @class BAPIAppViewuniteV1IntroductionTab; @class BAPIAppViewuniteV1RelatesFeedReply; @class BBPlayerToastContainerWidget; @class BAPIAppViewuniteCommonRelates; 
 
 
 #line 45 "/Users/touchworld/Documents/iOSDisassembler/hook/bilibili/BiliBiliTweak/BiliBiliTweak/src/Detail/NJDetailAd.xm"
