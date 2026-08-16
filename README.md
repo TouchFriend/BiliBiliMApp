@@ -142,6 +142,6 @@ BiliBiliMApp/BiliBiliMD/TargetApp
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=TouchFriend/BiliBiliMApp&type=date&legend=top-left)](https://www.star-history.com/#TouchFriend/BiliBiliMApp&type=date&legend=top-left)
+[![Star History Chart](https://star-history.dera.page/svg?repos=TouchFriend/BiliBiliMApp&type=date&legend=top-left)](https://star-history.dera.page/#TouchFriend/BiliBiliMApp&type=date&legend=top-left)
 
   
